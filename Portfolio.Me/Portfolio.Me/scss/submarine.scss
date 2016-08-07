@@ -1,0 +1,443 @@
+﻿@import 'vars.scss';
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.submarine {
+    position: absolute;
+    width: 100%;
+    height: calc(85vh - 132px);
+    cursor: none;
+    overflow: hidden;
+
+    &-bubble {
+        width: 30px;
+        height: 30px;
+        background: lighten(#e74c3c,33%);
+        border-radius: 200px;
+        -moz-border-radius: 200px;
+        -webkit-border-radius: 200px;
+        position: absolute;
+        z-index: 10;
+
+        &:nth-child(1) {
+            left: 10%;
+            -webkit-transform: scale(0.9);
+            -moz-transform: scale(0.9);
+            transform: scale(0.9);
+            opacity: 0.2;
+            animation: subamrine-move-bubble 15s linear infinite, subamrine-side-ways 4s ease-in-out infinite alternate;
+        }
+
+        &:nth-child(2) {
+            left: 20%;
+            -webkit-transform: scale(0.6);
+            -moz-transform: scale(0.6);
+            transform: scale(0.6);
+            opacity: 0.5;
+            animation: subamrine-move-bubble 25s linear infinite, subamrine-side-ways 5s ease-in-out infinite alternate;
+        }
+
+        &:nth-child(3) {
+            left: 30%;
+            -webkit-transform: scale(0.8);
+            -moz-transform: scale(0.8);
+            transform: scale(0.8);
+            opacity: 0.3;
+            animation: subamrine-move-bubble 20s linear infinite, subamrine-side-ways 4s ease-in-out infinite alternate;
+        }
+
+        &:nth-child(4) {
+            left: 40%;
+            -webkit-transform: scale(0.75);
+            -moz-transform: scale(0.75);
+            transform: scale(0.75);
+            opacity: 0.35;
+            animation: subamrine-move-bubble 18s linear infinite, subamrine-side-ways 2s ease-in-out infinite alternate;
+        }
+
+        &:nth-child(5) {
+            left: 50%;
+            -webkit-transform: scale(0.8);
+            -moz-transform: scale(0.8);
+            transform: scale(0.8);
+            opacity: 0.3;
+            animation: subamrine-move-bubble 7s linear infinite, subamrine-side-ways 1s ease-in-out infinite alternate;
+        }
+
+        &:nth-child(6) {
+            left: 60%;
+            -webkit-transform: scale(0.8);
+            -moz-transform: scale(0.56);
+            transform: scale(0.8);
+            opacity: 0.3;
+            animation: subamrine-move-bubble 17s linear infinite, subamrine-side-ways 1s ease-in-out infinite alternate;
+        }
+
+        &:nth-child(7) {
+            left: 70%;
+            -webkit-transform: scale(0.78);
+            -moz-transform: scale(0.78);
+            transform: scale(0.78);
+            opacity: 0.3;
+            animation: subamrine-move-bubble 8s linear infinite, subamrine-side-ways 1s ease-in-out infinite alternate;
+        }
+
+        &:nth-child(8) {
+            left: 80%;
+            -webkit-transform: scale(0.90);
+            -moz-transform: scale(0.90);
+            transform: scale(0.90);
+            opacity: 0.3;
+            animation: subamrine-move-bubble 15s linear infinite, subamrine-side-ways 1s ease-in-out infinite alternate;
+        }
+
+        &:nth-child(9) {
+            left: 87%;
+            -webkit-transform: scale(0.33);
+            -moz-transform: scale(0.33);
+            transform: scale(0.33);
+            opacity: 0.3;
+            animation: subamrine-move-bubble 28s linear infinite, subamrine-side-ways 1s ease-in-out infinite alternate;
+        }
+
+        &:nth-child(10) {
+            left: 95%;
+            -webkit-transform: scale(0.60);
+            -moz-transform: scale(0.60);
+            transform: scale(0.60);
+            opacity: 0.3;
+            animation: subamrine-move-bubble 19s linear infinite, subamrine-side-ways 1s ease-in-out infinite alternate;
+        }
+    }
+
+    &-wrapper {
+        position: absolute;
+        left: calc(50% - 75px);
+        height: 300px;
+        width: 300px;
+        padding: 30px 50px 30px 150px;
+        margin: 0 auto 0 auto;
+        animation: submarine-diving 3s ease-in-out infinite, submarine-diving-rotate 3s ease-in-out infinite;
+    }
+
+    &-body {
+        width: 150px;
+        height: 80px;
+        position: absolute;
+        margin-top: 50px;
+        left: 28px;
+        border: 2px solid lighten(#e74c3c,20%);
+        border-radius: 40px;
+        background: lighten(#e74c3c,20%);
+
+        &-light-marker {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 13px;
+            border-radius: 5px;
+            background-color: darken(#e74c3c, 15%);
+            margin-left: -10px;
+            top: 61px;
+            left: 136px;
+            transform: rotate(-45deg);
+            z-index: 2;
+        }
+
+        &-light {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 40px 150px 40px;
+            border-color: transparent transparent lighten(#e74c3c,5%) transparent;
+            transform: rotate(-50deg);
+            top: 65px;
+            left: 98px;
+            z-index: 1;
+            transform-origin: 38px 6px;
+            animation: submarine-rotate-light-anim 4s linear infinite;
+        }
+
+        &-window {
+            width: 37px;
+            height: 37px;
+            position: absolute;
+            margin-top: 20px;
+            right: 33px;
+            background: lighten(#e74c3c,20%);
+            border-radius: 50%;
+            border: 3px solid #e74c3c;
+
+            &:after {
+                content: "";
+                position: absolute;
+                margin-top: 3px;
+                margin-left: 3px;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background-color: transparent;
+                opacity: 0.8;
+                border-top: 3px solid #e74c3c;
+                transform: rotate(-45deg);
+            }
+        }
+
+        &-engine {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            margin-top: 24px;
+            left: 11px;
+            background-color: #e74c3c;
+            border-radius: 50%;
+            border: 5px solid #e74c3c;
+
+            &:after, &:before {
+                position: absolute;
+                content: "";
+                border-radius: 2px;
+                background-color: lighten(#e74c3c,33%);
+                animation: submarine-engine-spin 900ms linear infinite;
+                opacity: 0.8;
+            }
+
+            &:after {
+                top: 8px;
+                width: 20px;
+                height: 4px;
+            }
+
+            &:before {
+                left: 8px;
+                width: 4px;
+                height: 20px;
+            }
+        }
+    }
+
+    &-helix {
+        width: 8px;
+        height: 70px;
+        position: absolute;
+        margin-top: 55px;
+        left: 21px;
+        border: 2px solid lighten(#e74c3c,20%);
+        border-radius: 7px;
+        background: transparent;
+    }
+
+    &-fins {
+        position: absolute;
+        width: 20px;
+        height: 60px;
+        left: 1px;
+        top: 106px;
+
+        &-fin {
+            width: 0;
+            height: 4px;
+            background: lighten(#e74c3c,20%);
+            right: 0;
+            position: absolute;
+            border-radius: 18%;
+            animation: submarine-fin-anim 1s linear infinite;
+
+            &:nth-child(1) {
+                -moz-animation-delay: 0.3s;
+                -o-animation-delay: 0.3s;
+                -webkit-animation-delay: 0.3s;
+                animation-delay: 0.3s;
+                top: 0px;
+            }
+
+            &:nth-child(2) {
+                -moz-animation-delay: 0.6s;
+                -o-animation-delay: 0.6s;
+                -webkit-animation-delay: 0.6s;
+                animation-delay: 0.6s;
+                top: 8px;
+            }
+
+            &:nth-child(3) {
+                -moz-animation-delay: 0.9s;
+                -o-animation-delay: 0.9s;
+                -webkit-animation-delay: 0.9s;
+                animation-delay: 0.9s;
+                top: 16px;
+            }
+
+            &:nth-child(4) {
+                -moz-animation-delay: 1.2s;
+                -o-animation-delay: 1.2s;
+                -webkit-animation-delay: 1.2s;
+                animation-delay: 1.2s;
+                top: 24px;
+            }
+        }
+    }
+
+    &-hat {
+        width: 65px;
+        height: 25px;
+        position: absolute;
+        margin-top: 26px;
+        left: 70px;
+        background-color: lighten(#e74c3c,20%);
+        border-radius: 10px 10px 0 0;
+
+        &-periscope {
+            position: absolute;
+            width: 7px;
+            height: 20px;
+            background-color: lighten(#e74c3c,20%);
+            margin-top: -27px;
+            margin-left: 32px;
+            border-radius: 5px 5px 0 0;
+
+            &:after, &:before {
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 7px;
+                border-radius: 5px;
+                background-color: lighten(#e74c3c,20%);
+            }
+        }
+
+        &-leds-wrapper {
+            width: 53px;
+            height: 13px;
+            position: relative;
+            top: 7px;
+            left: 7px;
+            background-color: #e74c3c;
+            border-radius: 10px;
+
+            &-leds {
+                position: absolute;
+                margin-top: 4px;
+                margin-left: 7px;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: lighten(#e74c3c, 20%);
+                animation: submarine-leds-off 1000ms linear infinite;
+
+                &:after, &:before {
+                    content: "";
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background-color: lighten(#e74c3c, 20%);
+                }
+
+                &:after {
+                    margin-top: 0px;
+                    margin-left: 17px;
+                    animation-delay: 0.3s;
+                }
+
+                &:before {
+                    margin-top: 0px;
+                    margin-left: 34px;
+                    animation-delay: -0.3s;
+                }
+            }
+        }
+    }
+}
+
+@keyframes submarine-engine-spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes submarine-leds-off {
+    0%, 100% {
+        opacity: 0.1;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+}
+
+@keyframes submarine-diving {
+    0% {
+        margin-top: 5px;
+    }
+
+    50% {
+        margin-top: 15px;
+    }
+
+    100% {
+        margin-top: 5px;
+    }
+}
+
+@keyframes submarine-diving-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(3deg);
+    }
+
+    75% {
+        transform: rotate(-2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+@keyframes submarine-fin-anim {
+    0%, 100% {
+        width: 33%;
+    }
+
+    50% {
+        width: 100%;
+    }
+}
+
+
+@keyframes submarine-rotate-light-anim {
+    0%, 100% {
+        transform: rotate(-90deg);
+    }
+
+    50% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes subamrine-move-bubble {
+    0% {
+        top: 100%;
+    }
+
+    100% {
+        top: -100%;
+    }
+}
+
+@keyframes subamrine-side-ways {
+    0% {
+        margin-left: 0px;
+    }
+
+    100% {
+        margin-left: 50px;
+    }
+}

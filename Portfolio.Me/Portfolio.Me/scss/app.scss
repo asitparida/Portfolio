@@ -1,0 +1,607 @@
+﻿@import 'vars.scss';
+
+/* Include this file in your html if you are using the CSP mode. */
+
+@charset "UTF-8";
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
+.ng-cloak, .x-ng-cloak,
+.ng-hide:not(.ng-hide-animate) {
+    display: none !important;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+@mixin color-defines-css($defcolor) {
+    .header {
+        background-color: $defcolor;
+        transition: background-color 0.3s linear 0s;
+
+        &-colorslab {
+
+            &--top {
+                background-color: lighten($defcolor, 20);
+                transition: background-color 0.3s linear 0s;
+            }
+
+            &--middle {
+                background-color: lighten($defcolor, 10);
+                transition: background-color 0.3s linear 0s;
+            }
+
+            &--bottom {
+                background-color: darken($defcolor, 0);
+                transition: background-color 0.3s linear 0s;
+            }
+        }
+
+        &-profile-links-pages-list-toggle {
+            background: linear-gradient(to right, darken($defcolor, 10) 0%, $defcolor 100%);
+            border: 3px solid lighten($defcolor, 33%);
+            transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s;
+        }
+
+        &-picture-container {
+
+            &-pic {
+                border-color: #f0f0f0;
+                background-color: #f0f0f0;
+                transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s;
+            }
+        }
+
+        .submarine {
+            &-bubble {
+                background: lighten($defcolor,33%);
+                transition: background-color 0.3s linear 0s;
+            }
+
+            &-body {
+                border-color: lighten($defcolor,20%);
+                background: lighten($defcolor,20%);
+                transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s;
+
+                &-light-marker {
+                    background-color: darken($defcolor, 15%);
+                    transition: background-color 0.3s linear 0s;
+                }
+
+                &-light {
+                    border-color: transparent transparent lighten($defcolor,5%) transparent;
+                    transition: border-color 0.3s linear 0s;
+                }
+
+                &-window {
+                    background: lighten($defcolor,20%);
+                    border-color: $defcolor;
+                    transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s;
+
+                    &:after {
+                        border-top-color: $defcolor;
+                        transition: border-top-color 0.3s linear 0s;
+                    }
+                }
+
+                &-engine {
+                    background-color: $defcolor;
+                    border-color: $defcolor;
+                    transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s;
+
+                    &:after, &:before {
+                        background-color: lighten($defcolor,33%);
+                        transition: background-color 0.3s linear 0s;
+                    }
+                }
+            }
+
+            &-helix {
+                border: 2px solid lighten($defcolor,20%);
+                transition: border-color 0.3s linear 0s;
+            }
+
+            &-fins {
+                &-fin {
+                    background: lighten($defcolor,20%);
+                    transition: background-color 0.3s linear 0s;
+                }
+            }
+
+            &-hat {
+                background-color: lighten($defcolor,20%);
+                transition: background-color 0.3s linear 0s;
+
+                &-periscope {
+                    background-color: lighten($defcolor,20%);
+                    transition: background-color 0.3s linear 0s;
+
+                    &:after, &:before {
+                        background-color: lighten($defcolor,20%);
+                        transition: background-color 0.3s linear 0s;
+                    }
+                }
+
+                &-leds-wrapper {
+                    background-color: $defcolor;
+                    transition: background-color 0.3s linear 0s;
+
+                    &-leds {
+                        background-color: lighten($defcolor, 20%);
+                        transition: background-color 0.3s linear 0s;
+
+                        &:after, &:before {
+                            background-color: lighten($defcolor, 20%);
+                            transition: background-color 0.3s linear 0s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        &-project-badge {
+            &-innercontent {
+                &-label {
+                    background: $defcolor;
+                }
+            }
+        }
+    }
+}
+
+body {
+
+    &.turquoise {
+        @include color-defines-css( $turquoise );
+    }
+
+    &.emerland {
+        @include color-defines-css( $emerland );
+    }
+
+    &.peterRiver {
+        @include color-defines-css( $peterRiver );
+    }
+
+    &.amethyst {
+        @include color-defines-css( $amethyst );
+    }
+
+    &.moosikPurple {
+        @include color-defines-css( $moosikPurple );
+    }
+
+    &.wetAsphalt {
+        @include color-defines-css( $wetAsphalt );
+    }
+
+    &.greenSea {
+        @include color-defines-css( $greenSea );
+    }
+
+    &.nephritis {
+        @include color-defines-css( $nephritis );
+    }
+
+    &.belizeHole {
+        @include color-defines-css( $belizeHole );
+    }
+
+    &.wisteria {
+        @include color-defines-css( $wisteria );
+    }
+
+    &.midnightBlue {
+        @include color-defines-css( $midnightBlue );
+    }
+
+    &.sunDlower {
+        @include color-defines-css( $sunDlower );
+    }
+
+    &.carrot {
+        @include color-defines-css( $carrot );
+    }
+
+    &.alizarin {
+        @include color-defines-css( $alizarin );
+    }
+
+    &.orange {
+        @include color-defines-css( $orange );
+    }
+
+    &.pumpkin {
+        @include color-defines-css( $pumpkin );
+    }
+
+    &.pomegranate {
+        @include color-defines-css( $pomegranate );
+    }
+
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #f0f0f0;
+    transition: all 0.3s linear 0s;
+    top: 0px;
+
+    &.colorPickerActive {
+        position: relative;
+        top: 275px;
+    }
+
+    .color-switcher {
+        position: absolute;
+        height: 275px;
+        width: 100%;
+        top: -275px;
+        left: 0;
+
+        .accent-picker {
+            height: 275px;
+            margin: 0;
+            overflow: hidden;
+            padding: 30px;
+
+            label {
+                font-size: large;
+                margin: 0;
+                font-weight: 500;
+            }
+
+            .settings-color-picker {
+                margin: 0 auto;
+                width: 200px;
+                height: 200px;
+                position: relative;
+                -moz-transform: rotate(-20deg);
+                -ms-transform: rotate(-20deg);
+                -o-transform: rotate(-20deg);
+                -webkit-transform: rotate(-20deg);
+                transform: rotate(-20deg);
+                left: -30px;
+
+                .color-plate {
+                    width: 120px;
+                    height: 48px;
+                    position: absolute;
+                    left: 127px;
+                    -moz-transform-origin: 0 24px;
+                    -ms-transform-origin: 0 24px;
+                    -o-transform-origin: 0 24px;
+                    -webkit-transform-origin: 0 24px;
+                    transform-origin: 0 24px;
+                    top: 140px;
+                    border-radius: 7%;
+                    border: 2px solid #e0e0e0;
+                    -moz-transform: rotate(-150deg) scale(1,1);
+                    -ms-transform: rotate(-150deg) scale(1,1);
+                    -o-transform: rotate(-150deg) scale(1,1);
+                    -webkit-transform: rotate(-150deg) scale(1,1);
+                    transform: rotate(-150deg) scale(1,1);
+                    outline: none;
+
+                    &:active {
+                        -moz-transform: scale(0.90, 0.90);
+                        -ms-transform: scale(0.90, 0.90);
+                        -o-transform: scale(0.90, 0.90);
+                        -webkit-transform: scale(0.90, 0.90);
+                        transform: scale(0.90, 0.90);
+                    }
+
+                    &.ng-enter {
+                        -moz-animation: color_track_pl_enter 0.3s linear;
+                        -o-animation: color_track_pl_enter 0.3s linear;
+                        -webkit-animation: color_track_pl_enter 0.3s linear;
+                        animation: color_track_pl_enter 0.3s linear;
+                    }
+                }
+            }
+        }
+    }
+
+    .header {
+        height: 85vh;
+        width: 100%;
+        position: relative;
+
+        &-colorslab {
+            width: 100%;
+
+            &--bottom {
+                height: 50vh;
+            }
+        }
+
+        &-profile-data {
+            height: 132px;
+            width: 100%;
+            position: relative;
+            padding: 30px;
+        }
+
+        &-picture-container {
+            height: 72px;
+            width: 72px;
+
+            &-pic {
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+                border: none;
+                overflow: hidden;
+                position: relative;
+
+                &-circle {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    position: relative;
+                    z-index: 3;
+                }
+
+                &--0 {
+                    position: absolute;
+                    top: 0;
+                    height: 72px;
+                    width: 72px;
+                    background-size: contain;
+                    background-image: url(../../assets/my-pic-0.jpg);
+                }
+
+                &--1 {
+                    top: 72px;
+                    position: absolute;
+                    height: 72px;
+                    width: 72px;
+                    background-size: contain;
+                    background-image: url(../../assets/my-pic-1.jpg);
+                }
+
+                &--2 {
+                    top: 72px;
+                    position: absolute;
+                    height: 72px;
+                    width: 72px;
+                    background-size: contain;
+                    background-image: url(../../assets/my-pic-2.jpg);
+                }
+
+                &--3 {
+                    top: 72px;
+                    position: absolute;
+                    height: 72px;
+                    width: 72px;
+                    background-size: contain;
+                    background-image: url(../../assets/my-pic-3.jpg);
+                }
+
+                &--4 {
+                    top: 72px;
+                    position: absolute;
+                    height: 72px;
+                    width: 72px;
+                    background-size: contain;
+                    background-image: url(../../assets/my-pic-4.jpg);
+                }
+            }
+        }
+
+        &-profile-mast {
+            width: 300px;
+
+            &-name {
+                font-size: 2em;
+                display: block;
+                margin-left: 30px;
+                font-weight: 100;
+                color: #fff;
+            }
+
+            &-job-title {
+                font-size: 1.08em;
+                display: block;
+                margin-left: 30px;
+                font-weight: 300;
+                letter-spacing: 1px;
+                color: #fff;
+            }
+        }
+
+        &-profile-links {
+            position: relative;
+            top: 6px;
+
+            &-pages-list {
+                margin: 0;
+                list-style: none;
+                width: 100%;
+                text-align: center;
+                padding: 0;
+
+                li {
+                    margin: 0;
+                    display: inline-block;
+                    font-size: 1.25em;
+                    color: #fff;
+                    border-bottom: 2px solid transparent;
+
+                    &.header-profile-links-pages-list--active {
+                        border-bottom: 2px solid #fff;
+                    }
+
+                    a {
+                        padding: 10px 15px;
+                        font-size: medium;
+                        line-height: 48px;
+                        height: 48px;
+                        color: #fff;
+                        text-decoration: none;
+
+                        img {
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-profile-links-pages-list-toggle {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #ff0000;
+            border: 3px solid #fff;
+            position: relative;
+            top: 15px;
+            margin-left: 15px;
+        }
+
+        &-tagged {
+            width: 100%;
+            position: absolute;
+            top: 420px;
+            z-index: 2;
+            cursor: none;
+
+            &-awesome {
+                font-size: 3em;
+                width: 100%;
+                margin: 0;
+                color: #fff;
+                font-weight: 100;
+                text-align: center;
+                letter-spacing: 1px;
+            }
+
+            &-topskills {
+                margin: 15px 0;
+                list-style: none;
+                width: 100%;
+                text-align: center;
+                padding: 0;
+
+                li {
+                    font-size: medium;
+                    margin: 0;
+                    color: #fff;
+                    font-weight: 500;
+                    text-align: center;
+                    display: inline;
+
+                    &:after {
+                        content: '';
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background: #fff;
+                        display: inline-block;
+                        margin-left: 15px;
+                        margin-right: 15px;
+                    }
+
+                    &:last-child:after {
+                        background: transparent;
+                        margin: 0;
+                    }
+                }
+            }
+
+            &-arrow-holder {
+                width: 3em;
+                height: 3em;
+                border: 2px solid #fff;
+                border-radius: 50%;
+                display: block;
+                margin: 45px auto 0;
+
+                &-arrow {
+                    position: absolute;
+                    overflow: hidden;
+                    display: inline-block;
+                    font-size: 12px; /*set the size for arrow*/
+                    width: 1em;
+                    height: 1em;
+                    margin-top: 11px;
+
+                    &--bottom {
+                        border-bottom: 2px solid #fff;
+                        border-left: 2px solid #fff;
+                        transform: rotate(-46deg) skew(0deg);
+                        left: calc(50% - 0.5em);
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        height: auto;
+        width: 100%;
+        background: #f0f0f0;
+
+        &-project-badge {
+            height: 300px;
+            padding: 0;
+            margin: 0;
+            position: relative;
+
+            &-locked {
+                content: '';
+                background-image: url(../../project-logos/project-lock.png);
+                width: 24px;
+                height: 24px;
+                background-size: contain;
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                z-index: 2;
+            }
+
+            &-innercontent {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                z-index: 1;
+                position: relative;
+                cursor: pointer;
+
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    transform: scale(1, 1);
+                    transition: transform 0.3s ease-in 0s;
+                }
+
+                &-label {
+                    height: 48px;
+                    line-height: 48px;
+                    padding: 0 15px;
+                    font-size: medium;
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                    background: #161616;
+                    color: #fff;
+                    transform: translateY(100px);
+                    transition: transform 0.3s ease-in 0s, background-color 0.3s linear 0s;
+                }
+
+                &:hover {
+                    .content-project-badge-innercontent-label {
+                        transform: translateY(0);
+                    }
+
+                    img {
+                        transform: scale(0.90,0.90);
+                    }
+                }
+            }
+        }
+    }
+}

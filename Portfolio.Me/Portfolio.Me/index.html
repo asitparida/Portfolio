@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html ng-csp ng-app="Portfolio.UI">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="lib/hammer.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular.hammer.min.js"></script>
+    <script src="lib/angular-animate.min.js"></script>
+    <script src="lib/angular-aria.min.js"></script>
+    <script src="lib/angular-resource.min.js"></script>
+    <script src="lib/angular-material.min.js"></script>
+    <script src="lib/underscore-min.js"></script>
+    <script src="lib/tinycolor-min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="dist/css/angular-material.css" rel="stylesheet" />
+    <link href="dist/css/app.min.css" rel="stylesheet" />
+    <script src="dist/js/configs/app.js"></script>
+    <script src="dist/js/controllers/main.controller.js"></script>
+</head>
+<body class="{{main.activeColorMode.colorId}}" ng-controller="MainController as main" ng-cloak ng-class="{'colorPickerActive': main.showColorPicker}">
+    <div class="color-switcher">
+        <div class="theme-switcher accent-picker">
+            <label class="settings-label">Pick Accent</label>
+            <div class="settings-color-picker" ng-show="main.settingsPaneColorsInitalized">
+                <div class="color-originator"></div>
+                <div class="color-plate" ng-repeat="color in main.shownColorModes" ng-style="{
+                'background-color':color.code,
+                'z-index': main.shownColorModes.length - $index,
+                'transition':color.transition}" ng-attr-id="color_{{color.colorId}}"
+                     ng-click="main.choseColor(color)"></div>
+            </div>
+        </div>
+    </div>
+    <div class="header" ng-mouseleave="main.bannerleave($event)">
+        <div class="header-profile-data">
+            <div class="header-picture-container  pull-left">
+                <div class="header-picture-container-pic">
+                    <div class="header-picture-container-pic-circle">
+                        <div class="header-picture-container-pic--0" id="header-pic-0"></div>
+                        <div class="header-picture-container-pic--1" id="header-pic-1"></div>
+                        <div class="header-picture-container-pic--2" id="header-pic-2"></div>
+                        <div class="header-picture-container-pic--3" id="header-pic-3"></div>
+                        <div class="header-picture-container-pic--4" id="header-pic-4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-profile-mast pull-left">
+                <div class="header-profile-mast-name">Asit Kumar Parida</div>
+                <div class="header-profile-mast-job-title">I build awesome experiences</div>
+            </div>
+            <div class="header-profile-links-pages-list-toggle pull-right" ng-click="main.openColorPicker()"></div>
+            <div class="header-profile-links pull-right">
+                <ul class="header-profile-links-pages-list">
+                    <li class="header-profile-links-pages-list--active"><a>Home</a></li>
+                    <li><a>Portfolio</a></li>
+                    <li><a href="http://github.com/asitparida"><img src="assets/github-logo-plain.png" /></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-tagged">
+            <label class="header-tagged-awesome">Responsive, Accessible & Extensible</label>
+            <ul class="header-tagged-topskills">
+                <li>HTML5 / CSS3</li>
+                <li>Web / Native</li>
+                <li>Eye for Design</li>
+                <li>JavaScript</li>
+                <li>MVC / MVVM</li>
+            </ul>
+            <div class="header-tagged-arrow-holder" tabindex="0">
+                <div class="header-tagged-arrow-holder-arrow header-tagged-arrow-holder-arrow--bottom"></div>
+            </div>
+        </div>
+        <div class="submarine"
+             id="header"
+             hm-panmove="main.panmove($event)"
+             ng-mousemove="main.mouseMove($event)"
+             hm-recognizer-options='[{"type":"pan","threshold":5,"pointers": 0, "directions":"DIRECTION_ALL"}]'>
+            <div class="submarine-bubble"></div>
+            <div class="submarine-bubble"></div>
+            <div class="submarine-bubble"></div>
+            <div class="submarine-bubble"></div>
+            <div class="submarine-bubble"></div>
+            <div class="submarine-bubble"></div>
+            <div class="submarine-bubble"></div>
+            <div class="submarine-bubble"></div>
+            <div class="submarine-bubble"></div>
+            <div class="submarine-bubble"></div>
+            <div class="submarine-wrapper" id="pf_submarine">
+                <div class="submarine-body">
+                    <div class="submarine-body-window"></div>
+                    <div class="submarine-body-engine"></div>
+                    <div class="submarine-body-light-marker"></div>
+                    <div class="submarine-body-light"></div>
+                </div>
+                <div class="submarine-helix"></div>
+                <div class="submarine-fins">
+                    <div class="submarine-fins-fin"></div>
+                    <div class="submarine-fins-fin"></div>
+                    <div class="submarine-fins-fin"></div>
+                    <div class="submarine-fins-fin"></div>
+                </div>
+                <div class="submarine-hat">
+                    <div class="submarine-hat-leds-wrapper">
+                        <div class="submarine-hat-periscope"></div>
+                        <div class="submarine-hat-leds-wrapper-leds"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-colorslab--bottom"></div>
+    </div>
+    <div class="content">
+        <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
+            <div class="content-project-badge-innercontent">
+                <img src="project-logos/moosik_200_blank.png" style="width:130px;margin-top:80px;" />
+                <div class="content-project-badge-innercontent-label">Moosik - An offline music player</div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#f0f0f0;">
+            <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
+            <div class="content-project-badge-innercontent">
+                <img src="project-logos/itibp.png" style="width:160px;margin-top:90px;" />
+                <div class="content-project-badge-innercontent-label">Best Engineering Practices</div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
+            <div class="content-project-badge-innercontent">
+                <img src="project-logos/piemix.png" style="width:130px;margin-top:78px;" />
+                <div class="content-project-badge-innercontent-label">PieMix - SVG & angular enabled pie chart</div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#f0f0f0;">
+            <div class="content-project-badge-innercontent">
+                <img src="project-logos/vx-grid.png" style="width:100%;margin-top:-30px;" />
+                <div class="content-project-badge-innercontent-label">VxGrid - DOM virtualized angular grid plugin</div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
+            <div class="content-project-badge-innercontent">
+                <img src="project-logos/notsogrey.png" style="width:130px;margin-top:78px;" />
+                <div class="content-project-badge-innercontent-label">For people who dream colors !!!</div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#f0f0f0;">
+            <div class="content-project-badge-innercontent">
+                <img src="project-logos/richcc.png" style="width:100%;margin-top:-30px;" />
+                <div class="content-project-badge-innercontent-label">RichCC - Rich calendar events plugin</div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
+            <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
+            <div class="content-project-badge-innercontent">
+                <img src="project-logos/baat.png" style="width:130px;margin-top:135px;" />
+                <div class="content-project-badge-innercontent-label">Awesome financial management app</div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#f0f0f0;">
+            <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
+            <div class="content-project-badge-innercontent">
+                <img src="project-logos/elements.png" style="width:100px;margin-top:100px;" />
+                <div class="content-project-badge-innercontent-label">Project Elements</div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
+            <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
+            <div class="content-project-badge-innercontent">
+                <img src="project-logos/fduap.png" style="width:100px;margin-top:110px;" />
+                <div class="content-project-badge-innercontent-label">Going crazy with UWP & dashboards</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
