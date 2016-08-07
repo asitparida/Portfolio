@@ -4,6 +4,7 @@
     <title></title>
     <meta charset="utf-8" />
     <script src="lib/hammer.min.js"></script>
+    <script src="lib/jquery-2.2.4.min.js"></script>
     <script src="lib/angular.min.js"></script>
     <script src="lib/angular.hammer.min.js"></script>
     <script src="lib/angular-animate.min.js"></script>
@@ -11,10 +12,12 @@
     <script src="lib/angular-resource.min.js"></script>
     <script src="lib/angular-material.min.js"></script>
     <script src="lib/underscore-min.js"></script>
+    <script src="lib/slick.min.js"></script>
     <script src="lib/tinycolor-min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="dist/css/slick.css" rel="stylesheet" />
     <link href="dist/css/angular-material.css" rel="stylesheet" />
     <link href="dist/css/app.min.css" rel="stylesheet" />
     <script src="dist/js/configs/app.js"></script>
@@ -114,64 +117,120 @@
         <div class="header-colorslab--bottom"></div>
     </div>
     <div class="content">
-        <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
-            <div class="content-project-badge-innercontent">
-                <img src="project-logos/moosik_200_blank.png" style="width:130px;margin-top:80px;" />
-                <div class="content-project-badge-innercontent-label">Moosik - An offline music player</div>
+        <div class="content-projects">
+            <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
+                <div class="content-project-badge-innercontent">
+                    <img src="project-logos/moosik_200_blank.png" style="width:130px;margin-top:80px;" />
+                    <div class="content-project-badge-innercontent-label">Moosik - An offline music player</div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#f0f0f0;">
+                <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
+                <div class="content-project-badge-innercontent">
+                    <img src="project-logos/itibp.png" style="width:160px;margin-top:90px;" />
+                    <div class="content-project-badge-innercontent-label">Best Engineering Practices</div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
+                <div class="content-project-badge-innercontent">
+                    <img src="project-logos/piemix.png" style="width:130px;margin-top:78px;" />
+                    <div class="content-project-badge-innercontent-label">PieMix - SVG & angular enabled pie chart</div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#f0f0f0;">
+                <div class="content-project-badge-innercontent">
+                    <img src="project-logos/vx-grid.png" style="width:100%;margin-top:-30px;" />
+                    <div class="content-project-badge-innercontent-label">VxGrid - DOM virtualized angular grid plugin</div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
+                <div class="content-project-badge-innercontent">
+                    <img src="project-logos/notsogrey.png" style="width:130px;margin-top:78px;" />
+                    <div class="content-project-badge-innercontent-label">For people who dream colors !!!</div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#f0f0f0;">
+                <div class="content-project-badge-innercontent">
+                    <img src="project-logos/richcc.png" style="width:100%;margin-top:-30px;" />
+                    <div class="content-project-badge-innercontent-label">RichCC - Rich calendar events plugin</div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
+                <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
+                <div class="content-project-badge-innercontent">
+                    <img src="project-logos/baat.png" style="width:130px;margin-top:135px;" />
+                    <div class="content-project-badge-innercontent-label">Awesome financial management app</div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#f0f0f0;">
+                <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
+                <div class="content-project-badge-innercontent">
+                    <img src="project-logos/elements.png" style="width:100px;margin-top:100px;" />
+                    <div class="content-project-badge-innercontent-label">Project Elements</div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
+                <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
+                <div class="content-project-badge-innercontent">
+                    <img src="project-logos/fduap.png" style="width:100px;margin-top:110px;" />
+                    <div class="content-project-badge-innercontent-label">Going crazy with UWP & dashboards</div>
+                </div>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#f0f0f0;">
-            <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
-            <div class="content-project-badge-innercontent">
-                <img src="project-logos/itibp.png" style="width:160px;margin-top:90px;" />
-                <div class="content-project-badge-innercontent-label">Best Engineering Practices</div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
-            <div class="content-project-badge-innercontent">
-                <img src="project-logos/piemix.png" style="width:130px;margin-top:78px;" />
-                <div class="content-project-badge-innercontent-label">PieMix - SVG & angular enabled pie chart</div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#f0f0f0;">
-            <div class="content-project-badge-innercontent">
-                <img src="project-logos/vx-grid.png" style="width:100%;margin-top:-30px;" />
-                <div class="content-project-badge-innercontent-label">VxGrid - DOM virtualized angular grid plugin</div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
-            <div class="content-project-badge-innercontent">
-                <img src="project-logos/notsogrey.png" style="width:130px;margin-top:78px;" />
-                <div class="content-project-badge-innercontent-label">For people who dream colors !!!</div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#f0f0f0;">
-            <div class="content-project-badge-innercontent">
-                <img src="project-logos/richcc.png" style="width:100%;margin-top:-30px;" />
-                <div class="content-project-badge-innercontent-label">RichCC - Rich calendar events plugin</div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
-            <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
-            <div class="content-project-badge-innercontent">
-                <img src="project-logos/baat.png" style="width:130px;margin-top:135px;" />
-                <div class="content-project-badge-innercontent-label">Awesome financial management app</div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#f0f0f0;">
-            <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
-            <div class="content-project-badge-innercontent">
-                <img src="project-logos/elements.png" style="width:100px;margin-top:100px;" />
-                <div class="content-project-badge-innercontent-label">Project Elements</div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
-            <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
-            <div class="content-project-badge-innercontent">
-                <img src="project-logos/fduap.png" style="width:100px;margin-top:110px;" />
-                <div class="content-project-badge-innercontent-label">Going crazy with UWP & dashboards</div>
-            </div>
-        </div>
+        <label class="content-skills-label">Frameworks and Tools</label>
+        <ul class="content-skills">
+            <li class="content-skills-badge">
+                <img src="profile-skills/html5.png" />
+            </li>
+            <li class="content-skills-badge">
+                <img src="profile-skills/css3.png" />
+            </li>
+            <li class="content-skills-badge">
+                <img src="profile-skills/bootstrap.png" />
+            </li>
+            <li class="content-skills-badge">
+                <img src="profile-skills/scss.png" />
+            </li>
+            <li class="content-skills-badge">
+                <img src="profile-skills/material.png" />
+            </li>
+            <li class="content-skills-badge">
+                <img src="profile-skills/js.png" />
+            </li>
+            <li class="content-skills-badge">
+                <img src="profile-skills/ts.png" />
+            </li>
+            <li class="content-skills-badge">
+                <img src="profile-skills/ang.png" />
+            </li>
+            <li class="content-skills-badge">
+                <img src="profile-skills/ko.png" />
+            </li>
+            <li class="content-skills-badge">
+                <img src="profile-skills/electron.png" />
+            </li>
+            <li class="content-skills-badge">
+                <img src="profile-skills/visualstudio.png" />
+            </li>            
+            <li class="content-skills-badge">
+                <img src="profile-skills/git.png" />
+            </li>
+            <li class="content-skills-badge">
+                <img src="profile-skills/gulp.png" />
+            </li>
+            <li class="content-skills-badge">
+                <img src="profile-skills/npm.png" />
+            </li>
+            <li class="content-skills-badge">
+                <img src="profile-skills/bower.png" />
+            </li>
+            <li class="content-skills-badge">
+                <img src="profile-skills/sql.png" />
+            </li>
+            <li class="content-skills-badge">
+                <img src="profile-skills/aspnetmvc.png" />
+            </li>
+        </ul>
     </div>
 </body>
 </html>

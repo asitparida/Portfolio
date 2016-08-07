@@ -139,8 +139,7 @@ html {
             }
         }
     }
-
-    .content {
+    /*.content {
         &-project-badge {
             &-innercontent {
                 &-label {
@@ -148,7 +147,7 @@ html {
                 }
             }
         }
-    }
+    }*/
 }
 
 body {
@@ -249,7 +248,7 @@ body {
             &-close {
                 width: 24px;
                 height: 24px;
-                background-image: url(../../project-logos/app-close.png);
+                background-image: url(../../assets/app-close.png);
                 background-size: contain;
                 position: absolute;
                 top: 30px;
@@ -365,7 +364,7 @@ body {
                     height: 72px;
                     width: 72px;
                     background-size: contain;
-                    background-image: url(../../assets/my-pic-0.jpg);
+                    background-image: url(../../profile-pics/my-pic-0.jpg);
                 }
 
                 &--1 {
@@ -374,7 +373,7 @@ body {
                     height: 72px;
                     width: 72px;
                     background-size: contain;
-                    background-image: url(../../assets/my-pic-1.jpg);
+                    background-image: url(../../profile-pics/my-pic-1.jpg);
                 }
 
                 &--2 {
@@ -383,7 +382,7 @@ body {
                     height: 72px;
                     width: 72px;
                     background-size: contain;
-                    background-image: url(../../assets/my-pic-2.jpg);
+                    background-image: url(../../profile-pics/my-pic-2.jpg);
                 }
 
                 &--3 {
@@ -392,7 +391,7 @@ body {
                     height: 72px;
                     width: 72px;
                     background-size: contain;
-                    background-image: url(../../assets/my-pic-3.jpg);
+                    background-image: url(../../profile-pics/my-pic-3.jpg);
                 }
 
                 &--4 {
@@ -401,7 +400,7 @@ body {
                     height: 72px;
                     width: 72px;
                     background-size: contain;
-                    background-image: url(../../assets/my-pic-4.jpg);
+                    background-image: url(../../profile-pics/my-pic-4.jpg);
                 }
             }
         }
@@ -482,7 +481,6 @@ body {
             position: absolute;
             top: 420px;
             z-index: 2;
-            cursor: none;
 
             &-awesome {
                 font-size: 3em;
@@ -559,6 +557,11 @@ body {
         height: auto;
         width: 100%;
         background: #f0f0f0;
+        padding-bottom: 30px;
+
+        &-projects {
+            width: 100%;
+        }
 
         &-project-badge {
             height: 300px;
@@ -568,7 +571,7 @@ body {
 
             &-locked {
                 content: '';
-                background-image: url(../../project-logos/project-lock.png);
+                background-image: url(../../assets/project-lock.png);
                 width: 24px;
                 height: 24px;
                 background-size: contain;
@@ -590,7 +593,7 @@ body {
                     display: block;
                     margin: 0 auto;
                     transform: scale(1, 1);
-                    transition: transform 0.3s ease-in 0s;
+                    transition: transform 0.5s ease-in 0s;
                 }
 
                 &-label {
@@ -601,10 +604,10 @@ body {
                     position: absolute;
                     width: 100%;
                     bottom: 0;
-                    background: #161616;
+                    background: #565656;
                     color: #fff;
                     transform: translateY(100px);
-                    transition: transform 0.3s ease-in 0s, background-color 0.3s linear 0s;
+                    transition: transform 0.5s ease-in 0s, background-color 0.3s linear 0s;
                 }
 
                 &:hover {
@@ -615,6 +618,30 @@ body {
                     img {
                         transform: scale(0.90,0.90);
                     }
+                }
+            }
+        }
+
+        &-skills-label {
+            margin: 0;
+            font-size: large;
+            line-height: 60px;
+            font-weight: 500;
+            padding: 30px;
+        }
+
+        &-skills {
+            width: 100%;
+            padding: 0 30px;
+            margin: 0;
+
+            &-badge {
+                display: inline-block;
+                margin-right: 90px;
+                margin-bottom: 90px;
+
+                img {
+                    height: 100px;
                 }
             }
         }

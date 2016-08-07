@@ -437,6 +437,8 @@
     padding: 30px 50px 30px 150px;
     margin: 0 auto 0 auto;
     animation: submarine-diving 3s ease-in-out infinite, submarine-diving-rotate 3s ease-in-out infinite; }
+    .submarine-wrapper.transition-left {
+      transition: left 0.3s ease-in-out 0s; }
   .submarine-body {
     width: 150px;
     height: 80px;

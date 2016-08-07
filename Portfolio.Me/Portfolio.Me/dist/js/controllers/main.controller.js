@@ -36,7 +36,11 @@
         var _top = 0.33 * (self.headerHeight - self.submarineHeight);
         var _left = 0.5 * (self.headerWidth - self.submarineWidth);
         //self.submarine.style.top = _top + 'px';
+        self.submarine.classList.add('transition-left');
         self.submarine.style.left = _left + 'px';
+        setTimeout(function() {
+            self.submarine.classList.remove('transition-left');
+        });
     }
 
     self.mouseMove = function (e) {
