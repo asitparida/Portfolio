@@ -120,10 +120,12 @@
         }
     }
 
-    self.closeSettings = function () {
-        self.settingsPaneColorsInitalized = false;
+    self.closeColorPicker = function () {
         self.showColorPicker = false;
-        self.shownColorModes = [];
+        $timeout(function () {
+            self.settingsPaneColorsInitalized = false;
+            self.shownColorModes = [];
+        }, 300);
     }
 
     self.choseColor = function (color) {

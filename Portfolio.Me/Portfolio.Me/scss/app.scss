@@ -246,6 +246,21 @@ body {
             overflow: hidden;
             padding: 30px;
 
+            &-close {
+                width: 24px;
+                height: 24px;
+                background-image: url(../../project-logos/app-close.png);
+                background-size: contain;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                cursor: pointer;
+
+                &:active {
+                    transform: scale(0.95,0.95);
+                }
+            }
+
             label {
                 font-size: large;
                 margin: 0;

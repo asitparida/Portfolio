@@ -24,6 +24,7 @@
     <div class="color-switcher">
         <div class="theme-switcher accent-picker">
             <label class="settings-label">Pick Accent</label>
+            <div class="accent-picker-close" ng-click="main.closeColorPicker()"></div>
             <div class="settings-color-picker" ng-show="main.settingsPaneColorsInitalized">
                 <div class="color-originator"></div>
                 <div class="color-plate" ng-repeat="color in main.shownColorModes" ng-style="{
