@@ -1923,7 +1923,7 @@ body {
     body .header-tagged {
       width: 100%;
       position: absolute;
-      top: 420px;
+      bottom: 45px;
       z-index: 2; }
       body .header-tagged-awesome {
         font-size: 3em;
@@ -1982,7 +1982,7 @@ body {
   body .content {
     height: auto;
     width: 100%;
-    background: #f0f0f0;
+    background: #fff;
     padding-bottom: 30px; }
     body .content-projects {
       width: 100%; }
@@ -2034,14 +2034,61 @@ body {
       font-size: large;
       line-height: 60px;
       font-weight: 500;
-      padding: 30px; }
+      padding: 15px 30px; }
+    body .content-skills-holder {
+      width: 100%;
+      height: 160px;
+      position: relative;
+      overflow: hidden; }
+      body .content-skills-holder-arrow-holder {
+        position: absolute;
+        top: 50px;
+        height: 60px;
+        background: #F0F0F0;
+        width: 30px;
+        cursor: pointer;
+        outline: none; }
+        body .content-skills-holder-arrow-holder.disabled .content-skills-holder-arrow-holder-arrow {
+          opacity: 0.65; }
+        body .content-skills-holder-arrow-holder-arrow {
+          position: absolute;
+          overflow: hidden;
+          display: inline-block;
+          font-size: 12px;
+          /*set the size for arrow*/
+          width: 1em;
+          height: 1em;
+          margin-top: 11px; }
+          body .content-skills-holder-arrow-holder-arrow--mover {
+            border-bottom: 2px solid #808080;
+            border-left: 2px solid #808080;
+            transform: rotate(-45deg) skew(0deg);
+            top: 12px; }
+        body .content-skills-holder-arrow-holder.left {
+          left: 0; }
+          body .content-skills-holder-arrow-holder.left .content-skills-holder-arrow-holder-arrow--mover {
+            transform: rotate(46deg) skew(0deg);
+            left: 10px; }
+        body .content-skills-holder-arrow-holder.right {
+          right: 0; }
+          body .content-skills-holder-arrow-holder.right .content-skills-holder-arrow-holder-arrow--mover {
+            transform: rotate(-135deg) skew(0deg);
+            right: 10px; }
     body .content-skills {
       width: 100%;
-      padding: 0 30px;
-      margin: 0; }
+      padding: 0;
+      margin: 0;
+      height: 180px;
+      overflow-y: hidden;
+      overflow-x: auto;
+      white-space: nowrap; }
+      body .content-skills-wrapper {
+        width: calc(100% - 90px);
+        margin-left: 45px;
+        height: 100%;
+        overflow: hidden; }
       body .content-skills-badge {
         display: inline-block;
-        margin-right: 90px;
-        margin-bottom: 90px; }
+        margin: 30px 45px 0 45px; }
         body .content-skills-badge img {
           height: 100px; }

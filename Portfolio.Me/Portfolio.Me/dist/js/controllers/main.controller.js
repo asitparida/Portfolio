@@ -35,12 +35,12 @@
         self.submarineWidth = self.submarine.getBoundingClientRect().width;
         var _top = 0.33 * (self.headerHeight - self.submarineHeight);
         var _left = 0.5 * (self.headerWidth - self.submarineWidth);
-        //self.submarine.style.top = _top + 'px';
+        self.submarine.style.top = _top + 'px';
         self.submarine.classList.add('transition-left');
         self.submarine.style.left = _left + 'px';
         setTimeout(function() {
             self.submarine.classList.remove('transition-left');
-        });
+        }, 300);
     }
 
     self.mouseMove = function (e) {
@@ -54,7 +54,7 @@
         _top = _top <= -50 ? -50 : _top;
         _left = _left <= 0 ? 0 : _left;
         _left = _left >= self.headerWidth - 200 ? self.headerWidth - 200 : _left;
-        //self.submarine.style.top = _top + 'px';
+        self.submarine.style.top = _top + 'px';
         self.submarine.style.left = _left + 'px';
     }
 
@@ -134,6 +134,16 @@
 
     self.choseColor = function (color) {
         self.activeColorMode = color;
+    }
+
+    self.scrollLeft = function() {
+        var _scrollElm = document.getElementById('contentSkillsList');
+        $(_scrollElm).animate({ scrollLeft: _scrollElm.scrollLeft - (window.innerWidth / 3) }, 300);
+    }
+
+    self.scrollRight = function() {
+        var _scrollElm = document.getElementById('contentSkillsList');
+        $(_scrollElm).animate({ scrollLeft: _scrollElm.scrollLeft + (window.innerWidth / 3) }, 300);
     }
 
     setTimeout(self.adjustPosition, 100);
