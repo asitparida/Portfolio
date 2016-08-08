@@ -48,8 +48,8 @@
         self.headerWidth = self.header.getBoundingClientRect().width;
         self.submarineHeight = self.submarine.getBoundingClientRect().height;
         self.submarineWidth = self.submarine.getBoundingClientRect().width;
-        var _top = e.pageY - (self.submarineHeight);
-        var _left = e.pageX;
+        var _top = e.pageY - (self.submarineHeight) + 45;
+        var _left = e.pageX - 75;
         _top = _top >= self.headerHeight - 200 ? self.headerHeight - 200 : _top;
         _top = _top <= -50 ? -50 : _top;
         _left = _left <= 0 ? 0 : _left;
