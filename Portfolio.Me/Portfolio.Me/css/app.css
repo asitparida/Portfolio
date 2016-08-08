@@ -1772,6 +1772,8 @@ body {
             animation: color_track_pl_enter 0.3s linear; }
   body .header {
     height: 85vh;
+    min-height: 400px;
+    max-height: 100vh;
     width: 100%;
     position: relative; }
     body .header-xs {
@@ -2057,7 +2059,7 @@ body {
   body .content {
     height: auto;
     width: 100%;
-    background: #fff;
+    background: #f6f6f6;
     padding-bottom: 30px; }
     body .content-projects {
       width: 100%; }
@@ -2092,29 +2094,33 @@ body {
             width: 130px;
             margin-top: 80px; }
           body .content-project-badge-innercontent img.itibp {
-            width: 160px;
+            width: 150px;
             margin-top: 90px; }
           body .content-project-badge-innercontent img.piemix {
             width: 130px;
             margin-top: 78px; }
           body .content-project-badge-innercontent img.vxgrid {
-            height: 100%;
-            margin-top: 0; }
+            width: 100%;
+            margin-top: -15px; }
           body .content-project-badge-innercontent img.notsogrey {
             width: 130px;
             margin-top: 78px; }
           body .content-project-badge-innercontent img.richcc {
-            height: 100%;
+            width: 100%;
             margin-top: 0; }
+            @media only screen and (max-width: 768px) {
+              body .content-project-badge-innercontent img.richcc {
+                height: 100%;
+                width: auto; } }
           body .content-project-badge-innercontent img.baat {
-            width: 130px;
-            margin-top: 135px; }
+            width: 100%;
+            margin-top: 60px; }
           body .content-project-badge-innercontent img.elements {
             width: 100px;
             margin-top: 100px; }
           body .content-project-badge-innercontent img.fduap {
-            width: 100px;
-            margin-top: 110px; }
+            width: 100%;
+            margin-top: 60px; }
         body .content-project-badge-innercontent-label {
           height: 48px;
           line-height: 48px;
@@ -2123,13 +2129,13 @@ body {
           position: absolute;
           width: 100%;
           bottom: 0;
-          background: #565656;
+          background: #303030;
           color: #fff;
           transform: translateY(100px);
           transition: transform 0.5s ease-in 0s, background-color 0.3s linear 0s; }
         body .content-project-badge-innercontent:hover .content-project-badge-innercontent-label {
           transform: translateY(0); }
-        body .content-project-badge-innercontent:hover img {
+        body .content-project-badge-innercontent:hover img:not(.tranformLocked) {
           transform: scale(0.9, 0.9); }
     body .content-skills-label {
       margin: 0;
@@ -2213,7 +2219,7 @@ body {
             body .content-skills-badge img {
               height: 70px; } }
   body footer {
-    background-color: #f0f0f0; }
+    background-color: #fff; }
     body footer .footer {
       height: 48px;
       margin: 0;
