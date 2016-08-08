@@ -350,6 +350,9 @@
   height: calc(100vh - 132px);
   cursor: none;
   overflow: hidden; }
+  @media only screen and (max-width: 768px) {
+    .submarine {
+      height: calc(100vh - 193px); } }
   .submarine-bubble {
     width: 30px;
     height: 30px;

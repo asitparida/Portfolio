@@ -11,6 +11,10 @@
     cursor: none;
     overflow: hidden;
 
+    @include respond-to-mobile {
+        height: calc(100vh - 193px);
+    }
+
     &-bubble {
         width: 30px;
         height: 30px;
