@@ -357,1383 +357,1247 @@ body {
   background: #f0f0f0;
   transition: all 0.3s linear 0s;
   top: 0px; }
-  body.turquoise {
-    /*.content {
-        &-project-badge {
-            &-innercontent {
-                &-label {
-                    background: $defcolor;
-                }
-            }
-        }
-    }*/ }
-    body.turquoise .header {
+  body.turquoise .header {
+    background-color: #1abc9c;
+    transition: background-color 0.3s linear 0s; }
+    body.turquoise .header-colorslab--top {
+      background-color: #55e7ca;
+      transition: background-color 0.3s linear 0s; }
+    body.turquoise .header-colorslab--middle {
+      background-color: #28e1bd;
+      transition: background-color 0.3s linear 0s; }
+    body.turquoise .header-colorslab--bottom {
       background-color: #1abc9c;
       transition: background-color 0.3s linear 0s; }
-      body.turquoise .header-colorslab--top {
-        background-color: #55e7ca;
+    body.turquoise .header-xs-profile-links-pages-list-toggle, body.turquoise .header-profile-links-pages-list-toggle {
+      background: linear-gradient(to right, #148f77 0%, #1abc9c 100%);
+      border: 3px solid #8fefdc;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.turquoise .header-picture-container-pic {
+      border-color: #f0f0f0;
+      background-color: #f0f0f0;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.turquoise .header .submarine-bubble {
+      background: #8fefdc;
+      transition: background-color 0.3s linear 0s; }
+    body.turquoise .header .submarine-body {
+      border-color: #55e7ca;
+      background: #55e7ca;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+      body.turquoise .header .submarine-body-light-marker {
+        background-color: #117964;
         transition: background-color 0.3s linear 0s; }
-      body.turquoise .header-colorslab--middle {
-        background-color: #28e1bd;
-        transition: background-color 0.3s linear 0s; }
-      body.turquoise .header-colorslab--bottom {
-        background-color: #1abc9c;
-        transition: background-color 0.3s linear 0s; }
-      body.turquoise .header-profile-links-pages-list-toggle {
-        background: linear-gradient(to right, #148f77 0%, #1abc9c 100%);
-        border: 3px solid #8fefdc;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.turquoise .header-picture-container-pic {
-        border-color: #f0f0f0;
-        background-color: #f0f0f0;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.turquoise .header .submarine-bubble {
-        background: #8fefdc;
-        transition: background-color 0.3s linear 0s; }
-      body.turquoise .header .submarine-body {
-        border-color: #55e7ca;
-        background: #55e7ca;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-        body.turquoise .header .submarine-body-light-marker {
-          background-color: #117964;
-          transition: background-color 0.3s linear 0s; }
-        body.turquoise .header .submarine-body-light {
-          border-color: transparent transparent #1dd2af transparent;
-          transition: border-color 0.3s linear 0s; }
-        body.turquoise .header .submarine-body-window {
-          background: #55e7ca;
-          border-color: #1abc9c;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.turquoise .header .submarine-body-window:after {
-            border-top-color: #1abc9c;
-            transition: border-top-color 0.3s linear 0s; }
-        body.turquoise .header .submarine-body-engine {
-          background-color: #1abc9c;
-          border-color: #1abc9c;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.turquoise .header .submarine-body-engine:after, body.turquoise .header .submarine-body-engine:before {
-            background-color: #8fefdc;
-            transition: background-color 0.3s linear 0s; }
-      body.turquoise .header .submarine-helix {
-        border: 2px solid #55e7ca;
+      body.turquoise .header .submarine-body-light {
+        border-color: transparent transparent #1dd2af transparent;
         transition: border-color 0.3s linear 0s; }
-      body.turquoise .header .submarine-fins-fin {
+      body.turquoise .header .submarine-body-window {
         background: #55e7ca;
-        transition: background-color 0.3s linear 0s; }
-      body.turquoise .header .submarine-hat {
+        border-color: #1abc9c;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.turquoise .header .submarine-body-window:after {
+          border-top-color: #1abc9c;
+          transition: border-top-color 0.3s linear 0s; }
+      body.turquoise .header .submarine-body-engine {
+        background-color: #1abc9c;
+        border-color: #1abc9c;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.turquoise .header .submarine-body-engine:after, body.turquoise .header .submarine-body-engine:before {
+          background-color: #8fefdc;
+          transition: background-color 0.3s linear 0s; }
+    body.turquoise .header .submarine-helix {
+      border: 2px solid #55e7ca;
+      transition: border-color 0.3s linear 0s; }
+    body.turquoise .header .submarine-fins-fin {
+      background: #55e7ca;
+      transition: background-color 0.3s linear 0s; }
+    body.turquoise .header .submarine-hat {
+      background-color: #55e7ca;
+      transition: background-color 0.3s linear 0s; }
+      body.turquoise .header .submarine-hat-periscope {
         background-color: #55e7ca;
         transition: background-color 0.3s linear 0s; }
-        body.turquoise .header .submarine-hat-periscope {
+        body.turquoise .header .submarine-hat-periscope:after, body.turquoise .header .submarine-hat-periscope:before {
           background-color: #55e7ca;
           transition: background-color 0.3s linear 0s; }
-          body.turquoise .header .submarine-hat-periscope:after, body.turquoise .header .submarine-hat-periscope:before {
-            background-color: #55e7ca;
-            transition: background-color 0.3s linear 0s; }
-        body.turquoise .header .submarine-hat-leds-wrapper {
-          background-color: #1abc9c;
+      body.turquoise .header .submarine-hat-leds-wrapper {
+        background-color: #1abc9c;
+        transition: background-color 0.3s linear 0s; }
+        body.turquoise .header .submarine-hat-leds-wrapper-leds {
+          background-color: #55e7ca;
           transition: background-color 0.3s linear 0s; }
-          body.turquoise .header .submarine-hat-leds-wrapper-leds {
+          body.turquoise .header .submarine-hat-leds-wrapper-leds:after, body.turquoise .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #55e7ca;
             transition: background-color 0.3s linear 0s; }
-            body.turquoise .header .submarine-hat-leds-wrapper-leds:after, body.turquoise .header .submarine-hat-leds-wrapper-leds:before {
-              background-color: #55e7ca;
-              transition: background-color 0.3s linear 0s; }
-  body.emerland {
-    /*.content {
-        &-project-badge {
-            &-innercontent {
-                &-label {
-                    background: $defcolor;
-                }
-            }
-        }
-    }*/ }
-    body.emerland .header {
+  body.turquoise footer .footer li svg g g {
+    fill: #1abc9c; }
+  body.emerland .header {
+    background-color: #2ecc71;
+    transition: background-color 0.3s linear 0s; }
+    body.emerland .header-colorslab--top {
+      background-color: #7ee2a8;
+      transition: background-color 0.3s linear 0s; }
+    body.emerland .header-colorslab--middle {
+      background-color: #54d98c;
+      transition: background-color 0.3s linear 0s; }
+    body.emerland .header-colorslab--bottom {
       background-color: #2ecc71;
       transition: background-color 0.3s linear 0s; }
-      body.emerland .header-colorslab--top {
-        background-color: #7ee2a8;
+    body.emerland .header-xs-profile-links-pages-list-toggle, body.emerland .header-profile-links-pages-list-toggle {
+      background: linear-gradient(to right, #25a25a 0%, #2ecc71 100%);
+      border: 3px solid #b4eecd;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.emerland .header-picture-container-pic {
+      border-color: #f0f0f0;
+      background-color: #f0f0f0;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.emerland .header .submarine-bubble {
+      background: #b4eecd;
+      transition: background-color 0.3s linear 0s; }
+    body.emerland .header .submarine-body {
+      border-color: #7ee2a8;
+      background: #7ee2a8;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+      body.emerland .header .submarine-body-light-marker {
+        background-color: #208e4e;
         transition: background-color 0.3s linear 0s; }
-      body.emerland .header-colorslab--middle {
-        background-color: #54d98c;
-        transition: background-color 0.3s linear 0s; }
-      body.emerland .header-colorslab--bottom {
-        background-color: #2ecc71;
-        transition: background-color 0.3s linear 0s; }
-      body.emerland .header-profile-links-pages-list-toggle {
-        background: linear-gradient(to right, #25a25a 0%, #2ecc71 100%);
-        border: 3px solid #b4eecd;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.emerland .header-picture-container-pic {
-        border-color: #f0f0f0;
-        background-color: #f0f0f0;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.emerland .header .submarine-bubble {
-        background: #b4eecd;
-        transition: background-color 0.3s linear 0s; }
-      body.emerland .header .submarine-body {
-        border-color: #7ee2a8;
-        background: #7ee2a8;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-        body.emerland .header .submarine-body-light-marker {
-          background-color: #208e4e;
-          transition: background-color 0.3s linear 0s; }
-        body.emerland .header .submarine-body-light {
-          border-color: transparent transparent #40d47e transparent;
-          transition: border-color 0.3s linear 0s; }
-        body.emerland .header .submarine-body-window {
-          background: #7ee2a8;
-          border-color: #2ecc71;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.emerland .header .submarine-body-window:after {
-            border-top-color: #2ecc71;
-            transition: border-top-color 0.3s linear 0s; }
-        body.emerland .header .submarine-body-engine {
-          background-color: #2ecc71;
-          border-color: #2ecc71;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.emerland .header .submarine-body-engine:after, body.emerland .header .submarine-body-engine:before {
-            background-color: #b4eecd;
-            transition: background-color 0.3s linear 0s; }
-      body.emerland .header .submarine-helix {
-        border: 2px solid #7ee2a8;
+      body.emerland .header .submarine-body-light {
+        border-color: transparent transparent #40d47e transparent;
         transition: border-color 0.3s linear 0s; }
-      body.emerland .header .submarine-fins-fin {
+      body.emerland .header .submarine-body-window {
         background: #7ee2a8;
-        transition: background-color 0.3s linear 0s; }
-      body.emerland .header .submarine-hat {
+        border-color: #2ecc71;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.emerland .header .submarine-body-window:after {
+          border-top-color: #2ecc71;
+          transition: border-top-color 0.3s linear 0s; }
+      body.emerland .header .submarine-body-engine {
+        background-color: #2ecc71;
+        border-color: #2ecc71;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.emerland .header .submarine-body-engine:after, body.emerland .header .submarine-body-engine:before {
+          background-color: #b4eecd;
+          transition: background-color 0.3s linear 0s; }
+    body.emerland .header .submarine-helix {
+      border: 2px solid #7ee2a8;
+      transition: border-color 0.3s linear 0s; }
+    body.emerland .header .submarine-fins-fin {
+      background: #7ee2a8;
+      transition: background-color 0.3s linear 0s; }
+    body.emerland .header .submarine-hat {
+      background-color: #7ee2a8;
+      transition: background-color 0.3s linear 0s; }
+      body.emerland .header .submarine-hat-periscope {
         background-color: #7ee2a8;
         transition: background-color 0.3s linear 0s; }
-        body.emerland .header .submarine-hat-periscope {
+        body.emerland .header .submarine-hat-periscope:after, body.emerland .header .submarine-hat-periscope:before {
           background-color: #7ee2a8;
           transition: background-color 0.3s linear 0s; }
-          body.emerland .header .submarine-hat-periscope:after, body.emerland .header .submarine-hat-periscope:before {
-            background-color: #7ee2a8;
-            transition: background-color 0.3s linear 0s; }
-        body.emerland .header .submarine-hat-leds-wrapper {
-          background-color: #2ecc71;
+      body.emerland .header .submarine-hat-leds-wrapper {
+        background-color: #2ecc71;
+        transition: background-color 0.3s linear 0s; }
+        body.emerland .header .submarine-hat-leds-wrapper-leds {
+          background-color: #7ee2a8;
           transition: background-color 0.3s linear 0s; }
-          body.emerland .header .submarine-hat-leds-wrapper-leds {
+          body.emerland .header .submarine-hat-leds-wrapper-leds:after, body.emerland .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #7ee2a8;
             transition: background-color 0.3s linear 0s; }
-            body.emerland .header .submarine-hat-leds-wrapper-leds:after, body.emerland .header .submarine-hat-leds-wrapper-leds:before {
-              background-color: #7ee2a8;
-              transition: background-color 0.3s linear 0s; }
-  body.peterRiver {
-    /*.content {
-        &-project-badge {
-            &-innercontent {
-                &-label {
-                    background: $defcolor;
-                }
-            }
-        }
-    }*/ }
-    body.peterRiver .header {
+  body.emerland footer .footer li svg g g {
+    fill: #2ecc71; }
+  body.peterRiver .header {
+    background-color: #3498db;
+    transition: background-color 0.3s linear 0s; }
+    body.peterRiver .header-colorslab--top {
+      background-color: #8bc4ea;
+      transition: background-color 0.3s linear 0s; }
+    body.peterRiver .header-colorslab--middle {
+      background-color: #5faee3;
+      transition: background-color 0.3s linear 0s; }
+    body.peterRiver .header-colorslab--bottom {
       background-color: #3498db;
       transition: background-color 0.3s linear 0s; }
-      body.peterRiver .header-colorslab--top {
-        background-color: #8bc4ea;
+    body.peterRiver .header-xs-profile-links-pages-list-toggle, body.peterRiver .header-profile-links-pages-list-toggle {
+      background: linear-gradient(to right, #217dbb 0%, #3498db 100%);
+      border: 3px solid #c3e1f4;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.peterRiver .header-picture-container-pic {
+      border-color: #f0f0f0;
+      background-color: #f0f0f0;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.peterRiver .header .submarine-bubble {
+      background: #c3e1f4;
+      transition: background-color 0.3s linear 0s; }
+    body.peterRiver .header .submarine-body {
+      border-color: #8bc4ea;
+      background: #8bc4ea;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+      body.peterRiver .header .submarine-body-light-marker {
+        background-color: #1d6fa5;
         transition: background-color 0.3s linear 0s; }
-      body.peterRiver .header-colorslab--middle {
-        background-color: #5faee3;
-        transition: background-color 0.3s linear 0s; }
-      body.peterRiver .header-colorslab--bottom {
-        background-color: #3498db;
-        transition: background-color 0.3s linear 0s; }
-      body.peterRiver .header-profile-links-pages-list-toggle {
-        background: linear-gradient(to right, #217dbb 0%, #3498db 100%);
-        border: 3px solid #c3e1f4;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.peterRiver .header-picture-container-pic {
-        border-color: #f0f0f0;
-        background-color: #f0f0f0;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.peterRiver .header .submarine-bubble {
-        background: #c3e1f4;
-        transition: background-color 0.3s linear 0s; }
-      body.peterRiver .header .submarine-body {
-        border-color: #8bc4ea;
-        background: #8bc4ea;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-        body.peterRiver .header .submarine-body-light-marker {
-          background-color: #1d6fa5;
-          transition: background-color 0.3s linear 0s; }
-        body.peterRiver .header .submarine-body-light {
-          border-color: transparent transparent #4aa3df transparent;
-          transition: border-color 0.3s linear 0s; }
-        body.peterRiver .header .submarine-body-window {
-          background: #8bc4ea;
-          border-color: #3498db;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.peterRiver .header .submarine-body-window:after {
-            border-top-color: #3498db;
-            transition: border-top-color 0.3s linear 0s; }
-        body.peterRiver .header .submarine-body-engine {
-          background-color: #3498db;
-          border-color: #3498db;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.peterRiver .header .submarine-body-engine:after, body.peterRiver .header .submarine-body-engine:before {
-            background-color: #c3e1f4;
-            transition: background-color 0.3s linear 0s; }
-      body.peterRiver .header .submarine-helix {
-        border: 2px solid #8bc4ea;
+      body.peterRiver .header .submarine-body-light {
+        border-color: transparent transparent #4aa3df transparent;
         transition: border-color 0.3s linear 0s; }
-      body.peterRiver .header .submarine-fins-fin {
+      body.peterRiver .header .submarine-body-window {
         background: #8bc4ea;
-        transition: background-color 0.3s linear 0s; }
-      body.peterRiver .header .submarine-hat {
+        border-color: #3498db;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.peterRiver .header .submarine-body-window:after {
+          border-top-color: #3498db;
+          transition: border-top-color 0.3s linear 0s; }
+      body.peterRiver .header .submarine-body-engine {
+        background-color: #3498db;
+        border-color: #3498db;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.peterRiver .header .submarine-body-engine:after, body.peterRiver .header .submarine-body-engine:before {
+          background-color: #c3e1f4;
+          transition: background-color 0.3s linear 0s; }
+    body.peterRiver .header .submarine-helix {
+      border: 2px solid #8bc4ea;
+      transition: border-color 0.3s linear 0s; }
+    body.peterRiver .header .submarine-fins-fin {
+      background: #8bc4ea;
+      transition: background-color 0.3s linear 0s; }
+    body.peterRiver .header .submarine-hat {
+      background-color: #8bc4ea;
+      transition: background-color 0.3s linear 0s; }
+      body.peterRiver .header .submarine-hat-periscope {
         background-color: #8bc4ea;
         transition: background-color 0.3s linear 0s; }
-        body.peterRiver .header .submarine-hat-periscope {
+        body.peterRiver .header .submarine-hat-periscope:after, body.peterRiver .header .submarine-hat-periscope:before {
           background-color: #8bc4ea;
           transition: background-color 0.3s linear 0s; }
-          body.peterRiver .header .submarine-hat-periscope:after, body.peterRiver .header .submarine-hat-periscope:before {
-            background-color: #8bc4ea;
-            transition: background-color 0.3s linear 0s; }
-        body.peterRiver .header .submarine-hat-leds-wrapper {
-          background-color: #3498db;
+      body.peterRiver .header .submarine-hat-leds-wrapper {
+        background-color: #3498db;
+        transition: background-color 0.3s linear 0s; }
+        body.peterRiver .header .submarine-hat-leds-wrapper-leds {
+          background-color: #8bc4ea;
           transition: background-color 0.3s linear 0s; }
-          body.peterRiver .header .submarine-hat-leds-wrapper-leds {
+          body.peterRiver .header .submarine-hat-leds-wrapper-leds:after, body.peterRiver .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #8bc4ea;
             transition: background-color 0.3s linear 0s; }
-            body.peterRiver .header .submarine-hat-leds-wrapper-leds:after, body.peterRiver .header .submarine-hat-leds-wrapper-leds:before {
-              background-color: #8bc4ea;
-              transition: background-color 0.3s linear 0s; }
-  body.amethyst {
-    /*.content {
-        &-project-badge {
-            &-innercontent {
-                &-label {
-                    background: $defcolor;
-                }
-            }
-        }
-    }*/ }
-    body.amethyst .header {
+  body.peterRiver footer .footer li svg g g {
+    fill: #3498db; }
+  body.amethyst .header {
+    background-color: #9b59b6;
+    transition: background-color 0.3s linear 0s; }
+    body.amethyst .header-colorslab--top {
+      background-color: #c6a0d5;
+      transition: background-color 0.3s linear 0s; }
+    body.amethyst .header-colorslab--middle {
+      background-color: #b07cc6;
+      transition: background-color 0.3s linear 0s; }
+    body.amethyst .header-colorslab--bottom {
       background-color: #9b59b6;
       transition: background-color 0.3s linear 0s; }
-      body.amethyst .header-colorslab--top {
-        background-color: #c6a0d5;
+    body.amethyst .header-xs-profile-links-pages-list-toggle, body.amethyst .header-profile-links-pages-list-toggle {
+      background: linear-gradient(to right, #804399 0%, #9b59b6 100%);
+      border: 3px solid #e1cee9;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.amethyst .header-picture-container-pic {
+      border-color: #f0f0f0;
+      background-color: #f0f0f0;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.amethyst .header .submarine-bubble {
+      background: #e1cee9;
+      transition: background-color 0.3s linear 0s; }
+    body.amethyst .header .submarine-body {
+      border-color: #c6a0d5;
+      background: #c6a0d5;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+      body.amethyst .header .submarine-body-light-marker {
+        background-color: #713b87;
         transition: background-color 0.3s linear 0s; }
-      body.amethyst .header-colorslab--middle {
-        background-color: #b07cc6;
-        transition: background-color 0.3s linear 0s; }
-      body.amethyst .header-colorslab--bottom {
-        background-color: #9b59b6;
-        transition: background-color 0.3s linear 0s; }
-      body.amethyst .header-profile-links-pages-list-toggle {
-        background: linear-gradient(to right, #804399 0%, #9b59b6 100%);
-        border: 3px solid #e1cee9;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.amethyst .header-picture-container-pic {
-        border-color: #f0f0f0;
-        background-color: #f0f0f0;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.amethyst .header .submarine-bubble {
-        background: #e1cee9;
-        transition: background-color 0.3s linear 0s; }
-      body.amethyst .header .submarine-body {
-        border-color: #c6a0d5;
-        background: #c6a0d5;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-        body.amethyst .header .submarine-body-light-marker {
-          background-color: #713b87;
-          transition: background-color 0.3s linear 0s; }
-        body.amethyst .header .submarine-body-light {
-          border-color: transparent transparent #a66bbe transparent;
-          transition: border-color 0.3s linear 0s; }
-        body.amethyst .header .submarine-body-window {
-          background: #c6a0d5;
-          border-color: #9b59b6;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.amethyst .header .submarine-body-window:after {
-            border-top-color: #9b59b6;
-            transition: border-top-color 0.3s linear 0s; }
-        body.amethyst .header .submarine-body-engine {
-          background-color: #9b59b6;
-          border-color: #9b59b6;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.amethyst .header .submarine-body-engine:after, body.amethyst .header .submarine-body-engine:before {
-            background-color: #e1cee9;
-            transition: background-color 0.3s linear 0s; }
-      body.amethyst .header .submarine-helix {
-        border: 2px solid #c6a0d5;
+      body.amethyst .header .submarine-body-light {
+        border-color: transparent transparent #a66bbe transparent;
         transition: border-color 0.3s linear 0s; }
-      body.amethyst .header .submarine-fins-fin {
+      body.amethyst .header .submarine-body-window {
         background: #c6a0d5;
-        transition: background-color 0.3s linear 0s; }
-      body.amethyst .header .submarine-hat {
+        border-color: #9b59b6;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.amethyst .header .submarine-body-window:after {
+          border-top-color: #9b59b6;
+          transition: border-top-color 0.3s linear 0s; }
+      body.amethyst .header .submarine-body-engine {
+        background-color: #9b59b6;
+        border-color: #9b59b6;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.amethyst .header .submarine-body-engine:after, body.amethyst .header .submarine-body-engine:before {
+          background-color: #e1cee9;
+          transition: background-color 0.3s linear 0s; }
+    body.amethyst .header .submarine-helix {
+      border: 2px solid #c6a0d5;
+      transition: border-color 0.3s linear 0s; }
+    body.amethyst .header .submarine-fins-fin {
+      background: #c6a0d5;
+      transition: background-color 0.3s linear 0s; }
+    body.amethyst .header .submarine-hat {
+      background-color: #c6a0d5;
+      transition: background-color 0.3s linear 0s; }
+      body.amethyst .header .submarine-hat-periscope {
         background-color: #c6a0d5;
         transition: background-color 0.3s linear 0s; }
-        body.amethyst .header .submarine-hat-periscope {
+        body.amethyst .header .submarine-hat-periscope:after, body.amethyst .header .submarine-hat-periscope:before {
           background-color: #c6a0d5;
           transition: background-color 0.3s linear 0s; }
-          body.amethyst .header .submarine-hat-periscope:after, body.amethyst .header .submarine-hat-periscope:before {
-            background-color: #c6a0d5;
-            transition: background-color 0.3s linear 0s; }
-        body.amethyst .header .submarine-hat-leds-wrapper {
-          background-color: #9b59b6;
+      body.amethyst .header .submarine-hat-leds-wrapper {
+        background-color: #9b59b6;
+        transition: background-color 0.3s linear 0s; }
+        body.amethyst .header .submarine-hat-leds-wrapper-leds {
+          background-color: #c6a0d5;
           transition: background-color 0.3s linear 0s; }
-          body.amethyst .header .submarine-hat-leds-wrapper-leds {
+          body.amethyst .header .submarine-hat-leds-wrapper-leds:after, body.amethyst .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #c6a0d5;
             transition: background-color 0.3s linear 0s; }
-            body.amethyst .header .submarine-hat-leds-wrapper-leds:after, body.amethyst .header .submarine-hat-leds-wrapper-leds:before {
-              background-color: #c6a0d5;
-              transition: background-color 0.3s linear 0s; }
-  body.moosikPurple {
-    /*.content {
-        &-project-badge {
-            &-innercontent {
-                &-label {
-                    background: $defcolor;
-                }
-            }
-        }
-    }*/ }
-    body.moosikPurple .header {
+  body.amethyst footer .footer li svg g g {
+    fill: #9b59b6; }
+  body.moosikPurple .header {
+    background-color: #d613b5;
+    transition: background-color 0.3s linear 0s; }
+    body.moosikPurple .header-colorslab--top {
+      background-color: #f15ed8;
+      transition: background-color 0.3s linear 0s; }
+    body.moosikPurple .header-colorslab--middle {
+      background-color: #ed2fcd;
+      transition: background-color 0.3s linear 0s; }
+    body.moosikPurple .header-colorslab--bottom {
       background-color: #d613b5;
       transition: background-color 0.3s linear 0s; }
-      body.moosikPurple .header-colorslab--top {
-        background-color: #f15ed8;
+    body.moosikPurple .header-xs-profile-links-pages-list-toggle, body.moosikPurple .header-profile-links-pages-list-toggle {
+      background: linear-gradient(to right, #a70f8d 0%, #d613b5 100%);
+      border: 3px solid #f69be7;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.moosikPurple .header-picture-container-pic {
+      border-color: #f0f0f0;
+      background-color: #f0f0f0;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.moosikPurple .header .submarine-bubble {
+      background: #f69be7;
+      transition: background-color 0.3s linear 0s; }
+    body.moosikPurple .header .submarine-body {
+      border-color: #f15ed8;
+      background: #f15ed8;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+      body.moosikPurple .header .submarine-body-light-marker {
+        background-color: #900d7a;
         transition: background-color 0.3s linear 0s; }
-      body.moosikPurple .header-colorslab--middle {
-        background-color: #ed2fcd;
-        transition: background-color 0.3s linear 0s; }
-      body.moosikPurple .header-colorslab--bottom {
-        background-color: #d613b5;
-        transition: background-color 0.3s linear 0s; }
-      body.moosikPurple .header-profile-links-pages-list-toggle {
-        background: linear-gradient(to right, #a70f8d 0%, #d613b5 100%);
-        border: 3px solid #f69be7;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.moosikPurple .header-picture-container-pic {
-        border-color: #f0f0f0;
-        background-color: #f0f0f0;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.moosikPurple .header .submarine-bubble {
-        background: #f69be7;
-        transition: background-color 0.3s linear 0s; }
-      body.moosikPurple .header .submarine-body {
-        border-color: #f15ed8;
-        background: #f15ed8;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-        body.moosikPurple .header .submarine-body-light-marker {
-          background-color: #900d7a;
-          transition: background-color 0.3s linear 0s; }
-        body.moosikPurple .header .submarine-body-light {
-          border-color: transparent transparent #ea18c7 transparent;
-          transition: border-color 0.3s linear 0s; }
-        body.moosikPurple .header .submarine-body-window {
-          background: #f15ed8;
-          border-color: #d613b5;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.moosikPurple .header .submarine-body-window:after {
-            border-top-color: #d613b5;
-            transition: border-top-color 0.3s linear 0s; }
-        body.moosikPurple .header .submarine-body-engine {
-          background-color: #d613b5;
-          border-color: #d613b5;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.moosikPurple .header .submarine-body-engine:after, body.moosikPurple .header .submarine-body-engine:before {
-            background-color: #f69be7;
-            transition: background-color 0.3s linear 0s; }
-      body.moosikPurple .header .submarine-helix {
-        border: 2px solid #f15ed8;
+      body.moosikPurple .header .submarine-body-light {
+        border-color: transparent transparent #ea18c7 transparent;
         transition: border-color 0.3s linear 0s; }
-      body.moosikPurple .header .submarine-fins-fin {
+      body.moosikPurple .header .submarine-body-window {
         background: #f15ed8;
-        transition: background-color 0.3s linear 0s; }
-      body.moosikPurple .header .submarine-hat {
+        border-color: #d613b5;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.moosikPurple .header .submarine-body-window:after {
+          border-top-color: #d613b5;
+          transition: border-top-color 0.3s linear 0s; }
+      body.moosikPurple .header .submarine-body-engine {
+        background-color: #d613b5;
+        border-color: #d613b5;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.moosikPurple .header .submarine-body-engine:after, body.moosikPurple .header .submarine-body-engine:before {
+          background-color: #f69be7;
+          transition: background-color 0.3s linear 0s; }
+    body.moosikPurple .header .submarine-helix {
+      border: 2px solid #f15ed8;
+      transition: border-color 0.3s linear 0s; }
+    body.moosikPurple .header .submarine-fins-fin {
+      background: #f15ed8;
+      transition: background-color 0.3s linear 0s; }
+    body.moosikPurple .header .submarine-hat {
+      background-color: #f15ed8;
+      transition: background-color 0.3s linear 0s; }
+      body.moosikPurple .header .submarine-hat-periscope {
         background-color: #f15ed8;
         transition: background-color 0.3s linear 0s; }
-        body.moosikPurple .header .submarine-hat-periscope {
+        body.moosikPurple .header .submarine-hat-periscope:after, body.moosikPurple .header .submarine-hat-periscope:before {
           background-color: #f15ed8;
           transition: background-color 0.3s linear 0s; }
-          body.moosikPurple .header .submarine-hat-periscope:after, body.moosikPurple .header .submarine-hat-periscope:before {
-            background-color: #f15ed8;
-            transition: background-color 0.3s linear 0s; }
-        body.moosikPurple .header .submarine-hat-leds-wrapper {
-          background-color: #d613b5;
+      body.moosikPurple .header .submarine-hat-leds-wrapper {
+        background-color: #d613b5;
+        transition: background-color 0.3s linear 0s; }
+        body.moosikPurple .header .submarine-hat-leds-wrapper-leds {
+          background-color: #f15ed8;
           transition: background-color 0.3s linear 0s; }
-          body.moosikPurple .header .submarine-hat-leds-wrapper-leds {
+          body.moosikPurple .header .submarine-hat-leds-wrapper-leds:after, body.moosikPurple .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #f15ed8;
             transition: background-color 0.3s linear 0s; }
-            body.moosikPurple .header .submarine-hat-leds-wrapper-leds:after, body.moosikPurple .header .submarine-hat-leds-wrapper-leds:before {
-              background-color: #f15ed8;
-              transition: background-color 0.3s linear 0s; }
-  body.wetAsphalt {
-    /*.content {
-        &-project-badge {
-            &-innercontent {
-                &-label {
-                    background: $defcolor;
-                }
-            }
-        }
-    }*/ }
-    body.wetAsphalt .header {
+  body.moosikPurple footer .footer li svg g g {
+    fill: #d613b5; }
+  body.wetAsphalt .header {
+    background-color: #34495e;
+    transition: background-color 0.3s linear 0s; }
+    body.wetAsphalt .header-colorslab--top {
+      background-color: #587ca0;
+      transition: background-color 0.3s linear 0s; }
+    body.wetAsphalt .header-colorslab--middle {
+      background-color: #46637f;
+      transition: background-color 0.3s linear 0s; }
+    body.wetAsphalt .header-colorslab--bottom {
       background-color: #34495e;
       transition: background-color 0.3s linear 0s; }
-      body.wetAsphalt .header-colorslab--top {
-        background-color: #587ca0;
+    body.wetAsphalt .header-xs-profile-links-pages-list-toggle, body.wetAsphalt .header-profile-links-pages-list-toggle {
+      background: linear-gradient(to right, #22303d 0%, #34495e 100%);
+      border: 3px solid #819db9;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.wetAsphalt .header-picture-container-pic {
+      border-color: #f0f0f0;
+      background-color: #f0f0f0;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.wetAsphalt .header .submarine-bubble {
+      background: #819db9;
+      transition: background-color 0.3s linear 0s; }
+    body.wetAsphalt .header .submarine-body {
+      border-color: #587ca0;
+      background: #587ca0;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+      body.wetAsphalt .header .submarine-body-light-marker {
+        background-color: #19232d;
         transition: background-color 0.3s linear 0s; }
-      body.wetAsphalt .header-colorslab--middle {
-        background-color: #46637f;
-        transition: background-color 0.3s linear 0s; }
-      body.wetAsphalt .header-colorslab--bottom {
-        background-color: #34495e;
-        transition: background-color 0.3s linear 0s; }
-      body.wetAsphalt .header-profile-links-pages-list-toggle {
-        background: linear-gradient(to right, #22303d 0%, #34495e 100%);
-        border: 3px solid #819db9;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.wetAsphalt .header-picture-container-pic {
-        border-color: #f0f0f0;
-        background-color: #f0f0f0;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.wetAsphalt .header .submarine-bubble {
-        background: #819db9;
-        transition: background-color 0.3s linear 0s; }
-      body.wetAsphalt .header .submarine-body {
-        border-color: #587ca0;
-        background: #587ca0;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-        body.wetAsphalt .header .submarine-body-light-marker {
-          background-color: #19232d;
-          transition: background-color 0.3s linear 0s; }
-        body.wetAsphalt .header .submarine-body-light {
-          border-color: transparent transparent #3d566e transparent;
-          transition: border-color 0.3s linear 0s; }
-        body.wetAsphalt .header .submarine-body-window {
-          background: #587ca0;
-          border-color: #34495e;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.wetAsphalt .header .submarine-body-window:after {
-            border-top-color: #34495e;
-            transition: border-top-color 0.3s linear 0s; }
-        body.wetAsphalt .header .submarine-body-engine {
-          background-color: #34495e;
-          border-color: #34495e;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.wetAsphalt .header .submarine-body-engine:after, body.wetAsphalt .header .submarine-body-engine:before {
-            background-color: #819db9;
-            transition: background-color 0.3s linear 0s; }
-      body.wetAsphalt .header .submarine-helix {
-        border: 2px solid #587ca0;
+      body.wetAsphalt .header .submarine-body-light {
+        border-color: transparent transparent #3d566e transparent;
         transition: border-color 0.3s linear 0s; }
-      body.wetAsphalt .header .submarine-fins-fin {
+      body.wetAsphalt .header .submarine-body-window {
         background: #587ca0;
-        transition: background-color 0.3s linear 0s; }
-      body.wetAsphalt .header .submarine-hat {
+        border-color: #34495e;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.wetAsphalt .header .submarine-body-window:after {
+          border-top-color: #34495e;
+          transition: border-top-color 0.3s linear 0s; }
+      body.wetAsphalt .header .submarine-body-engine {
+        background-color: #34495e;
+        border-color: #34495e;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.wetAsphalt .header .submarine-body-engine:after, body.wetAsphalt .header .submarine-body-engine:before {
+          background-color: #819db9;
+          transition: background-color 0.3s linear 0s; }
+    body.wetAsphalt .header .submarine-helix {
+      border: 2px solid #587ca0;
+      transition: border-color 0.3s linear 0s; }
+    body.wetAsphalt .header .submarine-fins-fin {
+      background: #587ca0;
+      transition: background-color 0.3s linear 0s; }
+    body.wetAsphalt .header .submarine-hat {
+      background-color: #587ca0;
+      transition: background-color 0.3s linear 0s; }
+      body.wetAsphalt .header .submarine-hat-periscope {
         background-color: #587ca0;
         transition: background-color 0.3s linear 0s; }
-        body.wetAsphalt .header .submarine-hat-periscope {
+        body.wetAsphalt .header .submarine-hat-periscope:after, body.wetAsphalt .header .submarine-hat-periscope:before {
           background-color: #587ca0;
           transition: background-color 0.3s linear 0s; }
-          body.wetAsphalt .header .submarine-hat-periscope:after, body.wetAsphalt .header .submarine-hat-periscope:before {
-            background-color: #587ca0;
-            transition: background-color 0.3s linear 0s; }
-        body.wetAsphalt .header .submarine-hat-leds-wrapper {
-          background-color: #34495e;
+      body.wetAsphalt .header .submarine-hat-leds-wrapper {
+        background-color: #34495e;
+        transition: background-color 0.3s linear 0s; }
+        body.wetAsphalt .header .submarine-hat-leds-wrapper-leds {
+          background-color: #587ca0;
           transition: background-color 0.3s linear 0s; }
-          body.wetAsphalt .header .submarine-hat-leds-wrapper-leds {
+          body.wetAsphalt .header .submarine-hat-leds-wrapper-leds:after, body.wetAsphalt .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #587ca0;
             transition: background-color 0.3s linear 0s; }
-            body.wetAsphalt .header .submarine-hat-leds-wrapper-leds:after, body.wetAsphalt .header .submarine-hat-leds-wrapper-leds:before {
-              background-color: #587ca0;
-              transition: background-color 0.3s linear 0s; }
-  body.greenSea {
-    /*.content {
-        &-project-badge {
-            &-innercontent {
-                &-label {
-                    background: $defcolor;
-                }
-            }
-        }
-    }*/ }
-    body.greenSea .header {
+  body.wetAsphalt footer .footer li svg g g {
+    fill: #34495e; }
+  body.greenSea .header {
+    background-color: #16a085;
+    transition: background-color 0.3s linear 0s; }
+    body.greenSea .header-colorslab--top {
+      background-color: #38e4c2;
+      transition: background-color 0.3s linear 0s; }
+    body.greenSea .header-colorslab--middle {
+      background-color: #1ccdaa;
+      transition: background-color 0.3s linear 0s; }
+    body.greenSea .header-colorslab--bottom {
       background-color: #16a085;
       transition: background-color 0.3s linear 0s; }
-      body.greenSea .header-colorslab--top {
-        background-color: #38e4c2;
+    body.greenSea .header-xs-profile-links-pages-list-toggle, body.greenSea .header-profile-links-pages-list-toggle {
+      background: linear-gradient(to right, #107360 0%, #16a085 100%);
+      border: 3px solid #73ecd4;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.greenSea .header-picture-container-pic {
+      border-color: #f0f0f0;
+      background-color: #f0f0f0;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.greenSea .header .submarine-bubble {
+      background: #73ecd4;
+      transition: background-color 0.3s linear 0s; }
+    body.greenSea .header .submarine-body {
+      border-color: #38e4c2;
+      background: #38e4c2;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+      body.greenSea .header .submarine-body-light-marker {
+        background-color: #0d5d4d;
         transition: background-color 0.3s linear 0s; }
-      body.greenSea .header-colorslab--middle {
-        background-color: #1ccdaa;
-        transition: background-color 0.3s linear 0s; }
-      body.greenSea .header-colorslab--bottom {
-        background-color: #16a085;
-        transition: background-color 0.3s linear 0s; }
-      body.greenSea .header-profile-links-pages-list-toggle {
-        background: linear-gradient(to right, #107360 0%, #16a085 100%);
-        border: 3px solid #73ecd4;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.greenSea .header-picture-container-pic {
-        border-color: #f0f0f0;
-        background-color: #f0f0f0;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.greenSea .header .submarine-bubble {
-        background: #73ecd4;
-        transition: background-color 0.3s linear 0s; }
-      body.greenSea .header .submarine-body {
-        border-color: #38e4c2;
-        background: #38e4c2;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-        body.greenSea .header .submarine-body-light-marker {
-          background-color: #0d5d4d;
-          transition: background-color 0.3s linear 0s; }
-        body.greenSea .header .submarine-body-light {
-          border-color: transparent transparent #19b698 transparent;
-          transition: border-color 0.3s linear 0s; }
-        body.greenSea .header .submarine-body-window {
-          background: #38e4c2;
-          border-color: #16a085;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.greenSea .header .submarine-body-window:after {
-            border-top-color: #16a085;
-            transition: border-top-color 0.3s linear 0s; }
-        body.greenSea .header .submarine-body-engine {
-          background-color: #16a085;
-          border-color: #16a085;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.greenSea .header .submarine-body-engine:after, body.greenSea .header .submarine-body-engine:before {
-            background-color: #73ecd4;
-            transition: background-color 0.3s linear 0s; }
-      body.greenSea .header .submarine-helix {
-        border: 2px solid #38e4c2;
+      body.greenSea .header .submarine-body-light {
+        border-color: transparent transparent #19b698 transparent;
         transition: border-color 0.3s linear 0s; }
-      body.greenSea .header .submarine-fins-fin {
+      body.greenSea .header .submarine-body-window {
         background: #38e4c2;
-        transition: background-color 0.3s linear 0s; }
-      body.greenSea .header .submarine-hat {
+        border-color: #16a085;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.greenSea .header .submarine-body-window:after {
+          border-top-color: #16a085;
+          transition: border-top-color 0.3s linear 0s; }
+      body.greenSea .header .submarine-body-engine {
+        background-color: #16a085;
+        border-color: #16a085;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.greenSea .header .submarine-body-engine:after, body.greenSea .header .submarine-body-engine:before {
+          background-color: #73ecd4;
+          transition: background-color 0.3s linear 0s; }
+    body.greenSea .header .submarine-helix {
+      border: 2px solid #38e4c2;
+      transition: border-color 0.3s linear 0s; }
+    body.greenSea .header .submarine-fins-fin {
+      background: #38e4c2;
+      transition: background-color 0.3s linear 0s; }
+    body.greenSea .header .submarine-hat {
+      background-color: #38e4c2;
+      transition: background-color 0.3s linear 0s; }
+      body.greenSea .header .submarine-hat-periscope {
         background-color: #38e4c2;
         transition: background-color 0.3s linear 0s; }
-        body.greenSea .header .submarine-hat-periscope {
+        body.greenSea .header .submarine-hat-periscope:after, body.greenSea .header .submarine-hat-periscope:before {
           background-color: #38e4c2;
           transition: background-color 0.3s linear 0s; }
-          body.greenSea .header .submarine-hat-periscope:after, body.greenSea .header .submarine-hat-periscope:before {
-            background-color: #38e4c2;
-            transition: background-color 0.3s linear 0s; }
-        body.greenSea .header .submarine-hat-leds-wrapper {
-          background-color: #16a085;
+      body.greenSea .header .submarine-hat-leds-wrapper {
+        background-color: #16a085;
+        transition: background-color 0.3s linear 0s; }
+        body.greenSea .header .submarine-hat-leds-wrapper-leds {
+          background-color: #38e4c2;
           transition: background-color 0.3s linear 0s; }
-          body.greenSea .header .submarine-hat-leds-wrapper-leds {
+          body.greenSea .header .submarine-hat-leds-wrapper-leds:after, body.greenSea .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #38e4c2;
             transition: background-color 0.3s linear 0s; }
-            body.greenSea .header .submarine-hat-leds-wrapper-leds:after, body.greenSea .header .submarine-hat-leds-wrapper-leds:before {
-              background-color: #38e4c2;
-              transition: background-color 0.3s linear 0s; }
-  body.nephritis {
-    /*.content {
-        &-project-badge {
-            &-innercontent {
-                &-label {
-                    background: $defcolor;
-                }
-            }
-        }
-    }*/ }
-    body.nephritis .header {
+  body.greenSea footer .footer li svg g g {
+    fill: #16a085; }
+  body.nephritis .header {
+    background-color: #27ae60;
+    transition: background-color 0.3s linear 0s; }
+    body.nephritis .header-colorslab--top {
+      background-color: #60db94;
+      transition: background-color 0.3s linear 0s; }
+    body.nephritis .header-colorslab--middle {
+      background-color: #36d278;
+      transition: background-color 0.3s linear 0s; }
+    body.nephritis .header-colorslab--bottom {
       background-color: #27ae60;
       transition: background-color 0.3s linear 0s; }
-      body.nephritis .header-colorslab--top {
-        background-color: #60db94;
+    body.nephritis .header-xs-profile-links-pages-list-toggle, body.nephritis .header-profile-links-pages-list-toggle {
+      background: linear-gradient(to right, #1e8449 0%, #27ae60 100%);
+      border: 3px solid #96e7b8;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.nephritis .header-picture-container-pic {
+      border-color: #f0f0f0;
+      background-color: #f0f0f0;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.nephritis .header .submarine-bubble {
+      background: #96e7b8;
+      transition: background-color 0.3s linear 0s; }
+    body.nephritis .header .submarine-body {
+      border-color: #60db94;
+      background: #60db94;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+      body.nephritis .header .submarine-body-light-marker {
+        background-color: #19703e;
         transition: background-color 0.3s linear 0s; }
-      body.nephritis .header-colorslab--middle {
-        background-color: #36d278;
-        transition: background-color 0.3s linear 0s; }
-      body.nephritis .header-colorslab--bottom {
-        background-color: #27ae60;
-        transition: background-color 0.3s linear 0s; }
-      body.nephritis .header-profile-links-pages-list-toggle {
-        background: linear-gradient(to right, #1e8449 0%, #27ae60 100%);
-        border: 3px solid #96e7b8;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.nephritis .header-picture-container-pic {
-        border-color: #f0f0f0;
-        background-color: #f0f0f0;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.nephritis .header .submarine-bubble {
-        background: #96e7b8;
-        transition: background-color 0.3s linear 0s; }
-      body.nephritis .header .submarine-body {
-        border-color: #60db94;
-        background: #60db94;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-        body.nephritis .header .submarine-body-light-marker {
-          background-color: #19703e;
-          transition: background-color 0.3s linear 0s; }
-        body.nephritis .header .submarine-body-light {
-          border-color: transparent transparent #2cc36b transparent;
-          transition: border-color 0.3s linear 0s; }
-        body.nephritis .header .submarine-body-window {
-          background: #60db94;
-          border-color: #27ae60;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.nephritis .header .submarine-body-window:after {
-            border-top-color: #27ae60;
-            transition: border-top-color 0.3s linear 0s; }
-        body.nephritis .header .submarine-body-engine {
-          background-color: #27ae60;
-          border-color: #27ae60;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.nephritis .header .submarine-body-engine:after, body.nephritis .header .submarine-body-engine:before {
-            background-color: #96e7b8;
-            transition: background-color 0.3s linear 0s; }
-      body.nephritis .header .submarine-helix {
-        border: 2px solid #60db94;
+      body.nephritis .header .submarine-body-light {
+        border-color: transparent transparent #2cc36b transparent;
         transition: border-color 0.3s linear 0s; }
-      body.nephritis .header .submarine-fins-fin {
+      body.nephritis .header .submarine-body-window {
         background: #60db94;
-        transition: background-color 0.3s linear 0s; }
-      body.nephritis .header .submarine-hat {
+        border-color: #27ae60;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.nephritis .header .submarine-body-window:after {
+          border-top-color: #27ae60;
+          transition: border-top-color 0.3s linear 0s; }
+      body.nephritis .header .submarine-body-engine {
+        background-color: #27ae60;
+        border-color: #27ae60;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.nephritis .header .submarine-body-engine:after, body.nephritis .header .submarine-body-engine:before {
+          background-color: #96e7b8;
+          transition: background-color 0.3s linear 0s; }
+    body.nephritis .header .submarine-helix {
+      border: 2px solid #60db94;
+      transition: border-color 0.3s linear 0s; }
+    body.nephritis .header .submarine-fins-fin {
+      background: #60db94;
+      transition: background-color 0.3s linear 0s; }
+    body.nephritis .header .submarine-hat {
+      background-color: #60db94;
+      transition: background-color 0.3s linear 0s; }
+      body.nephritis .header .submarine-hat-periscope {
         background-color: #60db94;
         transition: background-color 0.3s linear 0s; }
-        body.nephritis .header .submarine-hat-periscope {
+        body.nephritis .header .submarine-hat-periscope:after, body.nephritis .header .submarine-hat-periscope:before {
           background-color: #60db94;
           transition: background-color 0.3s linear 0s; }
-          body.nephritis .header .submarine-hat-periscope:after, body.nephritis .header .submarine-hat-periscope:before {
-            background-color: #60db94;
-            transition: background-color 0.3s linear 0s; }
-        body.nephritis .header .submarine-hat-leds-wrapper {
-          background-color: #27ae60;
+      body.nephritis .header .submarine-hat-leds-wrapper {
+        background-color: #27ae60;
+        transition: background-color 0.3s linear 0s; }
+        body.nephritis .header .submarine-hat-leds-wrapper-leds {
+          background-color: #60db94;
           transition: background-color 0.3s linear 0s; }
-          body.nephritis .header .submarine-hat-leds-wrapper-leds {
+          body.nephritis .header .submarine-hat-leds-wrapper-leds:after, body.nephritis .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #60db94;
             transition: background-color 0.3s linear 0s; }
-            body.nephritis .header .submarine-hat-leds-wrapper-leds:after, body.nephritis .header .submarine-hat-leds-wrapper-leds:before {
-              background-color: #60db94;
-              transition: background-color 0.3s linear 0s; }
-  body.belizeHole {
-    /*.content {
-        &-project-badge {
-            &-innercontent {
-                &-label {
-                    background: $defcolor;
-                }
-            }
-        }
-    }*/ }
-    body.belizeHole .header {
+  body.nephritis footer .footer li svg g g {
+    fill: #27ae60; }
+  body.belizeHole .header {
+    background-color: #2980b9;
+    transition: background-color 0.3s linear 0s; }
+    body.belizeHole .header-colorslab--top {
+      background-color: #6ab0de;
+      transition: background-color 0.3s linear 0s; }
+    body.belizeHole .header-colorslab--middle {
+      background-color: #409ad5;
+      transition: background-color 0.3s linear 0s; }
+    body.belizeHole .header-colorslab--bottom {
       background-color: #2980b9;
       transition: background-color 0.3s linear 0s; }
-      body.belizeHole .header-colorslab--top {
-        background-color: #6ab0de;
+    body.belizeHole .header-xs-profile-links-pages-list-toggle, body.belizeHole .header-profile-links-pages-list-toggle {
+      background: linear-gradient(to right, #20638f 0%, #2980b9 100%);
+      border: 3px solid #a0cdea;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.belizeHole .header-picture-container-pic {
+      border-color: #f0f0f0;
+      background-color: #f0f0f0;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.belizeHole .header .submarine-bubble {
+      background: #a0cdea;
+      transition: background-color 0.3s linear 0s; }
+    body.belizeHole .header .submarine-body {
+      border-color: #6ab0de;
+      background: #6ab0de;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+      body.belizeHole .header .submarine-body-light-marker {
+        background-color: #1b557a;
         transition: background-color 0.3s linear 0s; }
-      body.belizeHole .header-colorslab--middle {
-        background-color: #409ad5;
-        transition: background-color 0.3s linear 0s; }
-      body.belizeHole .header-colorslab--bottom {
-        background-color: #2980b9;
-        transition: background-color 0.3s linear 0s; }
-      body.belizeHole .header-profile-links-pages-list-toggle {
-        background: linear-gradient(to right, #20638f 0%, #2980b9 100%);
-        border: 3px solid #a0cdea;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.belizeHole .header-picture-container-pic {
-        border-color: #f0f0f0;
-        background-color: #f0f0f0;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.belizeHole .header .submarine-bubble {
-        background: #a0cdea;
-        transition: background-color 0.3s linear 0s; }
-      body.belizeHole .header .submarine-body {
-        border-color: #6ab0de;
-        background: #6ab0de;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-        body.belizeHole .header .submarine-body-light-marker {
-          background-color: #1b557a;
-          transition: background-color 0.3s linear 0s; }
-        body.belizeHole .header .submarine-body-light {
-          border-color: transparent transparent #2e8ece transparent;
-          transition: border-color 0.3s linear 0s; }
-        body.belizeHole .header .submarine-body-window {
-          background: #6ab0de;
-          border-color: #2980b9;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.belizeHole .header .submarine-body-window:after {
-            border-top-color: #2980b9;
-            transition: border-top-color 0.3s linear 0s; }
-        body.belizeHole .header .submarine-body-engine {
-          background-color: #2980b9;
-          border-color: #2980b9;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.belizeHole .header .submarine-body-engine:after, body.belizeHole .header .submarine-body-engine:before {
-            background-color: #a0cdea;
-            transition: background-color 0.3s linear 0s; }
-      body.belizeHole .header .submarine-helix {
-        border: 2px solid #6ab0de;
+      body.belizeHole .header .submarine-body-light {
+        border-color: transparent transparent #2e8ece transparent;
         transition: border-color 0.3s linear 0s; }
-      body.belizeHole .header .submarine-fins-fin {
+      body.belizeHole .header .submarine-body-window {
         background: #6ab0de;
-        transition: background-color 0.3s linear 0s; }
-      body.belizeHole .header .submarine-hat {
+        border-color: #2980b9;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.belizeHole .header .submarine-body-window:after {
+          border-top-color: #2980b9;
+          transition: border-top-color 0.3s linear 0s; }
+      body.belizeHole .header .submarine-body-engine {
+        background-color: #2980b9;
+        border-color: #2980b9;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.belizeHole .header .submarine-body-engine:after, body.belizeHole .header .submarine-body-engine:before {
+          background-color: #a0cdea;
+          transition: background-color 0.3s linear 0s; }
+    body.belizeHole .header .submarine-helix {
+      border: 2px solid #6ab0de;
+      transition: border-color 0.3s linear 0s; }
+    body.belizeHole .header .submarine-fins-fin {
+      background: #6ab0de;
+      transition: background-color 0.3s linear 0s; }
+    body.belizeHole .header .submarine-hat {
+      background-color: #6ab0de;
+      transition: background-color 0.3s linear 0s; }
+      body.belizeHole .header .submarine-hat-periscope {
         background-color: #6ab0de;
         transition: background-color 0.3s linear 0s; }
-        body.belizeHole .header .submarine-hat-periscope {
+        body.belizeHole .header .submarine-hat-periscope:after, body.belizeHole .header .submarine-hat-periscope:before {
           background-color: #6ab0de;
           transition: background-color 0.3s linear 0s; }
-          body.belizeHole .header .submarine-hat-periscope:after, body.belizeHole .header .submarine-hat-periscope:before {
-            background-color: #6ab0de;
-            transition: background-color 0.3s linear 0s; }
-        body.belizeHole .header .submarine-hat-leds-wrapper {
-          background-color: #2980b9;
+      body.belizeHole .header .submarine-hat-leds-wrapper {
+        background-color: #2980b9;
+        transition: background-color 0.3s linear 0s; }
+        body.belizeHole .header .submarine-hat-leds-wrapper-leds {
+          background-color: #6ab0de;
           transition: background-color 0.3s linear 0s; }
-          body.belizeHole .header .submarine-hat-leds-wrapper-leds {
+          body.belizeHole .header .submarine-hat-leds-wrapper-leds:after, body.belizeHole .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #6ab0de;
             transition: background-color 0.3s linear 0s; }
-            body.belizeHole .header .submarine-hat-leds-wrapper-leds:after, body.belizeHole .header .submarine-hat-leds-wrapper-leds:before {
-              background-color: #6ab0de;
-              transition: background-color 0.3s linear 0s; }
-  body.wisteria {
-    /*.content {
-        &-project-badge {
-            &-innercontent {
-                &-label {
-                    background: $defcolor;
-                }
-            }
-        }
-    }*/ }
-    body.wisteria .header {
+  body.belizeHole footer .footer li svg g g {
+    fill: #2980b9; }
+  body.wisteria .header {
+    background-color: #8e44ad;
+    transition: background-color 0.3s linear 0s; }
+    body.wisteria .header-colorslab--top {
+      background-color: #ba87d0;
+      transition: background-color 0.3s linear 0s; }
+    body.wisteria .header-colorslab--middle {
+      background-color: #a563c1;
+      transition: background-color 0.3s linear 0s; }
+    body.wisteria .header-colorslab--bottom {
       background-color: #8e44ad;
       transition: background-color 0.3s linear 0s; }
-      body.wisteria .header-colorslab--top {
-        background-color: #ba87d0;
+    body.wisteria .header-xs-profile-links-pages-list-toggle, body.wisteria .header-profile-links-pages-list-toggle {
+      background: linear-gradient(to right, #703688 0%, #8e44ad 100%);
+      border: 3px solid #d6b7e3;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.wisteria .header-picture-container-pic {
+      border-color: #f0f0f0;
+      background-color: #f0f0f0;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.wisteria .header .submarine-bubble {
+      background: #d6b7e3;
+      transition: background-color 0.3s linear 0s; }
+    body.wisteria .header .submarine-body {
+      border-color: #ba87d0;
+      background: #ba87d0;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+      body.wisteria .header .submarine-body-light-marker {
+        background-color: #612e76;
         transition: background-color 0.3s linear 0s; }
-      body.wisteria .header-colorslab--middle {
-        background-color: #a563c1;
-        transition: background-color 0.3s linear 0s; }
-      body.wisteria .header-colorslab--bottom {
-        background-color: #8e44ad;
-        transition: background-color 0.3s linear 0s; }
-      body.wisteria .header-profile-links-pages-list-toggle {
-        background: linear-gradient(to right, #703688 0%, #8e44ad 100%);
-        border: 3px solid #d6b7e3;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.wisteria .header-picture-container-pic {
-        border-color: #f0f0f0;
-        background-color: #f0f0f0;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.wisteria .header .submarine-bubble {
-        background: #d6b7e3;
-        transition: background-color 0.3s linear 0s; }
-      body.wisteria .header .submarine-body {
-        border-color: #ba87d0;
-        background: #ba87d0;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-        body.wisteria .header .submarine-body-light-marker {
-          background-color: #612e76;
-          transition: background-color 0.3s linear 0s; }
-        body.wisteria .header .submarine-body-light {
-          border-color: transparent transparent #9b50ba transparent;
-          transition: border-color 0.3s linear 0s; }
-        body.wisteria .header .submarine-body-window {
-          background: #ba87d0;
-          border-color: #8e44ad;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.wisteria .header .submarine-body-window:after {
-            border-top-color: #8e44ad;
-            transition: border-top-color 0.3s linear 0s; }
-        body.wisteria .header .submarine-body-engine {
-          background-color: #8e44ad;
-          border-color: #8e44ad;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.wisteria .header .submarine-body-engine:after, body.wisteria .header .submarine-body-engine:before {
-            background-color: #d6b7e3;
-            transition: background-color 0.3s linear 0s; }
-      body.wisteria .header .submarine-helix {
-        border: 2px solid #ba87d0;
+      body.wisteria .header .submarine-body-light {
+        border-color: transparent transparent #9b50ba transparent;
         transition: border-color 0.3s linear 0s; }
-      body.wisteria .header .submarine-fins-fin {
+      body.wisteria .header .submarine-body-window {
         background: #ba87d0;
-        transition: background-color 0.3s linear 0s; }
-      body.wisteria .header .submarine-hat {
+        border-color: #8e44ad;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.wisteria .header .submarine-body-window:after {
+          border-top-color: #8e44ad;
+          transition: border-top-color 0.3s linear 0s; }
+      body.wisteria .header .submarine-body-engine {
+        background-color: #8e44ad;
+        border-color: #8e44ad;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.wisteria .header .submarine-body-engine:after, body.wisteria .header .submarine-body-engine:before {
+          background-color: #d6b7e3;
+          transition: background-color 0.3s linear 0s; }
+    body.wisteria .header .submarine-helix {
+      border: 2px solid #ba87d0;
+      transition: border-color 0.3s linear 0s; }
+    body.wisteria .header .submarine-fins-fin {
+      background: #ba87d0;
+      transition: background-color 0.3s linear 0s; }
+    body.wisteria .header .submarine-hat {
+      background-color: #ba87d0;
+      transition: background-color 0.3s linear 0s; }
+      body.wisteria .header .submarine-hat-periscope {
         background-color: #ba87d0;
         transition: background-color 0.3s linear 0s; }
-        body.wisteria .header .submarine-hat-periscope {
+        body.wisteria .header .submarine-hat-periscope:after, body.wisteria .header .submarine-hat-periscope:before {
           background-color: #ba87d0;
           transition: background-color 0.3s linear 0s; }
-          body.wisteria .header .submarine-hat-periscope:after, body.wisteria .header .submarine-hat-periscope:before {
-            background-color: #ba87d0;
-            transition: background-color 0.3s linear 0s; }
-        body.wisteria .header .submarine-hat-leds-wrapper {
-          background-color: #8e44ad;
+      body.wisteria .header .submarine-hat-leds-wrapper {
+        background-color: #8e44ad;
+        transition: background-color 0.3s linear 0s; }
+        body.wisteria .header .submarine-hat-leds-wrapper-leds {
+          background-color: #ba87d0;
           transition: background-color 0.3s linear 0s; }
-          body.wisteria .header .submarine-hat-leds-wrapper-leds {
+          body.wisteria .header .submarine-hat-leds-wrapper-leds:after, body.wisteria .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #ba87d0;
             transition: background-color 0.3s linear 0s; }
-            body.wisteria .header .submarine-hat-leds-wrapper-leds:after, body.wisteria .header .submarine-hat-leds-wrapper-leds:before {
-              background-color: #ba87d0;
-              transition: background-color 0.3s linear 0s; }
-  body.midnightBlue {
-    /*.content {
-        &-project-badge {
-            &-innercontent {
-                &-label {
-                    background: $defcolor;
-                }
-            }
-        }
-    }*/ }
-    body.midnightBlue .header {
+  body.wisteria footer .footer li svg g g {
+    fill: #8e44ad; }
+  body.midnightBlue .header {
+    background-color: #2c3e50;
+    transition: background-color 0.3s linear 0s; }
+    body.midnightBlue .header-colorslab--top {
+      background-color: #507192;
+      transition: background-color 0.3s linear 0s; }
+    body.midnightBlue .header-colorslab--middle {
+      background-color: #3e5871;
+      transition: background-color 0.3s linear 0s; }
+    body.midnightBlue .header-colorslab--bottom {
       background-color: #2c3e50;
       transition: background-color 0.3s linear 0s; }
-      body.midnightBlue .header-colorslab--top {
-        background-color: #507192;
+    body.midnightBlue .header-xs-profile-links-pages-list-toggle, body.midnightBlue .header-profile-links-pages-list-toggle {
+      background: linear-gradient(to right, #1a252f 0%, #2c3e50 100%);
+      border: 3px solid #7392b2;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.midnightBlue .header-picture-container-pic {
+      border-color: #f0f0f0;
+      background-color: #f0f0f0;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.midnightBlue .header .submarine-bubble {
+      background: #7392b2;
+      transition: background-color 0.3s linear 0s; }
+    body.midnightBlue .header .submarine-body {
+      border-color: #507192;
+      background: #507192;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+      body.midnightBlue .header .submarine-body-light-marker {
+        background-color: #11181f;
         transition: background-color 0.3s linear 0s; }
-      body.midnightBlue .header-colorslab--middle {
-        background-color: #3e5871;
-        transition: background-color 0.3s linear 0s; }
-      body.midnightBlue .header-colorslab--bottom {
-        background-color: #2c3e50;
-        transition: background-color 0.3s linear 0s; }
-      body.midnightBlue .header-profile-links-pages-list-toggle {
-        background: linear-gradient(to right, #1a252f 0%, #2c3e50 100%);
-        border: 3px solid #7392b2;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.midnightBlue .header-picture-container-pic {
-        border-color: #f0f0f0;
-        background-color: #f0f0f0;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.midnightBlue .header .submarine-bubble {
-        background: #7392b2;
-        transition: background-color 0.3s linear 0s; }
-      body.midnightBlue .header .submarine-body {
-        border-color: #507192;
-        background: #507192;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-        body.midnightBlue .header .submarine-body-light-marker {
-          background-color: #11181f;
-          transition: background-color 0.3s linear 0s; }
-        body.midnightBlue .header .submarine-body-light {
-          border-color: transparent transparent #354b60 transparent;
-          transition: border-color 0.3s linear 0s; }
-        body.midnightBlue .header .submarine-body-window {
-          background: #507192;
-          border-color: #2c3e50;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.midnightBlue .header .submarine-body-window:after {
-            border-top-color: #2c3e50;
-            transition: border-top-color 0.3s linear 0s; }
-        body.midnightBlue .header .submarine-body-engine {
-          background-color: #2c3e50;
-          border-color: #2c3e50;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.midnightBlue .header .submarine-body-engine:after, body.midnightBlue .header .submarine-body-engine:before {
-            background-color: #7392b2;
-            transition: background-color 0.3s linear 0s; }
-      body.midnightBlue .header .submarine-helix {
-        border: 2px solid #507192;
+      body.midnightBlue .header .submarine-body-light {
+        border-color: transparent transparent #354b60 transparent;
         transition: border-color 0.3s linear 0s; }
-      body.midnightBlue .header .submarine-fins-fin {
+      body.midnightBlue .header .submarine-body-window {
         background: #507192;
-        transition: background-color 0.3s linear 0s; }
-      body.midnightBlue .header .submarine-hat {
+        border-color: #2c3e50;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.midnightBlue .header .submarine-body-window:after {
+          border-top-color: #2c3e50;
+          transition: border-top-color 0.3s linear 0s; }
+      body.midnightBlue .header .submarine-body-engine {
+        background-color: #2c3e50;
+        border-color: #2c3e50;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.midnightBlue .header .submarine-body-engine:after, body.midnightBlue .header .submarine-body-engine:before {
+          background-color: #7392b2;
+          transition: background-color 0.3s linear 0s; }
+    body.midnightBlue .header .submarine-helix {
+      border: 2px solid #507192;
+      transition: border-color 0.3s linear 0s; }
+    body.midnightBlue .header .submarine-fins-fin {
+      background: #507192;
+      transition: background-color 0.3s linear 0s; }
+    body.midnightBlue .header .submarine-hat {
+      background-color: #507192;
+      transition: background-color 0.3s linear 0s; }
+      body.midnightBlue .header .submarine-hat-periscope {
         background-color: #507192;
         transition: background-color 0.3s linear 0s; }
-        body.midnightBlue .header .submarine-hat-periscope {
+        body.midnightBlue .header .submarine-hat-periscope:after, body.midnightBlue .header .submarine-hat-periscope:before {
           background-color: #507192;
           transition: background-color 0.3s linear 0s; }
-          body.midnightBlue .header .submarine-hat-periscope:after, body.midnightBlue .header .submarine-hat-periscope:before {
-            background-color: #507192;
-            transition: background-color 0.3s linear 0s; }
-        body.midnightBlue .header .submarine-hat-leds-wrapper {
-          background-color: #2c3e50;
+      body.midnightBlue .header .submarine-hat-leds-wrapper {
+        background-color: #2c3e50;
+        transition: background-color 0.3s linear 0s; }
+        body.midnightBlue .header .submarine-hat-leds-wrapper-leds {
+          background-color: #507192;
           transition: background-color 0.3s linear 0s; }
-          body.midnightBlue .header .submarine-hat-leds-wrapper-leds {
+          body.midnightBlue .header .submarine-hat-leds-wrapper-leds:after, body.midnightBlue .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #507192;
             transition: background-color 0.3s linear 0s; }
-            body.midnightBlue .header .submarine-hat-leds-wrapper-leds:after, body.midnightBlue .header .submarine-hat-leds-wrapper-leds:before {
-              background-color: #507192;
-              transition: background-color 0.3s linear 0s; }
-  body.sunDlower {
-    /*.content {
-        &-project-badge {
-            &-innercontent {
-                &-label {
-                    background: $defcolor;
-                }
-            }
-        }
-    }*/ }
-    body.sunDlower .header {
+  body.midnightBlue footer .footer li svg g g {
+    fill: #2c3e50; }
+  body.sunDlower .header {
+    background-color: #f1c40f;
+    transition: background-color 0.3s linear 0s; }
+    body.sunDlower .header-colorslab--top {
+      background-color: #f7dc6f;
+      transition: background-color 0.3s linear 0s; }
+    body.sunDlower .header-colorslab--middle {
+      background-color: #f4d03f;
+      transition: background-color 0.3s linear 0s; }
+    body.sunDlower .header-colorslab--bottom {
       background-color: #f1c40f;
       transition: background-color 0.3s linear 0s; }
-      body.sunDlower .header-colorslab--top {
-        background-color: #f7dc6f;
+    body.sunDlower .header-xs-profile-links-pages-list-toggle, body.sunDlower .header-profile-links-pages-list-toggle {
+      background: linear-gradient(to right, #c29d0b 0%, #f1c40f 100%);
+      border: 3px solid #faebae;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.sunDlower .header-picture-container-pic {
+      border-color: #f0f0f0;
+      background-color: #f0f0f0;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.sunDlower .header .submarine-bubble {
+      background: #faebae;
+      transition: background-color 0.3s linear 0s; }
+    body.sunDlower .header .submarine-body {
+      border-color: #f7dc6f;
+      background: #f7dc6f;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+      body.sunDlower .header .submarine-body-light-marker {
+        background-color: #aa8a0a;
         transition: background-color 0.3s linear 0s; }
-      body.sunDlower .header-colorslab--middle {
-        background-color: #f4d03f;
-        transition: background-color 0.3s linear 0s; }
-      body.sunDlower .header-colorslab--bottom {
-        background-color: #f1c40f;
-        transition: background-color 0.3s linear 0s; }
-      body.sunDlower .header-profile-links-pages-list-toggle {
-        background: linear-gradient(to right, #c29d0b 0%, #f1c40f 100%);
-        border: 3px solid #faebae;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.sunDlower .header-picture-container-pic {
-        border-color: #f0f0f0;
-        background-color: #f0f0f0;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.sunDlower .header .submarine-bubble {
-        background: #faebae;
-        transition: background-color 0.3s linear 0s; }
-      body.sunDlower .header .submarine-body {
-        border-color: #f7dc6f;
-        background: #f7dc6f;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-        body.sunDlower .header .submarine-body-light-marker {
-          background-color: #aa8a0a;
-          transition: background-color 0.3s linear 0s; }
-        body.sunDlower .header .submarine-body-light {
-          border-color: transparent transparent #f2ca27 transparent;
-          transition: border-color 0.3s linear 0s; }
-        body.sunDlower .header .submarine-body-window {
-          background: #f7dc6f;
-          border-color: #f1c40f;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.sunDlower .header .submarine-body-window:after {
-            border-top-color: #f1c40f;
-            transition: border-top-color 0.3s linear 0s; }
-        body.sunDlower .header .submarine-body-engine {
-          background-color: #f1c40f;
-          border-color: #f1c40f;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.sunDlower .header .submarine-body-engine:after, body.sunDlower .header .submarine-body-engine:before {
-            background-color: #faebae;
-            transition: background-color 0.3s linear 0s; }
-      body.sunDlower .header .submarine-helix {
-        border: 2px solid #f7dc6f;
+      body.sunDlower .header .submarine-body-light {
+        border-color: transparent transparent #f2ca27 transparent;
         transition: border-color 0.3s linear 0s; }
-      body.sunDlower .header .submarine-fins-fin {
+      body.sunDlower .header .submarine-body-window {
         background: #f7dc6f;
-        transition: background-color 0.3s linear 0s; }
-      body.sunDlower .header .submarine-hat {
+        border-color: #f1c40f;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.sunDlower .header .submarine-body-window:after {
+          border-top-color: #f1c40f;
+          transition: border-top-color 0.3s linear 0s; }
+      body.sunDlower .header .submarine-body-engine {
+        background-color: #f1c40f;
+        border-color: #f1c40f;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.sunDlower .header .submarine-body-engine:after, body.sunDlower .header .submarine-body-engine:before {
+          background-color: #faebae;
+          transition: background-color 0.3s linear 0s; }
+    body.sunDlower .header .submarine-helix {
+      border: 2px solid #f7dc6f;
+      transition: border-color 0.3s linear 0s; }
+    body.sunDlower .header .submarine-fins-fin {
+      background: #f7dc6f;
+      transition: background-color 0.3s linear 0s; }
+    body.sunDlower .header .submarine-hat {
+      background-color: #f7dc6f;
+      transition: background-color 0.3s linear 0s; }
+      body.sunDlower .header .submarine-hat-periscope {
         background-color: #f7dc6f;
         transition: background-color 0.3s linear 0s; }
-        body.sunDlower .header .submarine-hat-periscope {
+        body.sunDlower .header .submarine-hat-periscope:after, body.sunDlower .header .submarine-hat-periscope:before {
           background-color: #f7dc6f;
           transition: background-color 0.3s linear 0s; }
-          body.sunDlower .header .submarine-hat-periscope:after, body.sunDlower .header .submarine-hat-periscope:before {
-            background-color: #f7dc6f;
-            transition: background-color 0.3s linear 0s; }
-        body.sunDlower .header .submarine-hat-leds-wrapper {
-          background-color: #f1c40f;
+      body.sunDlower .header .submarine-hat-leds-wrapper {
+        background-color: #f1c40f;
+        transition: background-color 0.3s linear 0s; }
+        body.sunDlower .header .submarine-hat-leds-wrapper-leds {
+          background-color: #f7dc6f;
           transition: background-color 0.3s linear 0s; }
-          body.sunDlower .header .submarine-hat-leds-wrapper-leds {
+          body.sunDlower .header .submarine-hat-leds-wrapper-leds:after, body.sunDlower .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #f7dc6f;
             transition: background-color 0.3s linear 0s; }
-            body.sunDlower .header .submarine-hat-leds-wrapper-leds:after, body.sunDlower .header .submarine-hat-leds-wrapper-leds:before {
-              background-color: #f7dc6f;
-              transition: background-color 0.3s linear 0s; }
-  body.carrot {
-    /*.content {
-        &-project-badge {
-            &-innercontent {
-                &-label {
-                    background: $defcolor;
-                }
-            }
-        }
-    }*/ }
-    body.carrot .header {
+  body.sunDlower footer .footer li svg g g {
+    fill: #f1c40f; }
+  body.carrot .header {
+    background-color: #e67e22;
+    transition: background-color 0.3s linear 0s; }
+    body.carrot .header-colorslab--top {
+      background-color: #f0b37e;
+      transition: background-color 0.3s linear 0s; }
+    body.carrot .header-colorslab--middle {
+      background-color: #eb9950;
+      transition: background-color 0.3s linear 0s; }
+    body.carrot .header-colorslab--bottom {
       background-color: #e67e22;
       transition: background-color 0.3s linear 0s; }
-      body.carrot .header-colorslab--top {
-        background-color: #f0b37e;
+    body.carrot .header-xs-profile-links-pages-list-toggle, body.carrot .header-profile-links-pages-list-toggle {
+      background: linear-gradient(to right, #bf6516 0%, #e67e22 100%);
+      border: 3px solid #f7d6b9;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.carrot .header-picture-container-pic {
+      border-color: #f0f0f0;
+      background-color: #f0f0f0;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.carrot .header .submarine-bubble {
+      background: #f7d6b9;
+      transition: background-color 0.3s linear 0s; }
+    body.carrot .header .submarine-body {
+      border-color: #f0b37e;
+      background: #f0b37e;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+      body.carrot .header .submarine-body-light-marker {
+        background-color: #a85913;
         transition: background-color 0.3s linear 0s; }
-      body.carrot .header-colorslab--middle {
-        background-color: #eb9950;
-        transition: background-color 0.3s linear 0s; }
-      body.carrot .header-colorslab--bottom {
-        background-color: #e67e22;
-        transition: background-color 0.3s linear 0s; }
-      body.carrot .header-profile-links-pages-list-toggle {
-        background: linear-gradient(to right, #bf6516 0%, #e67e22 100%);
-        border: 3px solid #f7d6b9;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.carrot .header-picture-container-pic {
-        border-color: #f0f0f0;
-        background-color: #f0f0f0;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.carrot .header .submarine-bubble {
-        background: #f7d6b9;
-        transition: background-color 0.3s linear 0s; }
-      body.carrot .header .submarine-body {
-        border-color: #f0b37e;
-        background: #f0b37e;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-        body.carrot .header .submarine-body-light-marker {
-          background-color: #a85913;
-          transition: background-color 0.3s linear 0s; }
-        body.carrot .header .submarine-body-light {
-          border-color: transparent transparent #e98b39 transparent;
-          transition: border-color 0.3s linear 0s; }
-        body.carrot .header .submarine-body-window {
-          background: #f0b37e;
-          border-color: #e67e22;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.carrot .header .submarine-body-window:after {
-            border-top-color: #e67e22;
-            transition: border-top-color 0.3s linear 0s; }
-        body.carrot .header .submarine-body-engine {
-          background-color: #e67e22;
-          border-color: #e67e22;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.carrot .header .submarine-body-engine:after, body.carrot .header .submarine-body-engine:before {
-            background-color: #f7d6b9;
-            transition: background-color 0.3s linear 0s; }
-      body.carrot .header .submarine-helix {
-        border: 2px solid #f0b37e;
+      body.carrot .header .submarine-body-light {
+        border-color: transparent transparent #e98b39 transparent;
         transition: border-color 0.3s linear 0s; }
-      body.carrot .header .submarine-fins-fin {
+      body.carrot .header .submarine-body-window {
         background: #f0b37e;
-        transition: background-color 0.3s linear 0s; }
-      body.carrot .header .submarine-hat {
+        border-color: #e67e22;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.carrot .header .submarine-body-window:after {
+          border-top-color: #e67e22;
+          transition: border-top-color 0.3s linear 0s; }
+      body.carrot .header .submarine-body-engine {
+        background-color: #e67e22;
+        border-color: #e67e22;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.carrot .header .submarine-body-engine:after, body.carrot .header .submarine-body-engine:before {
+          background-color: #f7d6b9;
+          transition: background-color 0.3s linear 0s; }
+    body.carrot .header .submarine-helix {
+      border: 2px solid #f0b37e;
+      transition: border-color 0.3s linear 0s; }
+    body.carrot .header .submarine-fins-fin {
+      background: #f0b37e;
+      transition: background-color 0.3s linear 0s; }
+    body.carrot .header .submarine-hat {
+      background-color: #f0b37e;
+      transition: background-color 0.3s linear 0s; }
+      body.carrot .header .submarine-hat-periscope {
         background-color: #f0b37e;
         transition: background-color 0.3s linear 0s; }
-        body.carrot .header .submarine-hat-periscope {
+        body.carrot .header .submarine-hat-periscope:after, body.carrot .header .submarine-hat-periscope:before {
           background-color: #f0b37e;
           transition: background-color 0.3s linear 0s; }
-          body.carrot .header .submarine-hat-periscope:after, body.carrot .header .submarine-hat-periscope:before {
-            background-color: #f0b37e;
-            transition: background-color 0.3s linear 0s; }
-        body.carrot .header .submarine-hat-leds-wrapper {
-          background-color: #e67e22;
+      body.carrot .header .submarine-hat-leds-wrapper {
+        background-color: #e67e22;
+        transition: background-color 0.3s linear 0s; }
+        body.carrot .header .submarine-hat-leds-wrapper-leds {
+          background-color: #f0b37e;
           transition: background-color 0.3s linear 0s; }
-          body.carrot .header .submarine-hat-leds-wrapper-leds {
+          body.carrot .header .submarine-hat-leds-wrapper-leds:after, body.carrot .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #f0b37e;
             transition: background-color 0.3s linear 0s; }
-            body.carrot .header .submarine-hat-leds-wrapper-leds:after, body.carrot .header .submarine-hat-leds-wrapper-leds:before {
-              background-color: #f0b37e;
-              transition: background-color 0.3s linear 0s; }
-  body.alizarin {
-    /*.content {
-        &-project-badge {
-            &-innercontent {
-                &-label {
-                    background: $defcolor;
-                }
-            }
-        }
-    }*/ }
-    body.alizarin .header {
+  body.carrot footer .footer li svg g g {
+    fill: #e67e22; }
+  body.alizarin .header {
+    background-color: #e74c3c;
+    transition: background-color 0.3s linear 0s; }
+    body.alizarin .header-colorslab--top {
+      background-color: #f29f97;
+      transition: background-color 0.3s linear 0s; }
+    body.alizarin .header-colorslab--middle {
+      background-color: #ed7669;
+      transition: background-color 0.3s linear 0s; }
+    body.alizarin .header-colorslab--bottom {
       background-color: #e74c3c;
       transition: background-color 0.3s linear 0s; }
-      body.alizarin .header-colorslab--top {
-        background-color: #f29f97;
+    body.alizarin .header-xs-profile-links-pages-list-toggle, body.alizarin .header-profile-links-pages-list-toggle {
+      background: linear-gradient(to right, #d62c1a 0%, #e74c3c 100%);
+      border: 3px solid #f9d6d2;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.alizarin .header-picture-container-pic {
+      border-color: #f0f0f0;
+      background-color: #f0f0f0;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.alizarin .header .submarine-bubble {
+      background: #f9d6d2;
+      transition: background-color 0.3s linear 0s; }
+    body.alizarin .header .submarine-body {
+      border-color: #f29f97;
+      background: #f29f97;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+      body.alizarin .header .submarine-body-light-marker {
+        background-color: #bf2718;
         transition: background-color 0.3s linear 0s; }
-      body.alizarin .header-colorslab--middle {
-        background-color: #ed7669;
-        transition: background-color 0.3s linear 0s; }
-      body.alizarin .header-colorslab--bottom {
-        background-color: #e74c3c;
-        transition: background-color 0.3s linear 0s; }
-      body.alizarin .header-profile-links-pages-list-toggle {
-        background: linear-gradient(to right, #d62c1a 0%, #e74c3c 100%);
-        border: 3px solid #f9d6d2;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.alizarin .header-picture-container-pic {
-        border-color: #f0f0f0;
-        background-color: #f0f0f0;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.alizarin .header .submarine-bubble {
-        background: #f9d6d2;
-        transition: background-color 0.3s linear 0s; }
-      body.alizarin .header .submarine-body {
-        border-color: #f29f97;
-        background: #f29f97;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-        body.alizarin .header .submarine-body-light-marker {
-          background-color: #bf2718;
-          transition: background-color 0.3s linear 0s; }
-        body.alizarin .header .submarine-body-light {
-          border-color: transparent transparent #ea6153 transparent;
-          transition: border-color 0.3s linear 0s; }
-        body.alizarin .header .submarine-body-window {
-          background: #f29f97;
-          border-color: #e74c3c;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.alizarin .header .submarine-body-window:after {
-            border-top-color: #e74c3c;
-            transition: border-top-color 0.3s linear 0s; }
-        body.alizarin .header .submarine-body-engine {
-          background-color: #e74c3c;
-          border-color: #e74c3c;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.alizarin .header .submarine-body-engine:after, body.alizarin .header .submarine-body-engine:before {
-            background-color: #f9d6d2;
-            transition: background-color 0.3s linear 0s; }
-      body.alizarin .header .submarine-helix {
-        border: 2px solid #f29f97;
+      body.alizarin .header .submarine-body-light {
+        border-color: transparent transparent #ea6153 transparent;
         transition: border-color 0.3s linear 0s; }
-      body.alizarin .header .submarine-fins-fin {
+      body.alizarin .header .submarine-body-window {
         background: #f29f97;
-        transition: background-color 0.3s linear 0s; }
-      body.alizarin .header .submarine-hat {
+        border-color: #e74c3c;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.alizarin .header .submarine-body-window:after {
+          border-top-color: #e74c3c;
+          transition: border-top-color 0.3s linear 0s; }
+      body.alizarin .header .submarine-body-engine {
+        background-color: #e74c3c;
+        border-color: #e74c3c;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.alizarin .header .submarine-body-engine:after, body.alizarin .header .submarine-body-engine:before {
+          background-color: #f9d6d2;
+          transition: background-color 0.3s linear 0s; }
+    body.alizarin .header .submarine-helix {
+      border: 2px solid #f29f97;
+      transition: border-color 0.3s linear 0s; }
+    body.alizarin .header .submarine-fins-fin {
+      background: #f29f97;
+      transition: background-color 0.3s linear 0s; }
+    body.alizarin .header .submarine-hat {
+      background-color: #f29f97;
+      transition: background-color 0.3s linear 0s; }
+      body.alizarin .header .submarine-hat-periscope {
         background-color: #f29f97;
         transition: background-color 0.3s linear 0s; }
-        body.alizarin .header .submarine-hat-periscope {
+        body.alizarin .header .submarine-hat-periscope:after, body.alizarin .header .submarine-hat-periscope:before {
           background-color: #f29f97;
           transition: background-color 0.3s linear 0s; }
-          body.alizarin .header .submarine-hat-periscope:after, body.alizarin .header .submarine-hat-periscope:before {
-            background-color: #f29f97;
-            transition: background-color 0.3s linear 0s; }
-        body.alizarin .header .submarine-hat-leds-wrapper {
-          background-color: #e74c3c;
+      body.alizarin .header .submarine-hat-leds-wrapper {
+        background-color: #e74c3c;
+        transition: background-color 0.3s linear 0s; }
+        body.alizarin .header .submarine-hat-leds-wrapper-leds {
+          background-color: #f29f97;
           transition: background-color 0.3s linear 0s; }
-          body.alizarin .header .submarine-hat-leds-wrapper-leds {
+          body.alizarin .header .submarine-hat-leds-wrapper-leds:after, body.alizarin .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #f29f97;
             transition: background-color 0.3s linear 0s; }
-            body.alizarin .header .submarine-hat-leds-wrapper-leds:after, body.alizarin .header .submarine-hat-leds-wrapper-leds:before {
-              background-color: #f29f97;
-              transition: background-color 0.3s linear 0s; }
-  body.orange {
-    /*.content {
-        &-project-badge {
-            &-innercontent {
-                &-label {
-                    background: $defcolor;
-                }
-            }
-        }
-    }*/ }
-    body.orange .header {
+  body.alizarin footer .footer li svg g g {
+    fill: #e74c3c; }
+  body.orange .header {
+    background-color: #f39c12;
+    transition: background-color 0.3s linear 0s; }
+    body.orange .header-colorslab--top {
+      background-color: #f8c573;
+      transition: background-color 0.3s linear 0s; }
+    body.orange .header-colorslab--middle {
+      background-color: #f5b043;
+      transition: background-color 0.3s linear 0s; }
+    body.orange .header-colorslab--bottom {
       background-color: #f39c12;
       transition: background-color 0.3s linear 0s; }
-      body.orange .header-colorslab--top {
-        background-color: #f8c573;
+    body.orange .header-xs-profile-links-pages-list-toggle, body.orange .header-profile-links-pages-list-toggle {
+      background: linear-gradient(to right, #c87f0a 0%, #f39c12 100%);
+      border: 3px solid #fbdfb2;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.orange .header-picture-container-pic {
+      border-color: #f0f0f0;
+      background-color: #f0f0f0;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.orange .header .submarine-bubble {
+      background: #fbdfb2;
+      transition: background-color 0.3s linear 0s; }
+    body.orange .header .submarine-body {
+      border-color: #f8c573;
+      background: #f8c573;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+      body.orange .header .submarine-body-light-marker {
+        background-color: #b06f09;
         transition: background-color 0.3s linear 0s; }
-      body.orange .header-colorslab--middle {
-        background-color: #f5b043;
-        transition: background-color 0.3s linear 0s; }
-      body.orange .header-colorslab--bottom {
-        background-color: #f39c12;
-        transition: background-color 0.3s linear 0s; }
-      body.orange .header-profile-links-pages-list-toggle {
-        background: linear-gradient(to right, #c87f0a 0%, #f39c12 100%);
-        border: 3px solid #fbdfb2;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.orange .header-picture-container-pic {
-        border-color: #f0f0f0;
-        background-color: #f0f0f0;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.orange .header .submarine-bubble {
-        background: #fbdfb2;
-        transition: background-color 0.3s linear 0s; }
-      body.orange .header .submarine-body {
-        border-color: #f8c573;
-        background: #f8c573;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-        body.orange .header .submarine-body-light-marker {
-          background-color: #b06f09;
-          transition: background-color 0.3s linear 0s; }
-        body.orange .header .submarine-body-light {
-          border-color: transparent transparent #f4a62a transparent;
-          transition: border-color 0.3s linear 0s; }
-        body.orange .header .submarine-body-window {
-          background: #f8c573;
-          border-color: #f39c12;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.orange .header .submarine-body-window:after {
-            border-top-color: #f39c12;
-            transition: border-top-color 0.3s linear 0s; }
-        body.orange .header .submarine-body-engine {
-          background-color: #f39c12;
-          border-color: #f39c12;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.orange .header .submarine-body-engine:after, body.orange .header .submarine-body-engine:before {
-            background-color: #fbdfb2;
-            transition: background-color 0.3s linear 0s; }
-      body.orange .header .submarine-helix {
-        border: 2px solid #f8c573;
+      body.orange .header .submarine-body-light {
+        border-color: transparent transparent #f4a62a transparent;
         transition: border-color 0.3s linear 0s; }
-      body.orange .header .submarine-fins-fin {
+      body.orange .header .submarine-body-window {
         background: #f8c573;
-        transition: background-color 0.3s linear 0s; }
-      body.orange .header .submarine-hat {
+        border-color: #f39c12;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.orange .header .submarine-body-window:after {
+          border-top-color: #f39c12;
+          transition: border-top-color 0.3s linear 0s; }
+      body.orange .header .submarine-body-engine {
+        background-color: #f39c12;
+        border-color: #f39c12;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.orange .header .submarine-body-engine:after, body.orange .header .submarine-body-engine:before {
+          background-color: #fbdfb2;
+          transition: background-color 0.3s linear 0s; }
+    body.orange .header .submarine-helix {
+      border: 2px solid #f8c573;
+      transition: border-color 0.3s linear 0s; }
+    body.orange .header .submarine-fins-fin {
+      background: #f8c573;
+      transition: background-color 0.3s linear 0s; }
+    body.orange .header .submarine-hat {
+      background-color: #f8c573;
+      transition: background-color 0.3s linear 0s; }
+      body.orange .header .submarine-hat-periscope {
         background-color: #f8c573;
         transition: background-color 0.3s linear 0s; }
-        body.orange .header .submarine-hat-periscope {
+        body.orange .header .submarine-hat-periscope:after, body.orange .header .submarine-hat-periscope:before {
           background-color: #f8c573;
           transition: background-color 0.3s linear 0s; }
-          body.orange .header .submarine-hat-periscope:after, body.orange .header .submarine-hat-periscope:before {
-            background-color: #f8c573;
-            transition: background-color 0.3s linear 0s; }
-        body.orange .header .submarine-hat-leds-wrapper {
-          background-color: #f39c12;
+      body.orange .header .submarine-hat-leds-wrapper {
+        background-color: #f39c12;
+        transition: background-color 0.3s linear 0s; }
+        body.orange .header .submarine-hat-leds-wrapper-leds {
+          background-color: #f8c573;
           transition: background-color 0.3s linear 0s; }
-          body.orange .header .submarine-hat-leds-wrapper-leds {
+          body.orange .header .submarine-hat-leds-wrapper-leds:after, body.orange .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #f8c573;
             transition: background-color 0.3s linear 0s; }
-            body.orange .header .submarine-hat-leds-wrapper-leds:after, body.orange .header .submarine-hat-leds-wrapper-leds:before {
-              background-color: #f8c573;
-              transition: background-color 0.3s linear 0s; }
-  body.pumpkin {
-    /*.content {
-        &-project-badge {
-            &-innercontent {
-                &-label {
-                    background: $defcolor;
-                }
-            }
-        }
-    }*/ }
-    body.pumpkin .header {
+  body.orange footer .footer li svg g g {
+    fill: #f39c12; }
+  body.pumpkin .header {
+    background-color: #d35400;
+    transition: background-color 0.3s linear 0s; }
+    body.pumpkin .header-colorslab--top {
+      background-color: #ff883a;
+      transition: background-color 0.3s linear 0s; }
+    body.pumpkin .header-colorslab--middle {
+      background-color: #ff6a07;
+      transition: background-color 0.3s linear 0s; }
+    body.pumpkin .header-colorslab--bottom {
       background-color: #d35400;
       transition: background-color 0.3s linear 0s; }
-      body.pumpkin .header-colorslab--top {
-        background-color: #ff883a;
+    body.pumpkin .header-xs-profile-links-pages-list-toggle, body.pumpkin .header-profile-links-pages-list-toggle {
+      background: linear-gradient(to right, #a04000 0%, #d35400 100%);
+      border: 3px solid #ffb07c;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.pumpkin .header-picture-container-pic {
+      border-color: #f0f0f0;
+      background-color: #f0f0f0;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.pumpkin .header .submarine-bubble {
+      background: #ffb07c;
+      transition: background-color 0.3s linear 0s; }
+    body.pumpkin .header .submarine-body {
+      border-color: #ff883a;
+      background: #ff883a;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+      body.pumpkin .header .submarine-body-light-marker {
+        background-color: #873600;
         transition: background-color 0.3s linear 0s; }
-      body.pumpkin .header-colorslab--middle {
-        background-color: #ff6a07;
-        transition: background-color 0.3s linear 0s; }
-      body.pumpkin .header-colorslab--bottom {
-        background-color: #d35400;
-        transition: background-color 0.3s linear 0s; }
-      body.pumpkin .header-profile-links-pages-list-toggle {
-        background: linear-gradient(to right, #a04000 0%, #d35400 100%);
-        border: 3px solid #ffb07c;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.pumpkin .header-picture-container-pic {
-        border-color: #f0f0f0;
-        background-color: #f0f0f0;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.pumpkin .header .submarine-bubble {
-        background: #ffb07c;
-        transition: background-color 0.3s linear 0s; }
-      body.pumpkin .header .submarine-body {
-        border-color: #ff883a;
-        background: #ff883a;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-        body.pumpkin .header .submarine-body-light-marker {
-          background-color: #873600;
-          transition: background-color 0.3s linear 0s; }
-        body.pumpkin .header .submarine-body-light {
-          border-color: transparent transparent #ed5e00 transparent;
-          transition: border-color 0.3s linear 0s; }
-        body.pumpkin .header .submarine-body-window {
-          background: #ff883a;
-          border-color: #d35400;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.pumpkin .header .submarine-body-window:after {
-            border-top-color: #d35400;
-            transition: border-top-color 0.3s linear 0s; }
-        body.pumpkin .header .submarine-body-engine {
-          background-color: #d35400;
-          border-color: #d35400;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.pumpkin .header .submarine-body-engine:after, body.pumpkin .header .submarine-body-engine:before {
-            background-color: #ffb07c;
-            transition: background-color 0.3s linear 0s; }
-      body.pumpkin .header .submarine-helix {
-        border: 2px solid #ff883a;
+      body.pumpkin .header .submarine-body-light {
+        border-color: transparent transparent #ed5e00 transparent;
         transition: border-color 0.3s linear 0s; }
-      body.pumpkin .header .submarine-fins-fin {
+      body.pumpkin .header .submarine-body-window {
         background: #ff883a;
-        transition: background-color 0.3s linear 0s; }
-      body.pumpkin .header .submarine-hat {
+        border-color: #d35400;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.pumpkin .header .submarine-body-window:after {
+          border-top-color: #d35400;
+          transition: border-top-color 0.3s linear 0s; }
+      body.pumpkin .header .submarine-body-engine {
+        background-color: #d35400;
+        border-color: #d35400;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.pumpkin .header .submarine-body-engine:after, body.pumpkin .header .submarine-body-engine:before {
+          background-color: #ffb07c;
+          transition: background-color 0.3s linear 0s; }
+    body.pumpkin .header .submarine-helix {
+      border: 2px solid #ff883a;
+      transition: border-color 0.3s linear 0s; }
+    body.pumpkin .header .submarine-fins-fin {
+      background: #ff883a;
+      transition: background-color 0.3s linear 0s; }
+    body.pumpkin .header .submarine-hat {
+      background-color: #ff883a;
+      transition: background-color 0.3s linear 0s; }
+      body.pumpkin .header .submarine-hat-periscope {
         background-color: #ff883a;
         transition: background-color 0.3s linear 0s; }
-        body.pumpkin .header .submarine-hat-periscope {
+        body.pumpkin .header .submarine-hat-periscope:after, body.pumpkin .header .submarine-hat-periscope:before {
           background-color: #ff883a;
           transition: background-color 0.3s linear 0s; }
-          body.pumpkin .header .submarine-hat-periscope:after, body.pumpkin .header .submarine-hat-periscope:before {
-            background-color: #ff883a;
-            transition: background-color 0.3s linear 0s; }
-        body.pumpkin .header .submarine-hat-leds-wrapper {
-          background-color: #d35400;
+      body.pumpkin .header .submarine-hat-leds-wrapper {
+        background-color: #d35400;
+        transition: background-color 0.3s linear 0s; }
+        body.pumpkin .header .submarine-hat-leds-wrapper-leds {
+          background-color: #ff883a;
           transition: background-color 0.3s linear 0s; }
-          body.pumpkin .header .submarine-hat-leds-wrapper-leds {
+          body.pumpkin .header .submarine-hat-leds-wrapper-leds:after, body.pumpkin .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #ff883a;
             transition: background-color 0.3s linear 0s; }
-            body.pumpkin .header .submarine-hat-leds-wrapper-leds:after, body.pumpkin .header .submarine-hat-leds-wrapper-leds:before {
-              background-color: #ff883a;
-              transition: background-color 0.3s linear 0s; }
-  body.pomegranate {
-    /*.content {
-        &-project-badge {
-            &-innercontent {
-                &-label {
-                    background: $defcolor;
-                }
-            }
-        }
-    }*/ }
-    body.pomegranate .header {
+  body.pumpkin footer .footer li svg g g {
+    fill: #d35400; }
+  body.pomegranate .header {
+    background-color: #c0392b;
+    transition: background-color 0.3s linear 0s; }
+    body.pomegranate .header-colorslab--top {
+      background-color: #df7c72;
+      transition: background-color 0.3s linear 0s; }
+    body.pomegranate .header-colorslab--middle {
+      background-color: #d65548;
+      transition: background-color 0.3s linear 0s; }
+    body.pomegranate .header-colorslab--bottom {
       background-color: #c0392b;
       transition: background-color 0.3s linear 0s; }
-      body.pomegranate .header-colorslab--top {
-        background-color: #df7c72;
+    body.pomegranate .header-xs-profile-links-pages-list-toggle, body.pomegranate .header-profile-links-pages-list-toggle {
+      background: linear-gradient(to right, #962d22 0%, #c0392b 100%);
+      border: 3px solid #ebaea8;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.pomegranate .header-picture-container-pic {
+      border-color: #f0f0f0;
+      background-color: #f0f0f0;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.pomegranate .header .submarine-bubble {
+      background: #ebaea8;
+      transition: background-color 0.3s linear 0s; }
+    body.pomegranate .header .submarine-body {
+      border-color: #df7c72;
+      background: #df7c72;
+      transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+      body.pomegranate .header .submarine-body-light-marker {
+        background-color: #81261d;
         transition: background-color 0.3s linear 0s; }
-      body.pomegranate .header-colorslab--middle {
-        background-color: #d65548;
-        transition: background-color 0.3s linear 0s; }
-      body.pomegranate .header-colorslab--bottom {
-        background-color: #c0392b;
-        transition: background-color 0.3s linear 0s; }
-      body.pomegranate .header-profile-links-pages-list-toggle {
-        background: linear-gradient(to right, #962d22 0%, #c0392b 100%);
-        border: 3px solid #ebaea8;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.pomegranate .header-picture-container-pic {
-        border-color: #f0f0f0;
-        background-color: #f0f0f0;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-      body.pomegranate .header .submarine-bubble {
-        background: #ebaea8;
-        transition: background-color 0.3s linear 0s; }
-      body.pomegranate .header .submarine-body {
-        border-color: #df7c72;
-        background: #df7c72;
-        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-        body.pomegranate .header .submarine-body-light-marker {
-          background-color: #81261d;
-          transition: background-color 0.3s linear 0s; }
-        body.pomegranate .header .submarine-body-light {
-          border-color: transparent transparent #d14233 transparent;
-          transition: border-color 0.3s linear 0s; }
-        body.pomegranate .header .submarine-body-window {
-          background: #df7c72;
-          border-color: #c0392b;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.pomegranate .header .submarine-body-window:after {
-            border-top-color: #c0392b;
-            transition: border-top-color 0.3s linear 0s; }
-        body.pomegranate .header .submarine-body-engine {
-          background-color: #c0392b;
-          border-color: #c0392b;
-          transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
-          body.pomegranate .header .submarine-body-engine:after, body.pomegranate .header .submarine-body-engine:before {
-            background-color: #ebaea8;
-            transition: background-color 0.3s linear 0s; }
-      body.pomegranate .header .submarine-helix {
-        border: 2px solid #df7c72;
+      body.pomegranate .header .submarine-body-light {
+        border-color: transparent transparent #d14233 transparent;
         transition: border-color 0.3s linear 0s; }
-      body.pomegranate .header .submarine-fins-fin {
+      body.pomegranate .header .submarine-body-window {
         background: #df7c72;
-        transition: background-color 0.3s linear 0s; }
-      body.pomegranate .header .submarine-hat {
+        border-color: #c0392b;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.pomegranate .header .submarine-body-window:after {
+          border-top-color: #c0392b;
+          transition: border-top-color 0.3s linear 0s; }
+      body.pomegranate .header .submarine-body-engine {
+        background-color: #c0392b;
+        border-color: #c0392b;
+        transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+        body.pomegranate .header .submarine-body-engine:after, body.pomegranate .header .submarine-body-engine:before {
+          background-color: #ebaea8;
+          transition: background-color 0.3s linear 0s; }
+    body.pomegranate .header .submarine-helix {
+      border: 2px solid #df7c72;
+      transition: border-color 0.3s linear 0s; }
+    body.pomegranate .header .submarine-fins-fin {
+      background: #df7c72;
+      transition: background-color 0.3s linear 0s; }
+    body.pomegranate .header .submarine-hat {
+      background-color: #df7c72;
+      transition: background-color 0.3s linear 0s; }
+      body.pomegranate .header .submarine-hat-periscope {
         background-color: #df7c72;
         transition: background-color 0.3s linear 0s; }
-        body.pomegranate .header .submarine-hat-periscope {
+        body.pomegranate .header .submarine-hat-periscope:after, body.pomegranate .header .submarine-hat-periscope:before {
           background-color: #df7c72;
           transition: background-color 0.3s linear 0s; }
-          body.pomegranate .header .submarine-hat-periscope:after, body.pomegranate .header .submarine-hat-periscope:before {
-            background-color: #df7c72;
-            transition: background-color 0.3s linear 0s; }
-        body.pomegranate .header .submarine-hat-leds-wrapper {
-          background-color: #c0392b;
+      body.pomegranate .header .submarine-hat-leds-wrapper {
+        background-color: #c0392b;
+        transition: background-color 0.3s linear 0s; }
+        body.pomegranate .header .submarine-hat-leds-wrapper-leds {
+          background-color: #df7c72;
           transition: background-color 0.3s linear 0s; }
-          body.pomegranate .header .submarine-hat-leds-wrapper-leds {
+          body.pomegranate .header .submarine-hat-leds-wrapper-leds:after, body.pomegranate .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #df7c72;
             transition: background-color 0.3s linear 0s; }
-            body.pomegranate .header .submarine-hat-leds-wrapper-leds:after, body.pomegranate .header .submarine-hat-leds-wrapper-leds:before {
-              background-color: #df7c72;
-              transition: background-color 0.3s linear 0s; }
+  body.pomegranate footer .footer li svg g g {
+    fill: #c0392b; }
   body.colorPickerActive {
     position: relative;
     top: 275px; }
@@ -1808,6 +1672,47 @@ body {
     height: 85vh;
     width: 100%;
     position: relative; }
+    body .header-xs {
+      width: 100%;
+      height: 60px;
+      display: none;
+      padding: 15px 15px 0 15px; }
+      @media only screen and (max-width: 768px) {
+        body .header-xs {
+          display: block; } }
+      body .header-xs-profile-links-pages-list {
+        margin: 0;
+        list-style: none;
+        width: 100%;
+        text-align: center;
+        padding: 0; }
+        body .header-xs-profile-links-pages-list li {
+          margin: 0;
+          display: inline-block;
+          font-size: 1.25em;
+          color: #fff;
+          border-bottom: 2px solid transparent; }
+          body .header-xs-profile-links-pages-list li.header-profile-links-pages-list--active {
+            border-bottom: 2px solid #fff; }
+          body .header-xs-profile-links-pages-list li a {
+            padding: 10px 15px;
+            font-size: medium;
+            line-height: 48px;
+            height: 48px;
+            color: #fff;
+            text-decoration: none; }
+            body .header-xs-profile-links-pages-list li a img {
+              width: 30px; }
+      body .header-xs-profile-links-pages-list-toggle {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #ff0000;
+        border: 3px solid #fff;
+        position: relative;
+        top: 12px;
+        margin-left: 15px; }
     body .header-colorslab {
       width: 100%; }
       body .header-colorslab--bottom {
@@ -1817,9 +1722,22 @@ body {
       width: 100%;
       position: relative;
       padding: 30px; }
+      @media only screen and (max-width: 768px) {
+        body .header-profile-data {
+          z-index: 9; } }
     body .header-picture-container {
       height: 72px;
-      width: 72px; }
+      width: 72px;
+      float: left; }
+      @media only screen and (max-width: 768px) {
+        body .header-picture-container {
+          height: 100px;
+          width: 100px; } }
+      @media only screen and (max-width: 768px) {
+        body .header-picture-container {
+          float: none;
+          display: block;
+          margin: 0 auto 15px auto; } }
       body .header-picture-container-pic {
         height: 100%;
         width: 100%;
@@ -1841,6 +1759,10 @@ body {
           width: 72px;
           background-size: contain;
           background-image: url(../../profile-pics/my-pic-0.jpg); }
+          @media only screen and (max-width: 768px) {
+            body .header-picture-container-pic--0 {
+              height: 100px;
+              width: 100px; } }
         body .header-picture-container-pic--1 {
           top: 72px;
           position: absolute;
@@ -1848,6 +1770,11 @@ body {
           width: 72px;
           background-size: contain;
           background-image: url(../../profile-pics/my-pic-1.jpg); }
+          @media only screen and (max-width: 768px) {
+            body .header-picture-container-pic--1 {
+              top: 100px;
+              height: 100px;
+              width: 100px; } }
         body .header-picture-container-pic--2 {
           top: 72px;
           position: absolute;
@@ -1855,6 +1782,11 @@ body {
           width: 72px;
           background-size: contain;
           background-image: url(../../profile-pics/my-pic-2.jpg); }
+          @media only screen and (max-width: 768px) {
+            body .header-picture-container-pic--2 {
+              top: 100px;
+              height: 100px;
+              width: 100px; } }
         body .header-picture-container-pic--3 {
           top: 72px;
           position: absolute;
@@ -1862,6 +1794,11 @@ body {
           width: 72px;
           background-size: contain;
           background-image: url(../../profile-pics/my-pic-3.jpg); }
+          @media only screen and (max-width: 768px) {
+            body .header-picture-container-pic--3 {
+              top: 100px;
+              height: 100px;
+              width: 100px; } }
         body .header-picture-container-pic--4 {
           top: 72px;
           position: absolute;
@@ -1869,8 +1806,19 @@ body {
           width: 72px;
           background-size: contain;
           background-image: url(../../profile-pics/my-pic-4.jpg); }
+          @media only screen and (max-width: 768px) {
+            body .header-picture-container-pic--4 {
+              top: 100px;
+              height: 100px;
+              width: 100px; } }
     body .header-profile-mast {
-      width: 300px; }
+      width: 300px;
+      float: left; }
+      @media only screen and (max-width: 768px) {
+        body .header-profile-mast {
+          float: none;
+          margin: 0 auto;
+          display: block; } }
       body .header-profile-mast-name {
         font-size: 2em;
         display: block;
@@ -1887,6 +1835,9 @@ body {
     body .header-profile-links {
       position: relative;
       top: 6px; }
+      @media only screen and (max-width: 768px) {
+        body .header-profile-links {
+          display: none; } }
       body .header-profile-links-pages-list {
         margin: 0;
         list-style: none;
@@ -1920,10 +1871,13 @@ body {
       position: relative;
       top: 15px;
       margin-left: 15px; }
+      @media only screen and (max-width: 768px) {
+        body .header-profile-links-pages-list-toggle {
+          display: none; } }
     body .header-tagged {
       width: 100%;
       position: absolute;
-      top: 420px;
+      bottom: 45px;
       z-index: 2; }
       body .header-tagged-awesome {
         font-size: 3em;
@@ -1933,12 +1887,18 @@ body {
         font-weight: 100;
         text-align: center;
         letter-spacing: 1px; }
+        @media only screen and (max-width: 768px) {
+          body .header-tagged-awesome {
+            display: none; } }
       body .header-tagged-topskills {
         margin: 15px 0;
         list-style: none;
         width: 100%;
         text-align: center;
         padding: 0; }
+        @media only screen and (max-width: 768px) {
+          body .header-tagged-topskills {
+            display: none; } }
         body .header-tagged-topskills li {
           font-size: medium;
           margin: 0;
@@ -1965,6 +1925,9 @@ body {
         border-radius: 50%;
         display: block;
         margin: 45px auto 0; }
+        @media only screen and (max-width: 768px) {
+          body .header-tagged-arrow-holder {
+            margin: 0 auto; } }
         body .header-tagged-arrow-holder-arrow {
           position: absolute;
           overflow: hidden;
@@ -1982,7 +1945,7 @@ body {
   body .content {
     height: auto;
     width: 100%;
-    background: #f0f0f0;
+    background: #fff;
     padding-bottom: 30px; }
     body .content-projects {
       width: 100%; }
@@ -2013,6 +1976,33 @@ body {
           margin: 0 auto;
           transform: scale(1, 1);
           transition: transform 0.5s ease-in 0s; }
+          body .content-project-badge-innercontent img.moosik {
+            width: 130px;
+            margin-top: 80px; }
+          body .content-project-badge-innercontent img.itibp {
+            width: 160px;
+            margin-top: 90px; }
+          body .content-project-badge-innercontent img.piemix {
+            width: 130px;
+            margin-top: 78px; }
+          body .content-project-badge-innercontent img.vxgrid {
+            height: 100%;
+            margin-top: 0; }
+          body .content-project-badge-innercontent img.notsogrey {
+            width: 130px;
+            margin-top: 78px; }
+          body .content-project-badge-innercontent img.richcc {
+            height: 100%;
+            margin-top: 0; }
+          body .content-project-badge-innercontent img.baat {
+            width: 130px;
+            margin-top: 135px; }
+          body .content-project-badge-innercontent img.elements {
+            width: 100px;
+            margin-top: 100px; }
+          body .content-project-badge-innercontent img.fduap {
+            width: 100px;
+            margin-top: 110px; }
         body .content-project-badge-innercontent-label {
           height: 48px;
           line-height: 48px;
@@ -2034,14 +2024,99 @@ body {
       font-size: large;
       line-height: 60px;
       font-weight: 500;
-      padding: 30px; }
+      padding: 15px 30px; }
+      @media only screen and (max-width: 768px) {
+        body .content-skills-label {
+          padding: 0 30px; } }
+    body .content-skills-holder {
+      width: 100%;
+      height: 160px;
+      position: relative;
+      overflow: hidden; }
+      @media only screen and (max-width: 768px) {
+        body .content-skills-holder {
+          height: 130px; } }
+      body .content-skills-holder-arrow-holder {
+        position: absolute;
+        top: 50px;
+        height: 60px;
+        background: #F0F0F0;
+        width: 30px;
+        cursor: pointer;
+        outline: none; }
+        @media only screen and (max-width: 768px) {
+          body .content-skills-holder-arrow-holder {
+            top: 35px; } }
+        body .content-skills-holder-arrow-holder.disabled .content-skills-holder-arrow-holder-arrow {
+          opacity: 0.65; }
+        body .content-skills-holder-arrow-holder-arrow {
+          position: absolute;
+          overflow: hidden;
+          display: inline-block;
+          font-size: 12px;
+          /*set the size for arrow*/
+          width: 1em;
+          height: 1em;
+          margin-top: 11px; }
+          body .content-skills-holder-arrow-holder-arrow--mover {
+            border-bottom: 2px solid #808080;
+            border-left: 2px solid #808080;
+            transform: rotate(-45deg) skew(0deg);
+            top: 12px; }
+        body .content-skills-holder-arrow-holder.left {
+          left: 0; }
+          body .content-skills-holder-arrow-holder.left .content-skills-holder-arrow-holder-arrow--mover {
+            transform: rotate(46deg) skew(0deg);
+            left: 10px; }
+        body .content-skills-holder-arrow-holder.right {
+          right: 0; }
+          body .content-skills-holder-arrow-holder.right .content-skills-holder-arrow-holder-arrow--mover {
+            transform: rotate(-135deg) skew(0deg);
+            right: 10px; }
     body .content-skills {
       width: 100%;
-      padding: 0 30px;
-      margin: 0; }
+      padding: 0;
+      margin: 0;
+      height: 180px;
+      overflow-y: hidden;
+      overflow-x: auto;
+      white-space: nowrap; }
+      @media only screen and (max-width: 768px) {
+        body .content-skills {
+          height: 150px; } }
+      body .content-skills-wrapper {
+        width: calc(100% - 90px);
+        margin-left: 45px;
+        height: 100%;
+        overflow: hidden; }
       body .content-skills-badge {
         display: inline-block;
-        margin-right: 90px;
-        margin-bottom: 90px; }
+        margin: 30px 45px 0 45px; }
+        @media only screen and (max-width: 768px) {
+          body .content-skills-badge {
+            margin: 30px 20px 0 20px; } }
         body .content-skills-badge img {
           height: 100px; }
+          @media only screen and (max-width: 768px) {
+            body .content-skills-badge img {
+              height: 70px; } }
+  body footer {
+    background-color: #f0f0f0; }
+    body footer .footer {
+      height: 48px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: right; }
+      @media only screen and (max-width: 768px) {
+        body footer .footer {
+          text-align: center; } }
+      body footer .footer li {
+        display: inline-block;
+        width: 48px; }
+        body footer .footer li.margLeft {
+          margin: 0 0 0 15px; }
+        body footer .footer li svg {
+          height: 24px;
+          position: relative;
+          top: 12px; }

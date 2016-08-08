@@ -1,8 +1,9 @@
 ﻿<!DOCTYPE html>
 <html ng-csp ng-app="Portfolio.UI">
 <head>
-    <title></title>
-    <meta charset="utf-8" />
+    <title>Asit Parida</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="lib/hammer.min.js"></script>
     <script src="lib/jquery-2.2.4.min.js"></script>
     <script src="lib/angular.min.js"></script>
@@ -39,8 +40,16 @@
         </div>
     </div>
     <div class="header" ng-mouseleave="main.bannerleave($event)">
+        <div class="header-xs">
+            <div class="header-xs-profile-links">
+                <ul class="header-xs-profile-links-pages-list">
+                    <li class="pull-left"><a href="http://github.com/asitparida"><img src="assets/github-logo-plain.png" /></a></li>
+                    <li class="pull-right"><div class="header-xs-profile-links-pages-list-toggle" ng-click="main.openColorPicker()"></div></li>
+                </ul>
+            </div>
+        </div>
         <div class="header-profile-data">
-            <div class="header-picture-container  pull-left">
+            <div class="header-picture-container">
                 <div class="header-picture-container-pic">
                     <div class="header-picture-container-pic-circle">
                         <div class="header-picture-container-pic--0" id="header-pic-0"></div>
@@ -51,7 +60,7 @@
                     </div>
                 </div>
             </div>
-            <div class="header-profile-mast pull-left">
+            <div class="header-profile-mast">
                 <div class="header-profile-mast-name">Asit Kumar Parida</div>
                 <div class="header-profile-mast-job-title">I build awesome experiences</div>
             </div>
@@ -73,7 +82,7 @@
                 <li>JavaScript</li>
                 <li>MVC / MVVM</li>
             </ul>
-            <div class="header-tagged-arrow-holder" tabindex="0">
+            <div class="header-tagged-arrow-holder" tabindex="0" ng-click="main.goToContent()">
                 <div class="header-tagged-arrow-holder-arrow header-tagged-arrow-holder-arrow--bottom"></div>
             </div>
         </div>
@@ -116,121 +125,189 @@
         </div>
         <div class="header-colorslab--bottom"></div>
     </div>
-    <div class="content">
+    <div class="content" id="portfolioContent">
         <div class="content-projects">
             <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
-                <div class="content-project-badge-innercontent">
-                    <img src="project-logos/moosik_200_blank.png" style="width:130px;margin-top:80px;" />
-                    <div class="content-project-badge-innercontent-label">Moosik - An offline music player</div>
-                </div>
+                <a href="https://github.com/asitparida/Moosik">
+                    <div class="content-project-badge-innercontent">
+                        <img src="project-logos/moosik_200_blank.png" class="moosik" />
+                        <div class="content-project-badge-innercontent-label">Moosik - An offline music player</div>
+                    </div>
+                </a>
             </div>
             <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#f0f0f0;">
-                <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
-                <div class="content-project-badge-innercontent">
-                    <img src="project-logos/itibp.png" style="width:160px;margin-top:90px;" />
-                    <div class="content-project-badge-innercontent-label">Best Engineering Practices</div>
-                </div>
+                <a href="https://github.com/asitparida/NotSoGrey">
+                    <div class="content-project-badge-innercontent">
+                        <img src="project-logos/notsogrey.png" class="notsogrey" />
+                        <div class="content-project-badge-innercontent-label">For people who dream colors !!!</div>
+                    </div>
+                </a>
             </div>
             <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
-                <div class="content-project-badge-innercontent">
-                    <img src="project-logos/piemix.png" style="width:130px;margin-top:78px;" />
-                    <div class="content-project-badge-innercontent-label">PieMix - SVG & angular enabled pie chart</div>
-                </div>
+                <a href="https://github.com/asitparida/PieMix">
+                    <div class="content-project-badge-innercontent">
+                        <img src="project-logos/piemix.png" class="piemix" />
+                        <div class="content-project-badge-innercontent-label">PieMix - SVG & angular enabled pie chart</div>
+                    </div>
+                </a>
             </div>
             <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#f0f0f0;">
-                <div class="content-project-badge-innercontent">
-                    <img src="project-logos/vx-grid.png" style="width:100%;margin-top:-30px;" />
-                    <div class="content-project-badge-innercontent-label">VxGrid - DOM virtualized angular grid plugin</div>
-                </div>
+                <a href="https://github.com/asitparida/VxGrid">
+                    <div class="content-project-badge-innercontent">
+                        <img src="project-logos/vx-grid.png" class="vxgrid" />
+                        <div class="content-project-badge-innercontent-label">VxGrid - DOM virtualized angular grid plugin</div>
+                    </div>
+                </a>
             </div>
             <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
-                <div class="content-project-badge-innercontent">
-                    <img src="project-logos/notsogrey.png" style="width:130px;margin-top:78px;" />
-                    <div class="content-project-badge-innercontent-label">For people who dream colors !!!</div>
-                </div>
+                <a href="http://aka.ms/itibp">
+                    <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
+                    <div class="content-project-badge-innercontent">
+                        <img src="project-logos/itibp.png" class="itibp" />
+                        <div class="content-project-badge-innercontent-label">Best Engineering Practices</div>
+                    </div>
+                </a>
             </div>
             <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#f0f0f0;">
-                <div class="content-project-badge-innercontent">
-                    <img src="project-logos/richcc.png" style="width:100%;margin-top:-30px;" />
-                    <div class="content-project-badge-innercontent-label">RichCC - Rich calendar events plugin</div>
-                </div>
+                <a href="https://github.com/asitparida/RichCC">
+                    <div class="content-project-badge-innercontent">
+                        <img src="project-logos/richcc.png" class="richcc" />
+                        <div class="content-project-badge-innercontent-label">RichCC - Rich calendar events plugin</div>
+                    </div>
+                </a>
             </div>
             <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
-                <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
-                <div class="content-project-badge-innercontent">
-                    <img src="project-logos/baat.png" style="width:130px;margin-top:135px;" />
-                    <div class="content-project-badge-innercontent-label">Awesome financial management app</div>
-                </div>
+                <a href="http://uxbaat1.azurewebsites.net">
+                    <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
+                    <div class="content-project-badge-innercontent">
+                        <img src="project-logos/baat.png" class="baat" />
+                        <div class="content-project-badge-innercontent-label">Awesome financial management app</div>
+                    </div>
+                </a>
             </div>
             <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#f0f0f0;">
-                <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
-                <div class="content-project-badge-innercontent">
-                    <img src="project-logos/elements.png" style="width:100px;margin-top:100px;" />
-                    <div class="content-project-badge-innercontent-label">Project Elements</div>
-                </div>
+                <a href="http://elementsux.azurewebsites.net">
+                    <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
+                    <div class="content-project-badge-innercontent">
+                        <img src="project-logos/elements.png" class="elements" />
+                        <div class="content-project-badge-innercontent-label">Project Elements</div>
+                    </div>
+                </a>
             </div>
             <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
-                <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
-                <div class="content-project-badge-innercontent">
-                    <img src="project-logos/fduap.png" style="width:100px;margin-top:110px;" />
-                    <div class="content-project-badge-innercontent-label">Going crazy with UWP & dashboards</div>
-                </div>
+                <a>
+                    <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
+                    <div class="content-project-badge-innercontent">
+                        <img src="project-logos/fduap.png" class="fduap" />
+                        <div class="content-project-badge-innercontent-label">Going crazy with UWP & dashboards</div>
+                    </div>
+                </a>
             </div>
         </div>
         <label class="content-skills-label">Frameworks and Tools</label>
-        <ul class="content-skills">
-            <li class="content-skills-badge">
-                <img src="profile-skills/html5.png" />
+        <div class="content-skills-holder">
+            <div class="content-skills-holder-arrow-holder left" ng-click="main.scrollLeft()">
+                <div class="content-skills-holder-arrow-holder-arrow content-skills-holder-arrow-holder-arrow--mover"></div>
+            </div>
+            <div class="content-skills-holder-arrow-holder right" ng-click="main.scrollRight()">
+                <div class="content-skills-holder-arrow-holder-arrow content-skills-holder-arrow-holder-arrow--mover"></div>
+            </div>
+            <div class="content-skills-wrapper">
+                <ul class="content-skills" id="contentSkillsList">
+                    <li class="content-skills-badge">
+                        <img src="profile-skills/html5.png" />
+                    </li>
+                    <li class="content-skills-badge">
+                        <img src="profile-skills/css3.png" />
+                    </li>
+                    <li class="content-skills-badge">
+                        <img src="profile-skills/bootstrap.png" />
+                    </li>
+                    <li class="content-skills-badge">
+                        <img src="profile-skills/scss.png" />
+                    </li>
+                    <li class="content-skills-badge">
+                        <img src="profile-skills/material.png" />
+                    </li>
+                    <li class="content-skills-badge">
+                        <img src="profile-skills/js.png" />
+                    </li>
+                    <li class="content-skills-badge">
+                        <img src="profile-skills/ts.png" />
+                    </li>
+                    <li class="content-skills-badge">
+                        <img src="profile-skills/ang.png" />
+                    </li>
+                    <li class="content-skills-badge">
+                        <img src="profile-skills/ko.png" />
+                    </li>
+                    <li class="content-skills-badge">
+                        <img src="profile-skills/electron.png" />
+                    </li>
+                    <li class="content-skills-badge">
+                        <img src="profile-skills/visualstudio.png" />
+                    </li>
+                    <li class="content-skills-badge">
+                        <img src="profile-skills/git.png" />
+                    </li>
+                    <li class="content-skills-badge">
+                        <img src="profile-skills/gulp.png" />
+                    </li>
+                    <li class="content-skills-badge">
+                        <img src="profile-skills/npm.png" />
+                    </li>
+                    <li class="content-skills-badge">
+                        <img src="profile-skills/bower.png" />
+                    </li>
+                    <li class="content-skills-badge">
+                        <img src="profile-skills/sql.png" />
+                    </li>
+                    <li class="content-skills-badge">
+                        <img src="profile-skills/aspnetmvc.png" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <ul class="footer">
+            <li class="git margLeft">
+                <a href="https://github.com/asitparida">
+                    <svg width="48px" height="47px" viewBox="0 0 48 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>Github</title>
+                        <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Black" transform="translate(-700.000000, -560.000000)" fill="#000000">
+                                <path d="M723.9985,560 C710.746,560 700,570.787092 700,584.096644 C700,594.740671 706.876,603.77183 716.4145,606.958412 C717.6145,607.179786 718.0525,606.435849 718.0525,605.797328 C718.0525,605.225068 718.0315,603.710086 718.0195,601.699648 C711.343,603.155898 709.9345,598.469394 709.9345,598.469394 C708.844,595.686405 707.2705,594.94548 707.2705,594.94548 C705.091,593.450075 707.4355,593.480194 707.4355,593.480194 C709.843,593.650366 711.1105,595.963499 711.1105,595.963499 C713.2525,599.645538 716.728,598.58234 718.096,597.964902 C718.3135,596.407754 718.9345,595.346062 719.62,594.743683 C714.2905,594.135281 708.688,592.069123 708.688,582.836167 C708.688,580.205279 709.6225,578.054788 711.1585,576.369634 C710.911,575.759726 710.0875,573.311058 711.3925,569.993458 C711.3925,569.993458 713.4085,569.345902 717.9925,572.46321 C719.908,571.928599 721.96,571.662047 724.0015,571.651505 C726.04,571.662047 728.0935,571.928599 730.0105,572.46321 C734.5915,569.345902 736.603,569.993458 736.603,569.993458 C737.9125,573.311058 737.089,575.759726 736.8415,576.369634 C738.3805,578.054788 739.309,580.205279 739.309,582.836167 C739.309,592.091712 733.6975,594.129257 728.3515,594.725612 C729.2125,595.469549 729.9805,596.939353 729.9805,599.18773 C729.9805,602.408949 729.9505,605.006706 729.9505,605.797328 C729.9505,606.441873 730.3825,607.191834 731.6005,606.9554 C741.13,603.762794 748,594.737659 748,584.096644 C748,570.787092 737.254,560 723.9985,560" id="Github"></path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
             </li>
-            <li class="content-skills-badge">
-                <img src="profile-skills/css3.png" />
+            <li class="linkedin margLeft">
+                <a href="c">
+                    <svg width="44px" height="40px" viewBox="0 0 44 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>Linked In</title>
+                        <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Black" transform="translate(-702.000000, -265.000000)" fill="#000000">
+                                <path d="M746,305 L736.2754,305 L736.2754,290.9384 C736.2754,287.257796 734.754233,284.74515 731.409219,284.74515 C728.850659,284.74515 727.427799,286.440738 726.765522,288.074854 C726.517168,288.661395 726.555974,289.478453 726.555974,290.295511 L726.555974,305 L716.921919,305 C716.921919,305 717.046096,280.091247 716.921919,277.827047 L726.555974,277.827047 L726.555974,282.091631 C727.125118,280.226996 730.203669,277.565794 735.116416,277.565794 C741.21143,277.565794 746,281.474355 746,289.890824 L746,305 L746,305 Z M707.17921,274.428187 L707.117121,274.428187 C704.0127,274.428187 702,272.350964 702,269.717936 C702,267.033681 704.072201,265 707.238711,265 C710.402634,265 712.348071,267.028559 712.41016,269.710252 C712.41016,272.34328 710.402634,274.428187 707.17921,274.428187 L707.17921,274.428187 L707.17921,274.428187 Z M703.109831,277.827047 L711.685795,277.827047 L711.685795,305 L703.109831,305 L703.109831,277.827047 L703.109831,277.827047 Z" id="LinkedIn"></path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
             </li>
-            <li class="content-skills-badge">
-                <img src="profile-skills/bootstrap.png" />
-            </li>
-            <li class="content-skills-badge">
-                <img src="profile-skills/scss.png" />
-            </li>
-            <li class="content-skills-badge">
-                <img src="profile-skills/material.png" />
-            </li>
-            <li class="content-skills-badge">
-                <img src="profile-skills/js.png" />
-            </li>
-            <li class="content-skills-badge">
-                <img src="profile-skills/ts.png" />
-            </li>
-            <li class="content-skills-badge">
-                <img src="profile-skills/ang.png" />
-            </li>
-            <li class="content-skills-badge">
-                <img src="profile-skills/ko.png" />
-            </li>
-            <li class="content-skills-badge">
-                <img src="profile-skills/electron.png" />
-            </li>
-            <li class="content-skills-badge">
-                <img src="profile-skills/visualstudio.png" />
-            </li>            
-            <li class="content-skills-badge">
-                <img src="profile-skills/git.png" />
-            </li>
-            <li class="content-skills-badge">
-                <img src="profile-skills/gulp.png" />
-            </li>
-            <li class="content-skills-badge">
-                <img src="profile-skills/npm.png" />
-            </li>
-            <li class="content-skills-badge">
-                <img src="profile-skills/bower.png" />
-            </li>
-            <li class="content-skills-badge">
-                <img src="profile-skills/sql.png" />
-            </li>
-            <li class="content-skills-badge">
-                <img src="profile-skills/aspnetmvc.png" />
+            <li class="facebook margLeft">
+                <a href="https://www.facebook.com/asitparida">
+                    <svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>Facebook</title>
+                        <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Black" transform="translate(-200.000000, -160.000000)" fill="#000000">
+                                <path d="M225.638355,208 L202.649232,208 C201.185673,208 200,206.813592 200,205.350603 L200,162.649211 C200,161.18585 201.185859,160 202.649232,160 L245.350955,160 C246.813955,160 248,161.18585 248,162.649211 L248,205.350603 C248,206.813778 246.813769,208 245.350955,208 L233.119305,208 L233.119305,189.411755 L239.358521,189.411755 L240.292755,182.167586 L233.119305,182.167586 L233.119305,177.542641 C233.119305,175.445287 233.701712,174.01601 236.70929,174.01601 L240.545311,174.014333 L240.545311,167.535091 C239.881886,167.446808 237.604784,167.24957 234.955552,167.24957 C229.424834,167.24957 225.638355,170.625526 225.638355,176.825209 L225.638355,182.167586 L219.383122,182.167586 L219.383122,189.411755 L225.638355,189.411755 L225.638355,208 L225.638355,208 Z" id="Facebook"></path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
             </li>
         </ul>
-    </div>
+    </footer>
 </body>
 </html>
