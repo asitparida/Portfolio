@@ -1,8 +1,9 @@
 ﻿<!DOCTYPE html>
 <html ng-csp ng-app="Portfolio.UI">
 <head>
-    <title></title>
-    <meta charset="utf-8" />
+    <title>Asit Parida</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="lib/hammer.min.js"></script>
     <script src="lib/jquery-2.2.4.min.js"></script>
     <script src="lib/angular.min.js"></script>
@@ -39,8 +40,16 @@
         </div>
     </div>
     <div class="header" ng-mouseleave="main.bannerleave($event)">
+        <div class="header-xs">
+            <div class="header-xs-profile-links">
+                <ul class="header-xs-profile-links-pages-list">
+                    <li class="pull-left"><a href="http://github.com/asitparida"><img src="assets/github-logo-plain.png" /></a></li>
+                    <li class="pull-right"><div class="header-xs-profile-links-pages-list-toggle" ng-click="main.openColorPicker()"></div></li>
+                </ul>
+            </div>
+        </div>
         <div class="header-profile-data">
-            <div class="header-picture-container  pull-left">
+            <div class="header-picture-container">
                 <div class="header-picture-container-pic">
                     <div class="header-picture-container-pic-circle">
                         <div class="header-picture-container-pic--0" id="header-pic-0"></div>
@@ -51,7 +60,7 @@
                     </div>
                 </div>
             </div>
-            <div class="header-profile-mast pull-left">
+            <div class="header-profile-mast">
                 <div class="header-profile-mast-name">Asit Kumar Parida</div>
                 <div class="header-profile-mast-job-title">I build awesome experiences</div>
             </div>
@@ -73,7 +82,7 @@
                 <li>JavaScript</li>
                 <li>MVC / MVVM</li>
             </ul>
-            <div class="header-tagged-arrow-holder" tabindex="0">
+            <div class="header-tagged-arrow-holder" tabindex="0" ng-click="main.goToContent()">
                 <div class="header-tagged-arrow-holder-arrow header-tagged-arrow-holder-arrow--bottom"></div>
             </div>
         </div>
@@ -116,63 +125,63 @@
         </div>
         <div class="header-colorslab--bottom"></div>
     </div>
-    <div class="content">
+    <div class="content" id="portfolioContent">
         <div class="content-projects">
             <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
                 <div class="content-project-badge-innercontent">
-                    <img src="project-logos/moosik_200_blank.png" style="width:130px;margin-top:80px;" />
+                    <img src="project-logos/moosik_200_blank.png" class="moosik" />
                     <div class="content-project-badge-innercontent-label">Moosik - An offline music player</div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#f0f0f0;">
                 <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
                 <div class="content-project-badge-innercontent">
-                    <img src="project-logos/itibp.png" style="width:160px;margin-top:90px;" />
+                    <img src="project-logos/itibp.png" class="itibp" />
                     <div class="content-project-badge-innercontent-label">Best Engineering Practices</div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
                 <div class="content-project-badge-innercontent">
-                    <img src="project-logos/piemix.png" style="width:130px;margin-top:78px;" />
+                    <img src="project-logos/piemix.png" class="piemix" />
                     <div class="content-project-badge-innercontent-label">PieMix - SVG & angular enabled pie chart</div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#f0f0f0;">
                 <div class="content-project-badge-innercontent">
-                    <img src="project-logos/vx-grid.png" style="width:100%;margin-top:-30px;" />
+                    <img src="project-logos/vx-grid.png" class="vxgrid" />
                     <div class="content-project-badge-innercontent-label">VxGrid - DOM virtualized angular grid plugin</div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
                 <div class="content-project-badge-innercontent">
-                    <img src="project-logos/notsogrey.png" style="width:130px;margin-top:78px;" />
+                    <img src="project-logos/notsogrey.png" class="notsogrey" />
                     <div class="content-project-badge-innercontent-label">For people who dream colors !!!</div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#f0f0f0;">
                 <div class="content-project-badge-innercontent">
-                    <img src="project-logos/richcc.png" style="width:100%;margin-top:-30px;" />
+                    <img src="project-logos/richcc.png" class="richcc" />
                     <div class="content-project-badge-innercontent-label">RichCC - Rich calendar events plugin</div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
                 <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
                 <div class="content-project-badge-innercontent">
-                    <img src="project-logos/baat.png" style="width:130px;margin-top:135px;" />
+                    <img src="project-logos/baat.png" class="baat" />
                     <div class="content-project-badge-innercontent-label">Awesome financial management app</div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#f0f0f0;">
                 <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
                 <div class="content-project-badge-innercontent">
-                    <img src="project-logos/elements.png" style="width:100px;margin-top:100px;" />
+                    <img src="project-logos/elements.png" class="elements" />
                     <div class="content-project-badge-innercontent-label">Project Elements</div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-sm-4 content-project-badge" style="background-color:#E0E0E0;">
                 <div class="content-project-badge-locked" title="You may not have access as this is a internal project"></div>
                 <div class="content-project-badge-innercontent">
-                    <img src="project-logos/fduap.png" style="width:100px;margin-top:110px;" />
+                    <img src="project-logos/fduap.png" class="fduap" />
                     <div class="content-project-badge-innercontent-label">Going crazy with UWP & dashboards</div>
                 </div>
             </div>

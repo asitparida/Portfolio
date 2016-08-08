@@ -14,6 +14,12 @@ html {
     font-family: 'Open Sans', sans-serif;
 }
 
+@mixin respond-to-mobile {
+    @media only screen and (max-width:768px) {
+        @content;
+    }
+}
+
 @mixin color-defines-css($defcolor) {
     .header {
         background-color: $defcolor;
@@ -37,6 +43,7 @@ html {
             }
         }
 
+        &-xs-profile-links-pages-list-toggle,
         &-profile-links-pages-list-toggle {
             background: linear-gradient(to right, darken($defcolor, 10) 0%, $defcolor 100%);
             border: 3px solid lighten($defcolor, 33%);
@@ -322,6 +329,65 @@ body {
         width: 100%;
         position: relative;
 
+        &-xs {
+            width: 100%;
+            height: 60px;
+            display: none;
+            padding: 15px 15px 0 15px;
+
+            @include respond-to-mobile {
+                display: block;
+            }
+
+            &-profile-links {
+
+                &-pages-list {
+                    margin: 0;
+                    list-style: none;
+                    width: 100%;
+                    text-align: center;
+                    padding: 0;
+
+                    li {
+                        margin: 0;
+                        display: inline-block;
+                        font-size: 1.25em;
+                        color: #fff;
+                        border-bottom: 2px solid transparent;
+
+                        &.header-profile-links-pages-list--active {
+                            border-bottom: 2px solid #fff;
+                        }
+
+                        a {
+                            padding: 10px 15px;
+                            font-size: medium;
+                            line-height: 48px;
+                            height: 48px;
+                            color: #fff;
+                            text-decoration: none;
+
+                            img {
+                                width: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-profile-links-pages-list-toggle {
+                cursor: pointer;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: #ff0000;
+                border: 3px solid #fff;
+                position: relative;
+                top: 12px;
+                margin-left: 15px;
+            }
+        }
+
         &-colorslab {
             width: 100%;
 
@@ -335,11 +401,28 @@ body {
             width: 100%;
             position: relative;
             padding: 30px;
+
+            @include respond-to-mobile {
+                z-index: 9;
+            }
         }
 
         &-picture-container {
             height: 72px;
             width: 72px;
+            float: left;
+
+
+            @include respond-to-mobile {
+                height: 100px;
+                width: 100px;
+            }
+
+            @include respond-to-mobile {
+                float: none;
+                display: block;
+                margin: 0 auto 15px auto;
+            }
 
             &-pic {
                 height: 100%;
@@ -365,6 +448,11 @@ body {
                     width: 72px;
                     background-size: contain;
                     background-image: url(../../profile-pics/my-pic-0.jpg);
+
+                    @include respond-to-mobile {
+                        height: 100px;
+                        width: 100px;
+                    }
                 }
 
                 &--1 {
@@ -374,6 +462,12 @@ body {
                     width: 72px;
                     background-size: contain;
                     background-image: url(../../profile-pics/my-pic-1.jpg);
+
+                    @include respond-to-mobile {
+                        top: 100px;
+                        height: 100px;
+                        width: 100px;
+                    }
                 }
 
                 &--2 {
@@ -383,6 +477,12 @@ body {
                     width: 72px;
                     background-size: contain;
                     background-image: url(../../profile-pics/my-pic-2.jpg);
+
+                    @include respond-to-mobile {
+                        top: 100px;
+                        height: 100px;
+                        width: 100px;
+                    }
                 }
 
                 &--3 {
@@ -392,6 +492,12 @@ body {
                     width: 72px;
                     background-size: contain;
                     background-image: url(../../profile-pics/my-pic-3.jpg);
+
+                    @include respond-to-mobile {
+                        top: 100px;
+                        height: 100px;
+                        width: 100px;
+                    }
                 }
 
                 &--4 {
@@ -401,12 +507,25 @@ body {
                     width: 72px;
                     background-size: contain;
                     background-image: url(../../profile-pics/my-pic-4.jpg);
+
+                    @include respond-to-mobile {
+                        top: 100px;
+                        height: 100px;
+                        width: 100px;
+                    }
                 }
             }
         }
 
         &-profile-mast {
             width: 300px;
+            float: left;
+
+            @include respond-to-mobile {
+                float: none;
+                margin: 0 auto;
+                display: block;
+            }
 
             &-name {
                 font-size: 2em;
@@ -429,6 +548,10 @@ body {
         &-profile-links {
             position: relative;
             top: 6px;
+
+            @include respond-to-mobile {
+                display: none;
+            }
 
             &-pages-list {
                 margin: 0;
@@ -474,6 +597,11 @@ body {
             position: relative;
             top: 15px;
             margin-left: 15px;
+
+
+            @include respond-to-mobile {
+                display: none;
+            }
         }
 
         &-tagged {
@@ -490,6 +618,10 @@ body {
                 font-weight: 100;
                 text-align: center;
                 letter-spacing: 1px;
+
+                @include respond-to-mobile {
+                    display: none;
+                }
             }
 
             &-topskills {
@@ -498,6 +630,10 @@ body {
                 width: 100%;
                 text-align: center;
                 padding: 0;
+
+                @include respond-to-mobile {
+                    display: none;
+                }
 
                 li {
                     font-size: medium;
@@ -532,6 +668,10 @@ body {
                 border-radius: 50%;
                 display: block;
                 margin: 45px auto 0;
+
+                @include respond-to-mobile {
+                    margin: 0 auto;
+                }
 
                 &-arrow {
                     position: absolute;
@@ -594,6 +734,51 @@ body {
                     margin: 0 auto;
                     transform: scale(1, 1);
                     transition: transform 0.5s ease-in 0s;
+
+                    &.moosik {
+                        width: 130px;
+                        margin-top: 80px;
+                    }
+
+                    &.itibp {
+                        width: 160px;
+                        margin-top: 90px;
+                    }
+
+                    &.piemix {
+                        width: 130px;
+                        margin-top: 78px;
+                    }
+
+                    &.vxgrid {
+                        height: 100%;
+                        margin-top: 0;
+                    }
+
+                    &.notsogrey {
+                        width: 130px;
+                        margin-top: 78px;
+                    }
+
+                    &.richcc {
+                        height: 100%;
+                        margin-top: 0;
+                    }
+
+                    &.baat {
+                        width: 130px;
+                        margin-top: 135px;
+                    }
+
+                    &.elements {
+                        width: 100px;
+                        margin-top: 100px;
+                    }
+
+                    &.fduap {
+                        width: 100px;
+                        margin-top: 110px;
+                    }
                 }
 
                 &-label {
@@ -628,6 +813,10 @@ body {
             line-height: 60px;
             font-weight: 500;
             padding: 15px 30px;
+
+            @include respond-to-mobile {
+                padding: 0 30px;
+            }
         }
 
         &-skills-holder {
@@ -635,6 +824,10 @@ body {
             height: 160px;
             position: relative;
             overflow: hidden;
+
+            @include respond-to-mobile {
+                height: 130px;
+            }
 
             &-arrow-holder {
                 position: absolute;
@@ -644,6 +837,10 @@ body {
                 width: 30px;
                 cursor: pointer;
                 outline: none;
+
+                @include respond-to-mobile {
+                    top: 35px;
+                }
 
                 &.disabled {
                     .content-skills-holder-arrow-holder-arrow {
@@ -698,6 +895,10 @@ body {
             overflow-x: auto;
             white-space: nowrap;
 
+            @include respond-to-mobile {
+                height: 150px;
+            }
+
             &-wrapper {
                 width: calc(100% - 90px);
                 margin-left: 45px;
@@ -709,8 +910,16 @@ body {
                 display: inline-block;
                 margin: 30px 45px 0 45px;
 
+                @include respond-to-mobile {
+                    margin: 30px 20px 0 20px;
+                }
+
                 img {
                     height: 100px;
+
+                    @include respond-to-mobile {
+                        height: 70px;
+                    }
                 }
             }
         }

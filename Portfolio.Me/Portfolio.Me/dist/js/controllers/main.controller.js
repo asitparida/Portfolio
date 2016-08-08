@@ -12,7 +12,7 @@
         { id: _.uniqueId('col'), colorId: "emerland", name: "emerland", code: "#2ecc71" },
         { id: _.uniqueId('col'), colorId: "nephritis", name: "nephritis", code: "#27ae60" },
         { id: _.uniqueId('col'), colorId: "peterRiver", name: "peter river", code: "#3498db" },
-        { id: _.uniqueId('col'), colorId: "wetAsphalt", name: "wet asphalt", code: "#34495e" },        
+        { id: _.uniqueId('col'), colorId: "wetAsphalt", name: "wet asphalt", code: "#34495e" },
         { id: _.uniqueId('col'), colorId: "amethyst", name: "amethyst", code: "#9b59b6" },
         { id: _.uniqueId('col'), colorId: "carrot", name: "carrot", code: "#e67e22" },
         { id: _.uniqueId('col'), colorId: "alizarin", name: "alizarin", code: "#e74c3c" },
@@ -38,7 +38,7 @@
         self.submarine.style.top = _top + 'px';
         self.submarine.classList.add('transition-left');
         self.submarine.style.left = _left + 'px';
-        setTimeout(function() {
+        setTimeout(function () {
             self.submarine.classList.remove('transition-left');
         }, 300);
     }
@@ -59,13 +59,12 @@
     }
 
     self.currentPic = 0;
-    self.picHeight = 72;
-    self.lastTop = 72;
+    self.lastTop = self.picHeight = window.innerWidth <= 768 ? 100 : 72;
 
     self.pause = false;
 
     self.adjustPosition = function () {
-        if (!self.pause) {
+        if (!self.pause) {            
             var currPic = 'header-pic-' + self.currentPic;
             var nextId = self.currentPic + 1 > 4 ? 0 : self.currentPic + 1;
             var nextPic = 'header-pic-' + nextId;
@@ -136,14 +135,22 @@
         self.activeColorMode = color;
     }
 
-    self.scrollLeft = function() {
+    self.scrollLeft = function () {
         var _scrollElm = document.getElementById('contentSkillsList');
         $(_scrollElm).animate({ scrollLeft: _scrollElm.scrollLeft - (window.innerWidth / 3) }, 300);
     }
 
-    self.scrollRight = function() {
+    self.scrollRight = function () {
         var _scrollElm = document.getElementById('contentSkillsList');
         $(_scrollElm).animate({ scrollLeft: _scrollElm.scrollLeft + (window.innerWidth / 3) }, 300);
+    }
+
+    self.goToContent = function () {
+        var _contentElem = document.getElementById('portfolioContent');
+        var _scrollTo = _contentElem.getBoundingClientRect().top;
+        $('html, body').animate({
+            scrollTop: _scrollTo
+        }, 300);
     }
 
     setTimeout(self.adjustPosition, 100);
