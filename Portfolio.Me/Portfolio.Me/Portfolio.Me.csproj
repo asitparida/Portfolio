@@ -101,7 +101,9 @@
     <Content Include="profile-skills\visualstudio.png" />
     <Content Include="project-logos\elements.png" />
     <Content Include="project-logos\moosik_200_blank.png" />
+    <Content Include="project-logos\moosik_app.png" />
     <Content Include="project-logos\notsogrey.png" />
+    <Content Include="project-logos\notsogrey_app.png" />
     <Content Include="project-logos\piemix.png" />
     <Content Include="assets\project-lock.png" />
     <Content Include="project-logos\richcc.png" />

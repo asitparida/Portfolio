@@ -1805,9 +1805,8 @@ body {
             -webkit-animation: color_track_pl_enter 0.3s linear;
             animation: color_track_pl_enter 0.3s linear; }
   body .header {
-    height: 85vh;
+    height: 100vh;
     min-height: 400px;
-    max-height: 100vh;
     width: 100%;
     position: relative; }
     body .header-xs {
@@ -2026,7 +2025,7 @@ body {
       position: absolute;
       bottom: 0;
       z-index: 2;
-      padding-bottom: 45px; }
+      padding-bottom: 75px; }
       body .header-tagged-awesome {
         font-size: 3em;
         width: 100%;
@@ -2098,10 +2097,19 @@ body {
     body .content-projects {
       width: 100%; }
     body .content-project-badge {
-      height: 300px;
+      height: 60vh;
+      min-height: 60vh;
       padding: 0;
       margin: 0;
       position: relative; }
+      @media only screen and (max-width: 768px) {
+        body .content-project-badge {
+          height: 100vw; } }
+      body .content-project-badge.h100 {
+        height: 100vh; }
+        @media only screen and (max-width: 768px) {
+          body .content-project-badge.h100 {
+            height: 100vw; } }
       body .content-project-badge-locked {
         content: '';
         background-image: url(../../assets/project-lock.png);
@@ -2119,6 +2127,12 @@ body {
         z-index: 1;
         position: relative;
         cursor: pointer; }
+        body .content-project-badge-innercontent.moosik-app {
+          max-height: 100vh;
+          background-color: #094781; }
+        body .content-project-badge-innercontent.nsg-app {
+          max-height: 100vh;
+          background-color: #0a4798; }
         body .content-project-badge-innercontent img {
           display: block;
           margin: 0 auto;
@@ -2127,34 +2141,37 @@ body {
           body .content-project-badge-innercontent img.moosik {
             width: 130px;
             margin-top: 80px; }
-          body .content-project-badge-innercontent img.itibp {
-            width: 150px;
-            margin-top: 90px; }
+          body .content-project-badge-innercontent img.moosik-app {
+            height: 70vh;
+            margin-top: 15vh; }
+            @media only screen and (max-width: 768px) {
+              body .content-project-badge-innercontent img.moosik-app {
+                width: 70vh;
+                height: auto; } }
           body .content-project-badge-innercontent img.piemix {
-            height: 130px;
-            margin-top: 78px; }
+            height: 444px;
+            margin-top: 15px; }
           body .content-project-badge-innercontent img.vxgrid {
             width: 100%;
             margin-top: -15px; }
           body .content-project-badge-innercontent img.notsogrey {
             width: 130px;
             margin-top: 78px; }
+          body .content-project-badge-innercontent img.nsg-app {
+            height: 70vh;
+            margin-top: 15vh; }
+            @media only screen and (max-width: 768px) {
+              body .content-project-badge-innercontent img.nsg-app {
+                width: 70vw;
+                height: auto; } }
           body .content-project-badge-innercontent img.richcc {
-            width: 100%;
-            margin-top: 0; }
+            height: 100%;
+            margin-left: -30px; }
             @media only screen and (max-width: 768px) {
               body .content-project-badge-innercontent img.richcc {
                 height: 100%;
-                width: auto; } }
-          body .content-project-badge-innercontent img.baat {
-            width: 100%;
-            margin-top: 60px; }
-          body .content-project-badge-innercontent img.elements {
-            width: 100px;
-            margin-top: 100px; }
-          body .content-project-badge-innercontent img.fduap {
-            width: 100%;
-            margin-top: 60px; }
+                width: auto;
+                margin-left: 0; } }
         body .content-project-badge-innercontent-label {
           height: 48px;
           line-height: 48px;
@@ -2177,9 +2194,6 @@ body {
       line-height: 60px;
       font-weight: 500;
       padding: 30px; }
-      @media only screen and (max-width: 768px) {
-        body .content-skills-label {
-          padding: 0 15px; } }
     body .content-skills-holder {
       width: 100%;
       height: 160px;
