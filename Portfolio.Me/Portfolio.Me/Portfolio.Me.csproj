@@ -99,12 +99,7 @@
     <Content Include="profile-skills\sql.png" />
     <Content Include="profile-skills\ts.png" />
     <Content Include="profile-skills\visualstudio.png" />
-    <Content Include="project-logos\baat.png" />
     <Content Include="project-logos\elements.png" />
-    <Content Include="project-logos\fd.png" />
-    <Content Include="project-logos\fduap.png" />
-    <Content Include="project-logos\itibp.png" />
-    <Content Include="project-logos\itibp2.png" />
     <Content Include="project-logos\moosik_200_blank.png" />
     <Content Include="project-logos\notsogrey.png" />
     <Content Include="project-logos\piemix.png" />
