@@ -18,7 +18,7 @@
         { id: _.uniqueId('col'), colorId: "alizarin", name: "alizarin", code: "#e74c3c" },
         { id: _.uniqueId('col'), colorId: "pomegranate", name: "pomegranate", code: "#c0392b" }
     ];
-    self.activeColorMode = self.colorModes[0];
+    self.activeColorMode = _.sample(self.colorModes);
 
     self.panmove = function (e) {
         e.pageX = e.center.x;
