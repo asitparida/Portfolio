@@ -50,6 +50,11 @@ html {
             transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s;
         }
 
+        &-xs-profile-links-pages-list li a svg g g,
+        &-profile-links-pages-list li a svg g g {
+            fill: lighten($defcolor, 33%);
+        }
+
         &-picture-container {
 
             &-pic {
@@ -371,6 +376,12 @@ body {
                             img {
                                 width: 30px;
                             }
+
+                            svg {
+                                height: 30px;
+                                position: relative;
+                                top: 10px;
+                            }
                         }
                     }
                 }
@@ -582,6 +593,12 @@ body {
 
                         img {
                             width: 30px;
+                        }
+
+                        svg {
+                            height: 30px;
+                            position: relative;
+                            top: 10px;
                         }
                     }
                 }

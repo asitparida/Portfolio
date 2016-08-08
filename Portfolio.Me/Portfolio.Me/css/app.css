@@ -373,6 +373,9 @@ body {
       background: linear-gradient(to right, #148f77 0%, #1abc9c 100%);
       border: 3px solid #8fefdc;
       transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.turquoise .header-xs-profile-links-pages-list li a svg g g,
+    body.turquoise .header-profile-links-pages-list li a svg g g {
+      fill: #8fefdc; }
     body.turquoise .header-picture-container-pic {
       border-color: #f0f0f0;
       background-color: #f0f0f0;
@@ -446,6 +449,9 @@ body {
       background: linear-gradient(to right, #25a25a 0%, #2ecc71 100%);
       border: 3px solid #b4eecd;
       transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.emerland .header-xs-profile-links-pages-list li a svg g g,
+    body.emerland .header-profile-links-pages-list li a svg g g {
+      fill: #b4eecd; }
     body.emerland .header-picture-container-pic {
       border-color: #f0f0f0;
       background-color: #f0f0f0;
@@ -519,6 +525,9 @@ body {
       background: linear-gradient(to right, #217dbb 0%, #3498db 100%);
       border: 3px solid #c3e1f4;
       transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.peterRiver .header-xs-profile-links-pages-list li a svg g g,
+    body.peterRiver .header-profile-links-pages-list li a svg g g {
+      fill: #c3e1f4; }
     body.peterRiver .header-picture-container-pic {
       border-color: #f0f0f0;
       background-color: #f0f0f0;
@@ -592,6 +601,9 @@ body {
       background: linear-gradient(to right, #804399 0%, #9b59b6 100%);
       border: 3px solid #e1cee9;
       transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.amethyst .header-xs-profile-links-pages-list li a svg g g,
+    body.amethyst .header-profile-links-pages-list li a svg g g {
+      fill: #e1cee9; }
     body.amethyst .header-picture-container-pic {
       border-color: #f0f0f0;
       background-color: #f0f0f0;
@@ -665,6 +677,9 @@ body {
       background: linear-gradient(to right, #a70f8d 0%, #d613b5 100%);
       border: 3px solid #f69be7;
       transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.moosikPurple .header-xs-profile-links-pages-list li a svg g g,
+    body.moosikPurple .header-profile-links-pages-list li a svg g g {
+      fill: #f69be7; }
     body.moosikPurple .header-picture-container-pic {
       border-color: #f0f0f0;
       background-color: #f0f0f0;
@@ -738,6 +753,9 @@ body {
       background: linear-gradient(to right, #22303d 0%, #34495e 100%);
       border: 3px solid #819db9;
       transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.wetAsphalt .header-xs-profile-links-pages-list li a svg g g,
+    body.wetAsphalt .header-profile-links-pages-list li a svg g g {
+      fill: #819db9; }
     body.wetAsphalt .header-picture-container-pic {
       border-color: #f0f0f0;
       background-color: #f0f0f0;
@@ -811,6 +829,9 @@ body {
       background: linear-gradient(to right, #107360 0%, #16a085 100%);
       border: 3px solid #73ecd4;
       transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.greenSea .header-xs-profile-links-pages-list li a svg g g,
+    body.greenSea .header-profile-links-pages-list li a svg g g {
+      fill: #73ecd4; }
     body.greenSea .header-picture-container-pic {
       border-color: #f0f0f0;
       background-color: #f0f0f0;
@@ -884,6 +905,9 @@ body {
       background: linear-gradient(to right, #1e8449 0%, #27ae60 100%);
       border: 3px solid #96e7b8;
       transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.nephritis .header-xs-profile-links-pages-list li a svg g g,
+    body.nephritis .header-profile-links-pages-list li a svg g g {
+      fill: #96e7b8; }
     body.nephritis .header-picture-container-pic {
       border-color: #f0f0f0;
       background-color: #f0f0f0;
@@ -957,6 +981,9 @@ body {
       background: linear-gradient(to right, #20638f 0%, #2980b9 100%);
       border: 3px solid #a0cdea;
       transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.belizeHole .header-xs-profile-links-pages-list li a svg g g,
+    body.belizeHole .header-profile-links-pages-list li a svg g g {
+      fill: #a0cdea; }
     body.belizeHole .header-picture-container-pic {
       border-color: #f0f0f0;
       background-color: #f0f0f0;
@@ -1030,6 +1057,9 @@ body {
       background: linear-gradient(to right, #703688 0%, #8e44ad 100%);
       border: 3px solid #d6b7e3;
       transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.wisteria .header-xs-profile-links-pages-list li a svg g g,
+    body.wisteria .header-profile-links-pages-list li a svg g g {
+      fill: #d6b7e3; }
     body.wisteria .header-picture-container-pic {
       border-color: #f0f0f0;
       background-color: #f0f0f0;
@@ -1103,6 +1133,9 @@ body {
       background: linear-gradient(to right, #1a252f 0%, #2c3e50 100%);
       border: 3px solid #7392b2;
       transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.midnightBlue .header-xs-profile-links-pages-list li a svg g g,
+    body.midnightBlue .header-profile-links-pages-list li a svg g g {
+      fill: #7392b2; }
     body.midnightBlue .header-picture-container-pic {
       border-color: #f0f0f0;
       background-color: #f0f0f0;
@@ -1176,6 +1209,9 @@ body {
       background: linear-gradient(to right, #c29d0b 0%, #f1c40f 100%);
       border: 3px solid #faebae;
       transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.sunDlower .header-xs-profile-links-pages-list li a svg g g,
+    body.sunDlower .header-profile-links-pages-list li a svg g g {
+      fill: #faebae; }
     body.sunDlower .header-picture-container-pic {
       border-color: #f0f0f0;
       background-color: #f0f0f0;
@@ -1249,6 +1285,9 @@ body {
       background: linear-gradient(to right, #bf6516 0%, #e67e22 100%);
       border: 3px solid #f7d6b9;
       transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.carrot .header-xs-profile-links-pages-list li a svg g g,
+    body.carrot .header-profile-links-pages-list li a svg g g {
+      fill: #f7d6b9; }
     body.carrot .header-picture-container-pic {
       border-color: #f0f0f0;
       background-color: #f0f0f0;
@@ -1322,6 +1361,9 @@ body {
       background: linear-gradient(to right, #d62c1a 0%, #e74c3c 100%);
       border: 3px solid #f9d6d2;
       transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.alizarin .header-xs-profile-links-pages-list li a svg g g,
+    body.alizarin .header-profile-links-pages-list li a svg g g {
+      fill: #f9d6d2; }
     body.alizarin .header-picture-container-pic {
       border-color: #f0f0f0;
       background-color: #f0f0f0;
@@ -1395,6 +1437,9 @@ body {
       background: linear-gradient(to right, #c87f0a 0%, #f39c12 100%);
       border: 3px solid #fbdfb2;
       transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.orange .header-xs-profile-links-pages-list li a svg g g,
+    body.orange .header-profile-links-pages-list li a svg g g {
+      fill: #fbdfb2; }
     body.orange .header-picture-container-pic {
       border-color: #f0f0f0;
       background-color: #f0f0f0;
@@ -1468,6 +1513,9 @@ body {
       background: linear-gradient(to right, #a04000 0%, #d35400 100%);
       border: 3px solid #ffb07c;
       transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.pumpkin .header-xs-profile-links-pages-list li a svg g g,
+    body.pumpkin .header-profile-links-pages-list li a svg g g {
+      fill: #ffb07c; }
     body.pumpkin .header-picture-container-pic {
       border-color: #f0f0f0;
       background-color: #f0f0f0;
@@ -1541,6 +1589,9 @@ body {
       background: linear-gradient(to right, #962d22 0%, #c0392b 100%);
       border: 3px solid #ebaea8;
       transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s; }
+    body.pomegranate .header-xs-profile-links-pages-list li a svg g g,
+    body.pomegranate .header-profile-links-pages-list li a svg g g {
+      fill: #ebaea8; }
     body.pomegranate .header-picture-container-pic {
       border-color: #f0f0f0;
       background-color: #f0f0f0;
@@ -1703,6 +1754,10 @@ body {
             text-decoration: none; }
             body .header-xs-profile-links-pages-list li a img {
               width: 30px; }
+            body .header-xs-profile-links-pages-list li a svg {
+              height: 30px;
+              position: relative;
+              top: 10px; }
       body .header-xs-profile-links-pages-list-toggle {
         cursor: pointer;
         width: 30px;
@@ -1861,6 +1916,10 @@ body {
             text-decoration: none; }
             body .header-profile-links-pages-list li a img {
               width: 30px; }
+            body .header-profile-links-pages-list li a svg {
+              height: 30px;
+              position: relative;
+              top: 10px; }
     body .header-profile-links-pages-list-toggle {
       cursor: pointer;
       width: 30px;
