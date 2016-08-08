@@ -431,6 +431,9 @@ body {
           body.turquoise .header .submarine-hat-leds-wrapper-leds:after, body.turquoise .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #55e7ca;
             transition: background-color 0.3s linear 0s; }
+  @media only screen and (max-width: 768px) {
+    body.turquoise footer .footer-xs-hidden {
+      display: none; } }
   body.turquoise footer .footer li svg g g {
     fill: #1abc9c; }
   body.emerland .header {
@@ -507,6 +510,9 @@ body {
           body.emerland .header .submarine-hat-leds-wrapper-leds:after, body.emerland .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #7ee2a8;
             transition: background-color 0.3s linear 0s; }
+  @media only screen and (max-width: 768px) {
+    body.emerland footer .footer-xs-hidden {
+      display: none; } }
   body.emerland footer .footer li svg g g {
     fill: #2ecc71; }
   body.peterRiver .header {
@@ -583,6 +589,9 @@ body {
           body.peterRiver .header .submarine-hat-leds-wrapper-leds:after, body.peterRiver .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #8bc4ea;
             transition: background-color 0.3s linear 0s; }
+  @media only screen and (max-width: 768px) {
+    body.peterRiver footer .footer-xs-hidden {
+      display: none; } }
   body.peterRiver footer .footer li svg g g {
     fill: #3498db; }
   body.amethyst .header {
@@ -659,6 +668,9 @@ body {
           body.amethyst .header .submarine-hat-leds-wrapper-leds:after, body.amethyst .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #c6a0d5;
             transition: background-color 0.3s linear 0s; }
+  @media only screen and (max-width: 768px) {
+    body.amethyst footer .footer-xs-hidden {
+      display: none; } }
   body.amethyst footer .footer li svg g g {
     fill: #9b59b6; }
   body.moosikPurple .header {
@@ -735,6 +747,9 @@ body {
           body.moosikPurple .header .submarine-hat-leds-wrapper-leds:after, body.moosikPurple .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #f15ed8;
             transition: background-color 0.3s linear 0s; }
+  @media only screen and (max-width: 768px) {
+    body.moosikPurple footer .footer-xs-hidden {
+      display: none; } }
   body.moosikPurple footer .footer li svg g g {
     fill: #d613b5; }
   body.wetAsphalt .header {
@@ -811,6 +826,9 @@ body {
           body.wetAsphalt .header .submarine-hat-leds-wrapper-leds:after, body.wetAsphalt .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #587ca0;
             transition: background-color 0.3s linear 0s; }
+  @media only screen and (max-width: 768px) {
+    body.wetAsphalt footer .footer-xs-hidden {
+      display: none; } }
   body.wetAsphalt footer .footer li svg g g {
     fill: #34495e; }
   body.greenSea .header {
@@ -887,6 +905,9 @@ body {
           body.greenSea .header .submarine-hat-leds-wrapper-leds:after, body.greenSea .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #38e4c2;
             transition: background-color 0.3s linear 0s; }
+  @media only screen and (max-width: 768px) {
+    body.greenSea footer .footer-xs-hidden {
+      display: none; } }
   body.greenSea footer .footer li svg g g {
     fill: #16a085; }
   body.nephritis .header {
@@ -963,6 +984,9 @@ body {
           body.nephritis .header .submarine-hat-leds-wrapper-leds:after, body.nephritis .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #60db94;
             transition: background-color 0.3s linear 0s; }
+  @media only screen and (max-width: 768px) {
+    body.nephritis footer .footer-xs-hidden {
+      display: none; } }
   body.nephritis footer .footer li svg g g {
     fill: #27ae60; }
   body.belizeHole .header {
@@ -1039,6 +1063,9 @@ body {
           body.belizeHole .header .submarine-hat-leds-wrapper-leds:after, body.belizeHole .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #6ab0de;
             transition: background-color 0.3s linear 0s; }
+  @media only screen and (max-width: 768px) {
+    body.belizeHole footer .footer-xs-hidden {
+      display: none; } }
   body.belizeHole footer .footer li svg g g {
     fill: #2980b9; }
   body.wisteria .header {
@@ -1115,6 +1142,9 @@ body {
           body.wisteria .header .submarine-hat-leds-wrapper-leds:after, body.wisteria .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #ba87d0;
             transition: background-color 0.3s linear 0s; }
+  @media only screen and (max-width: 768px) {
+    body.wisteria footer .footer-xs-hidden {
+      display: none; } }
   body.wisteria footer .footer li svg g g {
     fill: #8e44ad; }
   body.midnightBlue .header {
@@ -1191,6 +1221,9 @@ body {
           body.midnightBlue .header .submarine-hat-leds-wrapper-leds:after, body.midnightBlue .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #507192;
             transition: background-color 0.3s linear 0s; }
+  @media only screen and (max-width: 768px) {
+    body.midnightBlue footer .footer-xs-hidden {
+      display: none; } }
   body.midnightBlue footer .footer li svg g g {
     fill: #2c3e50; }
   body.sunDlower .header {
@@ -1267,6 +1300,9 @@ body {
           body.sunDlower .header .submarine-hat-leds-wrapper-leds:after, body.sunDlower .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #f7dc6f;
             transition: background-color 0.3s linear 0s; }
+  @media only screen and (max-width: 768px) {
+    body.sunDlower footer .footer-xs-hidden {
+      display: none; } }
   body.sunDlower footer .footer li svg g g {
     fill: #f1c40f; }
   body.carrot .header {
@@ -1343,6 +1379,9 @@ body {
           body.carrot .header .submarine-hat-leds-wrapper-leds:after, body.carrot .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #f0b37e;
             transition: background-color 0.3s linear 0s; }
+  @media only screen and (max-width: 768px) {
+    body.carrot footer .footer-xs-hidden {
+      display: none; } }
   body.carrot footer .footer li svg g g {
     fill: #e67e22; }
   body.alizarin .header {
@@ -1419,6 +1458,9 @@ body {
           body.alizarin .header .submarine-hat-leds-wrapper-leds:after, body.alizarin .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #f29f97;
             transition: background-color 0.3s linear 0s; }
+  @media only screen and (max-width: 768px) {
+    body.alizarin footer .footer-xs-hidden {
+      display: none; } }
   body.alizarin footer .footer li svg g g {
     fill: #e74c3c; }
   body.orange .header {
@@ -1495,6 +1537,9 @@ body {
           body.orange .header .submarine-hat-leds-wrapper-leds:after, body.orange .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #f8c573;
             transition: background-color 0.3s linear 0s; }
+  @media only screen and (max-width: 768px) {
+    body.orange footer .footer-xs-hidden {
+      display: none; } }
   body.orange footer .footer li svg g g {
     fill: #f39c12; }
   body.pumpkin .header {
@@ -1571,6 +1616,9 @@ body {
           body.pumpkin .header .submarine-hat-leds-wrapper-leds:after, body.pumpkin .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #ff883a;
             transition: background-color 0.3s linear 0s; }
+  @media only screen and (max-width: 768px) {
+    body.pumpkin footer .footer-xs-hidden {
+      display: none; } }
   body.pumpkin footer .footer li svg g g {
     fill: #d35400; }
   body.pomegranate .header {
@@ -1647,6 +1695,9 @@ body {
           body.pomegranate .header .submarine-hat-leds-wrapper-leds:after, body.pomegranate .header .submarine-hat-leds-wrapper-leds:before {
             background-color: #df7c72;
             transition: background-color 0.3s linear 0s; }
+  @media only screen and (max-width: 768px) {
+    body.pomegranate footer .footer-xs-hidden {
+      display: none; } }
   body.pomegranate footer .footer li svg g g {
     fill: #c0392b; }
   body.colorPickerActive {
@@ -1913,7 +1964,8 @@ body {
             line-height: 48px;
             height: 48px;
             color: #fff;
-            text-decoration: none; }
+            text-decoration: none;
+            cursor: pointer; }
             body .header-profile-links-pages-list li a img {
               width: 30px; }
             body .header-profile-links-pages-list li a svg {
@@ -2179,3 +2231,7 @@ body {
           height: 24px;
           position: relative;
           top: 12px; }
+          body footer .footer li svg g g {
+            transition: fill 0.3s linear 0s; }
+          body footer .footer li svg:hover g g {
+            fill: #565656; }

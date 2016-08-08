@@ -154,6 +154,13 @@ html {
 
     footer {
         .footer {
+            &-xs-hidden {
+
+                @include respond-to-mobile {
+                    display: none;
+                }
+            }
+
             li {
                 svg g g {
                     fill: $defcolor;
@@ -590,6 +597,7 @@ body {
                         height: 48px;
                         color: #fff;
                         text-decoration: none;
+                        cursor: pointer;
 
                         img {
                             width: 30px;
@@ -969,6 +977,16 @@ body {
                     height: 24px;
                     position: relative;
                     top: 12px;
+
+                    & g g {
+                        transition: fill 0.3s linear 0s;
+                    }
+
+                    &:hover {
+                        & g g {
+                            fill: #565656;
+                        }
+                    }
                 }
             }
         }
