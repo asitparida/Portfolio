@@ -347,7 +347,7 @@
 .submarine {
   position: absolute;
   width: 100%;
-  height: calc(85vh - 132px);
+  height: calc(100vh - 132px);
   cursor: none;
   overflow: hidden; }
   .submarine-bubble {
@@ -431,7 +431,7 @@
       animation: subamrine-move-bubble 19s linear infinite, subamrine-side-ways 1s ease-in-out infinite alternate; }
   .submarine-wrapper {
     position: absolute;
-    left: calc(50% - 75px);
+    left: calc(50% - 100px);
     height: 300px;
     width: 300px;
     padding: 30px 50px 30px 150px;

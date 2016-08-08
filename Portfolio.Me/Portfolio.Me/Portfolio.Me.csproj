@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\github-logo-plain.png" />
+    <Content Include="favicon.ico" />
     <Content Include="lib\jquery-2.2.4.min.js" />
     <Content Include="dist\css\slick.css" />
     <Content Include="lib\slick.min.js" />
@@ -98,12 +99,11 @@
     <Content Include="profile-skills\sql.png" />
     <Content Include="profile-skills\ts.png" />
     <Content Include="profile-skills\visualstudio.png" />
-    <Content Include="project-logos\baat.png" />
     <Content Include="project-logos\elements.png" />
-    <Content Include="project-logos\fduap.png" />
-    <Content Include="project-logos\itibp.png" />
     <Content Include="project-logos\moosik_200_blank.png" />
+    <Content Include="project-logos\moosik_app.png" />
     <Content Include="project-logos\notsogrey.png" />
+    <Content Include="project-logos\notsogrey_app.png" />
     <Content Include="project-logos\piemix.png" />
     <Content Include="assets\project-lock.png" />
     <Content Include="project-logos\richcc.png" />

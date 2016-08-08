@@ -434,8 +434,10 @@ body {
   @media only screen and (max-width: 768px) {
     body.turquoise footer .footer-xs-hidden {
       display: none; } }
-  body.turquoise footer .footer li svg g g {
-    fill: #1abc9c; }
+  body.turquoise footer .footer li {
+    /*svg g g {
+                    fill: darken($defcolor, 15%);
+                }*/ }
   body.emerland .header {
     background-color: #2ecc71;
     transition: background-color 0.3s linear 0s; }
@@ -513,8 +515,10 @@ body {
   @media only screen and (max-width: 768px) {
     body.emerland footer .footer-xs-hidden {
       display: none; } }
-  body.emerland footer .footer li svg g g {
-    fill: #2ecc71; }
+  body.emerland footer .footer li {
+    /*svg g g {
+                    fill: darken($defcolor, 15%);
+                }*/ }
   body.peterRiver .header {
     background-color: #3498db;
     transition: background-color 0.3s linear 0s; }
@@ -592,8 +596,10 @@ body {
   @media only screen and (max-width: 768px) {
     body.peterRiver footer .footer-xs-hidden {
       display: none; } }
-  body.peterRiver footer .footer li svg g g {
-    fill: #3498db; }
+  body.peterRiver footer .footer li {
+    /*svg g g {
+                    fill: darken($defcolor, 15%);
+                }*/ }
   body.amethyst .header {
     background-color: #9b59b6;
     transition: background-color 0.3s linear 0s; }
@@ -671,8 +677,10 @@ body {
   @media only screen and (max-width: 768px) {
     body.amethyst footer .footer-xs-hidden {
       display: none; } }
-  body.amethyst footer .footer li svg g g {
-    fill: #9b59b6; }
+  body.amethyst footer .footer li {
+    /*svg g g {
+                    fill: darken($defcolor, 15%);
+                }*/ }
   body.moosikPurple .header {
     background-color: #d613b5;
     transition: background-color 0.3s linear 0s; }
@@ -750,8 +758,10 @@ body {
   @media only screen and (max-width: 768px) {
     body.moosikPurple footer .footer-xs-hidden {
       display: none; } }
-  body.moosikPurple footer .footer li svg g g {
-    fill: #d613b5; }
+  body.moosikPurple footer .footer li {
+    /*svg g g {
+                    fill: darken($defcolor, 15%);
+                }*/ }
   body.wetAsphalt .header {
     background-color: #34495e;
     transition: background-color 0.3s linear 0s; }
@@ -829,8 +839,10 @@ body {
   @media only screen and (max-width: 768px) {
     body.wetAsphalt footer .footer-xs-hidden {
       display: none; } }
-  body.wetAsphalt footer .footer li svg g g {
-    fill: #34495e; }
+  body.wetAsphalt footer .footer li {
+    /*svg g g {
+                    fill: darken($defcolor, 15%);
+                }*/ }
   body.greenSea .header {
     background-color: #16a085;
     transition: background-color 0.3s linear 0s; }
@@ -908,8 +920,10 @@ body {
   @media only screen and (max-width: 768px) {
     body.greenSea footer .footer-xs-hidden {
       display: none; } }
-  body.greenSea footer .footer li svg g g {
-    fill: #16a085; }
+  body.greenSea footer .footer li {
+    /*svg g g {
+                    fill: darken($defcolor, 15%);
+                }*/ }
   body.nephritis .header {
     background-color: #27ae60;
     transition: background-color 0.3s linear 0s; }
@@ -987,8 +1001,10 @@ body {
   @media only screen and (max-width: 768px) {
     body.nephritis footer .footer-xs-hidden {
       display: none; } }
-  body.nephritis footer .footer li svg g g {
-    fill: #27ae60; }
+  body.nephritis footer .footer li {
+    /*svg g g {
+                    fill: darken($defcolor, 15%);
+                }*/ }
   body.belizeHole .header {
     background-color: #2980b9;
     transition: background-color 0.3s linear 0s; }
@@ -1066,8 +1082,10 @@ body {
   @media only screen and (max-width: 768px) {
     body.belizeHole footer .footer-xs-hidden {
       display: none; } }
-  body.belizeHole footer .footer li svg g g {
-    fill: #2980b9; }
+  body.belizeHole footer .footer li {
+    /*svg g g {
+                    fill: darken($defcolor, 15%);
+                }*/ }
   body.wisteria .header {
     background-color: #8e44ad;
     transition: background-color 0.3s linear 0s; }
@@ -1145,8 +1163,10 @@ body {
   @media only screen and (max-width: 768px) {
     body.wisteria footer .footer-xs-hidden {
       display: none; } }
-  body.wisteria footer .footer li svg g g {
-    fill: #8e44ad; }
+  body.wisteria footer .footer li {
+    /*svg g g {
+                    fill: darken($defcolor, 15%);
+                }*/ }
   body.midnightBlue .header {
     background-color: #2c3e50;
     transition: background-color 0.3s linear 0s; }
@@ -1224,8 +1244,10 @@ body {
   @media only screen and (max-width: 768px) {
     body.midnightBlue footer .footer-xs-hidden {
       display: none; } }
-  body.midnightBlue footer .footer li svg g g {
-    fill: #2c3e50; }
+  body.midnightBlue footer .footer li {
+    /*svg g g {
+                    fill: darken($defcolor, 15%);
+                }*/ }
   body.sunDlower .header {
     background-color: #f1c40f;
     transition: background-color 0.3s linear 0s; }
@@ -1303,8 +1325,10 @@ body {
   @media only screen and (max-width: 768px) {
     body.sunDlower footer .footer-xs-hidden {
       display: none; } }
-  body.sunDlower footer .footer li svg g g {
-    fill: #f1c40f; }
+  body.sunDlower footer .footer li {
+    /*svg g g {
+                    fill: darken($defcolor, 15%);
+                }*/ }
   body.carrot .header {
     background-color: #e67e22;
     transition: background-color 0.3s linear 0s; }
@@ -1382,8 +1406,10 @@ body {
   @media only screen and (max-width: 768px) {
     body.carrot footer .footer-xs-hidden {
       display: none; } }
-  body.carrot footer .footer li svg g g {
-    fill: #e67e22; }
+  body.carrot footer .footer li {
+    /*svg g g {
+                    fill: darken($defcolor, 15%);
+                }*/ }
   body.alizarin .header {
     background-color: #e74c3c;
     transition: background-color 0.3s linear 0s; }
@@ -1461,8 +1487,10 @@ body {
   @media only screen and (max-width: 768px) {
     body.alizarin footer .footer-xs-hidden {
       display: none; } }
-  body.alizarin footer .footer li svg g g {
-    fill: #e74c3c; }
+  body.alizarin footer .footer li {
+    /*svg g g {
+                    fill: darken($defcolor, 15%);
+                }*/ }
   body.orange .header {
     background-color: #f39c12;
     transition: background-color 0.3s linear 0s; }
@@ -1540,8 +1568,10 @@ body {
   @media only screen and (max-width: 768px) {
     body.orange footer .footer-xs-hidden {
       display: none; } }
-  body.orange footer .footer li svg g g {
-    fill: #f39c12; }
+  body.orange footer .footer li {
+    /*svg g g {
+                    fill: darken($defcolor, 15%);
+                }*/ }
   body.pumpkin .header {
     background-color: #d35400;
     transition: background-color 0.3s linear 0s; }
@@ -1619,8 +1649,10 @@ body {
   @media only screen and (max-width: 768px) {
     body.pumpkin footer .footer-xs-hidden {
       display: none; } }
-  body.pumpkin footer .footer li svg g g {
-    fill: #d35400; }
+  body.pumpkin footer .footer li {
+    /*svg g g {
+                    fill: darken($defcolor, 15%);
+                }*/ }
   body.pomegranate .header {
     background-color: #c0392b;
     transition: background-color 0.3s linear 0s; }
@@ -1698,8 +1730,10 @@ body {
   @media only screen and (max-width: 768px) {
     body.pomegranate footer .footer-xs-hidden {
       display: none; } }
-  body.pomegranate footer .footer li svg g g {
-    fill: #c0392b; }
+  body.pomegranate footer .footer li {
+    /*svg g g {
+                    fill: darken($defcolor, 15%);
+                }*/ }
   body.colorPickerActive {
     position: relative;
     top: 275px; }
@@ -1771,7 +1805,8 @@ body {
             -webkit-animation: color_track_pl_enter 0.3s linear;
             animation: color_track_pl_enter 0.3s linear; }
   body .header {
-    height: 85vh;
+    height: 100vh;
+    min-height: 400px;
     width: 100%;
     position: relative; }
     body .header-xs {
@@ -1990,7 +2025,7 @@ body {
       position: absolute;
       bottom: 0;
       z-index: 2;
-      padding-bottom: 45px; }
+      padding-bottom: 75px; }
       body .header-tagged-awesome {
         font-size: 3em;
         width: 100%;
@@ -2057,15 +2092,24 @@ body {
   body .content {
     height: auto;
     width: 100%;
-    background: #fff;
+    background: #f6f6f6;
     padding-bottom: 30px; }
     body .content-projects {
       width: 100%; }
     body .content-project-badge {
-      height: 300px;
+      height: 60vh;
+      min-height: 60vh;
       padding: 0;
       margin: 0;
       position: relative; }
+      @media only screen and (max-width: 768px) {
+        body .content-project-badge {
+          height: 100vw; } }
+      body .content-project-badge.h100 {
+        height: 100vh; }
+        @media only screen and (max-width: 768px) {
+          body .content-project-badge.h100 {
+            height: 100vw; } }
       body .content-project-badge-locked {
         content: '';
         background-image: url(../../assets/project-lock.png);
@@ -2083,6 +2127,12 @@ body {
         z-index: 1;
         position: relative;
         cursor: pointer; }
+        body .content-project-badge-innercontent.moosik-app {
+          max-height: 100vh;
+          background-color: #094781; }
+        body .content-project-badge-innercontent.nsg-app {
+          max-height: 100vh;
+          background-color: #0a4798; }
         body .content-project-badge-innercontent img {
           display: block;
           margin: 0 auto;
@@ -2091,30 +2141,37 @@ body {
           body .content-project-badge-innercontent img.moosik {
             width: 130px;
             margin-top: 80px; }
-          body .content-project-badge-innercontent img.itibp {
-            width: 160px;
-            margin-top: 90px; }
+          body .content-project-badge-innercontent img.moosik-app {
+            height: 70vh;
+            margin-top: 15vh; }
+            @media only screen and (max-width: 768px) {
+              body .content-project-badge-innercontent img.moosik-app {
+                width: 70vh;
+                height: auto; } }
           body .content-project-badge-innercontent img.piemix {
-            width: 130px;
-            margin-top: 78px; }
+            height: 444px;
+            margin-top: 15px; }
           body .content-project-badge-innercontent img.vxgrid {
-            height: 100%;
-            margin-top: 0; }
+            width: 100%;
+            margin-top: -15px; }
           body .content-project-badge-innercontent img.notsogrey {
             width: 130px;
             margin-top: 78px; }
+          body .content-project-badge-innercontent img.nsg-app {
+            height: 70vh;
+            margin-top: 15vh; }
+            @media only screen and (max-width: 768px) {
+              body .content-project-badge-innercontent img.nsg-app {
+                width: 70vw;
+                height: auto; } }
           body .content-project-badge-innercontent img.richcc {
             height: 100%;
-            margin-top: 0; }
-          body .content-project-badge-innercontent img.baat {
-            width: 130px;
-            margin-top: 135px; }
-          body .content-project-badge-innercontent img.elements {
-            width: 100px;
-            margin-top: 100px; }
-          body .content-project-badge-innercontent img.fduap {
-            width: 100px;
-            margin-top: 110px; }
+            margin-left: -30px; }
+            @media only screen and (max-width: 768px) {
+              body .content-project-badge-innercontent img.richcc {
+                height: 100%;
+                width: auto;
+                margin-left: 0; } }
         body .content-project-badge-innercontent-label {
           height: 48px;
           line-height: 48px;
@@ -2123,31 +2180,30 @@ body {
           position: absolute;
           width: 100%;
           bottom: 0;
-          background: #565656;
+          background: #303030;
           color: #fff;
           transform: translateY(100px);
           transition: transform 0.5s ease-in 0s, background-color 0.3s linear 0s; }
         body .content-project-badge-innercontent:hover .content-project-badge-innercontent-label {
           transform: translateY(0); }
-        body .content-project-badge-innercontent:hover img {
+        body .content-project-badge-innercontent:hover img:not(.tranformLocked) {
           transform: scale(0.9, 0.9); }
     body .content-skills-label {
       margin: 0;
       font-size: large;
       line-height: 60px;
       font-weight: 500;
-      padding: 15px 30px; }
-      @media only screen and (max-width: 768px) {
-        body .content-skills-label {
-          padding: 0 30px; } }
+      padding: 30px; }
     body .content-skills-holder {
       width: 100%;
       height: 160px;
       position: relative;
-      overflow: hidden; }
+      overflow: hidden;
+      margin-bottom: 30px; }
       @media only screen and (max-width: 768px) {
         body .content-skills-holder {
-          height: 130px; } }
+          height: 130px;
+          margin-bottom: 15px; } }
       body .content-skills-holder-arrow-holder {
         position: absolute;
         top: 50px;
@@ -2213,7 +2269,7 @@ body {
             body .content-skills-badge img {
               height: 70px; } }
   body footer {
-    background-color: #f0f0f0; }
+    background-color: #fff; }
     body footer .footer {
       height: 48px;
       margin: 0;
@@ -2233,6 +2289,7 @@ body {
           position: relative;
           top: 12px; }
           body footer .footer li svg g g {
-            transition: fill 0.3s linear 0s; }
+            transition: fill 0.3s linear 0s;
+            fill: #909090; }
           body footer .footer li svg:hover g g {
-            fill: #565656; }
+            fill: #000000; }
