@@ -633,8 +633,9 @@ body {
         &-tagged {
             width: 100%;
             position: absolute;
-            bottom: 45px;
+            bottom: 0;
             z-index: 2;
+            padding-bottom: 45px;
 
             &-awesome {
                 font-size: 3em;

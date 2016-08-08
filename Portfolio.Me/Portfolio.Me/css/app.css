@@ -1988,8 +1988,9 @@ body {
     body .header-tagged {
       width: 100%;
       position: absolute;
-      bottom: 45px;
-      z-index: 2; }
+      bottom: 0;
+      z-index: 2;
+      padding-bottom: 45px; }
       body .header-tagged-awesome {
         font-size: 3em;
         width: 100%;
