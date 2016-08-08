@@ -50,6 +50,11 @@ html {
             transition: background-color 0.3s linear 0s, border-color 0.3s linear 0s;
         }
 
+        &-xs-profile-links-pages-list li a svg g g,
+        &-profile-links-pages-list li a svg g g {
+            fill: lighten($defcolor, 33%);
+        }
+
         &-picture-container {
 
             &-pic {
@@ -149,6 +154,13 @@ html {
 
     footer {
         .footer {
+            &-xs-hidden {
+
+                @include respond-to-mobile {
+                    display: none;
+                }
+            }
+
             li {
                 svg g g {
                     fill: $defcolor;
@@ -371,6 +383,12 @@ body {
                             img {
                                 width: 30px;
                             }
+
+                            svg {
+                                height: 30px;
+                                position: relative;
+                                top: 10px;
+                            }
                         }
                     }
                 }
@@ -579,9 +597,16 @@ body {
                         height: 48px;
                         color: #fff;
                         text-decoration: none;
+                        cursor: pointer;
 
                         img {
                             width: 30px;
+                        }
+
+                        svg {
+                            height: 30px;
+                            position: relative;
+                            top: 10px;
                         }
                     }
                 }
@@ -608,8 +633,9 @@ body {
         &-tagged {
             width: 100%;
             position: absolute;
-            bottom: 45px;
+            bottom: 0;
             z-index: 2;
+            padding-bottom: 45px;
 
             &-awesome {
                 font-size: 3em;
@@ -952,6 +978,16 @@ body {
                     height: 24px;
                     position: relative;
                     top: 12px;
+
+                    & g g {
+                        transition: fill 0.3s linear 0s;
+                    }
+
+                    &:hover {
+                        & g g {
+                            fill: #565656;
+                        }
+                    }
                 }
             }
         }
