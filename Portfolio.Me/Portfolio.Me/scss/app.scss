@@ -146,15 +146,16 @@ html {
             }
         }
     }
-    /*.content {
-        &-project-badge {
-            &-innercontent {
-                &-label {
-                    background: $defcolor;
+
+    footer {
+        .footer {
+            li {
+                svg g g {
+                    fill: $defcolor;
                 }
             }
         }
-    }*/
+    }
 }
 
 body {
@@ -920,6 +921,37 @@ body {
                     @include respond-to-mobile {
                         height: 70px;
                     }
+                }
+            }
+        }
+    }
+
+    footer {
+        background-color: #f0f0f0;
+
+        .footer {
+            height: 48px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: right;
+
+            @include respond-to-mobile {
+                text-align: center;
+            }
+
+            li {
+                display: inline-block;
+                width: 48px;
+
+                &.margLeft {
+                    margin: 0 0 0 15px;
+                }
+
+                svg {
+                    height: 24px;
+                    position: relative;
+                    top: 12px;
                 }
             }
         }
