@@ -14,12 +14,6 @@ html {
     font-family: 'Open Sans', sans-serif;
 }
 
-@mixin respond-to-mobile {
-    @media only screen and (max-width:768px) {
-        @content;
-    }
-}
-
 @mixin color-defines-css($defcolor) {
     .header {
         background-color: $defcolor;
@@ -967,7 +961,7 @@ body {
                 margin: 30px 45px 0 45px;
 
                 @include respond-to-mobile {
-                    margin: 30px 20px 0 20px;
+                    margin: 30px 10px 0 10px;
                 }
 
                 img {
