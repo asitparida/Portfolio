@@ -833,60 +833,65 @@ body {
                     }
                 }
 
-                &-label {
-                    height: 120px;
+                &-name-badge {
+                    height: 100%;
                     padding: 0 15px;
                     font-size: medium;
                     position: absolute;
                     width: 100%;
                     bottom: 0;
-                    background: #303030;
-                    transform: translateY(120px);
-                    transition: transform 0.5s ease-in 0s, background-color 0.3s linear 0s;
-                    opacity: 0.80;
-
-                    @include respond-to-mobile {
+                    background: #000;
+                    opacity: 0;
+                    transition: opacity 0.5s ease-in 0s, background-color 0.3s linear 0s;
+                    /*@include respond-to-mobile {
                         height: 60px;
                         transform: translateY(60px);
-                    }
 
-                    label {
-                        font-size: 16px;
+                    }*/
+                    .label-container {
+                        height: 120px;
                         width: 100%;
-                        color: #fff;
-                        margin: 0;
-                        font-weight: 500;
+                        position: absolute;
+                        bottom: 0;
 
-                        &:nth-child(2n+1) {
-                            font-size: 24px;
-                            text-transform: uppercase;
-                            margin-top: 20px;
-                            line-height: 48px;
-                            height: 48px;
-                            letter-spacing: 1px;
+                        label {
+                            font-size: 16px;
+                            width: 100%;
+                            color: #fff;
+                            margin: 0;
+                            font-weight: 500;
 
-                            @include respond-to-mobile {
-                                margin-top: 0;
-                                height: 60px;
-                                line-height: 60px;
-                                font-size: medium;
+                            &:nth-child(2n+1) {
+                                font-size: 24px;
+                                text-transform: uppercase;
+                                margin-top: 20px;
+                                line-height: 48px;
+                                height: 48px;
+                                letter-spacing: 1px;
+
+                                @include respond-to-mobile {
+                                    margin-top: 0;
+                                    height: 60px;
+                                    line-height: 60px;
+                                    font-size: medium;
+                                }
                             }
-                        }
 
-                        &:nth-child(2n) {
-                            line-height: 30px;
-                            height: 30px;
+                            &:nth-child(2n) {
+                                line-height: 30px;
+                                height: 30px;
 
-                            @include respond-to-mobile {
-                                display: none;
+                                @include respond-to-mobile {
+                                    display: none;
+                                }
                             }
                         }
                     }
                 }
 
                 &:hover {
-                    .content-project-badge-innercontent-label {
-                        transform: translateY(0);
+                    .content-project-badge-innercontent-name-badge {
+                        opacity: 0.50;
                     }
 
                     img:not(.tranformLocked) {

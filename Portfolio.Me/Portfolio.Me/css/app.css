@@ -2172,48 +2172,53 @@ body {
                 height: 100%;
                 width: auto;
                 margin-left: 0; } }
-        body .content-project-badge-innercontent-label {
-          height: 120px;
+        body .content-project-badge-innercontent-name-badge {
+          height: 100%;
           padding: 0 15px;
           font-size: medium;
           position: absolute;
           width: 100%;
           bottom: 0;
-          background: #303030;
-          transform: translateY(120px);
-          transition: transform 0.5s ease-in 0s, background-color 0.3s linear 0s;
-          opacity: 0.80; }
-          @media only screen and (max-width: 768px) {
-            body .content-project-badge-innercontent-label {
-              height: 60px;
-              transform: translateY(60px); } }
-          body .content-project-badge-innercontent-label label {
-            font-size: 16px;
+          background: #000;
+          opacity: 0;
+          transition: opacity 0.5s ease-in 0s, background-color 0.3s linear 0s;
+          /*@include respond-to-mobile {
+                        height: 60px;
+                        transform: translateY(60px);
+
+                    }*/ }
+          body .content-project-badge-innercontent-name-badge .label-container {
+            height: 120px;
             width: 100%;
-            color: #fff;
-            margin: 0;
-            font-weight: 500; }
-            body .content-project-badge-innercontent-label label:nth-child(2n+1) {
-              font-size: 24px;
-              text-transform: uppercase;
-              margin-top: 20px;
-              line-height: 48px;
-              height: 48px;
-              letter-spacing: 1px; }
-              @media only screen and (max-width: 768px) {
-                body .content-project-badge-innercontent-label label:nth-child(2n+1) {
-                  margin-top: 0;
-                  height: 60px;
-                  line-height: 60px;
-                  font-size: medium; } }
-            body .content-project-badge-innercontent-label label:nth-child(2n) {
-              line-height: 30px;
-              height: 30px; }
-              @media only screen and (max-width: 768px) {
-                body .content-project-badge-innercontent-label label:nth-child(2n) {
-                  display: none; } }
-        body .content-project-badge-innercontent:hover .content-project-badge-innercontent-label {
-          transform: translateY(0); }
+            position: absolute;
+            bottom: 0; }
+            body .content-project-badge-innercontent-name-badge .label-container label {
+              font-size: 16px;
+              width: 100%;
+              color: #fff;
+              margin: 0;
+              font-weight: 500; }
+              body .content-project-badge-innercontent-name-badge .label-container label:nth-child(2n+1) {
+                font-size: 24px;
+                text-transform: uppercase;
+                margin-top: 20px;
+                line-height: 48px;
+                height: 48px;
+                letter-spacing: 1px; }
+                @media only screen and (max-width: 768px) {
+                  body .content-project-badge-innercontent-name-badge .label-container label:nth-child(2n+1) {
+                    margin-top: 0;
+                    height: 60px;
+                    line-height: 60px;
+                    font-size: medium; } }
+              body .content-project-badge-innercontent-name-badge .label-container label:nth-child(2n) {
+                line-height: 30px;
+                height: 30px; }
+                @media only screen and (max-width: 768px) {
+                  body .content-project-badge-innercontent-name-badge .label-container label:nth-child(2n) {
+                    display: none; } }
+        body .content-project-badge-innercontent:hover .content-project-badge-innercontent-name-badge {
+          opacity: 0.50; }
         body .content-project-badge-innercontent:hover img:not(.tranformLocked) {
           transform: scale(0.9, 0.9); }
     body .content-skills-label {
