@@ -690,7 +690,7 @@ body {
                 border-radius: 50%;
                 display: block;
                 margin: 45px auto 0;
-                animation: arrow-dip-dop 5s linear infinite;
+                animation: arrow-dip-dop 3s linear infinite;
 
                 @include respond-to-mobile {
                     margin: 0 auto;
@@ -1073,13 +1073,35 @@ body {
     }
 }
 
-@keyframes arrow-dip-dop {
+@-moz-keyframes arrow-dip-dop {
 
-    0%, 10%, 20%, 100% {
+    0%, 10%, 30%, 100% {
         transform: scale(1,1);
     }
 
-    15% {
+    20% {
+        transform: scale(1.10, 1.10);
+    }
+}
+
+@-webkit-keyframes arrow-dip-dop {
+
+    0%, 10%, 30%, 100% {
+        transform: scale(1,1);
+    }
+
+    20% {
+        transform: scale(1.10, 1.10);
+    }
+}
+
+@keyframes arrow-dip-dop {
+
+    0%, 10%, 30%, 100% {
+        transform: scale(1,1);
+    }
+
+    20% {
         transform: scale(1.10, 1.10);
     }
 }

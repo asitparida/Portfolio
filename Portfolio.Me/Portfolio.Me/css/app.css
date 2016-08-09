@@ -2072,7 +2072,7 @@ body {
         border-radius: 50%;
         display: block;
         margin: 45px auto 0;
-        animation: arrow-dip-dop 5s linear infinite; }
+        animation: arrow-dip-dop 3s linear infinite; }
         @media only screen and (max-width: 768px) {
           body .header-tagged-arrow-holder {
             margin: 0 auto; } }
@@ -2333,8 +2333,20 @@ body {
           body footer .footer li svg:hover g g {
             fill: #000000; }
 
-@keyframes arrow-dip-dop {
-  0%, 10%, 20%, 100% {
+@-moz-keyframes arrow-dip-dop {
+  0%, 10%, 30%, 100% {
     transform: scale(1, 1); }
-  15% {
+  20% {
+    transform: scale(1.1, 1.1); } }
+
+@-webkit-keyframes arrow-dip-dop {
+  0%, 10%, 30%, 100% {
+    transform: scale(1, 1); }
+  20% {
+    transform: scale(1.1, 1.1); } }
+
+@keyframes arrow-dip-dop {
+  0%, 10%, 30%, 100% {
+    transform: scale(1, 1); }
+  20% {
     transform: scale(1.1, 1.1); } }
