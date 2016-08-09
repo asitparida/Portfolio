@@ -2071,7 +2071,8 @@ body {
         border: 2px solid #fff;
         border-radius: 50%;
         display: block;
-        margin: 45px auto 0; }
+        margin: 45px auto 0;
+        animation: arrow-dip-dop 5s linear infinite; }
         @media only screen and (max-width: 768px) {
           body .header-tagged-arrow-holder {
             margin: 0 auto; } }
@@ -2331,3 +2332,9 @@ body {
             fill: #909090; }
           body footer .footer li svg:hover g g {
             fill: #000000; }
+
+@keyframes arrow-dip-dop {
+  0%, 10%, 20%, 100% {
+    transform: scale(1, 1); }
+  15% {
+    transform: scale(1.1, 1.1); } }

@@ -690,6 +690,7 @@ body {
                 border-radius: 50%;
                 display: block;
                 margin: 45px auto 0;
+                animation: arrow-dip-dop 5s linear infinite;
 
                 @include respond-to-mobile {
                     margin: 0 auto;
@@ -1069,5 +1070,16 @@ body {
                 }
             }
         }
+    }
+}
+
+@keyframes arrow-dip-dop {
+
+    0%, 10%, 20%, 100% {
+        transform: scale(1,1);
+    }
+
+    15% {
+        transform: scale(1.10, 1.10);
     }
 }
