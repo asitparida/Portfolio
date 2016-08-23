@@ -690,6 +690,7 @@ body {
                 border-radius: 50%;
                 display: block;
                 margin: 45px auto 0;
+                animation: arrow-dip-dop 3s linear infinite;
 
                 @include respond-to-mobile {
                     margin: 0 auto;
@@ -839,16 +840,28 @@ body {
                     font-size: medium;
                     position: absolute;
                     width: 100%;
-                    bottom: 0;
-                    background: #000;
-                    opacity: 0;
-                    transition: opacity 0.5s ease-in 0s, background-color 0.3s linear 0s;
+                    top: 0;
+                    transition: opacity 0.5s ease-in 0s;
+
+                    .opaqueHolder {
+                        content: "";
+                        background: #000;
+                        position: absolute;
+                        opacity: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        transition: opacity 0.5s ease-in 0s;
+                    }
 
                     .label-container {
                         height: 120px;
                         width: 100%;
                         position: absolute;
                         bottom: 0;
+                        transform: translateY(120px);
+                        transition: transform 0.500s linear 0s;
 
                         @include respond-to-mobile {
                             height: 60px;
@@ -869,30 +882,25 @@ body {
                                 line-height: 48px;
                                 height: 48px;
                                 letter-spacing: 1px;
-
-                                @include respond-to-mobile {
-                                    margin-top: 0;
-                                    height: 60px;
-                                    line-height: 60px;
-                                    font-size: medium;
-                                }
                             }
 
                             &:nth-child(2n) {
                                 line-height: 30px;
                                 height: 30px;
-
-                                @include respond-to-mobile {
-                                    display: none;
-                                }
                             }
                         }
                     }
                 }
 
                 &:hover {
-                    .content-project-badge-innercontent-name-badge {
+                    .content-project-badge-innercontent-name-badge .opaqueHolder {
                         opacity: 0.50;
+                    }
+
+                    .content-project-badge-innercontent-name-badge {
+                        .label-container {
+                            transform: translateY(0px);
+                        }
                     }
 
                     img:not(.tranformLocked) {
@@ -908,6 +916,11 @@ body {
             line-height: 60px;
             font-weight: 500;
             padding: 30px;
+
+            @include respond-to-mobile {
+                text-align: center;
+                width: 100%;
+            }
         }
 
         &-skills-holder {
@@ -1038,6 +1051,10 @@ body {
 
                 &.margLeft {
                     margin: 0 0 0 15px;
+
+                    @include respond-to-mobile {
+                        margin: 0 10px;
+                    }
                 }
 
                 svg {
@@ -1058,5 +1075,38 @@ body {
                 }
             }
         }
+    }
+}
+
+@-moz-keyframes arrow-dip-dop {
+
+    0%, 10%, 30%, 100% {
+        transform: scale(1,1);
+    }
+
+    20% {
+        transform: scale(1.10, 1.10);
+    }
+}
+
+@-webkit-keyframes arrow-dip-dop {
+
+    0%, 10%, 30%, 100% {
+        transform: scale(1,1);
+    }
+
+    20% {
+        transform: scale(1.10, 1.10);
+    }
+}
+
+@keyframes arrow-dip-dop {
+
+    0%, 10%, 30%, 100% {
+        transform: scale(1,1);
+    }
+
+    20% {
+        transform: scale(1.10, 1.10);
     }
 }
