@@ -863,10 +863,10 @@ body {
                         transform: translateY(120px);
                         transition: transform 0.500s linear 0s;
 
-                        @include respond-to-mobile {
+                        /*@include respond-to-mobile {
                             height: 60px;
                             bottom: 0;
-                        }
+                        }*/
 
                         label {
                             font-size: 16px;
