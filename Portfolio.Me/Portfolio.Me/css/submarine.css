@@ -352,7 +352,8 @@
   overflow: hidden; }
   @media only screen and (max-width: 768px) {
     .submarine {
-      height: calc(100vh - 193px); } }
+      height: calc(100vh - 193px);
+      pointer-events: none; } }
   .submarine-bubble {
     width: 30px;
     height: 30px;

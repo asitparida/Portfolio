@@ -13,6 +13,7 @@
 
     @include respond-to-mobile {
         height: calc(100vh - 193px);
+        pointer-events:none;
     }
 
     &-bubble {

@@ -2181,17 +2181,16 @@ body {
           bottom: 0;
           background: #000;
           opacity: 0;
-          transition: opacity 0.5s ease-in 0s, background-color 0.3s linear 0s;
-          /*@include respond-to-mobile {
-                        height: 60px;
-                        transform: translateY(60px);
-
-                    }*/ }
+          transition: opacity 0.5s ease-in 0s, background-color 0.3s linear 0s; }
           body .content-project-badge-innercontent-name-badge .label-container {
             height: 120px;
             width: 100%;
             position: absolute;
             bottom: 0; }
+            @media only screen and (max-width: 768px) {
+              body .content-project-badge-innercontent-name-badge .label-container {
+                height: 60px;
+                bottom: 0; } }
             body .content-project-badge-innercontent-name-badge .label-container label {
               font-size: 16px;
               width: 100%;

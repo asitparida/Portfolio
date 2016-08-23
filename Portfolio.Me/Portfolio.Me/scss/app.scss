@@ -843,16 +843,17 @@ body {
                     background: #000;
                     opacity: 0;
                     transition: opacity 0.5s ease-in 0s, background-color 0.3s linear 0s;
-                    /*@include respond-to-mobile {
-                        height: 60px;
-                        transform: translateY(60px);
 
-                    }*/
                     .label-container {
                         height: 120px;
                         width: 100%;
                         position: absolute;
                         bottom: 0;
+
+                        @include respond-to-mobile {
+                            height: 60px;
+                            bottom: 0;
+                        }
 
                         label {
                             font-size: 16px;
