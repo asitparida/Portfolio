@@ -109,10 +109,10 @@
     <Content Include="project-logos\richcc.png" />
     <Content Include="project-logos\richcc2.png" />
     <Content Include="project-logos\vx-grid.png" />
-    <Content Include="scss\utils.scss" />
-    <Content Include="scss\vars.scss" />
+    <Content Include="scss\_utils.scss" />
+    <Content Include="scss\_vars.scss" />
     <Content Include="scss\app.scss" />
-    <Content Include="scss\submarine.scss" />
+    <Content Include="scss\_submarine.scss" />
     <None Include="Properties\PublishProfiles\asparida-pf - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\asparida-pf - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
