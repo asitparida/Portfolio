@@ -1,4 +1,6 @@
-﻿@import 'vars.scss';
+﻿@import '_vars';
+@import '_utils';
+@import '_submarine';
 
 /* Include this file in your html if you are using the CSP mode. */
 
@@ -166,72 +168,10 @@ html {
 
 body {
 
-    &.turquoise {
-        @include color-defines-css( $turquoise );
-    }
-
-    &.emerland {
-        @include color-defines-css( $emerland );
-    }
-
-    &.peterRiver {
-        @include color-defines-css( $peterRiver );
-    }
-
-    &.amethyst {
-        @include color-defines-css( $amethyst );
-    }
-
-    &.moosikPurple {
-        @include color-defines-css( $moosikPurple );
-    }
-
-    &.wetAsphalt {
-        @include color-defines-css( $wetAsphalt );
-    }
-
-    &.greenSea {
-        @include color-defines-css( $greenSea );
-    }
-
-    &.nephritis {
-        @include color-defines-css( $nephritis );
-    }
-
-    &.belizeHole {
-        @include color-defines-css( $belizeHole );
-    }
-
-    &.wisteria {
-        @include color-defines-css( $wisteria );
-    }
-
-    &.midnightBlue {
-        @include color-defines-css( $midnightBlue );
-    }
-
-    &.sunDlower {
-        @include color-defines-css( $sunDlower );
-    }
-
-    &.carrot {
-        @include color-defines-css( $carrot );
-    }
-
-    &.alizarin {
-        @include color-defines-css( $alizarin );
-    }
-
-    &.orange {
-        @include color-defines-css( $orange );
-    }
-
-    &.pumpkin {
-        @include color-defines-css( $pumpkin );
-    }
-
-    &.pomegranate {
-        @include color-defines-css( $pomegranate );
+    @each $key, $value in $defaultPalettes{
+        &.#{$key}{
+            @include color-defines-css( $value );
+        }
     }
 
     padding: 0;
@@ -690,6 +630,7 @@ body {
                 border-radius: 50%;
                 display: block;
                 margin: 45px auto 0;
+                animation: arrow-dip-dop 3s linear infinite;
 
                 @include respond-to-mobile {
                     margin: 0 auto;
@@ -861,6 +802,11 @@ body {
                         bottom: 0;
                         transform: translateY(120px);
                         transition: transform 0.500s linear 0s;
+
+                        /*@include respond-to-mobile {
+                            height: 60px;
+                            bottom: 0;
+                        }*/
 
                         label {
                             font-size: 16px;
@@ -1069,5 +1015,38 @@ body {
                 }
             }
         }
+    }
+}
+
+@-moz-keyframes arrow-dip-dop {
+
+    0%, 10%, 30%, 100% {
+        transform: scale(1,1);
+    }
+
+    20% {
+        transform: scale(1.10, 1.10);
+    }
+}
+
+@-webkit-keyframes arrow-dip-dop {
+
+    0%, 10%, 30%, 100% {
+        transform: scale(1,1);
+    }
+
+    20% {
+        transform: scale(1.10, 1.10);
+    }
+}
+
+@keyframes arrow-dip-dop {
+
+    0%, 10%, 30%, 100% {
+        transform: scale(1,1);
+    }
+
+    20% {
+        transform: scale(1.10, 1.10);
     }
 }

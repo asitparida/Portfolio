@@ -1,59 +1,22 @@
-﻿$header-background: #303030;
-$header-background-hover: #000000;
-$header-subtle: #6fb28a;
-$header-foreground: #c0c0c0;
-$app-theme: #1ca32d;
-$base-font-size: 16px;
-$success: #67B745;
-$info: #9b59b6;
-$warning: #E59200;
-$danger: #B84C4C;
-$error: #e74c3c;
-$modal-background: #3abb9e;
-
-$progress-bounce: #ffb532;
-
-
-$turquoise: #1abc9c;
-$emerland: #2ecc71;
-$peterRiver: #3498db;
-$amethyst: #9b59b6;
-$moosikPurple: #d613b5;
-$wetAsphalt: #34495e;
-$greenSea: #16a085;
-$nephritis: #27ae60;
-$belizeHole: #2980b9;
-$wisteria: #8e44ad;
-$midnightBlue: #2c3e50;
-$sunDlower: #f1c40f;
-$carrot: #e67e22;
-$alizarin: #e74c3c;
-$orange: #f39c12;
-$pumpkin: #d35400;
-$pomegranate: #c0392b;
-
-
-$sidebar-background: #111c26;
-$sidebar-foreground: #fff;
-$sidebar-subtle-background: #454d56;
-$sidebar-subtle-foreground: #9fa1a3;
-$sidebar-active-background: #0760a7;
-$sidebar-active-foreground: #FFFFFF;
-$sidebar-active-action: #0760a7;
-
-$content-subtle-foreground: #666666;
-$content-subtle-background: #EFEFEF;
-$color-tile-id: #8e8e8e;
-$color-tile-name: #4d4d4d;
-$content-highlight-foreground: #0078d7;
-
-
-$content-background: #fff;
-$content-foreground: #222222;
-
-@function em($px, $base: $base-font-size) {
-    @return ($px / $base) * 1em;
-}
+﻿$defaultPalettes:(
+    turquoise: #1abc9c,
+    emerland: #2ecc71,
+    peterRiver: #3498db,
+    amethyst: #9b59b6,
+    moosikPurple: #d613b5,
+    wetAsphalt: #34495e,
+    greenSea: #16a085,
+    nephritis: #27ae60,
+    belizeHole: #2980b9,
+    wisteria: #8e44ad,
+    midnightBlue: #2c3e50,
+    sunDlower: #f1c40f,
+    carrot: #e67e22,
+    alizarin: #e74c3c,
+    orange: #f39c12,
+    pumpkin: #d35400,
+    pomegranate: #c0392b   
+);
 
 @mixin respond-to-mobile {
     @media only screen and (max-width:768px) {
