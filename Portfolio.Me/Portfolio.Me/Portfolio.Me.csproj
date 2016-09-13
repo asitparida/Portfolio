@@ -108,6 +108,7 @@
     <Content Include="assets\project-lock.png" />
     <Content Include="project-logos\richcc.png" />
     <Content Include="project-logos\richcc2.png" />
+    <Content Include="project-logos\topgit_app.png" />
     <Content Include="project-logos\vx-grid.png" />
     <Content Include="scss\_utils.scss" />
     <Content Include="scss\_vars.scss" />

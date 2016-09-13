@@ -684,7 +684,7 @@ body {
             position: relative;
 
             &.star-wars-bg {
-                background: radial-gradient(ellipse at bottom, #2c3e50 0%, #090A0F 100%);                
+                background: radial-gradient(ellipse at bottom, #2c3e50 0%, #090A0F 100%);
             }
 
             @include respond-to-mobile {
@@ -813,6 +813,11 @@ body {
                     background-color: #0a4798;
                 }
 
+                &.topgit-app {
+                    max-height: 100vh;
+                    background-color: #3498db;
+                }
+
                 img {
                     display: block;
                     margin: 0 auto;
@@ -849,7 +854,8 @@ body {
                         margin-top: 78px;
                     }
 
-                    &.nsg-app {
+                    &.nsg-app,
+                    &.topgit-app {
                         height: 70vh;
                         margin-top: 15vh;
 
@@ -909,6 +915,10 @@ body {
                             color: #fff;
                             margin: 0;
                             font-weight: 500;
+
+                            &.normalCase{
+                                text-transform: none !important;
+                            }
 
                             &:nth-child(2n+1) {
                                 font-size: 24px;
