@@ -5,6 +5,14 @@
     self.header = document.getElementById('header');
     self.submarine = document.getElementById('pf_submarine');
 
+    var scrollIcon = document.getElementById('scrollUpIcon');
+    $(window).on('scroll', function (e) {
+        if ($(e.target).scrollTop() > window.innerHeight)
+            scrollIcon.style.display = 'block';
+        else
+            scrollIcon.style.display = 'none';
+    });
+
     self.showColorPicker = false;
     self.settingsPaneColorsInitalized = false;
     self.colorModes = [
@@ -64,7 +72,7 @@
     self.pause = false;
 
     self.adjustPosition = function () {
-        if (!self.pause) {            
+        if (!self.pause) {
             var currPic = 'header-pic-' + self.currentPic;
             var nextId = self.currentPic + 1 > 4 ? 0 : self.currentPic + 1;
             var nextPic = 'header-pic-' + nextId;
@@ -151,6 +159,13 @@
         $('html, body').animate({
             scrollTop: _scrollTo
         }, 300);
+    }
+
+    self.scrollUp = function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 300);
+        document.getElementById('scrollUpIcon').style.display = 'none';
     }
 
     setTimeout(self.adjustPosition, 100);
