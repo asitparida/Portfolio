@@ -176,7 +176,6 @@ html {
     }
 
     .scrollUpIcon {
-        border-color: darken($defcolor, 15%);
         background: darken($defcolor, 15%);
     }
 }
@@ -199,18 +198,18 @@ body {
     .scrollUpIcon {
         position: fixed;
         z-index: 2;
-        width: 36px;
-        height: 36px;
-        bottom: 5px;
+        width: 30px;
+        height: 30px;
+        bottom: 8px;
         right: 5px;
         display: none;
-        border: 2px solid #fff;
+        border: 5px solid transparent;
         border-radius: 50%;
         box-sizing: border-box;
 
         span {
-            width: 32px;
-            line-height: 28px;
+            width: 22px;
+            line-height: 18px;
             text-align: center;
             height: 36px;
             color: #fff;
@@ -218,7 +217,6 @@ body {
 
         &:hover {
             & {
-                border-color: #000000;
                 background: #000000;
             }
         }
