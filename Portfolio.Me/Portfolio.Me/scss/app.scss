@@ -16,6 +16,16 @@ html {
     font-family: 'Open Sans', sans-serif;
 }
 
+@function star-speckles ($n, $speckle) {
+    $value: '#{random(2000)}px #{random(2000)}px #{$speckle}';
+
+    @for $i from 2 through $n {
+        $value: '#{$value} , #{random(2000)}px #{random(2000)}px #{$speckle}'
+    }
+
+    @return unquote($value);
+}
+
 @mixin color-defines-css($defcolor) {
     .header {
         background-color: $defcolor;
@@ -168,8 +178,8 @@ html {
 
 body {
 
-    @each $key, $value in $defaultPalettes{
-        &.#{$key}{
+    @each $key, $value in $defaultPalettes {
+        &.#{$key} {
             @include color-defines-css( $value );
         }
     }
@@ -673,8 +683,13 @@ body {
             margin: 0;
             position: relative;
 
+            &.star-wars-bg {
+                background: radial-gradient(ellipse at bottom, #2c3e50 0%, #090A0F 100%);                
+            }
+
             @include respond-to-mobile {
                 height: 100vw;
+                min-height: 100vw;
             }
 
             &.h100 {
@@ -710,6 +725,88 @@ body {
                     background-color: #094781;
                 }
 
+                &.starwars-app {
+                    height: 100vh;
+                    overflow: hidden;
+
+                    @include respond-to-mobile {
+                        height: 100vw;
+                    }
+
+                    .stars-bg {
+
+                        &-md {
+                            width: 2px;
+                            height: 2px;
+                            background: transparent;
+                            box-shadow: star-speckles(300, #fff);
+                            -moz-animation: animStar 100s linear infinite;
+                            -o-animation: animStar 100s linear infinite;
+                            -webkit-animation: animStar 100s linear infinite;
+                            animation: animStar 100s linear infinite;
+
+                            &:after {
+                                content: " ";
+                                position: absolute;
+                                top: 2000px;
+                                width: 2px;
+                                height: 2px;
+                                box-shadow: star-speckles(200, #fff);
+                                background: transparent;
+                            }
+                        }
+
+                        &-lg {
+                            width: 3px;
+                            height: 3px;
+                            background: transparent;
+                            box-shadow: star-speckles(100, #fff);
+                            -moz-animation: animStar 150s linear infinite;
+                            -o-animation: animStar 150s linear infinite;
+                            -webkit-animation: animStar 150s linear infinite;
+                            animation: animStar 150s linear infinite;
+
+                            &:after {
+                                content: " ";
+                                position: absolute;
+                                top: 2000px;
+                                width: 3px;
+                                height: 3px;
+                                box-shadow: star-speckles(100, #fff);
+                                background: transparent;
+                            }
+                        }
+                    }
+
+                    .logo-panel {
+                        height: 30vh;
+                        width: 100%;
+                        margin: calc(0.50 * (80vh)) auto;
+
+                        @include respond-to-mobile {
+                            height: 30vw;
+                            margin: calc(0.50 * (70vw)) auto;
+                        }
+
+                        svg {
+                            height: 20vh;
+                            margin: 0 auto;
+                            display: block;
+                            pointer-events: none;
+                            transform: scale(1, 1);
+                            transition: transform 0.5s ease-in 0s;
+
+                            @include respond-to-mobile {
+                                height: 30vw;
+                                margin: calc(0.50 * (70vw)) auto;
+                            }
+
+                            g path {
+                                fill: $starWarsTheme;
+                            }
+                        }
+                    }
+                }
 
                 &.nsg-app {
                     max-height: 100vh;
@@ -802,12 +899,10 @@ body {
                         bottom: 0;
                         transform: translateY(120px);
                         transition: transform 0.500s linear 0s;
-
                         /*@include respond-to-mobile {
                             height: 60px;
                             bottom: 0;
                         }*/
-
                         label {
                             font-size: 16px;
                             width: 100%;
@@ -843,7 +938,8 @@ body {
                         }
                     }
 
-                    img:not(.tranformLocked) {
+                    img:not(.tranformLocked),
+                    .logo-panel svg {
                         transform: scale(0.90,0.90);
                     }
                 }
@@ -1048,5 +1144,23 @@ body {
 
     20% {
         transform: scale(1.10, 1.10);
+    }
+}
+
+@keyframes animStar {
+    from {
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+
+    to {
+        -moz-transform: translateY(-2000px);
+        -ms-transform: translateY(-2000px);
+        -o-transform: translateY(-2000px);
+        -webkit-transform: translateY(-2000px);
+        transform: translateY(-2000px);
     }
 }

@@ -18,6 +18,8 @@
     pomegranate: #c0392b   
 );
 
+$starWarsTheme : #f1c40f;
+
 @mixin respond-to-mobile {
     @media only screen and (max-width:768px) {
         @content;
