@@ -168,11 +168,16 @@ html {
             }
 
             li {
-                /*svg g g {
+                svg g g {
                     fill: darken($defcolor, 15%);
-                }*/
+                }
             }
         }
+    }
+
+    .scrollUpIcon {
+        border-color: darken($defcolor, 15%);
+        background: darken($defcolor, 15%);
     }
 }
 
@@ -190,6 +195,34 @@ body {
     background: #f0f0f0;
     transition: all 0.3s linear 0s;
     top: 0px;
+
+    .scrollUpIcon {
+        position: fixed;
+        z-index: 2;
+        width: 36px;
+        height: 36px;
+        bottom: 5px;
+        right: 5px;
+        display: none;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        box-sizing: border-box;
+
+        span {
+            width: 32px;
+            line-height: 28px;
+            text-align: center;
+            height: 36px;
+            color: #fff;
+        }
+
+        &:hover {
+            & {
+                border-color: #000000;
+                background: #000000;
+            }
+        }
+    }
 
     &.colorPickerActive {
         position: relative;
@@ -700,6 +733,14 @@ body {
                 }
             }
 
+            &.h60 {
+                height: 60vh;
+
+                @include respond-to-mobile {
+                    height: 100vw;
+                }
+            }
+
             &-locked {
                 content: '';
                 background-image: url(../../assets/project-lock.png);
@@ -854,8 +895,7 @@ body {
                         margin-top: 78px;
                     }
 
-                    &.nsg-app,
-                    &.topgit-app {
+                    &.nsg-app {
                         height: 70vh;
                         margin-top: 15vh;
 
@@ -863,6 +903,10 @@ body {
                             width: 70vw;
                             height: auto;
                         }
+                    }
+
+                    &.topgit-app {
+                        width: 100%;
                     }
 
                     &.richcc {
@@ -916,7 +960,7 @@ body {
                             margin: 0;
                             font-weight: 500;
 
-                            &.normalCase{
+                            &.normalCase {
                                 text-transform: none !important;
                             }
 
@@ -1085,7 +1129,7 @@ body {
             margin: 0;
             padding: 0;
             list-style: none;
-            text-align: right;
+            text-align: left;
 
             @include respond-to-mobile {
                 text-align: center;
@@ -1097,6 +1141,14 @@ body {
 
                 &.margLeft {
                     margin: 0 0 0 15px;
+
+                    @include respond-to-mobile {
+                        margin: 0 10px;
+                    }
+                }
+
+                &.margRight {
+                    margin: 0 15px 0 0;
 
                     @include respond-to-mobile {
                         margin: 0 10px;
