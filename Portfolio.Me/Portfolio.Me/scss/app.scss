@@ -180,6 +180,30 @@ html {
     }
 }
 
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+    ::-webkit-scrollbar {
+        width: $size;
+        height: $size;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: $foreground-color;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: $background-color;
+    }
+    // For Internet Explorer
+    body {
+        -ms-scrollbar-face-color: $foreground-color;
+        scrollbar-face-color: $foreground-color;
+        -ms-scrollbar-track-color: $background-color;
+        scrollbar-track-color: $background-color;
+    }
+}
+
+@include scrollbars(.5em, darken(#c0c0c0, 20));
+
 body {
 
     @each $key, $value in $defaultPalettes {
@@ -194,6 +218,8 @@ body {
     background: #f0f0f0;
     transition: all 0.3s linear 0s;
     top: 0px;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
 
     .scrollUpIcon {
         position: fixed;
@@ -201,7 +227,7 @@ body {
         width: 30px;
         height: 30px;
         bottom: 8px;
-        right: 5px;
+        right: 8px;
         display: none;
         border: 5px solid transparent;
         border-radius: 50%;
