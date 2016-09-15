@@ -883,6 +883,10 @@ body {
                     background-color: #3498db;
                 }
 
+                &.cssloader-app{
+
+                }
+
                 img {
                     display: block;
                     margin: 0 auto;
@@ -1017,7 +1021,8 @@ body {
                     }
 
                     img:not(.tranformLocked),
-                    .logo-panel svg {
+                    .logo-panel svg,
+                    .robot {
                         transform: scale(0.90,0.90);
                     }
                 }
@@ -1192,6 +1197,167 @@ body {
                     &:hover {
                         & g g {
                             fill: #000000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .robot {
+        padding: 30px 0;
+        display: block;
+        margin: calc(0.5 * (100% - 360px)) auto;
+        height: 300px;
+        width: 300px;
+        transition: transform 0.5s ease-in 0s;
+
+        &-loader {
+            display: block;
+            margin: 30px auto;
+            width: 60%;
+            position: relative;
+            height: 100%;
+
+            &-bulb {
+                position: relative;
+                left: 5%;
+                width: 100%;
+
+                &-top {
+                    position: relative;
+                    border: 0;
+                    width: 5vh;
+                    height: 5vh;
+                    margin: 0 auto;
+                    padding: 0;
+                    -moz-border-radius: 999px;
+                    -webkit-border-radius: 999px;
+                    -khtml-border-radius: 999px;
+                    border-radius: 999px;
+                    border: 3px solid #000;
+                    background: #fff;
+                    z-index: 2;
+
+                    &-filament {
+                        height: 3px;
+                        position: absolute;
+                        left: 50%;
+                        bottom: 0;
+                        background: #000;
+                        transform-origin: left;
+
+                        &:nth-child(1) {
+                            transform: rotate(-105deg);
+                            width: 2.5vh;
+                        }
+
+                        &:nth-child(2) {
+                            width: 2vh;
+                            transform: rotate(-75deg);
+                        }
+                    }
+                }
+
+                &-bottom {
+                    width: 2.5vh;
+                    height: 2.5vh;
+                    margin: -1.50vh auto 0 auto;
+                    padding: 0;
+                    border-radius: 50%;
+                    background: #000;
+                    border: 1px solid #000;
+                    z-index: 1;
+                }
+
+                &-base {
+                    width: 5vh;
+                    height: 10px;
+                    background: #000;
+                    display: block;
+                    margin: 0 auto;
+                    position: relative;
+                    top: -5px;
+                }
+            }
+
+            &-head {
+                height: 50%;
+                width: 100%;
+                display: block;
+                margin: 0 auto;
+
+                &-box {
+                    background: #000;
+                    border-radius: 5%;
+                    width: 100%;
+                    height: 100%;
+                    padding: 2%;
+                    margin: 0 auto;
+                    display: block;
+                    position: relative;
+                    top: -5px;
+
+                    &-inner {
+                        background: #fff;
+                        border-radius: 5%;
+                        width: 85%;
+                        height: 100%;
+                        margin: 0 auto;
+                        float: right;
+                        position: relative;
+
+                        &-eye {
+                            margin: 15% 6%;
+                            width: 36%;
+                            height: 36%;
+                            position: relative;
+
+                            &:nth-child(1) {
+                                float: left;
+                            }
+
+                            &:nth-child(2) {
+                                float: right;
+                            }
+
+                            $n: 30;
+
+                            @for $i from 0 through 11 {
+                                .robot-loader-head-box-inner-eye#{$i + 1} {
+                                    -webkit-transform: rotate(#{$i * $n}deg);
+                                    -ms-transform: rotate(#{$i * $n}deg);
+                                    transform: rotate(#{$i * $n}deg);
+                                    width: 100%;
+                                    height: 100%;
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+
+                                    &:before {
+                                        content: '';
+                                        display: block;
+                                        margin: 0 auto;
+                                        width: 10%;
+                                        height: 10%;
+                                        background-color: #34495e;
+                                        border-radius: 100%;
+                                        -webkit-animation: robot-loader-head-box-inner-eye-circleBounceDelay 1.2s infinite ease-in-out both;
+                                        animation: robot-loader-head-box-inner-eye-circleBounceDelay 1.2s infinite ease-in-out both;
+                                    }
+                                }
+                            }
+                        }
+
+                        &-mouth {
+                            width: 30%;
+                            height: 5%;
+                            background: #000;
+                            position: absolute;
+                            bottom: 15%;
+                            left: 0;
+                            margin-left: 35%;
+                            border-radius: 25%;
                         }
                     }
                 }

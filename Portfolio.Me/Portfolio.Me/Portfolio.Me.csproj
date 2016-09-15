@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\github-logo-plain.png" />
+    <Content Include="cssloader.html" />
     <Content Include="favicon.ico" />
     <Content Include="lib\jquery-2.2.4.min.js" />
     <Content Include="dist\css\slick.css" />

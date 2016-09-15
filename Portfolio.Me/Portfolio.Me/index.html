@@ -5,13 +5,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="favicon.ico" type="image/ico" />
-    
+
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.min.css" rel="stylesheet" />      
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.min.css" rel="stylesheet" />
     <link href="dist/css/app.min.css" rel="stylesheet" />
-    
+
 </head>
 <body class="{{main.activeColorMode.colorId}}" ng-controller="MainController as main" ng-cloak ng-class="{'colorPickerActive': main.showColorPicker}">
     <div class="color-switcher">
@@ -140,7 +140,7 @@
         <div class="content-projects">
             <div class="col-xs-12 content-project-badge h100 star-wars-bg" style="background-color:#f0f0f0;">
                 <a target="_blank" href="https://github.com/asitparida/StarWars.Game">
-                    <div class="content-project-badge-innercontent starwars-app">                        
+                    <div class="content-project-badge-innercontent starwars-app">
                         <div class="stars-bg-md"></div>
                         <div class="stars-bg-lg"></div>
                         <div class="logo-panel">
@@ -176,7 +176,7 @@
                         <img src="project-logos/moosik_app.png" class="moosik-app" alt="moosik" />
                         <div class="content-project-badge-innercontent-name-badge">
                             <div class="opaqueHolder"></div>
-                            <div class="label-container">                                
+                            <div class="label-container">
                                 <label>Moosik </label>
                                 <label>An offline music player built using Electron</label>
                             </div>
@@ -184,7 +184,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 content-project-badge h60" style="background-color:#3498db;">
+            <div class="col-xs-12 col-sm-12 col-md-4 content-project-badge h60" style="background-color:#3498db;">
                 <a target="_blank" href="https://github.com/asitparida/TopGit">
                     <div class="content-project-badge-innercontent topgit-app">
                         <img src="project-logos/topgit_app.png" class="topgit-app" alt="Top Git" />
@@ -198,7 +198,21 @@
                     </div>
                 </a>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 content-project-badge h60" style="background-color:#03476f;">
+            <div class="col-xs-12 col-sm-12 col-md-4 content-project-badge h60" style="background-color:#34495e;">
+                <a target="_blank" href="https://github.com/asitparida/CSSRobotLoader">
+                    <div class="content-project-badge-innercontent cssloader-app">
+                        <ng-include src="'cssloader.html'"></ng-include>
+                        <div class="content-project-badge-innercontent-name-badge">
+                            <div class="opaqueHolder"></div>
+                            <div class="label-container">
+                                <label>CSS Loaders </label>
+                                <label>Robot like page loader built using HTML5/CSS animations</label>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 content-project-badge h60" style="background-color:#03476f;">
                 <a target="_blank" href="https://github.com/asitparida/TopGit">
                     <div class="content-project-badge-innercontent">
                         <img src="project-logos/segoe-app.jpg" class="vxgrid tranformLocked" alt="Segoe MDL Cheatsheet" />
@@ -246,14 +260,14 @@
                         <img src="project-logos/richcc.png" class="richcc tranformLocked" alt="rich cc" />
                         <div class="content-project-badge-innercontent-name-badge">
                             <div class="opaqueHolder"></div>
-                            <div class="label-container">                                
+                            <div class="label-container">
                                 <label>Rich CC </label>
                                 <label>A angular plugin for showing calendar events</label>
                             </div>
                         </div>
                     </div>
                 </a>
-            </div>            
+            </div>
             <div class="clearfix"></div>
         </div>
         <label class="content-skills-label">Frameworks and Tools</label>
