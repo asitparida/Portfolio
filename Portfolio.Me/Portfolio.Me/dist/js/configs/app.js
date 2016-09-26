@@ -1,1 +1,5 @@
-﻿angular.module('Portfolio.UI', ['ngAnimate', 'ngMaterial', 'hmTouchEvents']);
+﻿(function () {
+
+    angular.module('Portfolio.UI', ['ngAnimate', 'ngMaterial', 'hmTouchEvents']);
+
+})()
