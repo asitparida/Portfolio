@@ -5,8 +5,7 @@
     cssmin = require('gulp-cssmin'),
     del = require('del'),
     html2js = require('gulp-html-js-template'),
-    minify = require('gulp-minify'),
-    plato = require('plato');
+    minify = require('gulp-minify');
 
 var errorHandler = function (error) {
     console.log(error);
