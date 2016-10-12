@@ -83,6 +83,8 @@
     <Content Include="packages.config" />
     <Content Include="package.json" />
     <Content Include="assets\app-close.png" />
+    <Content Include="profile-skills\adobe-ai.png" />
+    <Content Include="profile-skills\adobe-ps.png" />
     <Content Include="profile-skills\ang.png" />
     <Content Include="profile-skills\aspnetmvc.png" />
     <Content Include="profile-skills\bootstrap.png" />
@@ -90,6 +92,7 @@
     <Content Include="profile-skills\css3.png" />
     <Content Include="profile-skills\electron.png" />
     <Content Include="profile-skills\git.png" />
+    <Content Include="profile-skills\gsap.png" />
     <Content Include="profile-skills\gulp.png" />
     <Content Include="profile-skills\html5.png" />
     <Content Include="profile-skills\js.png" />
