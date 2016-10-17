@@ -883,8 +883,9 @@ body {
                     background-color: #3498db;
                 }
 
-                &.cssloader-app{
-
+                &.nature-tween-app {
+                    max-height: 100vh;
+                    background-color: #a0cfee;
                 }
 
                 img {
@@ -918,6 +919,11 @@ body {
                         margin-top: -15px;
                     }
 
+                    &.pv_tween {
+                        height: 100%;
+                        margin-left: 0;
+                    }
+
                     &.notsogrey {
                         width: 130px;
                         margin-top: 78px;
@@ -935,6 +941,10 @@ body {
 
                     &.topgit-app {
                         width: 100%;
+                    }
+
+                    &.nature-tween-app {
+                        height: 100%;
                     }
 
                     &.richcc {
@@ -957,6 +967,18 @@ body {
                     width: 100%;
                     top: 0;
                     transition: opacity 0.5s ease-in 0s;
+
+                    &-git-link {
+                        position: absolute;
+                        bottom: 0;
+                        right: 30px;
+
+                        svg {
+                            & g g {
+                                fill: #909090;
+                            }
+                        }
+                    }
 
                     .opaqueHolder {
                         content: "";
@@ -983,7 +1005,7 @@ body {
                         }*/
                         label {
                             font-size: 16px;
-                            width: 100%;
+                            width: calc(100% - 60px);
                             color: #fff;
                             margin: 0;
                             font-weight: 500;

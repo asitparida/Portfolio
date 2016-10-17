@@ -68,7 +68,9 @@
   <ItemGroup>
     <Content Include="assets\github-logo-plain.png" />
     <Content Include="cssloader.html" />
+    <Content Include="dist\js\directives\gitlink.directive.js" />
     <Content Include="favicon.ico" />
+    <Content Include="dist\js\templates\git-link.tmpl.html" />
     <Content Include="lib\jquery-2.2.4.min.js" />
     <Content Include="dist\css\slick.css" />
     <Content Include="lib\slick.min.js" />
@@ -106,10 +108,13 @@
     <Content Include="project-logos\elements.png" />
     <Content Include="project-logos\moosik_200_blank.png" />
     <Content Include="project-logos\moosik_app.png" />
+    <Content Include="project-logos\nature_tween.jpg" />
     <Content Include="project-logos\notsogrey.png" />
     <Content Include="project-logos\notsogrey_app.png" />
+    <Content Include="project-logos\panda.png" />
     <Content Include="project-logos\piemix.png" />
     <Content Include="assets\project-lock.png" />
+    <Content Include="project-logos\pv_tween.jpg" />
     <Content Include="project-logos\richcc.png" />
     <Content Include="project-logos\richcc2.png" />
     <Content Include="project-logos\segoe-app.jpg" />
@@ -172,7 +177,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>33719</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:33719/</IISUrl>
+          <IISUrl>http://localhost:33725/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
