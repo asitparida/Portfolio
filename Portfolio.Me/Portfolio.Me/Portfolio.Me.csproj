@@ -106,10 +106,13 @@
     <Content Include="project-logos\elements.png" />
     <Content Include="project-logos\moosik_200_blank.png" />
     <Content Include="project-logos\moosik_app.png" />
+    <Content Include="project-logos\nature_tween.jpg" />
     <Content Include="project-logos\notsogrey.png" />
     <Content Include="project-logos\notsogrey_app.png" />
+    <Content Include="project-logos\panda.png" />
     <Content Include="project-logos\piemix.png" />
     <Content Include="assets\project-lock.png" />
+    <Content Include="project-logos\pv_tween.jpg" />
     <Content Include="project-logos\richcc.png" />
     <Content Include="project-logos\richcc2.png" />
     <Content Include="project-logos\segoe-app.jpg" />
@@ -172,7 +175,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>33719</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:33719/</IISUrl>
+          <IISUrl>http://localhost:33725/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
