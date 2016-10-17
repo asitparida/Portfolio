@@ -169,4 +169,4 @@
         document.getElementById('scrollUpIcon').style.display = 'none';
     }
 
-})()
+})();

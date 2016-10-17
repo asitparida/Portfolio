@@ -968,6 +968,18 @@ body {
                     top: 0;
                     transition: opacity 0.5s ease-in 0s;
 
+                    &-git-link {
+                        position: absolute;
+                        bottom: 0;
+                        right: 30px;
+
+                        svg {
+                            & g g {
+                                fill: #909090;
+                            }
+                        }
+                    }
+
                     .opaqueHolder {
                         content: "";
                         background: #000;
@@ -993,7 +1005,7 @@ body {
                         }*/
                         label {
                             font-size: 16px;
-                            width: 100%;
+                            width: calc(100% - 60px);
                             color: #fff;
                             margin: 0;
                             font-weight: 500;
