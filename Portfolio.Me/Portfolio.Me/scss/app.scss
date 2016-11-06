@@ -891,8 +891,10 @@ body {
                 img {
                     display: block;
                     margin: 0 auto;
-                    transform: scale(1, 1);
-                    transition: transform 0.5s ease-in 0s;
+
+                    &.addTxTransition {
+                        transition: transform 0.5s ease-in 0s;
+                    }
 
                     &.moosik {
                         width: 130px;

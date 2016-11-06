@@ -73,6 +73,7 @@
     <Content Include="dist\js\templates\git-link.tmpl.html" />
     <Content Include="lib\jquery-2.2.4.min.js" />
     <Content Include="dist\css\slick.css" />
+    <Content Include="lib\jquery.lazyload.js" />
     <Content Include="lib\slick.min.js" />
     <Content Include="profile-pics\my-pic-0.jpg" />
     <Content Include="profile-pics\my-pic-1.jpg" />
