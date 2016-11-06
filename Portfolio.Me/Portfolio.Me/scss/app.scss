@@ -790,6 +790,21 @@ body {
                     background-color: #094781;
                 }
 
+                &.fred-app {
+                    overflow: hidden;
+                    width: 100vw;
+
+                    .content-project-badge-innercontent-name-badge {
+                        z-index: 999;
+                    }
+
+                    .logo-panel {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                    }
+                }
+
                 &.starwars-app {
                     height: 100vh;
                     overflow: hidden;
@@ -891,8 +906,10 @@ body {
                 img {
                     display: block;
                     margin: 0 auto;
-                    transform: scale(1, 1);
-                    transition: transform 0.5s ease-in 0s;
+
+                    &.addTxTransition {
+                        transition: transform 0.5s ease-in 0s;
+                    }
 
                     &.moosik {
                         width: 130px;
@@ -1043,9 +1060,140 @@ body {
                     }
 
                     img:not(.tranformLocked),
-                    .logo-panel svg,
+                    .logo-panel:not(.tranformLocked) svg,
                     .robot {
                         transform: scale(0.90,0.90);
+                    }
+                }
+
+                .svg-fred {
+                    width: 100%;
+                    height: 100%;
+                    background-color: lighten(#3498db, 15);
+                    position: relative;
+                    overflow: hidden;
+
+                    .layer-grass {
+                        position: absolute;
+                        bottom: -5px;
+                        z-index: 999;
+                        max-height: 60px;
+
+                        @include respond-to-mobile {
+                            height: 10vh !important;
+                            bottom: 0;
+                        }
+
+                        .grass {
+                            fill: #16a085;
+                        }
+                    }
+
+                    .layer-moon {
+                        height: 200vh;
+                        width: 100%;
+                        position: absolute;
+                        top: -90vh;
+                        z-index: 100;
+                        transform: scale(1.25,1.25);
+                        right: -20vw;
+                        transform-style: preserve-3d;
+                        backface-visibility: hidden;
+
+                        .moon-allure-ring {
+                            fill: #000;
+                            opacity: 0.03;
+                        }
+
+                        .moon-main-ring {
+                            fill: #fff;
+                            opacity: 0.50;
+                        }
+
+                        @include respond-to-mobile {
+                            display: none;
+                        }
+                    }
+
+                    .layer-wilma-house {
+                        position: absolute;
+                        right: -35vh;
+                        bottom: 0;
+                        height: 80vh;
+                        z-index: 300;
+
+                        &.ieBrowser {
+                            right: -50vw;
+                        }
+
+                        .house-wall {
+                            fill: #c5e8fc;
+                        }
+
+                        .house-beam {
+                            fill: #0d2733;
+                        }
+
+                        @include respond-to-mobile {
+                            display: none;
+                        }
+                    }
+
+                    .layer-fred {
+                        position: absolute;
+                        height: 40vh;
+                        bottom: 15px;
+                        left: 0%;
+                        z-index: 150;
+
+                        &.ieBrowser {
+                            bottom: 0;
+                        }
+
+                        @include respond-to-mobile {
+                            height: 50vh !important;
+                            left: 30%;
+                            bottom: 0;
+                        }
+
+                        .leg-left,
+                        .hand-left {
+                            fill: #e5c9a8;
+                            opacity: 0.95;
+                        }
+
+                        .face-back,
+                        .face-mid,
+                        .leg-right,
+                        .hand-right {
+                            fill: #fce0b9;
+                        }
+
+                        .face-front {
+                            fill: #fcc995;
+                        }
+
+                        .hair {
+                            fill: #000000;
+                        }
+
+                        .mouth,
+                        .eye,
+                        .ear {
+                            fill: #4f463e;
+                        }
+
+                        .dress-spots {
+                            fill: #6d3d18;
+                        }
+
+                        .dress-wear {
+                            fill: #f98c32;
+                        }
+
+                        .collar {
+                            fill: #606ce2;
+                        }
                     }
                 }
             }

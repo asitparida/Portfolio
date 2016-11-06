@@ -137,11 +137,11 @@
         <div class="header-colorslab--bottom"></div>
     </div>
     <div class="content" id="portfolioContent">
-        <div class="content-projects">            
+        <div class="content-projects">
             <div class="col-xs-12 content-project-badge h100" style="background-color:#e0e0e0;">
                 <a target="_blank" href="https://github.com/asitparida/NotSoGrey">
                     <div class="content-project-badge-innercontent nsg-app">
-                        <img src="project-logos/notsogrey_app.png" class="nsg-app" alt="not so grey" />
+                        <img id="pf-img-nsg" data-original="project-logos/notsogrey_app.png" class="pf-img-lazy nsg-app" alt="not so grey" />
                         <div class="content-project-badge-innercontent-name-badge">
                             <div class="opaqueHolder"></div>
                             <div class="label-container">
@@ -152,11 +152,28 @@
                         </div>
                     </div>
                 </a>
-            </div>                       
+            </div>
+            <div class="col-xs-12 content-project-badge h100 star-wars-bg" style="background-color:#f0f0f0;">
+                <a target="_blank" href="http://gsap-flintstones.azurewebsites.net/">
+                    <div class="content-project-badge-innercontent fred-app">
+                        <div class="logo-panel tranformLocked">
+                            <ng-include src="'fred.html'"></ng-include>
+                        </div>
+                        <div class="content-project-badge-innercontent-name-badge">
+                            <div class="opaqueHolder"></div>
+                            <div class="label-container">
+                                <label>Flintstones</label>
+                                <label>An small animation on flintstones chracters using GSAP</label>
+                                <git-link link="'https://github.com/asitparida/GSAP.FlintStory'"></git-link>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
             <div class="col-xs-12 col-sm-12 col-md-4 content-project-badge h60" style="background-color:#a0cfee;">
                 <a target="_blank" href="http://gsap-bg-anim.azurewebsites.net/">
                     <div class="content-project-badge-innercontent nature-tween-app ">
-                        <img src="project-logos/nature_tween.jpg" class="nature-tween-app tranformLocked" alt="Tweening Nature" />
+                        <img id="pf-img-naturetween" data-original="project-logos/nature_tween.jpg" class="pf-img-lazy nature-tween-app tranformLocked " alt="Tweening Nature" />
                         <div class="content-project-badge-innercontent-name-badge">
                             <div class="opaqueHolder"></div>
                             <div class="label-container">
@@ -171,7 +188,7 @@
             <div class="col-xs-12 col-sm-12 col-md-4 content-project-badge h60" style="background-color:#2980b9;">
                 <a target="_blank" href="http://lazypanda.azurewebsites.net/">
                     <div class="content-project-badge-innercontent cssloader-app">
-                        <img src="project-logos/panda.png" class="topgit-app" alt="Lazy Panda" />
+                        <img id="pf-img-pandatween" data-original="project-logos/panda.png" class="pf-img-lazy topgit-app" alt="Lazy Panda" />
                         <div class="content-project-badge-innercontent-name-badge">
                             <div class="opaqueHolder"></div>
                             <div class="label-container">
@@ -186,7 +203,7 @@
             <div class="col-xs-12 col-sm-12 col-md-4 content-project-badge h60" style="background-color:#edeeee;">
                 <a target="_blank" href="http://gsap-pv-anim.azurewebsites.net/">
                     <div class="content-project-badge-innercontent">
-                        <img src="project-logos/pv_tween.jpg" class="pv_tween tranformLocked" alt="Tweening Photos Vectors" />
+                        <img id="pf-img-phototween" data-original="project-logos/pv_tween.jpg" class="pf-img-lazy pv_tween tranformLocked" alt="Tweening Photos Vectors" />
                         <div class="content-project-badge-innercontent-name-badge">
                             <div class="opaqueHolder"></div>
                             <div class="label-container">
@@ -197,11 +214,11 @@
                         </div>
                     </div>
                 </a>
-            </div>            
+            </div>
             <div class="col-xs-12 content-project-badge h100" style="background-color:#f0f0f0;">
                 <a target="_blank" href="https://github.com/asitparida/Moosik/releases">
                     <div class="content-project-badge-innercontent moosik-app">
-                        <img src="project-logos/moosik_app.png" class="moosik-app" alt="moosik" />
+                        <img id="pf-img-moosik" data-original="project-logos/moosik_app.png" class="pf-img-lazy moosik-app" alt="moosik" />
                         <div class="content-project-badge-innercontent-name-badge">
                             <div class="opaqueHolder"></div>
                             <div class="label-container">
@@ -216,7 +233,7 @@
             <div class="col-xs-12 col-sm-12 col-md-4 content-project-badge h60" style="background-color:#3498db;">
                 <a target="_blank" href="http://topgit.azurewebsites.net/">
                     <div class="content-project-badge-innercontent topgit-app">
-                        <img src="project-logos/topgit_app.png" class="topgit-app" alt="Top Git" />
+                        <img id="pf-img-topgit" data-original="project-logos/topgit_app.png" class="pf-img-lazy topgit-app" alt="Top Git" />
                         <div class="content-project-badge-innercontent-name-badge">
                             <div class="opaqueHolder"></div>
                             <div class="label-container">
@@ -246,7 +263,7 @@
             <div class="col-xs-12 col-sm-12 col-md-4 content-project-badge h60" style="background-color:#00436d;">
                 <a target="_blank" href="https://github.com/asitparida/SegoeMDLCheatsheet">
                     <div class="content-project-badge-innercontent">
-                        <img src="project-logos/segoe-app.jpg" class="vxgrid tranformLocked" alt="Segoe MDL Cheatsheet" />
+                        <img id="pf-img-segoe" data-original="project-logos/segoe-app.jpg" class="pf-img-lazy vxgrid tranformLocked" alt="Segoe MDL Cheatsheet" />
                         <div class="content-project-badge-innercontent-name-badge">
                             <div class="opaqueHolder"></div>
                             <div class="label-container">
@@ -276,11 +293,11 @@
                         </div>
                     </div>
                 </a>
-            </div> 
+            </div>
             <div class="col-xs-12 col-sm-12 col-md-4 content-project-badge" style="background-color:#f0f0f0;">
                 <a target="_blank" href="http://vxgrid.azurewebsites.net/">
                     <div class="content-project-badge-innercontent">
-                        <img src="project-logos/vx-grid.png" class="vxgrid tranformLocked" alt="vx grid" />
+                        <img id="pf-img-vxgrid" data-original="project-logos/vx-grid.png" class="pf-img-lazy vxgrid tranformLocked" alt="vx grid" />
                         <div class="content-project-badge-innercontent-name-badge">
                             <div class="opaqueHolder"></div>
                             <div class="label-container">
@@ -295,7 +312,7 @@
             <div class="col-xs-12 col-sm-12 col-md-4 content-project-badge" style="background-color:#f0f0f0;">
                 <a target="_blank" href="http://piemixsample.azurewebsites.net/">
                     <div class="content-project-badge-innercontent">
-                        <img src="project-logos/piemix.png" class="piemix" alt="pie mix" />
+                        <img id="pf-img-piemix" data-original="project-logos/piemix.png" class="pf-img-lazy piemix" alt="pie mix" />
                         <div class="content-project-badge-innercontent-name-badge">
                             <div class="opaqueHolder"></div>
                             <div class="label-container">
@@ -310,7 +327,7 @@
             <div class="col-xs-12 col-sm-12 col-md-4 content-project-badge" style="background-color:#f0f0f0;">
                 <a target="_blank" href="http://richcc.azurewebsites.net/">
                     <div class="content-project-badge-innercontent">
-                        <img src="project-logos/richcc.png" class="richcc tranformLocked" alt="rich cc" />
+                        <img id="pf-img-richcc" data-original="project-logos/richcc.png" class="pf-img-lazy richcc tranformLocked" alt="rich cc" />
                         <div class="content-project-badge-innercontent-name-badge">
                             <div class="opaqueHolder"></div>
                             <div class="label-container">
@@ -335,64 +352,64 @@
             <div class="content-skills-wrapper">
                 <ul class="content-skills" id="contentSkillsList">
                     <li class="content-skills-badge">
-                        <img src="profile-skills/html5.png" alt="HTML5" title="HTML5" />
+                        <img id="pf-skill-html5" src="profile-skills/html5.png" alt="HTML5" title="HTML5" />
                     </li>
                     <li class="content-skills-badge">
-                        <img src="profile-skills/css3.png" alt="css3" title="css3" />
+                        <img id="pf-skill-css3" src="profile-skills/css3.png" alt="css3" title="css3" />
                     </li>
                     <li class="content-skills-badge">
-                        <img src="profile-skills/bootstrap.png" alt="bootstrap" title="bootstrap" />
+                        <img id="pf-skill-bootstrap" src="profile-skills/bootstrap.png" alt="bootstrap" title="bootstrap" />
                     </li>
                     <li class="content-skills-badge">
-                        <img src="profile-skills/scss.png" alt="sass" title="sass" />
+                        <img id="pf-skill-scss" src="profile-skills/scss.png" alt="sass" title="sass" />
                     </li>
                     <li class="content-skills-badge">
-                        <img src="profile-skills/material.png" alt="material design" title="material design" />
+                        <img id="pf-skill-material" src="profile-skills/material.png" alt="material design" title="material design" />
                     </li>
                     <li class="content-skills-badge">
-                        <img src="profile-skills/js.png" alt="javascript" title="javascript" />
+                        <img id="pf-skill-js" src="profile-skills/js.png" alt="javascript" title="javascript" />
                     </li>
                     <li class="content-skills-badge">
-                        <img src="profile-skills/ts.png" alt="typescript" title="typescript" />
+                        <img id="pf-skill-ts" src="profile-skills/ts.png" alt="typescript" title="typescript" />
                     </li>
                     <li class="content-skills-badge">
-                        <img src="profile-skills/gsap.png" alt="GSAP" title="GSAP" />
+                        <img id="pf-skill-gsap" src="profile-skills/gsap.png" alt="GSAP" title="GSAP" />
                     </li>
                     <li class="content-skills-badge">
-                        <img src="profile-skills/ang.png" alt="angular" title="angular" />
+                        <img id="pf-skill-ang" src="profile-skills/ang.png" alt="angular" title="angular" />
                     </li>
                     <li class="content-skills-badge">
-                        <img src="profile-skills/ko.png" alt="knockout" title="knockout" />
+                        <img id="pf-skill-ko" src="profile-skills/ko.png" alt="knockout" title="knockout" />
                     </li>
                     <li class="content-skills-badge">
-                        <img src="profile-skills/electron.png" alt="electron" title="electron" />
+                        <img id="pf-skill-electron" src="profile-skills/electron.png" alt="electron" title="electron" />
                     </li>
                     <li class="content-skills-badge">
-                        <img src="profile-skills/visualstudio.png" alt="visual studio" title="visual studio" />
+                        <img id="pf-skill-visualstudio" src="profile-skills/visualstudio.png" alt="visual studio" title="visual studio" />
                     </li>
                     <li class="content-skills-badge">
-                        <img src="profile-skills/git.png" alt="git hub" title="git hub" />
+                        <img id="pf-skill-git" src="profile-skills/git.png" alt="git hub" title="git hub" />
                     </li>
                     <li class="content-skills-badge">
-                        <img src="profile-skills/gulp.png" alt="gulp" title="gulp" />
+                        <img id="pf-skill-gulp" src="profile-skills/gulp.png" alt="gulp" title="gulp" />
                     </li>
                     <li class="content-skills-badge">
-                        <img src="profile-skills/npm.png" alt="node package manager" title="node package manager" />
+                        <img id="pf-skill-npm" src="profile-skills/npm.png" alt="node package manager" title="node package manager" />
                     </li>
                     <li class="content-skills-badge">
-                        <img src="profile-skills/bower.png" alt="bower" title="bower" />
+                        <img id="pf-skill-bower" src="profile-skills/bower.png" alt="bower" title="bower" />
                     </li>
                     <li class="content-skills-badge">
-                        <img src="profile-skills/sql.png" alt="sql" title="sql " />
+                        <img id="pf-skill-sql" src="profile-skills/sql.png" alt="sql" title="sql " />
                     </li>
                     <li class="content-skills-badge">
-                        <img src="profile-skills/aspnetmvc.png" alt="asp . net mvc" title="asp . net mvc" />
+                        <img id="pf-skill-aspnetmvc" src="profile-skills/aspnetmvc.png" alt="asp . net mvc" title="asp . net mvc" />
                     </li>
                     <li class="content-skills-badge">
-                        <img src="profile-skills/adobe-ps.png" alt="adobe photoshop" title="Adobe Photoshop" />
+                        <img id="pf-skill-adobe-ps" src="profile-skills/adobe-ps.png" alt="adobe photoshop" title="Adobe Photoshop" />
                     </li>
                     <li class="content-skills-badge">
-                        <img src="profile-skills/adobe-ai.png" alt="adobe illustrator" title="Adobe Illustrator" />
+                        <img id="pf-skill-adobe-ai" src="profile-skills/adobe-ai.png" alt="adobe illustrator" title="Adobe Illustrator" />
                     </li>
                 </ul>
             </div>
@@ -443,6 +460,7 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/RyanMullins-angular-hammer/2.2.0/angular.hammer.min.js"></script>
@@ -450,8 +468,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-aria.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-resource.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.min.js"></script>
-    <script src="dist/js/configs/app.js"></script>
-    <script src="dist/js/controllers/main.controller.js"></script>
-    <script src="dist/js/directives/gitlink.directive.js"></script>
+    <script src="lib/detect.min.js"></script>
+    <script src="lib/jquery.lazyload.js"></script>
+    <script src="dist/min/app.min.js"></script>
 </body>
 </html>
