@@ -16,7 +16,9 @@
     "gulp-filter": "4.0.0",
     "del": "2.2.1",
     "gulp-html-js-template": "0.1.6",
-    "gulp-minify": "0.0.12"
+    "gulp-minify": "0.0.12",
+    "gulp-uglify": "2.0.0",
+    "pump": "1.0.1"
   },
   "author": "asparida@microsoft.com",
   "license": "MIT"
