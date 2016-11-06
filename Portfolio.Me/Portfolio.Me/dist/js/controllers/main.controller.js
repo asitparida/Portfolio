@@ -1,12 +1,13 @@
 ﻿(function () {
 
     angular.module('Portfolio.UI')
-    .controller('MainController', ['$timeout', MainController]);
+    .controller('MainController', ['$timeout', 'BrowserService', MainController]);
 
-    function MainController($timeout) {
+    function MainController($timeout, BrowserService) {
 
         var self = this;
         this.timeout = $timeout;
+        this.browserService = BrowserService;
         this.name = 'Asit Kumar Parida';
         this.showColorPicker = false;
         this.settingsPaneColorsInitalized = false;
@@ -28,6 +29,17 @@
         this.activeColorMode = this.colorModes[3];
         this.lastTop = this.picHeight = window.innerWidth <= 768 ? 100 : 72;
         this.pause = false;
+
+        if (this.browserService.isBrowserSafari()) {
+            $('img.pf-img-lazy').each(function (index) {
+                var _src = $(this).attr('data-original');
+                $(this).attr('src', _src);
+                $(this).addClass('addTxTransition');
+            });
+        }
+        else {
+            $('img.pf-img-lazy').lazyload();
+        }
 
         $(window).on('scroll', function (e) {
             if ($(e.target).scrollTop() > window.innerHeight)
