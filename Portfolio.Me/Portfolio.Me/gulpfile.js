@@ -42,12 +42,12 @@ gulp.task('minify:css', ['minify:clean:css'], function () {
         .pipe(gulp.dest(min.path));
 });
 
-gulp.task('uglify-minify-js', function (cb) {
+gulp.task('uglify:minify:js', function (cb) {
     pump([
           gulp.src(['dist/**/*.js']),
           uglify(),
           concat('app.min.js'),
-          gulp.dest('dist/js')
+          gulp.dest('dist/min')
     ],
       cb
     );
@@ -56,4 +56,9 @@ gulp.task('uglify-minify-js', function (cb) {
 //Watch CSS task
 gulp.task('default:css', function () {
     gulp.watch('scss/*.scss', ['minify:css']);
+});
+
+//Watch CSS task
+gulp.task('default:js', function () {
+    gulp.watch('dist/js/**/*.js', ['uglify:minify:js']);
 });
