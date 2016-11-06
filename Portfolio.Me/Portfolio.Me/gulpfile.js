@@ -5,7 +5,9 @@
     cssmin = require('gulp-cssmin'),
     del = require('del'),
     html2js = require('gulp-html-js-template'),
-    minify = require('gulp-minify');
+    minify = require('gulp-minify'),
+    uglify = require('gulp-uglify'),
+    pump = require('pump');
 
 var errorHandler = function (error) {
     console.log(error);
@@ -34,10 +36,21 @@ gulp.task('minify:css', ['minify:clean:css'], function () {
     return gulp.src('scss/*.scss')
         .pipe(plumber(errorHandler))
         .pipe(sass())
-        .pipe(gulp.dest('css/'))
+        //.pipe(gulp.dest('css/'))
         .pipe(cssmin())
         .pipe(concat(min.file))
         .pipe(gulp.dest(min.path));
+});
+
+gulp.task('uglify-minify-js', function (cb) {
+    pump([
+          gulp.src(['dist/**/*.js']),
+          uglify(),
+          concat('app.min.js'),
+          gulp.dest('dist/js')
+    ],
+      cb
+    );
 });
 
 //Watch CSS task

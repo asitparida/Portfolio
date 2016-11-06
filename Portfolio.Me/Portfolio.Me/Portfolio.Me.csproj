@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="assets\github-logo-plain.png" />
     <Content Include="cssloader.html" />
+    <Content Include="dist\js\app.min.js" />
     <Content Include="dist\js\directives\gitlink.directive.js" />
     <Content Include="favicon.ico" />
     <Content Include="dist\js\templates\git-link.tmpl.html" />
