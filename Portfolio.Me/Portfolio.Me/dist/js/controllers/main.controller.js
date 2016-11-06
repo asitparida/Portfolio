@@ -30,7 +30,7 @@
         this.lastTop = this.picHeight = window.innerWidth <= 768 ? 100 : 72;
         this.pause = false;
 
-        if (this.browserService.isBrowserSafari()) {
+        if (this.browserService.isBrowserSafari() || true) {
             $('img.pf-img-lazy').each(function (index) {
                 var _src = $(this).attr('data-original');
                 $(this).attr('src', _src);
