@@ -44,7 +44,7 @@ gulp.task('minify:css', ['minify:clean:css'], function () {
 
 gulp.task('uglify:minify:js', function (cb) {
     pump([
-          gulp.src(['dist/**/*.js']),
+          gulp.src(['dist/js/**/*.js']),
           uglify(),
           concat('app.min.js'),
           gulp.dest('dist/min')
