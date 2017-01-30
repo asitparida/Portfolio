@@ -7,7 +7,8 @@
     html2js = require('gulp-html-js-template'),
     minify = require('gulp-minify'),
     uglify = require('gulp-uglify'),
-    pump = require('pump');
+    pump = require('pump'),
+    imagemin = require('gulp-imagemin');
 
 var errorHandler = function (error) {
     console.log(error);
@@ -62,3 +63,22 @@ gulp.task('default:css', function () {
 gulp.task('default:js', function () {
     gulp.watch('dist/js/**/*.js', ['uglify:minify:js']);
 });
+
+
+gulp.task('minify:profile-skills', () =>
+    gulp.src('profile-skills/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/images/profile-skills'))
+);
+
+gulp.task('minify:project-logos', () =>
+    gulp.src('project-logos/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/images/project-logos'))
+);
+
+gulp.task('minify:profile-pics', () =>
+    gulp.src('profile-pics/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/images/profile-pics'))
+);
