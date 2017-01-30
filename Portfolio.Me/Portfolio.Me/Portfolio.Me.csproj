@@ -33,6 +33,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -67,7 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\github-logo-plain.png" />
-    <Content Include="cssloader.html" />
     <Content Include="dist\images\profile-pics\my-pic-0.jpg" />
     <Content Include="dist\images\profile-pics\my-pic-1.jpg" />
     <Content Include="dist\images\profile-pics\my-pic-2.jpg" />
@@ -110,10 +110,12 @@
     <Content Include="dist\images\project-logos\vx-grid.jpg" />
     <Content Include="dist\js\controllers\fred.controller.js" />
     <Content Include="dist\js\directives\gitlink.directive.js" />
+    <Content Include="dist\js\templates\cssloader.html" />
+    <Content Include="dist\js\templates\fred.html" />
+    <Content Include="dist\js\templates\starWarsSvg.html" />
     <Content Include="dist\min\app.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="dist\js\templates\git-link.tmpl.html" />
-    <Content Include="fred.html" />
     <Content Include="lib\detect.min.js" />
     <Content Include="lib\jquery-2.2.4.min.js" />
     <Content Include="dist\css\slick.css" />
@@ -198,7 +200,6 @@
     <Content Include="lib\tinycolor-min.js" />
     <Content Include="lib\ui-bootstrap-tpls-1.1.1.min.js" />
     <Content Include="lib\underscore-min.js" />
-    <Content Include="starWarsSvg.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
