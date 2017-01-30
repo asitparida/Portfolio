@@ -1,6 +1,13 @@
 ﻿(function () {
 
-    angular.module('Portfolio.UI', ['ngAnimate', 'ngMaterial', 'hmTouchEvents'])
+    angular.module('Portfolio.UI.Templates', [])
+    .run(["$templateCache", function ($templateCache) {
+        for (var tmpl in window.TemplatesPortfolio) {
+             $templateCache.put(tmpl, window.TemplatesPortfolio[tmpl]);
+         }
+    }])
+
+    angular.module('Portfolio.UI', ['Portfolio.UI.Templates','ngAnimate', 'ngMaterial', 'hmTouchEvents'])
     .service('BrowserService', BrowserService);
 
     function BrowserService() {

@@ -14,7 +14,7 @@
             scope: {
                 'link': '='
             },
-            templateUrl: '/dist/js/templates/git-link.tmpl.html'
+            templateUrl: 'templates/portfolio/git-link.tmpl.html'
         };
     }
 
