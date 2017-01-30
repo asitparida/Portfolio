@@ -68,6 +68,11 @@
   <ItemGroup>
     <Content Include="assets\github-logo-plain.png" />
     <Content Include="cssloader.html" />
+    <Content Include="dist\images\profile-pics\my-pic-0.jpg" />
+    <Content Include="dist\images\profile-pics\my-pic-1.jpg" />
+    <Content Include="dist\images\profile-pics\my-pic-2.jpg" />
+    <Content Include="dist\images\profile-pics\my-pic-3.jpg" />
+    <Content Include="dist\images\profile-pics\my-pic-4.jpg" />
     <Content Include="dist\images\profile-skills\adobe-ai.png" />
     <Content Include="dist\images\profile-skills\adobe-ps.png" />
     <Content Include="dist\images\profile-skills\ang.png" />
@@ -90,9 +95,11 @@
     <Content Include="dist\images\profile-skills\visualstudio.png" />
     <Content Include="dist\images\project-logos\elements.png" />
     <Content Include="dist\images\project-logos\moosik_200_blank.png" />
+    <Content Include="dist\images\project-logos\moosik_app.jpg" />
     <Content Include="dist\images\project-logos\moosik_app.png" />
     <Content Include="dist\images\project-logos\nature_tween.jpg" />
     <Content Include="dist\images\project-logos\notsogrey.png" />
+    <Content Include="dist\images\project-logos\notsogrey_app.jpg" />
     <Content Include="dist\images\project-logos\notsogrey_app.png" />
     <Content Include="dist\images\project-logos\panda.png" />
     <Content Include="dist\images\project-logos\piemix.png" />
