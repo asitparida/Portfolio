@@ -4,7 +4,7 @@
     concat = require('gulp-concat'),
     cssmin = require('gulp-cssmin'),
     del = require('del'),
-    html2js = require('gulp-html-js-template'),
+    htmlToJsCompiler = require('gulp-html-to-js'),
     minify = require('gulp-minify'),
     uglify = require('gulp-uglify'),
     pump = require('pump'),
@@ -43,9 +43,11 @@ gulp.task('minify:css', ['minify:clean:css'], function () {
         .pipe(gulp.dest(min.path));
 });
 
-gulp.task('uglify:minify:js', function (cb) {
+gulp.task('uglify:minify:js',['minify:templates:js:concat'], function (cb) {
     pump([
-          gulp.src(['dist/js/**/*.js']),
+          gulp.src([
+              'minifiedTemplates/portfolio.templates.min.js',
+              'dist/js/**/*.js']),
           uglify(),
           concat('app.min.js'),
           gulp.dest('dist/min')
@@ -61,7 +63,8 @@ gulp.task('default:css', function () {
 
 //Watch CSS task
 gulp.task('default:js', function () {
-    gulp.watch('dist/js/**/*.js', ['uglify:minify:js']);
+    gulp.watch(
+        ['dist/js/**/*.js', 'dist/js/**/*.html'], ['uglify:minify:js']);
 });
 
 
@@ -82,3 +85,12 @@ gulp.task('minify:profile-pics', () =>
         .pipe(imagemin())
         .pipe(gulp.dest('dist/images/profile-pics'))
 );
+
+
+gulp.task('minify:templates:js:concat', function () {
+    return gulp.src([
+        'dist/js/templates/**/*.html', 
+        ])
+      .pipe(htmlToJsCompiler({ concat: 'portfolio.templates.min.js', prefix: 'templates/portfolio', global: 'window.TemplatesPortfolio' }))
+      .pipe(gulp.dest('minifiedTemplates/'));
+});

@@ -2,6 +2,10 @@
 <html ng-csp ng-app="Portfolio.UI">
 <head>
     <title>Asit Parida</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src filesystem 'self' data: gap: https://cdnjs.cloudflare.com http://cdnjs.cloudflare.com https://fonts.googleapis.com https://appsforoffice.microsoft.com https://ssl.gstatic.com 'unsafe-eval'; 
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://maxcdn.bootstrapcdn.com https://cdnjs.cloudflare.com;
+    font-src https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com https://maxcdn.bootstrapcdn.com; 
+    media-src *">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="favicon.ico" type="image/ico" />
@@ -157,7 +161,7 @@
                 <a target="_blank" href="http://gsap-flintstones.azurewebsites.net/">
                     <div class="content-project-badge-innercontent fred-app">
                         <div class="logo-panel tranformLocked">
-                            <ng-include src="'fred.html'"></ng-include>
+                            <ng-include src="'templates/portfolio/fred.html'"></ng-include>
                         </div>
                         <div class="content-project-badge-innercontent-name-badge">
                             <div class="opaqueHolder"></div>
@@ -248,7 +252,7 @@
             <div class="col-xs-12 col-sm-12 col-md-4 content-project-badge h60" style="background-color:#34495e;">
                 <a target="_blank" href="http://css-loader-robot.azurewebsites.net/">
                     <div class="content-project-badge-innercontent cssloader-app">
-                        <ng-include src="'cssloader.html'"></ng-include>
+                        <ng-include src="'templates/portfolio/cssloader.html'"></ng-include>
                         <div class="content-project-badge-innercontent-name-badge">
                             <div class="opaqueHolder"></div>
                             <div class="label-container">
@@ -281,7 +285,7 @@
                         <div class="stars-bg-md"></div>
                         <div class="stars-bg-lg"></div>
                         <div class="logo-panel">
-                            <ng-include src="'starWarsSvg.html'"></ng-include>
+                            <ng-include src="'templates/portfolio/starWarsSvg.html'"></ng-include>
                         </div>
                         <div class="content-project-badge-innercontent-name-badge">
                             <div class="opaqueHolder"></div>
