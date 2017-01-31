@@ -101,6 +101,7 @@
     <Content Include="dist\images\project-logos\moosik_200_blank.png" />
     <Content Include="dist\images\project-logos\moosik_app.jpg" />
     <Content Include="dist\images\project-logos\moosik_app.png" />
+    <Content Include="dist\images\project-logos\multihost.jpg" />
     <Content Include="dist\images\project-logos\nature_tween.jpg" />
     <Content Include="dist\images\project-logos\notsogrey.png" />
     <Content Include="dist\images\project-logos\notsogrey_app.jpg" />

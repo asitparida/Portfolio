@@ -14,7 +14,7 @@
 
 html {
     font-family: 'Open Sans', sans-serif;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 @function star-speckles ($n, $speckle) {
@@ -945,6 +945,15 @@ body {
                     &.notsogrey {
                         width: 130px;
                         margin-top: 78px;
+                    }
+
+                    &.mha-app {
+                        width: 100%;
+
+                        @include respond-to-mobile {
+                            width: auto;
+                            height: 100%;
+                        }
                     }
 
                     &.nsg-app {
