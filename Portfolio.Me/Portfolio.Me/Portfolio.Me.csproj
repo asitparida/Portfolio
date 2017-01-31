@@ -76,6 +76,7 @@
     <Content Include="dist\images\profile-skills\adobe-ai.png" />
     <Content Include="dist\images\profile-skills\adobe-ps.png" />
     <Content Include="dist\images\profile-skills\ang.png" />
+    <Content Include="dist\images\profile-skills\ang2.png" />
     <Content Include="dist\images\profile-skills\aspnetmvc.png" />
     <Content Include="dist\images\profile-skills\bootstrap.png" />
     <Content Include="dist\images\profile-skills\bower.png" />
@@ -88,11 +89,14 @@
     <Content Include="dist\images\profile-skills\js.png" />
     <Content Include="dist\images\profile-skills\ko.png" />
     <Content Include="dist\images\profile-skills\material.png" />
+    <Content Include="dist\images\profile-skills\mithtril.png" />
     <Content Include="dist\images\profile-skills\npm.png" />
+    <Content Include="dist\images\profile-skills\react.png" />
     <Content Include="dist\images\profile-skills\scss.png" />
     <Content Include="dist\images\profile-skills\sql.png" />
     <Content Include="dist\images\profile-skills\ts.png" />
     <Content Include="dist\images\profile-skills\visualstudio.png" />
+    <Content Include="dist\images\profile-skills\vue.png" />
     <Content Include="dist\images\project-logos\elements.png" />
     <Content Include="dist\images\project-logos\moosik_200_blank.png" />
     <Content Include="dist\images\project-logos\moosik_app.jpg" />
@@ -121,49 +125,13 @@
     <Content Include="dist\css\slick.css" />
     <Content Include="lib\jquery.lazyload.js" />
     <Content Include="lib\slick.min.js" />
-    <Content Include="profile-pics\my-pic-0.jpg" />
-    <Content Include="profile-pics\my-pic-1.jpg" />
-    <Content Include="profile-pics\my-pic-2.jpg" />
-    <Content Include="profile-pics\my-pic-3.jpg" />
-    <Content Include="profile-pics\my-pic-4.jpg" />
     <Content Include="dist\css\angular-material.css" />
     <Content Include="dist\css\bootstrap-theme.min.css" />
     <Content Include="dist\css\bootstrap.min.css" />
     <Content Include="packages.config" />
     <Content Include="package.json" />
     <Content Include="assets\app-close.png" />
-    <Content Include="profile-skills\adobe-ai.png" />
-    <Content Include="profile-skills\adobe-ps.png" />
-    <Content Include="profile-skills\ang.png" />
-    <Content Include="profile-skills\aspnetmvc.png" />
-    <Content Include="profile-skills\bootstrap.png" />
-    <Content Include="profile-skills\bower.png" />
-    <Content Include="profile-skills\css3.png" />
-    <Content Include="profile-skills\electron.png" />
-    <Content Include="profile-skills\git.png" />
-    <Content Include="profile-skills\gsap.png" />
-    <Content Include="profile-skills\gulp.png" />
-    <Content Include="profile-skills\html5.png" />
-    <Content Include="profile-skills\js.png" />
-    <Content Include="profile-skills\ko.png" />
-    <Content Include="profile-skills\material.png" />
-    <Content Include="profile-skills\npm.png" />
-    <Content Include="profile-skills\scss.png" />
-    <Content Include="profile-skills\sql.png" />
-    <Content Include="profile-skills\ts.png" />
-    <Content Include="profile-skills\visualstudio.png" />
-    <Content Include="project-logos\elements.png" />
-    <Content Include="project-logos\moosik_200_blank.png" />
-    <Content Include="project-logos\nature_tween.jpg" />
-    <Content Include="project-logos\notsogrey.png" />
-    <Content Include="project-logos\panda.png" />
-    <Content Include="project-logos\piemix.png" />
     <Content Include="assets\project-lock.png" />
-    <Content Include="project-logos\pv_tween.jpg" />
-    <Content Include="project-logos\richcc.jpg" />
-    <Content Include="project-logos\segoe-app.jpg" />
-    <Content Include="project-logos\topgit_app.jpg" />
-    <Content Include="project-logos\vx-grid.jpg" />
     <Content Include="scss\_utils.scss" />
     <Content Include="scss\_vars.scss" />
     <Content Include="scss\app.scss" />
@@ -204,6 +172,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="project-logos\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
