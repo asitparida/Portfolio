@@ -73,7 +73,6 @@
     <Content Include="dist\images\profile-pics\my-pic-2.jpg" />
     <Content Include="dist\images\profile-pics\my-pic-3.jpg" />
     <Content Include="dist\images\profile-pics\my-pic-4.jpg" />
-    <Content Include="dist\images\profile-pics\og-profile.jpg" />
     <Content Include="dist\images\profile-skills\adobe-ai.png" />
     <Content Include="dist\images\profile-skills\adobe-ps.png" />
     <Content Include="dist\images\profile-skills\ang.png" />
