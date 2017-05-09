@@ -1,4 +1,5 @@
 $EMERALD: #2ecc71;
+$NEPHRITIS: #27ae60;
 $TURQUOISE: #1abc9c;
 $PETER_RIVER: #3498db;
 $AMETHYST: #9b59b6;
@@ -10,9 +11,27 @@ $PUMPKIN: #d35400;
 $POMEGRANATE: #c0392b;
 $WISTERIA: #8e44ad;
 $BELIZE_HOLE: #2980b9;
-@mixin INSERT_HOVER_BGS($color, $lightenAmount) {
+@mixin INSERT_HOVER_BGS($color, $lightenAmount, $foreground) {
     .content-container {
         background-color: lighten($color, $lightenAmount);
+    }
+    .img-container-box {
+        color: $foreground;
+        p {
+            text-shadow: 3px 3px rgba($color, 0.50);
+        }
+        .git-link {
+            background-color: rgba(255, 255, 255, 0.33);
+            &:hover {
+                background-color: $foreground;
+                svg g g {
+                    fill: $color;
+                }
+            }
+            svg g g {
+                fill: $foreground;
+            }
+        }
     }
     .img-container:hover {
         -webkit-box-shadow: 0px 13px 71px -2px rgba($color, 1);
@@ -81,6 +100,7 @@ $BELIZE_HOLE: #2980b9;
             background-size: cover;
             background: url(../../assets/tile-watermark.png) #fff;
             background-repeat: repeat;
+            text-decoration: none;
         }
         >a {
             display: block;
@@ -90,40 +110,43 @@ $BELIZE_HOLE: #2980b9;
             margin: 0;
         }
         &[data-color="$PETER_RIVER"] {
-            @include INSERT_HOVER_BGS($PETER_RIVER, 40)
+            @include INSERT_HOVER_BGS($PETER_RIVER, 40, #fff)
         }
         &[data-color="$EMERALD"] {
-            @include INSERT_HOVER_BGS($EMERALD, 40)
+            @include INSERT_HOVER_BGS($EMERALD, 40, #000)
+        }
+        &[data-color="$NEPHRITIS"] {
+            @include INSERT_HOVER_BGS($NEPHRITIS, 40, #fff)
         }
         &[data-color="$TURQUOISE"] {
-            @include INSERT_HOVER_BGS($TURQUOISE, 40)
+            @include INSERT_HOVER_BGS($TURQUOISE, 40, #fff)
         }
         &[data-color="$AMETHYST"] {
-            @include INSERT_HOVER_BGS($AMETHYST, 40)
+            @include INSERT_HOVER_BGS($AMETHYST, 40, #fff)
         }
         &[data-color="$SUNFLOWER"] {
-            @include INSERT_HOVER_BGS($SUNFLOWER, 40)
+            @include INSERT_HOVER_BGS($SUNFLOWER, 40, #000)
         }
         &[data-color="$CARROT"] {
-            @include INSERT_HOVER_BGS($CARROT, 40)
+            @include INSERT_HOVER_BGS($CARROT, 40, #fff)
         }
         &[data-color="$ALIZARIN"] {
-            @include INSERT_HOVER_BGS($ALIZARIN, 40)
+            @include INSERT_HOVER_BGS($ALIZARIN, 40, #fff)
         }
         &[data-color="$ORANGE"] {
-            @include INSERT_HOVER_BGS($ORANGE, 40)
+            @include INSERT_HOVER_BGS($ORANGE, 40, #fff)
         }
         &[data-color="$PUMPKIN"] {
-            @include INSERT_HOVER_BGS($PUMPKIN, 40)
+            @include INSERT_HOVER_BGS($PUMPKIN, 40, #fff)
         }
         &[data-color="$POMEGRANATE"] {
-            @include INSERT_HOVER_BGS($POMEGRANATE, 40)
+            @include INSERT_HOVER_BGS($POMEGRANATE, 40, #fff)
         }
         &[data-color="$WISTERIA"] {
-            @include INSERT_HOVER_BGS($WISTERIA, 40)
+            @include INSERT_HOVER_BGS($WISTERIA, 40, #fff)
         }
         &[data-color="$BELIZE_HOLE"] {
-            @include INSERT_HOVER_BGS($BELIZE_HOLE, 40)
+            @include INSERT_HOVER_BGS($BELIZE_HOLE, 40, #fff)
         }
         .content-container {
             height: 400px;
@@ -149,29 +172,57 @@ $BELIZE_HOLE: #2980b9;
             border: none;
             position: relative;
             z-index: 10;
-            &[size="single"] {
-                height: 400px;
+            &:hover,
+            &.active {
+                .img-container-box {
+                    animation: move-up-text 0.5s linear forwards;
+                }
             }
-            &[size="double"] {
-                height: 605px;
+            &-box {
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                padding: 30px;
+                opacity: 0;
+                h3 {
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 30px;
+                    margin: 0;
+                    padding-top: 15px;
+                    font-family: 'Open sans', sans-serif;
+                    font-weight: bold;
+                    text-align: left;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    box-sizing: border-box;
+                    font-size: medium;
+                    border-top: 5px solid rgba(255, 255, 255, 0.33);
+                    transition: transform 0.2s, color 0.2s;
+                    text-decoration: none;
+                    max-width: calc(100% - 90px);
+                }
+                p {
+                    position: absolute;
+                    top: 45px;
+                    display: block;
+                    font-family: 'Open sans', sans-serif;
+                    width: calc(100% - 60px);
+                    font-size: x-large;
+                    text-align: left;
+                    text-decoration: none;
+                }
+                .git-link {
+                    position: absolute;
+                    bottom: 30px;
+                    right: 30px;
+                    height: 48px;
+                    width: 48px;
+                    padding: 0 9px;
+                    border-radius: 50%;
+                    transition: background-color 0.2s linear 0s;
+                }
             }
-        }
-        h3 {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            margin: 0;
-            padding: 20px;
-            width: 100%;
-            font-family: 'Open sans', sans-serif;
-            font-weight: 500;
-            color: #000;
-            text-align: left;
-            text-transform: capitalize;
-            letter-spacing: 1px;
-            box-sizing: border-box;
-            font-size: large;
-            transition: transform 0.2s, color 0.2s;
         }
         &:not(.shown) {
             overflow: hidden;
@@ -310,5 +361,16 @@ $BELIZE_HOLE: #2980b9;
     }
     100% {
         display: none;
+    }
+}
+
+@keyframes move-up-text {
+    0% {
+        transform: translate3d(0, 25px, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
     }
 }
