@@ -1,3 +1,28 @@
+$EMERALD: #2ecc71;
+$TURQUOISE: #1abc9c;
+$PETER_RIVER: #3498db;
+$AMETHYST: #9b59b6;
+$SUNFLOWER: #f1c40f;
+$CARROT: #e67e22;
+$ALIZARIN: #e74c3c;
+$ORANGE: #f39c12;
+$PUMPKIN: #d35400;
+$POMEGRANATE: #c0392b;
+$WISTERIA: #8e44ad;
+$BELIZE_HOLE: #2980b9;
+@mixin INSERT_HOVER_BGS($color, $lightenAmount) {
+    .content-container {
+        background-color: lighten($color, $lightenAmount);
+    }
+    .img-container:hover {
+        -webkit-box-shadow: 0px 13px 71px -2px rgba($color, 1);
+        -moz-box-shadow: 0px 13px 71px -2px rgba($color, 1);
+        box-shadow: 0px 13px 71px -2px rgba($color, 1);
+        background: $color;
+        background: rgba($color, 0.8) 20px 20px no-repeat;
+    }
+}
+
 .grid {
     margin: 30px auto;
     padding: 0;
@@ -9,7 +34,7 @@
         padding: 0;
         max-width: 1260px;
         &-separator {
-            background: linear-gradient(-45deg, #fff 16px, red 16px, #fff 16px, transparent 0), linear-gradient(45deg,  #fff 16px, transparent 0);
+            background: linear-gradient(-45deg, #fff 16px, red 16px, #fff 16px, transparent 0), linear-gradient(45deg, #fff 16px, transparent 0);
             background-position: left top;
             background-repeat: repeat-x;
             background-size: 18px 32px;
@@ -45,12 +70,17 @@
         box-sizing: border-box;
         text-align: left;
         vertical-align: top;
+        &[size="double"] {
+            width: 100%;
+        }
         a {
             height: 100%;
             width: 100%;
             box-sizing: border-box;
-            background: #f6f6f6;
-            opacity: 0;
+            opacity: 1;
+            background-size: cover;
+            background: url(../../assets/tile-watermark.png) #fff;
+            background-repeat: repeat;
         }
         >a {
             display: block;
@@ -59,80 +89,71 @@
             position: relative;
             margin: 0;
         }
+        &[data-color="$PETER_RIVER"] {
+            @include INSERT_HOVER_BGS($PETER_RIVER, 40)
+        }
+        &[data-color="$EMERALD"] {
+            @include INSERT_HOVER_BGS($EMERALD, 40)
+        }
+        &[data-color="$TURQUOISE"] {
+            @include INSERT_HOVER_BGS($TURQUOISE, 40)
+        }
+        &[data-color="$AMETHYST"] {
+            @include INSERT_HOVER_BGS($AMETHYST, 40)
+        }
+        &[data-color="$SUNFLOWER"] {
+            @include INSERT_HOVER_BGS($SUNFLOWER, 40)
+        }
+        &[data-color="$CARROT"] {
+            @include INSERT_HOVER_BGS($CARROT, 40)
+        }
+        &[data-color="$ALIZARIN"] {
+            @include INSERT_HOVER_BGS($ALIZARIN, 40)
+        }
+        &[data-color="$ORANGE"] {
+            @include INSERT_HOVER_BGS($ORANGE, 40)
+        }
+        &[data-color="$PUMPKIN"] {
+            @include INSERT_HOVER_BGS($PUMPKIN, 40)
+        }
+        &[data-color="$POMEGRANATE"] {
+            @include INSERT_HOVER_BGS($POMEGRANATE, 40)
+        }
+        &[data-color="$WISTERIA"] {
+            @include INSERT_HOVER_BGS($WISTERIA, 40)
+        }
+        &[data-color="$BELIZE_HOLE"] {
+            @include INSERT_HOVER_BGS($BELIZE_HOLE, 40)
+        }
+        .content-container {
+            height: 400px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: 9;
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 80%; // display: none;
+            }
+        }
         .img-container {
             height: 400px;
             width: 100%;
             display: block;
             outline: none;
             border: none;
-            &[size="double"] {
+            position: relative;
+            z-index: 10;
+            &[size="single"] {
                 height: 400px;
             }
             &[size="double"] {
                 height: 605px;
-            }
-            &[data-hoverbg="default1"]:hover {
-                -webkit-box-shadow: 0px 13px 71px -2px rgba(241, 248, 247, 1);
-                -moz-box-shadow: 0px 13px 71px -2px rgba(241, 248, 247, 1);
-                box-shadow: 0px 13px 71px -2px rgba(241, 248, 247, 1);
-                background: rgb(241, 248, 247);
-                background: rgba(241, 248, 247, 0.8) 20px 20px no-repeat;
-            }
-            &[data-hoverbg="default2"]:hover {
-                -webkit-box-shadow: 0px 13px 71px -2px rgba(235, 43, 143, 1);
-                -moz-box-shadow: 0px 13px 71px -2px rgba(235, 43, 143, 1);
-                box-shadow: 0px 13px 71px -2px rgba(235, 43, 143, 1);
-                background: rgb(235, 43, 143);
-                background: rgba(235, 43, 143, 0.8) 20px 20px no-repeat;
-            }
-            &[data-hoverbg="red"]:hover {
-                -webkit-box-shadow: 0px 13px 71px -2px rgba(224, 78, 78, 0.5);
-                -moz-box-shadow: 0px 13px 71px -2px rgba(224, 78, 78, 0.5);
-                box-shadow: 0px 13px 71px -2px rgba(224, 78, 78, 0.5);
-                background: rgb(224, 78, 78);
-                background: rgba(224, 78, 78, 0.8) 20px 20px no-repeat;
-            }
-            &[data-hoverbg="green"]:hover {
-                -webkit-box-shadow: 0px 13px 71px -2px rgba(64, 166, 77, 0.45);
-                -moz-box-shadow: 0px 13px 71px -2px rgba(64, 166, 77, 0.45);
-                box-shadow: 0px 13px 71px -2px rgba(64, 166, 77, 0.45);
-                background: rgb(64, 166, 77);
-                background: rgba(64, 166, 77, 0.8) 20px 20px no-repeat;
-            }
-            &[data-hoverbg="blue"]:hover {
-                -webkit-box-shadow: 0px 13px 71px -2px rgba(76, 192, 208, 1);
-                -moz-box-shadow: 0px 13px 71px -2px rgba(76, 192, 208, 1);
-                box-shadow: 0px 13px 71px -2px rgba(76, 192, 208, 1);
-                background: rgb(76, 192, 208);
-                background: rgba(76, 192, 208, 0.8) 20px 20px no-repeat;
-            }
-            &[data-hoverbg="orange"]:hover {
-                -webkit-box-shadow: 0px 13px 71px -2px rgba(237, 136, 55, 1);
-                -moz-box-shadow: 0px 13px 71px -2px rgba(237, 136, 55, 1);
-                box-shadow: 0px 13px 71px -2px rgba(237, 136, 55, 1);
-                background: rgb(237, 136, 55);
-                background: rgba(237, 136, 55, 0.8) 20px 20px no-repeat;
-            }
-            &[data-hoverbg="orange2"]:hover {
-                -webkit-box-shadow: 0px 13px 71px -2px rgba(235, 60, 0, 1);
-                -moz-box-shadow: 0px 13px 71px -2px rgba(235, 60, 0, 1);
-                box-shadow: 0px 13px 71px -2px rgba(235, 60, 0, 1);
-                background: rgb(235, 60, 0);
-                background: rgba(235, 60, 0, 0.8) 20px 20px no-repeat;
-            }
-            &[data-hoverbg="purple"]:hover {
-                -webkit-box-shadow: 0px 13px 71px -2px rgba(155, 21, 210, 1);
-                -moz-box-shadow: 0px 13px 71px -2px rgba(155, 21, 210, 1);
-                box-shadow: 0px 13px 71px -2px rgba(155, 21, 210, 1);
-                background: rgb(155, 21, 210);
-                background: rgba(155, 21, 210, 0.8) 20px 20px no-repeat;
-            }
-            &[data-hoverbg="yellow"]:hover {
-                -webkit-box-shadow: 0px 13px 71px -2px rgba(248, 186, 46, 1);
-                -moz-box-shadow: 0px 13px 71px -2px rgba(248, 186, 46, 1);
-                box-shadow: 0px 13px 71px -2px rgba(248, 186, 46, 1);
-                background: rgb(248, 186, 46);
-                background: rgba(248, 186, 46, 0.8) 20px 20px no-repeat;
             }
         }
         h3 {
@@ -152,21 +173,29 @@
             font-size: large;
             transition: transform 0.2s, color 0.2s;
         }
-        &.shown {
+        &:not(.shown) {
+            overflow: hidden;
             a {
-                animation: show-container 0.5s linear forwards;
+                border: 1px dashed #E0E0E0;
+            }
+        }
+        &.shown {
+            .content-container {
+                animation: show-container 1s linear forwards;
             }
             .img-container {
                 visibility: visible;
             }
+            .curtain {
+                transform: translate3d(0, 0, 0);
+            }
         }
         &.animate {
-            .curtain::after {
-                animation: fadeOut 1.5s ease forwards;
-                animation-delay: inherit;
+            .content-container {
+                animation: add-background 0.5s linear forwards;
             }
             .img-container {
-                animation: show-container 1.5s step-end forwards;
+                animation: show-container 0.5s step-end forwards;
             }
         }
     }
@@ -174,44 +203,30 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 100;
+        z-index: 8;
         width: 100%;
         height: 100%;
         background: #f0f0f0 !important;
     }
     &.swipe-down {
         .curtain {
-            transform: translate3d(0, -100%, 0);
-        }
-        .curtain::after {
-            top: -100%;
+            transform: translate3d(0, -120%, 0);
         }
         li.animate .curtain {
-            animation: swipeDown 1.5s cubic-bezier(0.6, 0, 0.4, 1) forwards;
+            animation: swipeDown 1s cubic-bezier(0.6, 0, 0.4, 1) forwards;
         }
     }
-}
-
-@-webkit-keyframes swipeDown {
-    0% {}
-    50% {}
-    60% {}
-    100% {}
 }
 
 @keyframes swipeDown {
     0% {}
     50% {
         //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-        transform: translate(0);
-    }
-    60% {
-        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-        transform: translate(0);
+        transform: translate3d(0, -120%, 0);
     }
     100% {
         //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-        transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 0, 0);
     }
 }
 
@@ -276,5 +291,24 @@
     100% {
         opacity: 1;
         transform: translateY(0)
+    }
+}
+
+@keyframes add-background {
+    0% {
+        background: rgba(1, 1, 1, 0);
+    }
+    100% {
+        background: rgba(1, 1, 1, 1);
+    }
+}
+
+@keyframes hide-container {
+    0%,
+    90% {
+        display: block;
+    }
+    100% {
+        display: none;
     }
 }

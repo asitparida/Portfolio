@@ -1,8 +1,11 @@
 <div class="grid-wrap-separator"></div>
 <section class="grid-wrap">
     <ul class="grid swipe-down" id="grid">
-        <li *ngFor="let item of projects">
-            <a href="#">                
+    <li *ngFor="let item of projects" [attr.data-color]="item.bgColor">
+            <a [attr.href]="item.publishSrc" target="_blank">
+                <div class="content-container">
+                    <img [attr.src]="item.imgSrc" [style.width]="item.width" [style.height]="item.height" />
+                </div>
                 <div class="img-container" [attr.data-hoverbg]="item.hoverbg" [attr.size]="item.size">
                     <h3>{{item.name}}</h3>
                 </div>                                
