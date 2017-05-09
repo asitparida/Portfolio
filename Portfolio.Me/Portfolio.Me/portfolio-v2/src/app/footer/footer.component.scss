@@ -2,10 +2,10 @@
     &-footer {
         height: 72px;
         width: 100%;
-        background: #f3f3f3;
+        background: #fff;
         display: block;
        &:before {
-            background: linear-gradient(-45deg, #f3f3f3 16px, red 16px, #f3f3f3 16px, transparent 0), linear-gradient(45deg,  #f3f3f3 16px, transparent 0);
+            background: linear-gradient(-45deg, #fff 16px, red 16px, #fff 16px, transparent 0), linear-gradient(45deg,  #fff 16px, transparent 0);
             background-position: left top;
             background-repeat: repeat-x;
             background-size: 18px 32px;

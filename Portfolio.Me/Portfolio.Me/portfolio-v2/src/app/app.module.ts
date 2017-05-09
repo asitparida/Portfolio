@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from '../app/header/header.component';
 import { ProjectsComponent } from '../app/projects/projects.component';
+import { SkillsComponent } from '../app/skills/skills.component';
 import { FooterComponent } from '../app/footer/footer.component';
 import { GitLinkComponent } from './git-link.component';
 
@@ -14,6 +15,7 @@ import { GitLinkComponent } from './git-link.component';
     AppComponent,
     HeaderComponent,
     ProjectsComponent,
+    SkillsComponent,
     FooterComponent,
     GitLinkComponent
   ],

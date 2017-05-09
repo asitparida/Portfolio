@@ -45,7 +45,7 @@ class Project {
 
 declare var GridScrollFx: any;
 
-const ProjectsArray: any[] = [
+const PROECTS_ARRAY: any[] = [
     { name: 'Not So Grey', desc: 'A desktop app for folks who dream colors', git: 'https://github.com/asitparida/NotSoGrey', img: 'assets/project-logos/notsogrey_app.png', href: "https://github.com/asitparida/NotSoGrey", size: 'double', width: '90%', height: 'auto', bgColor: '$NEPHRITIS' },
     { name: 'Multihost Adapter', desc: 'An adapter for running multiple ui client frameworks together', git: 'https://github.com/asitparida/Multihost.Adapter', img: 'assets/project-logos/multihost.png', href: "https://github.com/asitparida/Multihost.Adapter", size: 'double', width: 'auto', height: '90%', bgColor: '$PETER_RIVER' },
     { name: 'Flintstones', desc: 'An small animation on flintstones chracters using GSAP', git: 'https://github.com/asitparida/GSAP.FlintStory', img: 'assets/project-logos/flintstones.png', href: "http://gsap-flintstones-asparida.azurewebsites.net/", size: 'double', width: 'auto', height: '90%', bgColor: '$SUNFLOWER' },
@@ -74,14 +74,13 @@ export class ProjectsComponent implements AfterViewInit {
     projects: any[] = [];
     constructor() {
         let self = this;
-        _.each(ProjectsArray, (_item: any, _iter: number) => {
+        _.each(PROECTS_ARRAY, (_item: any, _iter: number) => {
             let _project = new Project();
             _project.name = _item.name;
             _project.description = _item.desc;
             _project.githubSrc = _item.git;
             _project.publishSrc = _item.href;
             _project.imgSrc = _item.img;
-            //_project.hoverbg = _.sample<string>(['default2', 'orange', 'orange2', 'blue', 'purple', 'yellow', 'red', 'green']);
             if (_item.size != null)
                 _project.landscapeSize = _item.size;
             if (_item.width != null)
