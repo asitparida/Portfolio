@@ -1,0 +1,280 @@
+.grid {
+    margin: 30px auto;
+    padding: 0;
+    list-style: none;
+    min-height: 500px;
+    &-wrap {
+        clear: both;
+        margin: 0 auto 100px auto;
+        padding: 0;
+        max-width: 1260px;
+        &-separator {
+            background: linear-gradient(-45deg, #fff 16px, red 16px, #fff 16px, transparent 0), linear-gradient(45deg,  #fff 16px, transparent 0);
+            background-position: left top;
+            background-repeat: repeat-x;
+            background-size: 18px 32px;
+            content: " ";
+            display: block;
+            height: 32px;
+            width: 100%;
+            position: relative;
+            bottom: 32px;
+            left: 0;
+        }
+    }
+    &.loaded {
+        background: none;
+        li {
+            display: inline-block;
+            float: left;
+            .img-container {
+                visibility: hidden;
+            }
+        }
+    }
+    &:not(.loaded) {
+        li {
+            display: none;
+            float: left;
+        }
+    }
+    li {
+        width: 400px;
+        padding: 5px;
+        box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: left;
+        vertical-align: top;
+        a {
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+            background: #f6f6f6;
+            opacity: 0;
+        }
+        >a {
+            display: block;
+            outline: none;
+            border: none;
+            position: relative;
+            margin: 0;
+        }
+        .img-container {
+            height: 400px;
+            width: 100%;
+            display: block;
+            outline: none;
+            border: none;
+            &[size="double"] {
+                height: 400px;
+            }
+            &[size="double"] {
+                height: 605px;
+            }
+            &[data-hoverbg="default1"]:hover {
+                -webkit-box-shadow: 0px 13px 71px -2px rgba(241, 248, 247, 1);
+                -moz-box-shadow: 0px 13px 71px -2px rgba(241, 248, 247, 1);
+                box-shadow: 0px 13px 71px -2px rgba(241, 248, 247, 1);
+                background: rgb(241, 248, 247);
+                background: rgba(241, 248, 247, 0.8) 20px 20px no-repeat;
+            }
+            &[data-hoverbg="default2"]:hover {
+                -webkit-box-shadow: 0px 13px 71px -2px rgba(235, 43, 143, 1);
+                -moz-box-shadow: 0px 13px 71px -2px rgba(235, 43, 143, 1);
+                box-shadow: 0px 13px 71px -2px rgba(235, 43, 143, 1);
+                background: rgb(235, 43, 143);
+                background: rgba(235, 43, 143, 0.8) 20px 20px no-repeat;
+            }
+            &[data-hoverbg="red"]:hover {
+                -webkit-box-shadow: 0px 13px 71px -2px rgba(224, 78, 78, 0.5);
+                -moz-box-shadow: 0px 13px 71px -2px rgba(224, 78, 78, 0.5);
+                box-shadow: 0px 13px 71px -2px rgba(224, 78, 78, 0.5);
+                background: rgb(224, 78, 78);
+                background: rgba(224, 78, 78, 0.8) 20px 20px no-repeat;
+            }
+            &[data-hoverbg="green"]:hover {
+                -webkit-box-shadow: 0px 13px 71px -2px rgba(64, 166, 77, 0.45);
+                -moz-box-shadow: 0px 13px 71px -2px rgba(64, 166, 77, 0.45);
+                box-shadow: 0px 13px 71px -2px rgba(64, 166, 77, 0.45);
+                background: rgb(64, 166, 77);
+                background: rgba(64, 166, 77, 0.8) 20px 20px no-repeat;
+            }
+            &[data-hoverbg="blue"]:hover {
+                -webkit-box-shadow: 0px 13px 71px -2px rgba(76, 192, 208, 1);
+                -moz-box-shadow: 0px 13px 71px -2px rgba(76, 192, 208, 1);
+                box-shadow: 0px 13px 71px -2px rgba(76, 192, 208, 1);
+                background: rgb(76, 192, 208);
+                background: rgba(76, 192, 208, 0.8) 20px 20px no-repeat;
+            }
+            &[data-hoverbg="orange"]:hover {
+                -webkit-box-shadow: 0px 13px 71px -2px rgba(237, 136, 55, 1);
+                -moz-box-shadow: 0px 13px 71px -2px rgba(237, 136, 55, 1);
+                box-shadow: 0px 13px 71px -2px rgba(237, 136, 55, 1);
+                background: rgb(237, 136, 55);
+                background: rgba(237, 136, 55, 0.8) 20px 20px no-repeat;
+            }
+            &[data-hoverbg="orange2"]:hover {
+                -webkit-box-shadow: 0px 13px 71px -2px rgba(235, 60, 0, 1);
+                -moz-box-shadow: 0px 13px 71px -2px rgba(235, 60, 0, 1);
+                box-shadow: 0px 13px 71px -2px rgba(235, 60, 0, 1);
+                background: rgb(235, 60, 0);
+                background: rgba(235, 60, 0, 0.8) 20px 20px no-repeat;
+            }
+            &[data-hoverbg="purple"]:hover {
+                -webkit-box-shadow: 0px 13px 71px -2px rgba(155, 21, 210, 1);
+                -moz-box-shadow: 0px 13px 71px -2px rgba(155, 21, 210, 1);
+                box-shadow: 0px 13px 71px -2px rgba(155, 21, 210, 1);
+                background: rgb(155, 21, 210);
+                background: rgba(155, 21, 210, 0.8) 20px 20px no-repeat;
+            }
+            &[data-hoverbg="yellow"]:hover {
+                -webkit-box-shadow: 0px 13px 71px -2px rgba(248, 186, 46, 1);
+                -moz-box-shadow: 0px 13px 71px -2px rgba(248, 186, 46, 1);
+                box-shadow: 0px 13px 71px -2px rgba(248, 186, 46, 1);
+                background: rgb(248, 186, 46);
+                background: rgba(248, 186, 46, 0.8) 20px 20px no-repeat;
+            }
+        }
+        h3 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+            padding: 20px;
+            width: 100%;
+            font-family: 'Open sans', sans-serif;
+            font-weight: 500;
+            color: #000;
+            text-align: left;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            box-sizing: border-box;
+            font-size: large;
+            transition: transform 0.2s, color 0.2s;
+        }
+        &.shown {
+            a {
+                animation: show-container 0.5s linear forwards;
+            }
+            .img-container {
+                visibility: visible;
+            }
+        }
+        &.animate {
+            .curtain::after {
+                animation: fadeOut 1.5s ease forwards;
+                animation-delay: inherit;
+            }
+            .img-container {
+                animation: show-container 1.5s step-end forwards;
+            }
+        }
+    }
+    .curtain {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        background: #f0f0f0 !important;
+    }
+    &.swipe-down {
+        .curtain {
+            transform: translate3d(0, -100%, 0);
+        }
+        .curtain::after {
+            top: -100%;
+        }
+        li.animate .curtain {
+            animation: swipeDown 1.5s cubic-bezier(0.6, 0, 0.4, 1) forwards;
+        }
+    }
+}
+
+@-webkit-keyframes swipeDown {
+    0% {}
+    50% {}
+    60% {}
+    100% {}
+}
+
+@keyframes swipeDown {
+    0% {}
+    50% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translate(0);
+    }
+    60% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translate(0);
+    }
+    100% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translate3d(0, 100%, 0);
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    0% {}
+    50% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {}
+    50% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes showMe {
+    from {
+        visibility: hidden;
+    }
+    60% {
+        visibility: visible;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+
+@keyframes showMe {
+    from {
+        visibility: hidden;
+    }
+    60% {
+        visibility: visible;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+
+@keyframes show-container {
+    from {
+        opacity: 0;
+        transform: translateY(-25px)
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
