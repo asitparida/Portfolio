@@ -222,7 +222,7 @@
             transform: translate3d(0, -120%, 0);
         }
         li.animate .curtain {
-            animation: swipeDown 1s cubic-bezier(0.6, 0, 0.4, 1) forwards;
+            animation: swipeDown 0.5s cubic-bezier(0.6, 0, 0.4, 1) forwards;
         }
     }
 }
