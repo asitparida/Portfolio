@@ -47,10 +47,10 @@ export class AppComponent {
       delay: 'rand(0, 150)',
       isForce3d: true
     },
-    onComplete: function(){
+    onComplete: function () {
       this.el.style.display = 'NONE';
     },
-    onStart: function(){
+    onStart: function () {
       this.el.style.display = 'BLOCK';
     }
   });
@@ -70,10 +70,10 @@ export class AppComponent {
       isForce3d: true,
       easing: 'cubic.inout'
     },
-    onComplete: function(){
+    onComplete: function () {
       this.el.style.display = 'NONE';
     },
-    onStart: function(){
+    onStart: function () {
       this.el.style.display = 'BLOCK';
     }
   });
@@ -88,10 +88,10 @@ export class AppComponent {
     opacity: { .25: 0 },
     radius: 250,
     duration: 600,
-    onComplete: function(){
+    onComplete: function () {
       this.el.style.display = 'NONE';
     },
-    onStart: function(){
+    onStart: function () {
       this.el.style.display = 'BLOCK';
     }
   });
@@ -103,10 +103,10 @@ export class AppComponent {
     fill: 'white',
     opacity: { .5: 0 },
     radius: 30,
-    onComplete: function(){
+    onComplete: function () {
       this.el.style.display = 'NONE';
     },
-    onStart: function(){
+    onStart: function () {
       this.el.style.display = 'BLOCK';
     }
   });

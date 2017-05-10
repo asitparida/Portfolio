@@ -1,15 +1,108 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'shared';
+.pull-left {
+    float: left !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    .dock {
+        height: 48px;
+        text-align: right;
+        background: lighten($PETER_RIVER, 40);
+        position: fixed;
+        z-index: 998;
+        width: 100%;
+        padding: 5px;
+        z-index: 997;
+        box-sizing: border-box;
+        &:after {
+            background: linear-gradient(-45deg, lighten(#3498db, 40) 16px, red 16px, lighten(#3498db, 40) 16px, transparent 0), linear-gradient(45deg, lighten(#3498db, 40) 16px, transparent 0);
+            background-position: left top;
+            background-repeat: repeat-x;
+            background-size: 18px 32px;
+            content: " ";
+            display: block;
+            height: 32px;
+            width: 100%;
+            position: relative;
+            bottom: -30px;
+            left: 0;
+            transform: scaleY(-1);
+        }
+        &-container {
+            display: inline;
+            position: relative;
+            z-index: 999;
+        }
+        a {
+            text-decoration: none;
+        }
+        &-item {
+            display: inline-block;
+            width: 36px;
+            padding: 8px 0;
+            margin: 0;
+            color: $PETER_RIVER;
+            top: 0px;
+            text-align: center;
+            text-decoration: none;
+            vertical-align: middle;
+            position: relative;
+            cursor: pointer;
+            &-pic {
+                display: inline-block;
+                margin-left: 10px;
+                position: relative;
+                height: 36px;
+                overflow: hidden;
+                vertical-align: middle;
+                cursor: pointer;
+                top: 2px;
+                img {
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                label {
+                    line-height: 36px;
+                    margin-left: 10px;
+                    font-family: 'Open sans', sans-serif;
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: small;
+                    text-transform: lowercase;
+                    font-weight: bold;
+                    color: $PETER_RIVER;
+                    cursor: pointer;
+                }
+            }
+            svg g {
+                fill: $PETER_RIVER;
+            }
+            img {
+                border: none;
+                margin: 5px 10px 0px;
+                width: 100%;
+            }
+            span {
+                display: none;
+                padding-left: 20px;
+            }
+        }
+    }
 }
 
 @include scrollbars(0.50em, #e0e0e0, #f0f0f0);
-
-
 article,
 aside,
 details,

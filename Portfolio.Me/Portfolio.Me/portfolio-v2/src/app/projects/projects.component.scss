@@ -1,5 +1,4 @@
 @import '../../shared';
-
 .grid {
     margin: 30px auto;
     padding: 0;
@@ -169,6 +168,7 @@
                     font-size: x-large;
                     text-align: left;
                     text-decoration: none;
+                    text-transform: lowercase;
                 }
                 .git-link {
                     position: absolute;
