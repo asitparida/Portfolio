@@ -22,6 +22,7 @@
         "styles.scss"
       ],
       "scripts": [
+        "../node_modules/mo-js/build/mo.min.js",
         "shared/modernizr.custom.js",
         "shared/classie.js",
         "shared/colorfinder-1.1.js",

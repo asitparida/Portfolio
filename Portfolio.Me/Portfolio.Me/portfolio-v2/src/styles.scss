@@ -1,9 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
-body{
+@import 'shared';
+body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
+
+@include scrollbars(0.50em, #e0e0e0, #f0f0f0);
+
 
 article,
 aside,

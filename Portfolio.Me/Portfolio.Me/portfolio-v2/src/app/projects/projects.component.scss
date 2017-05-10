@@ -1,46 +1,4 @@
-$EMERALD: #2ecc71;
-$NEPHRITIS: #27ae60;
-$TURQUOISE: #1abc9c;
-$PETER_RIVER: #3498db;
-$AMETHYST: #9b59b6;
-$SUNFLOWER: #f1c40f;
-$CARROT: #e67e22;
-$ALIZARIN: #e74c3c;
-$ORANGE: #f39c12;
-$PUMPKIN: #d35400;
-$POMEGRANATE: #c0392b;
-$WISTERIA: #8e44ad;
-$BELIZE_HOLE: #2980b9;
-@mixin INSERT_HOVER_BGS($color, $lightenAmount, $foreground) {
-    .content-container {
-        background-color: lighten($color, $lightenAmount);
-    }
-    .img-container-box {
-        color: $foreground;
-        p {
-            text-shadow: 3px 3px rgba($color, 0.50);
-        }
-        .git-link {
-            background-color: rgba(255, 255, 255, 0.33);
-            &:hover {
-                background-color: $foreground;
-                svg g g {
-                    fill: $color;
-                }
-            }
-            svg g g {
-                fill: $foreground;
-            }
-        }
-    }
-    .img-container:hover {
-        -webkit-box-shadow: 0px 13px 71px -2px rgba($color, 1);
-        -moz-box-shadow: 0px 13px 71px -2px rgba($color, 1);
-        box-shadow: 0px 13px 71px -2px rgba($color, 1);
-        background: $color;
-        background: rgba($color, 0.8) 20px 20px no-repeat;
-    }
-}
+@import '../../shared';
 
 .grid {
     margin: 30px auto;

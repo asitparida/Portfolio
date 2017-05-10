@@ -1,16 +1,11 @@
-@mixin respond-to-mobile {
-    @media only screen and (max-width: 768px) {
-        @content;
-    }
-}
-
+@import '../../shared';
 .app {
     &-skills {
         width: 100%;
-        background: #f3f3f3;
+        background: lighten(#3498db, 40);
         display: block;
         &:before {
-            background: linear-gradient(-45deg, #f3f3f3 16px, red 16px, #f3f3f3 16px, transparent 0), linear-gradient(45deg, #f3f3f3 16px, transparent 0);
+            background: linear-gradient(-45deg, lighten(#3498db, 40) 16px, red 16px, lighten(#3498db, 40) 16px, transparent 0), linear-gradient(45deg, lighten(#3498db, 40) 16px, transparent 0);
             background-position: left top;
             background-repeat: repeat-x;
             background-size: 18px 32px;
@@ -53,7 +48,7 @@
                     position: absolute;
                     top: 50px;
                     height: 60px;
-                    background: #E0E0E0;
+                    background: lighten(#3498db, 30);
                     width: 30px;
                     cursor: pointer;
                     outline: none;
@@ -74,8 +69,8 @@
                         height: 1em;
                         margin-top: 11px;
                         &--mover {
-                            border-bottom: 2px solid #808080;
-                            border-left: 2px solid #808080;
+                            border-bottom: 2px solid $PETER_RIVER;
+                            border-left: 2px solid $PETER_RIVER;
                             transform: rotate(-45deg) skew(0deg);
                             top: 12px;
                         }

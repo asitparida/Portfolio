@@ -96,6 +96,5 @@ export class ProjectsComponent implements AfterViewInit {
         let _grid = new GridScrollFx(document.getElementById('grid'), {
             viewportFactor: 1
         });
-        console.log(_grid);
     }
 }
