@@ -31,6 +31,14 @@
                     left: -10px;
                 }
             }
+            svg {
+                path{
+                    &.bubble-path{
+                        stroke: rgba($PETER_RIVER, 0.33);
+                        stroke-width: 5px;
+                    }
+                }
+            }
         }
         &-topskills {
             margin: 15px 0;
