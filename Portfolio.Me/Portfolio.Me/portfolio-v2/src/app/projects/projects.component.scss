@@ -1,4 +1,35 @@
 @import '../../shared';
+@mixin INSERT_HOVER_BGS($color, $lightenAmount, $foreground) {
+    .grid-item-content-container {
+        background-color: lighten($color, $lightenAmount);
+    }
+    .grid-item-text-container-box {
+        color: $foreground;
+        p {
+            text-shadow: 3px 3px rgba($color, 0.50);
+        }
+        .git-link {
+            background-color: rgba(255, 255, 255, 0.33);
+            &:hover {
+                background-color: $foreground;
+                svg g g {
+                    fill: $color;
+                }
+            }
+            svg g g {
+                fill: $foreground;
+            }
+        }
+    }
+    .grid-item-text-container:hover {
+        -webkit-box-shadow: 0px 13px 71px -2px rgba($color, 1);
+        -moz-box-shadow: 0px 13px 71px -2px rgba($color, 1);
+        box-shadow: 0px 13px 71px -2px rgba($color, 1);
+        background: $color;
+        background: rgba($color, 0.8) 20px 20px no-repeat;
+    }
+}
+
 .grid {
     margin: 30px auto;
     padding: 0;
@@ -10,7 +41,7 @@
         padding: 0;
         max-width: 1260px;
         &-separator {
-            background: linear-gradient(-45deg, #fff 16px, red 16px, #fff 16px, transparent 0), linear-gradient(45deg, #fff 16px, transparent 0);
+            background: linear-gradient(-45deg, #e1f0fa 16px, red 16px, #e1f0fa 16px, transparent 0), linear-gradient(45deg, #e1f0fa 16px, transparent 0);
             background-position: left top;
             background-repeat: repeat-x;
             background-size: 18px 32px;
@@ -19,27 +50,106 @@
             height: 32px;
             width: 100%;
             position: relative;
-            bottom: 32px;
+            bottom: 26px;
             left: 0;
+            transform: scaleY(-1);
+            &.dark {
+                background: linear-gradient(-45deg, #444 16px, red 16px, #444 16px, transparent 0), linear-gradient(45deg, #444 16px, transparent 0);
+                background-position: left top;
+                background-repeat: repeat-x;
+                background-size: 18px 32px;
+            }
         }
     }
     &.loaded {
         background: none;
-        li {
+        .grid-item {
             display: inline-block;
             float: left;
-            .img-container {
+            .grid-item-text-container {
                 visibility: hidden;
             }
         }
     }
+    &.dark {
+        .grid-item {
+            .curtain {
+                background: $DARKMODE_BG !important;
+            }
+            a {
+                background: url(../../assets/tile-watermark.png) $DARKMODE_BG;
+            }
+            &[data-color="$PETER_RIVER"],
+            &[data-color="$EMERALD"],
+            &[data-color="$NEPHRITIS"],
+            &[data-color="$TURQUOISE"],
+            &[data-color="$AMETHYST"],
+            &[data-color="$SUNFLOWER"],
+            &[data-color="$CARROT"],
+            &[data-color="$ALIZARIN"],
+            &[data-color="$ORANGE"],
+            &[data-color="$PUMPKIN"],
+            &[data-color="$POMEGRANATE"],
+            &[data-color="$WISTERIA"],
+            &[data-color="$BELIZE_HOLE"] {
+                .grid-item-content-container {
+                    background-color: #333;
+                    box-sizing: border-box;
+                    border: 3px solid #333;
+                }
+                .grid-item-text-container-box {
+                    color: $LIGHT_TONE;
+                    p {
+                        text-shadow: none;
+                    }
+                    .git-link {
+                        background-color: rgba(255, 255, 255, 0.33);
+                        &:hover {
+                            background-color: $LIGHT_TONE;
+                            svg g g {
+                                fill: #000;
+                            }
+                        }
+                        svg g g {
+                            fill: $LIGHT_TONE;
+                        }
+                    }
+                }
+                .grid-item-text-container:hover {
+                    -webkit-box-shadow: 0px 13px 71px -2px rgba(#000, 1);
+                    -moz-box-shadow: 0px 13px 71px -2px rgba(#000, 1);
+                    box-shadow: 0px 13px 71px -2px rgba(#000, 1);
+                    background: #000;
+                    background: rgba(#000, 0.8) 20px 20px no-repeat;
+                }
+            }
+            &-content-container {
+                img {
+                    width: 80%; // display: none;
+                    filter: grayscale(100%);
+                }
+            }
+            &-text-container {
+                &-box {
+                    h3 {
+                        border-top: 5px solid rgba(255, 255, 255, 0.33);
+                    }
+                }
+            }
+            &:not(.shown) {
+                a {
+                    border: 1px dashed #909090;
+                }
+            }
+        }
+    }
     &:not(.loaded) {
-        li {
+        .grid-item {
             display: none;
             float: left;
         }
     }
-    li {
+    .grid-item {
         width: 400px;
         padding: 5px;
         box-sizing: border-box;
@@ -105,7 +215,7 @@
         &[data-color="$BELIZE_HOLE"] {
             @include INSERT_HOVER_BGS($BELIZE_HOLE, 40, #fff)
         }
-        .content-container {
+        &-content-container {
             height: 400px;
             width: 100%;
             position: absolute;
@@ -121,7 +231,7 @@
                 width: 80%; // display: none;
             }
         }
-        .img-container {
+        &-text-container {
             height: 400px;
             width: 100%;
             display: block;
@@ -131,7 +241,7 @@
             z-index: 10;
             &:hover,
             &.active {
-                .img-container-box {
+                .grid-item-text-container-box {
                     animation: move-up-text 0.5s linear forwards;
                 }
             }
@@ -141,6 +251,7 @@
                 box-sizing: border-box;
                 padding: 30px;
                 opacity: 0;
+                transform: translateY(100%);
                 h3 {
                     display: inline-block;
                     position: absolute;
@@ -189,10 +300,10 @@
             }
         }
         &.shown {
-            .content-container {
+            .grid-item-content-container {
                 animation: show-container 1s linear forwards;
             }
-            .img-container {
+            .grid-item-text-container {
                 visibility: visible;
             }
             .curtain {
@@ -200,10 +311,10 @@
             }
         }
         &.animate {
-            .content-container {
+            .grid-item-content-container {
                 animation: add-background 0.5s linear forwards;
             }
-            .img-container {
+            .grid-item-text-container {
                 animation: show-container 0.5s step-end forwards;
             }
         }
@@ -221,7 +332,7 @@
         .curtain {
             transform: translate3d(0, -120%, 0);
         }
-        li.animate .curtain {
+        .grid-item.animate .curtain {
             animation: swipeDown 0.5s cubic-bezier(0.6, 0, 0.4, 1) forwards;
         }
     }

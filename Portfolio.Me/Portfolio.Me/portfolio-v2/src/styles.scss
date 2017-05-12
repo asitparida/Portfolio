@@ -13,6 +13,9 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    &.dark {
+        background-color: $DARKMODE_BG;
+    }
     .dock {
         height: 48px;
         text-align: right;
@@ -23,19 +26,140 @@ body {
         padding: 0;
         z-index: 997;
         box-sizing: border-box;
-        &:after {
-            background: linear-gradient(-45deg, lighten(#3498db, 40) 16px, red 16px, lighten(#3498db, 40) 16px, transparent 0), linear-gradient(45deg, lighten(#3498db, 40) 16px, transparent 0);
-            background-position: left top;
-            background-repeat: repeat-x;
-            background-size: 18px 32px;
-            content: " ";
-            display: block;
-            height: 32px;
-            width: 100%;
-            position: relative;
-            bottom: -40px;
-            left: 0;
-            transform: scaleY(-1);
+        &-theme {
+            &-toggle {
+                text-align: left;
+                width: 250px;
+                overflow: hidden;
+                margin-left: 15px;
+                label {
+                    display: inline;
+                    font-family: 'Open sans', sans-serif;
+                    text-transform: uppercase;
+                    color: rgba($PETER_RIVER, 25);
+                    font-size: small;
+                    line-height: 44px;
+                    cursor: pointer;
+                    letter-spacing: 1px;
+                }
+                input {
+                    clip: rect(0, 0, 0, 0);
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    position: absolute;
+                    visibility: hidden;
+                    &:not(:checked) {
+                        &+.dock-theme-toggle-bar {
+                            width: 50px;
+                            height: 12px;
+                            border-radius: 4px;
+                            background: lighten($PETER_RIVER, 35);
+                            display: inline-block;
+                            position: relative;
+                            margin: -1px 15px;
+                            &:after {
+                                content: ' ';
+                                width: 16px;
+                                height: 16px;
+                                border-radius: 50%;
+                                background: lighten($PETER_RIVER, 40);
+                                border: 3px solid lighten($PETER_RIVER, 30);
+                                display: block;
+                                top: -5px;
+                                left: 2px;
+                                position: absolute;
+                                box-shadow: 0px 0px 5px 2px rgba($PETER_RIVER, 0.33)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.dark {
+            background: $DARKMODE_BG_SECONDARY;
+            &:after {
+                background: linear-gradient(-45deg, $DARKMODE_BG_SECONDARY 16px, red 16px, $DARKMODE_BG_SECONDARY 16px, transparent 0), linear-gradient(45deg, $DARKMODE_BG_SECONDARY 16px, transparent 0);
+                background-position: left top;
+                background-repeat: repeat-x;
+                background-size: 18px 32px;
+                content: " ";
+                display: block;
+                height: 32px;
+                width: 100%;
+                position: relative;
+                bottom: -40px;
+                left: 0;
+                transform: scaleY(-1);
+            }
+            .dock {
+                &-theme {
+                    &-toggle {
+                        label {
+                            color: rgba($LIGHT_TONE, 0.75);
+                        }
+                        input {
+                            &:checked {
+                                &+.dock-theme-toggle-bar {
+                                    width: 50px;
+                                    height: 12px;
+                                    border-radius: 4px;
+                                    background: #606060;
+                                    display: inline-block;
+                                    position: relative;
+                                    margin: -1px 15px;
+                                    &:after {
+                                        content: ' ';
+                                        width: 16px;
+                                        height: 16px;
+                                        border-radius: 50%;
+                                        border: 3px solid #333;
+                                        background: #444;
+                                        display: block;
+                                        top: -5px;
+                                        left: 28px;
+                                        position: absolute;
+                                        box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.33);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &-item {
+                    color: $LIGHT_TONE;
+                    &-pic {
+                        img {
+                            border: 3px solid rgba($LIGHT_TONE, 0.33);
+                        }
+                        label {
+                            color: $LIGHT_TONE;
+                        }
+                    }
+                    svg g {
+                        fill: rgba($LIGHT_TONE, 0.80);
+                        ;
+                    }
+                }
+            }
+        }
+        &:not(.dark) {
+            &:after {
+                background: linear-gradient(-45deg, lighten(#3498db, 40) 16px, red 16px, lighten(#3498db, 40) 16px, transparent 0), linear-gradient(45deg, lighten(#3498db, 40) 16px, transparent 0);
+                background-position: left top;
+                background-repeat: repeat-x;
+                background-size: 18px 32px;
+                content: " ";
+                display: block;
+                height: 32px;
+                width: 100%;
+                position: relative;
+                bottom: -40px;
+                left: 0;
+                transform: scaleY(-1);
+            }
         }
         &-container {
             display: inline;

@@ -4,18 +4,64 @@
         width: 100%;
         background: lighten(#3498db, 40);
         display: block;
-        &:before {
-            background: linear-gradient(-45deg, lighten(#3498db, 40) 16px, red 16px, lighten(#3498db, 40) 16px, transparent 0), linear-gradient(45deg, lighten(#3498db, 40) 16px, transparent 0);
-            background-position: left top;
-            background-repeat: repeat-x;
-            background-size: 18px 32px;
-            content: " ";
-            display: block;
-            height: 32px;
-            width: 100%;
-            position: relative;
-            bottom: 32px;
-            left: 0;
+        &.dark {
+            background: $DARKMODE_BG_SECONDARY;
+            &:before {
+                background: linear-gradient(-45deg, $DARKMODE_BG_SECONDARY 16px, red 16px, $DARKMODE_BG_SECONDARY 16px, transparent 0), linear-gradient(45deg, $DARKMODE_BG_SECONDARY 16px, transparent 0);
+                background-position: left top;
+                background-repeat: repeat-x;
+                background-size: 18px 32px;
+                content: " ";
+                display: block;
+                height: 32px;
+                width: 100%;
+                position: relative;
+                bottom: 32px;
+                left: 0;
+            }
+            .content {
+                &-skills-label {
+                    color:rgba(255, 255, 255, 0.8);
+                }
+                &-skills-holder {
+                    &-arrow-holder {
+                        background: $DARKMODE_BG;
+                        &.disabled {
+                            .content-skills-holder-arrow-holder-arrow {
+                                opacity: 0.65;
+                            }
+                        }
+                        &-arrow {
+                            &--mover {
+                                border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+                                border-left: 2px solid rgba(255, 255, 255, 0.8);
+                            }
+                        }
+                    }
+                }
+                &-skills {
+                    &-badge {
+                        img {
+                            filter:grayscale(100%);
+                        }
+                    }
+                }
+            }
+        }
+        &:not(.dark) {
+            &:before {
+                background: linear-gradient(-45deg, lighten(#3498db, 40) 16px, red 16px, lighten(#3498db, 40) 16px, transparent 0), linear-gradient(45deg, lighten(#3498db, 40) 16px, transparent 0);
+                background-position: left top;
+                background-repeat: repeat-x;
+                background-size: 18px 32px;
+                content: " ";
+                display: block;
+                height: 32px;
+                width: 100%;
+                position: relative;
+                bottom: 32px;
+                left: 0;
+            }
         }
         .content {
             &-skills-label {

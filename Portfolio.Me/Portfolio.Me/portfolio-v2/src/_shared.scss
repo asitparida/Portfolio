@@ -21,37 +21,11 @@
     $POMEGRANATE: #c0392b;
     $WISTERIA: #8e44ad;
     $BELIZE_HOLE: #2980b9;
+
+    $LIGHT_TONE: #fff;
+    $DARKMODE_BG : #222;
+    $DARKMODE_BG_SECONDARY : #444;
     
-    @mixin INSERT_HOVER_BGS($color, $lightenAmount, $foreground) {
-        .content-container {
-            background-color: lighten($color, $lightenAmount);
-        }
-        .img-container-box {
-            color: $foreground;
-            p {
-                text-shadow: 3px 3px rgba($color, 0.50);
-            }
-            .git-link {
-                background-color: rgba(255, 255, 255, 0.33);
-                &:hover {
-                    background-color: $foreground;
-                    svg g g {
-                        fill: $color;
-                    }
-                }
-                svg g g {
-                    fill: $foreground;
-                }
-            }
-        }
-        .img-container:hover {
-            -webkit-box-shadow: 0px 13px 71px -2px rgba($color, 1);
-            -moz-box-shadow: 0px 13px 71px -2px rgba($color, 1);
-            box-shadow: 0px 13px 71px -2px rgba($color, 1);
-            background: $color;
-            background: rgba($color, 0.8) 20px 20px no-repeat;
-        }
-    }
 
     @mixin scrollbars($size, $foreground-color, $background-color) {
          ::-webkit-scrollbar {

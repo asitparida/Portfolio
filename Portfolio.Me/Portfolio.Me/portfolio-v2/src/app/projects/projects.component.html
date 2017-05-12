@@ -1,13 +1,13 @@
-<div class="grid-wrap-separator"></div>
+<div class="grid-wrap-separator" data-tag="dark-mode-applicable"></div>
 <section class="grid-wrap">
-    <ul class="grid swipe-down" id="grid">
-        <li *ngFor="let item of projects" [attr.data-color]="item.bgColor">
+    <ul class="grid swipe-down" id="grid" data-tag="dark-mode-applicable">
+        <li *ngFor="let item of projects" [attr.data-color]="item.bgColor" class="grid-item">
             <a [attr.href]="item.publishSrc" target="_blank">
-                <div class="content-container">
+                <div class="grid-item-content-container">
                     <img [attr.src]="item.imgSrc" [style.width]="item.width" [style.height]="item.height" />
                 </div>
-                <div class="img-container" [attr.data-hoverbg]="item.hoverbg" [attr.size]="item.size">
-                    <div class="img-container-box">
+                <div class="grid-item-text-container" [attr.data-hoverbg]="item.hoverbg" [attr.size]="item.size">
+                    <div class="grid-item-text-container-box">
                         <h3>{{item.name}}</h3>
                         <p>{{item.description}}</p>
                         <git-link [link]="item.githubSrc"></git-link>
