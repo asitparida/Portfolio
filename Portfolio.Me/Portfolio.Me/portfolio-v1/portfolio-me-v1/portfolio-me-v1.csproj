@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
-  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A5E38EF3-3EE6-48AE-B388-69C5BDEE5AC0}</ProjectGuid>
+    <ProjectGuid>{834F57EF-B384-4AED-A2CF-9CF6E9B86103}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Portfolio.Me</RootNamespace>
-    <AssemblyName>Portfolio.Me</AssemblyName>
+    <RootNamespace>portfolio_me_v1</RootNamespace>
+    <AssemblyName>portfolio-me-v1</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -33,7 +33,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -45,7 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <HintPath>..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
@@ -67,7 +66,28 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="package.json" />
+    <Content Include="scss\_submarine.scss" />
+    <Content Include="scss\_utils.scss" />
+    <Content Include="scss\_vars.scss" />
+    <Content Include="scss\app.scss" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\app-close.png" />
     <Content Include="assets\github-logo-plain.png" />
+    <Content Include="assets\project-lock.png" />
+    <Content Include="dist\css\angular-material.css" />
+    <Content Include="dist\css\app.min.css" />
+    <Content Include="dist\css\bootstrap-theme.min.css" />
+    <Content Include="dist\css\bootstrap.min.css" />
+    <Content Include="dist\css\slick.css" />
     <Content Include="dist\images\profile-pics\my-pic-0.jpg" />
     <Content Include="dist\images\profile-pics\my-pic-1.jpg" />
     <Content Include="dist\images\profile-pics\my-pic-2.jpg" />
@@ -114,43 +134,16 @@
     <Content Include="dist\images\project-logos\segoe-app.jpg" />
     <Content Include="dist\images\project-logos\topgit_app.jpg" />
     <Content Include="dist\images\project-logos\vx-grid.jpg" />
+    <Content Include="dist\js\configs\app.js" />
     <Content Include="dist\js\controllers\fred.controller.js" />
+    <Content Include="dist\js\controllers\main.controller.js" />
     <Content Include="dist\js\directives\gitlink.directive.js" />
     <Content Include="dist\js\templates\cssloader.html" />
     <Content Include="dist\js\templates\fred.html" />
+    <Content Include="dist\js\templates\git-link.tmpl.html" />
     <Content Include="dist\js\templates\starWarsSvg.html" />
     <Content Include="dist\min\app.min.js" />
     <Content Include="favicon.ico" />
-    <Content Include="dist\js\templates\git-link.tmpl.html" />
-    <Content Include="lib\detect.min.js" />
-    <Content Include="lib\jquery-2.2.4.min.js" />
-    <Content Include="dist\css\slick.css" />
-    <Content Include="lib\jquery.lazyload.js" />
-    <Content Include="lib\slick.min.js" />
-    <Content Include="dist\css\angular-material.css" />
-    <Content Include="dist\css\bootstrap-theme.min.css" />
-    <Content Include="dist\css\bootstrap.min.css" />
-    <Content Include="packages.config" />
-    <Content Include="package.json" />
-    <Content Include="assets\app-close.png" />
-    <Content Include="assets\project-lock.png" />
-    <Content Include="scss\_utils.scss" />
-    <Content Include="scss\_vars.scss" />
-    <Content Include="scss\app.scss" />
-    <Content Include="scss\_submarine.scss" />
-    <None Include="Properties\PublishProfiles\asparida-pf - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\asparida-pf - Web Deploy.pubxml" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="dist\css\app.min.css" />
-    <Content Include="dist\js\configs\app.js" />
-    <Content Include="dist\js\controllers\main.controller.js" />
     <Content Include="gulpfile.js" />
     <Content Include="index.html" />
     <Content Include="lib\angular-animate.min.js" />
@@ -165,8 +158,12 @@
     <Content Include="lib\anim-in-out.js" />
     <Content Include="lib\Color.Blind.js" />
     <Content Include="lib\Color.Space.js" />
+    <Content Include="lib\detect.min.js" />
     <Content Include="lib\hammer.min.js" />
+    <Content Include="lib\jquery-2.2.4.min.js" />
+    <Content Include="lib\jquery.lazyload.js" />
     <Content Include="lib\Please.js" />
+    <Content Include="lib\slick.min.js" />
     <Content Include="lib\tinycolor-min.js" />
     <Content Include="lib\ui-bootstrap-tpls-1.1.1.min.js" />
     <Content Include="lib\underscore-min.js" />
@@ -191,9 +188,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>33719</DevelopmentServerPort>
+          <DevelopmentServerPort>52359</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:33725/</IISUrl>
+          <IISUrl>http://localhost:52359/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -207,8 +204,8 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

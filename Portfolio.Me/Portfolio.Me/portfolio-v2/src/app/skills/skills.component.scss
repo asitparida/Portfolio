@@ -1,0 +1,175 @@
+@import '../../shared';
+.app {
+    &-skills {
+        width: 100%;
+        background: lighten(#3498db, 40);
+        display: block;
+        &.dark {
+            background: $DARKMODE_BG_SECONDARY;
+            &:before {
+                background: linear-gradient(-45deg, $DARKMODE_BG_SECONDARY 16px, red 16px, $DARKMODE_BG_SECONDARY 16px, transparent 0), linear-gradient(45deg, $DARKMODE_BG_SECONDARY 16px, transparent 0);
+                background-position: left top;
+                background-repeat: repeat-x;
+                background-size: 18px 32px;
+                content: " ";
+                display: block;
+                height: 32px;
+                width: 100%;
+                position: relative;
+                bottom: 32px;
+                left: 0;
+            }
+            .content {
+                &-skills-label {
+                    color:rgba(255, 255, 255, 0.8);
+                }
+                &-skills-holder {
+                    &-arrow-holder {
+                        background: $DARKMODE_BG;
+                        &.disabled {
+                            .content-skills-holder-arrow-holder-arrow {
+                                opacity: 0.65;
+                            }
+                        }
+                        &-arrow {
+                            &--mover {
+                                border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+                                border-left: 2px solid rgba(255, 255, 255, 0.8);
+                            }
+                        }
+                    }
+                }
+                &-skills {
+                    &-badge {
+                        img {
+                            filter:grayscale(100%);
+                        }
+                    }
+                }
+            }
+        }
+        &:not(.dark) {
+            &:before {
+                background: linear-gradient(-45deg, lighten(#3498db, 40) 16px, red 16px, lighten(#3498db, 40) 16px, transparent 0), linear-gradient(45deg, lighten(#3498db, 40) 16px, transparent 0);
+                background-position: left top;
+                background-repeat: repeat-x;
+                background-size: 18px 32px;
+                content: " ";
+                display: block;
+                height: 32px;
+                width: 100%;
+                position: relative;
+                bottom: 32px;
+                left: 0;
+            }
+        }
+        .content {
+            &-skills-label {
+                margin: 0;
+                font-size: medium;
+                line-height: 60px;
+                font-weight: 500;
+                padding: 0 30px 15px 30px;
+                font-family: 'Open sans', sans-serif;
+                color: $PETER_RIVER;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: bold;
+                width: 100%;
+                display: block;
+                box-sizing: border-box;
+                @include respond-to-mobile {
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+            &-skills-holder {
+                width: 100%;
+                height: 240px;
+                position: relative;
+                overflow: hidden;
+                @include respond-to-mobile {
+                    height: 130px;
+                    margin-bottom: 15px;
+                }
+                &-arrow-holder {
+                    position: absolute;
+                    top: 50px;
+                    height: 60px;
+                    background: lighten(#3498db, 30);
+                    width: 30px;
+                    cursor: pointer;
+                    outline: none;
+                    @include respond-to-mobile {
+                        top: 35px;
+                    }
+                    &.disabled {
+                        .content-skills-holder-arrow-holder-arrow {
+                            opacity: 0.65;
+                        }
+                    }
+                    &-arrow {
+                        position: absolute;
+                        overflow: hidden;
+                        display: inline-block;
+                        font-size: 12px;
+                        width: 1em;
+                        height: 1em;
+                        margin-top: 11px;
+                        &--mover {
+                            border-bottom: 2px solid $PETER_RIVER;
+                            border-left: 2px solid $PETER_RIVER;
+                            transform: rotate(-45deg) skew(0deg);
+                            top: 12px;
+                        }
+                    }
+                    &.left {
+                        left: 0;
+                        .content-skills-holder-arrow-holder-arrow--mover {
+                            transform: rotate(46deg) skew(0deg);
+                            left: 10px;
+                        }
+                    }
+                    &.right {
+                        right: 0;
+                        .content-skills-holder-arrow-holder-arrow--mover {
+                            transform: rotate(-135deg) skew(0deg);
+                            right: 10px;
+                        }
+                    }
+                }
+            }
+            &-skills {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                height: 260px;
+                overflow-y: hidden;
+                overflow-x: auto;
+                white-space: nowrap;
+                @include respond-to-mobile {
+                    height: 150px;
+                }
+                &-wrapper {
+                    width: calc(100% - 90px);
+                    margin-left: 45px;
+                    height: 100%;
+                    overflow: hidden;
+                }
+                &-badge {
+                    display: inline-block;
+                    margin: 30px 45px 0 45px;
+                    @include respond-to-mobile {
+                        margin: 30px 10px 0 10px;
+                    }
+                    img {
+                        height: 100px;
+                        @include respond-to-mobile {
+                            height: 70px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

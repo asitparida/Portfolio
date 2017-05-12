@@ -1,0 +1,445 @@
+@import '../../shared';
+@mixin INSERT_HOVER_BGS($color, $lightenAmount, $foreground) {
+    .grid-item-content-container {
+        background-color: lighten($color, $lightenAmount);
+    }
+    .grid-item-text-container-box {
+        color: $foreground;
+        p {
+            text-shadow: 3px 3px rgba($color, 0.50);
+        }
+        .git-link {
+            background-color: rgba(255, 255, 255, 0.33);
+            &:hover {
+                background-color: $foreground;
+                svg g g {
+                    fill: $color;
+                }
+            }
+            svg g g {
+                fill: $foreground;
+            }
+        }
+    }
+    .grid-item-text-container:hover {
+        -webkit-box-shadow: 0px 13px 71px -2px rgba($color, 1);
+        -moz-box-shadow: 0px 13px 71px -2px rgba($color, 1);
+        box-shadow: 0px 13px 71px -2px rgba($color, 1);
+        background: $color;
+        background: rgba($color, 0.8) 20px 20px no-repeat;
+    }
+}
+
+.grid {
+    margin: 30px auto;
+    padding: 0;
+    list-style: none;
+    min-height: 500px;
+    &-wrap {
+        clear: both;
+        margin: 0 auto 100px auto;
+        padding: 0;
+        max-width: 1260px;
+        &-separator {
+            background: linear-gradient(-45deg, #e1f0fa 16px, red 16px, #e1f0fa 16px, transparent 0), linear-gradient(45deg, #e1f0fa 16px, transparent 0);
+            background-position: left top;
+            background-repeat: repeat-x;
+            background-size: 18px 32px;
+            content: " ";
+            display: block;
+            height: 32px;
+            width: 100%;
+            position: relative;
+            bottom: 26px;
+            left: 0;
+            transform: scaleY(-1);
+            &.dark {
+                background: linear-gradient(-45deg, #444 16px, red 16px, #444 16px, transparent 0), linear-gradient(45deg, #444 16px, transparent 0);
+                background-position: left top;
+                background-repeat: repeat-x;
+                background-size: 18px 32px;
+            }
+        }
+    }
+    &.loaded {
+        background: none;
+        .grid-item {
+            display: inline-block;
+            float: left;
+            .grid-item-text-container {
+                visibility: hidden;
+            }
+        }
+    }
+    &.dark {
+        .grid-item {
+            .curtain {
+                background: $DARKMODE_BG !important;
+            }
+            a {
+                background: url(../../assets/tile-watermark.png) $DARKMODE_BG;
+            }
+            &[data-color="$PETER_RIVER"],
+            &[data-color="$EMERALD"],
+            &[data-color="$NEPHRITIS"],
+            &[data-color="$TURQUOISE"],
+            &[data-color="$AMETHYST"],
+            &[data-color="$SUNFLOWER"],
+            &[data-color="$CARROT"],
+            &[data-color="$ALIZARIN"],
+            &[data-color="$ORANGE"],
+            &[data-color="$PUMPKIN"],
+            &[data-color="$POMEGRANATE"],
+            &[data-color="$WISTERIA"],
+            &[data-color="$BELIZE_HOLE"] {
+                .grid-item-content-container {
+                    background-color: #333;
+                    box-sizing: border-box;
+                    border: 3px solid #333;
+                }
+                .grid-item-text-container-box {
+                    color: $LIGHT_TONE;
+                    p {
+                        text-shadow: none;
+                    }
+                    .git-link {
+                        background-color: rgba(255, 255, 255, 0.33);
+                        &:hover {
+                            background-color: $LIGHT_TONE;
+                            svg g g {
+                                fill: #000;
+                            }
+                        }
+                        svg g g {
+                            fill: $LIGHT_TONE;
+                        }
+                    }
+                }
+                .grid-item-text-container:hover {
+                    -webkit-box-shadow: 0px 13px 71px -2px rgba(#000, 1);
+                    -moz-box-shadow: 0px 13px 71px -2px rgba(#000, 1);
+                    box-shadow: 0px 13px 71px -2px rgba(#000, 1);
+                    background: #000;
+                    background: rgba(#000, 0.8) 20px 20px no-repeat;
+                }
+            }
+            &-content-container {
+                img {
+                    width: 80%; // display: none;
+                    filter: grayscale(100%);
+                }
+            }
+            &-text-container {
+                &-box {
+                    h3 {
+                        border-top: 5px solid rgba(255, 255, 255, 0.33);
+                    }
+                }
+            }
+            &:not(.shown) {
+                a {
+                    border: 1px dashed #909090;
+                }
+            }
+        }
+    }
+    &:not(.loaded) {
+        .grid-item {
+            display: none;
+            float: left;
+        }
+    }
+    .grid-item {
+        width: 400px;
+        padding: 5px;
+        box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: left;
+        vertical-align: top;
+        &[size="double"] {
+            width: 100%;
+        }
+        a {
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+            opacity: 1;
+            background-size: cover;
+            background: url(../../assets/tile-watermark.png) #fff;
+            background-repeat: repeat;
+            text-decoration: none;
+        }
+        >a {
+            display: block;
+            outline: none;
+            border: none;
+            position: relative;
+            margin: 0;
+        }
+        &[data-color="$PETER_RIVER"] {
+            @include INSERT_HOVER_BGS($PETER_RIVER, 40, #fff)
+        }
+        &[data-color="$EMERALD"] {
+            @include INSERT_HOVER_BGS($EMERALD, 40, #000)
+        }
+        &[data-color="$NEPHRITIS"] {
+            @include INSERT_HOVER_BGS($NEPHRITIS, 40, #fff)
+        }
+        &[data-color="$TURQUOISE"] {
+            @include INSERT_HOVER_BGS($TURQUOISE, 40, #fff)
+        }
+        &[data-color="$AMETHYST"] {
+            @include INSERT_HOVER_BGS($AMETHYST, 40, #fff)
+        }
+        &[data-color="$SUNFLOWER"] {
+            @include INSERT_HOVER_BGS($SUNFLOWER, 40, #000)
+        }
+        &[data-color="$CARROT"] {
+            @include INSERT_HOVER_BGS($CARROT, 40, #fff)
+        }
+        &[data-color="$ALIZARIN"] {
+            @include INSERT_HOVER_BGS($ALIZARIN, 40, #fff)
+        }
+        &[data-color="$ORANGE"] {
+            @include INSERT_HOVER_BGS($ORANGE, 40, #fff)
+        }
+        &[data-color="$PUMPKIN"] {
+            @include INSERT_HOVER_BGS($PUMPKIN, 40, #fff)
+        }
+        &[data-color="$POMEGRANATE"] {
+            @include INSERT_HOVER_BGS($POMEGRANATE, 40, #fff)
+        }
+        &[data-color="$WISTERIA"] {
+            @include INSERT_HOVER_BGS($WISTERIA, 40, #fff)
+        }
+        &[data-color="$BELIZE_HOLE"] {
+            @include INSERT_HOVER_BGS($BELIZE_HOLE, 40, #fff)
+        }
+        &-content-container {
+            height: 400px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: 9;
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 80%; // display: none;
+            }
+        }
+        &-text-container {
+            height: 400px;
+            width: 100%;
+            display: block;
+            outline: none;
+            border: none;
+            position: relative;
+            z-index: 10;
+            &:hover,
+            &.active {
+                .grid-item-text-container-box {
+                    animation: move-up-text 0.5s linear forwards;
+                }
+            }
+            &-box {
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                padding: 30px;
+                opacity: 0;
+                transform: translateY(100%);
+                h3 {
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 30px;
+                    margin: 0;
+                    padding-top: 15px;
+                    font-family: 'Open sans', sans-serif;
+                    font-weight: bold;
+                    text-align: left;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    box-sizing: border-box;
+                    font-size: medium;
+                    border-top: 5px solid rgba(255, 255, 255, 0.33);
+                    transition: transform 0.2s, color 0.2s;
+                    text-decoration: none;
+                    max-width: calc(100% - 90px);
+                }
+                p {
+                    position: absolute;
+                    top: 45px;
+                    display: block;
+                    font-family: 'Open sans', sans-serif;
+                    width: calc(100% - 60px);
+                    font-size: x-large;
+                    text-align: left;
+                    text-decoration: none;
+                    text-transform: lowercase;
+                }
+                .git-link {
+                    position: absolute;
+                    bottom: 30px;
+                    right: 30px;
+                    height: 48px;
+                    width: 48px;
+                    padding: 0 9px;
+                    border-radius: 50%;
+                    transition: background-color 0.2s linear 0s;
+                }
+            }
+        }
+        &:not(.shown) {
+            overflow: hidden;
+            a {
+                border: 1px dashed #E0E0E0;
+            }
+        }
+        &.shown {
+            .grid-item-content-container {
+                animation: show-container 1s linear forwards;
+            }
+            .grid-item-text-container {
+                visibility: visible;
+            }
+            .curtain {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        &.animate {
+            .grid-item-content-container {
+                animation: add-background 0.5s linear forwards;
+            }
+            .grid-item-text-container {
+                animation: show-container 0.5s step-end forwards;
+            }
+        }
+    }
+    .curtain {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 8;
+        width: 100%;
+        height: 100%;
+        background: #f0f0f0 !important;
+    }
+    &.swipe-down {
+        .curtain {
+            transform: translate3d(0, -120%, 0);
+        }
+        .grid-item.animate .curtain {
+            animation: swipeDown 0.5s cubic-bezier(0.6, 0, 0.4, 1) forwards;
+        }
+    }
+}
+
+@keyframes swipeDown {
+    0% {}
+    50% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translate3d(0, -120%, 0);
+    }
+    100% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    0% {}
+    50% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {}
+    50% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes showMe {
+    from {
+        visibility: hidden;
+    }
+    60% {
+        visibility: visible;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+
+@keyframes showMe {
+    from {
+        visibility: hidden;
+    }
+    60% {
+        visibility: visible;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+
+@keyframes show-container {
+    from {
+        opacity: 0;
+        transform: translateY(-25px)
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes add-background {
+    0% {
+        background: rgba(1, 1, 1, 0);
+    }
+    100% {
+        background: rgba(1, 1, 1, 1);
+    }
+}
+
+@keyframes hide-container {
+    0%,
+    90% {
+        display: block;
+    }
+    100% {
+        display: none;
+    }
+}
+
+@keyframes move-up-text {
+    0% {
+        transform: translate3d(0, 25px, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
