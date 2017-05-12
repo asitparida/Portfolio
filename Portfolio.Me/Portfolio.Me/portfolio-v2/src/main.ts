@@ -25,7 +25,7 @@ platformBrowserDynamic().bootstrapModule(AppModule);
         if (_targetElms.length > 0) {
           let _textElm: Element = document.querySelector('[data-tag="chrome-toggle-text"]');
           if (_textElm) {
-            _textElm.textContent = 'Switch off chrome';
+             _textElm.textContent = 'chrome mode on';
           }
         }
       } else {
@@ -36,7 +36,7 @@ platformBrowserDynamic().bootstrapModule(AppModule);
         if (_targetElms.length > 0) {
           let _textElm: Element = document.querySelector('[data-tag="chrome-toggle-text"]');
           if (_textElm) {
-            _textElm.textContent = 'Switch on chrome';
+            _textElm.textContent = 'chrome mode off';
           }
         }
       }

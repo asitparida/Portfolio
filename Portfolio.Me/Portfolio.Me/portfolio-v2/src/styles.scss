@@ -50,8 +50,15 @@ body {
                     margin: -1px;
                     overflow: hidden;
                     position: absolute;
-                    visibility: hidden;
                     &:not(:checked) {
+                        &:focus,
+                        &:active {
+                            &+.dock-theme-toggle-bar {
+                                &:after {
+                                    box-shadow: 0px 0px 5px 2px rgba($PETER_RIVER, 0.33);
+                                }
+                            }
+                        }
                         &+.dock-theme-toggle-bar {
                             width: 50px;
                             height: 12px;
@@ -69,9 +76,8 @@ body {
                                 border: 3px solid lighten($PETER_RIVER, 30);
                                 display: block;
                                 top: -5px;
-                                left: 2px;
+                                left: 0px;
                                 position: absolute;
-                                box-shadow: 0px 0px 5px 2px rgba($PETER_RIVER, 0.33)
                             }
                         }
                     }
@@ -102,6 +108,14 @@ body {
                         }
                         input {
                             &:checked {
+                                &:focus,
+                                &:active {
+                                    &+.dock-theme-toggle-bar {
+                                        &:after {
+                                            box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.33);
+                                        }
+                                    }
+                                }
                                 &+.dock-theme-toggle-bar {
                                     width: 50px;
                                     height: 12px;
@@ -121,7 +135,6 @@ body {
                                         top: -5px;
                                         left: 28px;
                                         position: absolute;
-                                        box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.33);
                                     }
                                 }
                             }
