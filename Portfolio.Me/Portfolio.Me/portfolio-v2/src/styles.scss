@@ -26,6 +26,12 @@ body {
         padding: 0;
         z-index: 997;
         box-sizing: border-box;
+        opacity: 0;
+        transition: opacity 0.3s linear 0s;
+        &.shown{
+            opacity: 1;
+
+        }
         &-theme {
             &-toggle {
                 text-align: left;
