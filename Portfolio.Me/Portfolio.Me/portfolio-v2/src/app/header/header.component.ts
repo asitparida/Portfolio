@@ -14,9 +14,6 @@ declare var mojs: any;
 export class HeaderComponent implements AfterViewInit {
   title = 'app works!';
   ngAfterViewInit() {
-    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
-    //Add 'implements AfterViewInit' to the class.
-
     setTimeout(() => {
       const mainTimeline = new mojs.Timeline;
       let _ch = new Characters(1000);
@@ -24,6 +21,14 @@ export class HeaderComponent implements AfterViewInit {
       mainTimeline.add(
         _ch
       ).play();
+      document.addEventListener('visibilitychange', function _func() {
+        if (!document.hidden && !mainTimeline._isCompleted) {
+          mainTimeline.replay();
+        }
+        if (mainTimeline._isCompleted) {
+          document.removeEventListener('visibilitychange', _func);
+        }
+      }, false);
     }, 100);
 
   }
