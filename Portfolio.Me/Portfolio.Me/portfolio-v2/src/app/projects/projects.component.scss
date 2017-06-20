@@ -228,7 +228,8 @@
             align-items: center;
             justify-content: center;
             img {
-                width: 80%; // display: none;
+                width: 80%;
+                // display: none;
             }
         }
         &-text-container {
@@ -303,6 +304,9 @@
         &.shown {
             .grid-item-content-container {
                 animation: show-container 1s linear forwards;
+                img {
+                    display: block;
+                }
             }
             .grid-item-text-container {
                 visibility: visible;

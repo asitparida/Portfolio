@@ -47,7 +47,7 @@ declare var GridScrollFx: any;
 
 const PROECTS_ARRAY: any[] = [
     { name: 'Not So Grey', desc: 'A desktop app for folks who dream colors', git: 'https://github.com/asitparida/NotSoGrey', img: 'assets/project-logos/notsogrey_app.png', href: "https://github.com/asitparida/NotSoGrey", size: 'double', width: '90%', height: 'auto', bgColor: '$NEPHRITIS' },
-    { name: 'Multihost Adapter', desc: 'An adapter for running multiple ui client frameworks together', git: 'https://github.com/asitparida/Multihost.Adapter', img: 'assets/project-logos/multihost.png', href: "https://github.com/asitparida/Multihost.Adapter", size: 'double', width: 'auto', height: '90%', bgColor: '$PETER_RIVER' },
+    { name: 'Multihost Adapter', desc: 'An adapter for running multiple ui client frameworks together', git: 'https://github.com/asitparida/Multihost.Adapter', img: 'assets/project-logos/multihost.png', href: "https://github.com/asitparida/Multihost.Adapter", size: 'double', width: '100%', height: 'auto', bgColor: '$PETER_RIVER' },
     { name: 'Flintstones', desc: 'An small animation on flintstones chracters using GSAP', git: 'https://github.com/asitparida/GSAP.FlintStory', img: 'assets/project-logos/flintstones.png', href: "http://gsap-flintstones-asparida.azurewebsites.net/", size: 'double', width: 'auto', height: '90%', bgColor: '$SUNFLOWER' },
     { name: 'ng-grid', desc: 'angular 2 implementation for vx-grid', git: 'https://github.com/asitparida/ng-vxgrid', img: 'assets/project-logos/grid_app.png', href: "https://vxgrid-ng2.azurewebsites.net/home", width: '90%', height: 'auto', bgColor: '$PETER_RIVER' },
     { name: 'Reddit ', desc: 'Concept illustration for what Reddit may look like', git: 'https://github.com/asitparida/redesign-reddit', img: 'assets/project-logos/reddit.png', href: "http://redesign-reddit.azurewebsites.net/", width: '90%', height: 'auto', bgColor: '$ALIZARIN' },
@@ -97,7 +97,7 @@ export class ProjectsComponent implements AfterViewInit {
     }
     ngAfterViewInit() {
         let _grid = new GridScrollFx(document.getElementById('grid'), {
-            viewportFactor: 1
+            viewportFactor: 0.20
         });
     }
 }
