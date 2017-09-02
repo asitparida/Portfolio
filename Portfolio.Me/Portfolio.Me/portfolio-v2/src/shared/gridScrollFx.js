@@ -128,11 +128,12 @@
 		}
 	}
 
-	function GridScrollFx(el, options) {
+	function GridScrollFx(el, options, callback) {
 		this.el = el;
 		this.options = extend({}, this.options);
 		extend(this.options, options);
 		this._init();
+		this.layoutCompleteCallback = callback;
 	}
 
 	GridScrollFx.prototype.options = {
@@ -163,10 +164,16 @@
 			classie.add(self.el, 'loaded');
 
 			// initialize masonry
-			new Masonry(self.el, {
+			self.masonry = new Masonry(self.el, {
 				itemSelector: 'li',
 				isFitWidth: true,
 				transitionDuration: 0
+			});
+
+			self.masonry.on('layoutComplete', function () {
+				if (typeof self.layoutCompleteCallback !== 'undefined' && typeof self.layoutCompleteCallback === 'function') {
+					self.layoutCompleteCallback();
+				}
 			});
 
 			// the items already shown...

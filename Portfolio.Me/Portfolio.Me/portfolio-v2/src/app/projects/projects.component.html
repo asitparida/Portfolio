@@ -1,5 +1,20 @@
 <div class="grid-wrap-separator hidden-on-xs" data-tag="dark-mode-applicable"></div>
 <section class="grid-wrap">
+    <ul class="grid loaded swipe-down" data-tag="dark-mode-applicable" id="highlight-grid">
+        <li data-color="$PETER_RIVER" class="grid-item shown" id="_ITEM_999" size="double">
+            <a href="http://www.lean-case.com/" target="_blank">
+                <div class="grid-item-content-container">
+                    <img style="height:100%;opacity:1;width:auto;max-width:80%;" src="assets/project-logos/lean-case.png" />
+                </div>
+                <div class="grid-item-text-container" size="double">
+                    <div class="grid-item-text-container-box">
+                        <h3>Lean-Case</h3>
+                        <p>a fintech app to plan and model day-to-day business operations and revenue subscriptions</p>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
     <ul class="grid swipe-down" id="grid" data-tag="dark-mode-applicable">
         <li *ngFor="let item of projects; let i = index;" [attr.data-color]="item.bgColor" class="grid-item" [attr.id]="'_ITEM_' + i">
             <a [attr.href]="item.publishSrc" target="_blank">
