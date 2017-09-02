@@ -154,7 +154,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     let _tmpl =
       `
-    <div class="dock-container pull-left">
+    <div class="dock-container hidden-on-xs pull-left">
       <div class="dock-theme-toggle">
         <label data-tag="chrome-toggle"><span data-tag="chrome-toggle-text">chrome Mode</span> <input id="chrome-toggle-switch" class="dock-theme-toggle-checkbox" type="checkbox" tabindex="0" /> <div class="dock-theme-toggle-bar"></div></label>
       </div>

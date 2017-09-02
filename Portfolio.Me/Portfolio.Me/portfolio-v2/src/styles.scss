@@ -9,6 +9,12 @@
     float: right !important;
 }
 
+@media (max-width: 768px) {
+    .hidden-on-xs {
+        display: none !important;
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
