@@ -58,7 +58,7 @@ const PROECTS_ARRAY: any[] = [
     { name: 'CSS Loaders', desc: 'Robot like css loader animation', git: 'https://github.com/asitparida/CSSRobotLoader', img: 'assets/project-logos/cssloader.png', href: "http://css-loader-robot.azurewebsites.net", width: 'auto', height: '70%', bgColor: '$PUMPKIN' },
     { name: 'Tweening Photos', desc: 'Animating a classic movie wallpaper using GSAP', git: 'https://github.com/asitparida/GSAP.PhotoVector.Anim', img: 'assets/project-logos/photoanim.png', href: "http://gsap-pv-anim-asparida.azurewebsites.net", width: '90%', height: 'auto', bgColor: '$ALIZARIN' },
     { name: 'Segoe MDL Cheatsheet', desc: 'Web crawled SCSS sheet for MDL Icons', git: 'https://github.com/asitparida/SegoeMDLCheatsheet', img: 'assets/project-logos/icons.png', href: "https://github.com/asitparida/SegoeMDLCheatsheet", width: '150px', height: 'auto', bgColor: '$CARROT' },
-    { name: 'Rich CC', desc: 'ng-plugin for showing calendar events', git: 'https://github.com/asitparida/RichCC', img: 'assets/project-logos/richcc.png', href: "http://richcc.azurewebsites.net",width: '90%', height: 'auto', bgColor: '$NEPHRITIS' },
+    { name: 'Rich CC', desc: 'ng-plugin for showing calendar events', git: 'https://github.com/asitparida/RichCC', img: 'assets/project-logos/richcc.png', href: "http://richcc.azurewebsites.net", width: '90%', height: 'auto', bgColor: '$NEPHRITIS' },
     { name: 'Pie Mix', desc: 'ng-plugin built using SVG', git: 'https://github.com/asitparida/PieMix', img: 'assets/project-logos/piemix.png', href: "http://piemix.azurewebsites.net", width: 'auto', height: '70%', bgColor: '$AMETHYST' },
     { name: 'Vx Grid', desc: 'A DOM virtualized ng-plugin', git: 'https://github.com/asitparida/VxGrid', img: 'assets/project-logos/vx-grid.jpg', href: "http://vxgrid.azurewebsites.net", bgColor: '$ALIZARIN' },
     { name: 'Tweening Nature', desc: 'Animating a wallpaper using GSAP', git: 'https://github.com/asitparida/GSAP.Background.Anim', img: 'assets/project-logos/nature_tween.png', href: "http://gsap-bganim-asparida.azurewebsites.net", width: '90%', height: 'auto', bgColor: '$PETER_RIVER' },
@@ -73,7 +73,6 @@ const PROECTS_ARRAY: any[] = [
     encapsulation: ViewEncapsulation.None
 })
 export class ProjectsComponent implements AfterViewInit {
-    title = 'app works!';
     projects: any[] = [];
     constructor() {
         let self = this;
@@ -96,8 +95,25 @@ export class ProjectsComponent implements AfterViewInit {
         });
     }
     ngAfterViewInit() {
-        let _grid = new GridScrollFx(document.getElementById('grid'), {
+        const gridElm: HTMLElement = document.getElementById('grid');
+        const gridMasonry = new GridScrollFx(gridElm, {
             viewportFactor: 0.20
+        },  () => {
+            this.hightlightGridLayoutAdjuster();
+        });
+        setTimeout(this.hightlightGridLayoutAdjuster);
+    }
+
+    hightlightGridLayoutAdjuster() {
+        setTimeout(() => {
+            const gridElm: HTMLElement = document.getElementById('grid');
+            const highlightGridElm: HTMLElement = document.getElementById('highlight-grid');
+            if (gridElm && highlightGridElm) {
+            const props: ClientRect = gridElm.getBoundingClientRect();
+                if (props) {
+                    highlightGridElm.style.width = props.width + 'px';
+                }
+            }
         });
     }
 }

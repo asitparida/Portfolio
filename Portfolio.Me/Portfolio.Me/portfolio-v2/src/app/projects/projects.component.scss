@@ -34,7 +34,14 @@
     margin: 30px auto;
     padding: 0;
     list-style: none;
-    min-height: 500px;
+    min-height: 400px;
+    max-width: 1200px;
+    &:nth-child(1){
+        margin-bottom: 10px;
+    }
+    &:nth-child(2){
+        margin-top: 5px;
+    }
     @include respond-to-mobile {
         margin: 0 !important;;
         width:100% !important;
@@ -169,6 +176,12 @@
         }
         &[size="double"] {
             width: 100%;
+            .grid-item-text-container-box p {
+                width:50%;
+                @include respond-to-mobile {
+                    width: calc(100% - 60px) !important;
+                }
+            }
         }
         a {
             height: 100%;
