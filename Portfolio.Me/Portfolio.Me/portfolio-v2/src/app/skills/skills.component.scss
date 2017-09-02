@@ -90,7 +90,7 @@
                 overflow: hidden;
                 @include respond-to-mobile {
                     height: 130px;
-                    margin-bottom: 15px;
+                    margin-bottom: 0;
                 }
                 &-arrow-holder {
                     position: absolute;

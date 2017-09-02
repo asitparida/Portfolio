@@ -1,10 +1,10 @@
-<div class="grid-wrap-separator" data-tag="dark-mode-applicable"></div>
+<div class="grid-wrap-separator hidden-on-xs" data-tag="dark-mode-applicable"></div>
 <section class="grid-wrap">
     <ul class="grid swipe-down" id="grid" data-tag="dark-mode-applicable">
         <li *ngFor="let item of projects; let i = index;" [attr.data-color]="item.bgColor" class="grid-item" [attr.id]="'_ITEM_' + i">
             <a [attr.href]="item.publishSrc" target="_blank">
                 <div class="grid-item-content-container">
-                    <img [style.width]="item.width" [style.height]="item.height" [attr.data-tag-lazy]="item.imgSrc" />
+                    <img deferLoad [style.width]="item.width" [style.height]="item.height" [attr.data-tag-lazy]="item.imgSrc" />
                 </div>
                 <div class="grid-item-text-container" [attr.data-hoverbg]="item.hoverbg" [attr.size]="item.size">
                     <div class="grid-item-text-container-box">

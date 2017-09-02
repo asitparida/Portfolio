@@ -9,6 +9,7 @@ import { ProjectsComponent } from '../app/projects/projects.component';
 import { SkillsComponent } from '../app/skills/skills.component';
 import { FooterComponent } from '../app/footer/footer.component';
 import { GitLinkComponent } from './git-link.component';
+import { DeferLoadDirective } from './projects/defer-load.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { GitLinkComponent } from './git-link.component';
     ProjectsComponent,
     SkillsComponent,
     FooterComponent,
-    GitLinkComponent
+    GitLinkComponent,
+    DeferLoadDirective
   ],
   imports: [
     BrowserModule,
