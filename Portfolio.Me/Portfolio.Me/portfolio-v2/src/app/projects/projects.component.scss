@@ -210,7 +210,7 @@
             @include INSERT_HOVER_BGS($NEPHRITIS, 40, #fff)
         }
         &[data-color="$TURQUOISE"] {
-            @include INSERT_HOVER_BGS($TURQUOISE, 40, #fff)
+            @include INSERT_HOVER_BGS($TURQUOISE, 40, #000)
         }
         &[data-color="$AMETHYST"] {
             @include INSERT_HOVER_BGS($AMETHYST, 40, #fff)
