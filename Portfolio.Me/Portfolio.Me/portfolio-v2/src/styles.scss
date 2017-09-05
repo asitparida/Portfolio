@@ -15,6 +15,13 @@
     }
 }
 
+html {
+    background: #e1f0fa;
+    &.dark {
+        background-color: $DARKMODE_BG_SECONDARY;
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
