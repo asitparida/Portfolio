@@ -31,7 +31,7 @@
 }
 
 .grid {
-    margin: 30px auto;
+    margin: 60px auto;
     padding: 0;
     list-style: none;
     min-height: 400px;
@@ -48,7 +48,7 @@
     }
     &-wrap {
         clear: both;
-        margin: 0 auto 100px auto;
+        margin: 0 auto;
         padding: 0;
         max-width: 1260px;
         @include respond-to-mobile {
@@ -64,9 +64,15 @@
             height: 32px;
             width: 100%;
             position: relative;
-            bottom: 26px;
+            bottom: 0;
             left: 0;
             transform: scaleY(-1);
+            &.top {
+                top: 0;
+            }
+            &.reverse {
+                transform: scaleY(1);
+            }
             &.dark {
                 background: linear-gradient(-45deg, #444 16px, red 16px, #444 16px, transparent 0), linear-gradient(45deg, #444 16px, transparent 0);
                 background-position: left top;
@@ -93,24 +99,28 @@
             a {
                 background: url(../../assets/tile-watermark.png) $DARKMODE_BG;
             }
-            &[data-color="$PETER_RIVER"],
-            &[data-color="$EMERALD"],
-            &[data-color="$NEPHRITIS"],
-            &[data-color="$TURQUOISE"],
-            &[data-color="$AMETHYST"],
-            &[data-color="$SUNFLOWER"],
-            &[data-color="$CARROT"],
-            &[data-color="$ALIZARIN"],
-            &[data-color="$ORANGE"],
-            &[data-color="$PUMPKIN"],
-            &[data-color="$POMEGRANATE"],
-            &[data-color="$WISTERIA"],
-            &[data-color="$BELIZE_HOLE"] {
-                .grid-item-content-container {
-                    background-color: #333;
-                    box-sizing: border-box;
-                    border: 3px solid #333;
+            &[data-color]{
+                &:nth-child(2n + 1){
+                    .grid-item-content-container {
+                        box-sizing: border-box;
+                        background-color: #333;
+                        border: 3px solid #333;
+                    }   
                 }
+                &:nth-child(2n + 2) {
+                    .grid-item-content-container {
+                        box-sizing: border-box;
+                        background-color: #333;
+                        border: 3px solid #333;
+                        @include respond-to-mobile {
+                            background-color: #111;
+                            border-color: #111;
+                        }
+                    }                
+                }
+            }
+            &[data-color],
+            {
                 .grid-item-text-container-box {
                     color: $LIGHT_TONE;
                     p {
@@ -258,7 +268,15 @@
                 &.show {
                     opacity: 1;
                 }
-                // display: none;
+                &.highlight-demo-pic {
+                    height:100%;
+                    width:auto;
+                    max-width:80%;
+
+                    @include respond-to-mobile {
+                        height: auto;
+                    }
+                }
             }
         }
         &-text-container {
