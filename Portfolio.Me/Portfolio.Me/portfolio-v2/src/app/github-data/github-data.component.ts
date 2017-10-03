@@ -147,6 +147,7 @@ export class GitHubDataComponent implements OnInit, AfterViewInit {
         this.sizeBasedGraph.forEach((item: SvgGraph, index: number) => {
             const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
             group.classList.add('repo-anchor-group');
+            group.setAttribute('tabindex', '0');
             const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
             rect.classList.add('repo-rect');
             rect.setAttribute('x', (item.x - (gap / 2)).toString());
@@ -224,6 +225,7 @@ export class GitHubDataComponent implements OnInit, AfterViewInit {
         this.languageBasedGraph.forEach((item: LanguageGrapg, index: number) => {
             const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
             group.classList.add('repo-anchor-group');
+            group.setAttribute('tabindex', '0');
             const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
             rect.classList.add('repo-rect');
             rect.setAttribute('x', (item.x - (gap / 2)).toString());

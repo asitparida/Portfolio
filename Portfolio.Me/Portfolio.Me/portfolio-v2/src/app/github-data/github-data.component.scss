@@ -102,6 +102,7 @@
     display: block;
     margin: 0 auto;
     .repo-anchor-group {
+        outline: none;
         .repo-anchor {
             opacity: 0.20;
             cursor: pointer;
@@ -119,7 +120,8 @@
             fill: rgba(0,115,198,0.03);
             opacity: 0;
         }
-        &:hover {
+        &:hover ,
+        &:focus {
             .repo-anchor,
             .repo-text {
                 opacity: 1;
