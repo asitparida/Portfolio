@@ -9,6 +9,8 @@ import { ProjectsComponent } from '../app/projects/projects.component';
 import { SkillsComponent } from '../app/skills/skills.component';
 import { FooterComponent } from '../app/footer/footer.component';
 import { GitLinkComponent } from './git-link.component';
+import { GitHubDataComponent } from './github-data/github-data.component';
+import { GitHubDataService } from './github-data/github-data.service';
 import { DeferLoadDirective } from './projects/defer-load.directive';
 
 @NgModule({
@@ -19,14 +21,17 @@ import { DeferLoadDirective } from './projects/defer-load.directive';
     SkillsComponent,
     FooterComponent,
     GitLinkComponent,
-    DeferLoadDirective
+    DeferLoadDirective,
+    GitHubDataComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    GitHubDataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
