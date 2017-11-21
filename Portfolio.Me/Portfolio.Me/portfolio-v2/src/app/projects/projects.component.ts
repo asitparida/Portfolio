@@ -1,7 +1,8 @@
 import {
     Component,
     AfterViewInit,
-    ViewEncapsulation
+    ViewEncapsulation,
+    HostListener
 } from '@angular/core';
 
 import * as _ from 'underscore';
@@ -77,6 +78,7 @@ const PROECTS_ARRAY: any[] = [
 })
 export class ProjectsComponent implements AfterViewInit {
     projects: any[] = [];
+    currentWindowSize = null;
     constructor() {
         let self = this;
         _.each(PROECTS_ARRAY, (_item: any, _iter: number) => {
@@ -98,13 +100,52 @@ export class ProjectsComponent implements AfterViewInit {
         });
     }
     ngAfterViewInit() {
-        const gridElm: HTMLElement = document.getElementById('grid');
-        const gridMasonry = new GridScrollFx(gridElm, {
-            viewportFactor: 0.20
-        },  () => {
-            this.hightlightGridLayoutAdjuster();
-        });
-        setTimeout(this.hightlightGridLayoutAdjuster);
+        this.initializeMasonry();
+    }
+
+    reload() {
+        window.location.reload();
+    }
+    @HostListener('window:resize', ['$event'])
+    initializeMasonry() {
+        if (window.innerWidth > 768) {
+            if (this.currentWindowSize === null || this.currentWindowSize === 1) {
+                const gridElm: HTMLElement = document.getElementById('grid');
+                const gridMasonry = new GridScrollFx(gridElm, {
+                    viewportFactor: 0.20
+                },  () => {
+                    this.hightlightGridLayoutAdjuster();
+                });
+                setTimeout(this.hightlightGridLayoutAdjuster);
+                this.currentWindowSize = 1;
+            } else {
+                this.reload();
+            }
+        } else {
+            if (this.currentWindowSize === null || this.currentWindowSize === 0) {
+                const containers = document.querySelectorAll('.grid');
+                for (let i = 0; i < containers.length; i++) {
+                    if (containers[i]) {
+                        const container = (containers[i] as HTMLElement);
+                        if (container.classList.contains('loaded') === false) {
+                            container.classList.add('loaded');
+                        }
+                        const items = container.querySelectorAll('.grid-item');
+                        for (let j = 0; j < items.length; j++) {
+                            if (items[j]) {
+                                const item = (items[j] as HTMLElement);
+                                if (item.classList.contains('shown') === false) {
+                                    item.classList.add('shown');
+                                }
+                            }
+                        }
+                    }
+                }
+                this.currentWindowSize = 0;
+            } else {
+                this.reload();
+            }
+        }
     }
 
     hightlightGridLayoutAdjuster() {

@@ -1,10 +1,10 @@
 <div class="grid-wrap-separator hidden-on-xs" data-tag="dark-mode-applicable"></div>
-<section class="svg-wrap" data-tag="adjust-width">
+<section class="svg-wrap" data-tag="adjust-width" *ngIf="!hideGraphs">
     <h3>GitHub repo sizes</h3>
-    <svg width="80%" height="250px" id="svg_graph"></svg>
+    <svg width="80%" height="150px" id="svg_graph"></svg>
 </section>
-<section class="svg-wrap" data-tag="adjust-width">
+<section class="svg-wrap" data-tag="adjust-width" *ngIf="!hideGraphs">
     <h3>GitHub repo Languages</h3>
-    <svg width="80%" height="250px" id="lang_graph"></svg>
+    <svg width="80%" height="150px" id="lang_graph"></svg>
 </section>
 <!-- <div class="grid-wrap-separator hidden-on-xs reverse" data-tag="dark-mode-applicable"></div> -->

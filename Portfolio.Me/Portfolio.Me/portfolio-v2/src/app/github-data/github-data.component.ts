@@ -9,6 +9,7 @@ import {
 import * as _ from 'underscore';
 
 import { GitHubDataService } from './github-data.service';
+// import { setTimeout } from 'timers';
 
 const COLORS = {
     $EMERALD: '#2ecc71',
@@ -69,10 +70,14 @@ export class GitHubDataComponent implements OnInit, AfterViewInit {
     collection: GitHubRepo[] = [];
     sizeBasedGraph: SvgGraph[] = [];
     languageBasedGraph: LanguageGrapg[] = [];
+    hideGraphs: Boolean = true;
     constructor(private githubService: GitHubDataService) { }
     ngOnInit() {
     }
     ngAfterViewInit() {
+        if (this.hideGraphs) {
+            return;
+        }
         this.githubService.getGitHubReposData().subscribe((data: any[]) => {
             const tempCollection = [];
             data.forEach((item: any) => {
@@ -84,7 +89,7 @@ export class GitHubDataComponent implements OnInit, AfterViewInit {
             });
             this.sizeBasedGraph = this.sizeBasedGraph.sort((x, y) => x.repo.size - y.repo.size);
             this.sizeBasedGraph = this.sizeBasedGraph.sort((x, y) => x.repo.size - y.repo.size);
-            const languages =_.unique(this.collection.map(x => x.language));
+            const languages = _.unique(this.collection.map(x => x.language));
             this.languageBasedGraph = languages.map((lang: string) => {
                 return { lang: lang, repos: this.collection.filter(x => x.language === lang), x: 0, y: 0 };
             });
@@ -94,16 +99,35 @@ export class GitHubDataComponent implements OnInit, AfterViewInit {
 
     @HostListener('window:resize', ['$event'])
     redrawGraphs(event?) {
-        const widthSrcElem = document.querySelector('[data-tag="take-width"]');
-        if (widthSrcElem) {
-            const width = (widthSrcElem.getBoundingClientRect()).width;
-            const svgContainer = document.querySelectorAll('[data-tag="adjust-width"]');
-            for (let i = 0; i < svgContainer.length; i++) {
-                (svgContainer[i] as HTMLElement).style.width = width + 'px';
+        setTimeout(() => {
+            if (this.hideGraphs) {
+                return;
             }
-        }
-        this.processForSizeBasedGraph(event);
-        this.processForLanguageBasedGraph(event);
+            const containers = document.querySelectorAll('.svg-wrap');
+            if (window.innerWidth > 768) {
+                if (containers && containers.length > 0) {
+                    for (let i = 0; i < containers.length; i++) {
+                        (containers[i] as HTMLElement).style.display = 'BLOCK';
+                    }
+                }
+                const widthSrcElem = document.querySelector('[data-tag="take-width"]');
+                if (widthSrcElem) {
+                    const width = (widthSrcElem.getBoundingClientRect()).width;
+                    const svgContainer = document.querySelectorAll('[data-tag="adjust-width"]');
+                    for (let i = 0; i < svgContainer.length; i++) {
+                        (svgContainer[i] as HTMLElement).style.width = width + 'px';
+                    }
+                }
+                this.processForSizeBasedGraph(event);
+                this.processForLanguageBasedGraph(event);
+            } else {
+                if (containers && containers.length > 0) {
+                    for (let i = 0; i < containers.length; i++) {
+                        (containers[i] as HTMLElement).style.display = 'NONE';
+                    }
+                }
+            }
+        }, 1);
     }
 
     processForSizeBasedGraph(event?) {
@@ -115,7 +139,7 @@ export class GitHubDataComponent implements OnInit, AfterViewInit {
             svgElem.setAttribute('width', width + 'px');
         }
         const svgElemProps = svgElem.getBoundingClientRect();
-        const height = 250;
+        const height = 150;
         const polygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
         polygon.style.stroke = '#9ccdec';
         polygon.style.strokeWidth = '1';
@@ -172,12 +196,12 @@ export class GitHubDataComponent implements OnInit, AfterViewInit {
                 textAnchor = 'end';
             }
             let textPositionY = height - item.y - 30;
-            textPositionY = textPositionY < 30 ? 45: textPositionY;
+            textPositionY = textPositionY < 30 ? 45 : textPositionY;
             text.setAttribute('x', textPositionX.toString());
             text.setAttribute('y', textPositionY.toString());
             text.setAttribute('fill', '#333333');
             text.setAttribute('text-anchor', textAnchor);
-            text.innerHTML = item.repo.name +  ' : ' + item.data;
+            text.innerHTML = item.repo.name + ' : ' + item.data;
             text.classList.add('repo-text');
             group.appendChild(text);
             svgElem.appendChild(group);
@@ -193,7 +217,7 @@ export class GitHubDataComponent implements OnInit, AfterViewInit {
             svgElem.setAttribute('width', width + 'px');
         }
         const svgElemProps = svgElem.getBoundingClientRect();
-        const height = 250;
+        const height = 150;
         const polygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
         polygon.style.stroke = '#9ccdec';
         polygon.style.strokeWidth = '1';
@@ -250,12 +274,12 @@ export class GitHubDataComponent implements OnInit, AfterViewInit {
                 textAnchor = 'end';
             }
             let textPositionY = height - item.y - 30;
-            textPositionY = textPositionY < 30 ? 45: textPositionY;
+            textPositionY = textPositionY < 30 ? 45 : textPositionY;
             text.setAttribute('x', textPositionX.toString());
             text.setAttribute('y', textPositionY.toString());
             text.setAttribute('fill', '#333333');
             text.setAttribute('text-anchor', textAnchor);
-            text.innerHTML = item.lang +  ' : ' + item.repos.length + (item.repos.length === 1 ? ' repo' : ' repos');
+            text.innerHTML = item.lang + ' : ' + item.repos.length + (item.repos.length === 1 ? ' repo' : ' repos');
             text.classList.add('repo-text');
             group.appendChild(text);
             svgElem.appendChild(group);

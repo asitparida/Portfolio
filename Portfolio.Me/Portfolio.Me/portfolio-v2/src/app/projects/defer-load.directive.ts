@@ -9,7 +9,9 @@ export class DeferLoadDirective implements AfterViewInit {
 
     ngAfterViewInit() {
         this.element.onload = () => {
-            this.element.classList.add('show');
+            if (window.innerWidth > 768) {
+                this.element.classList.add('show');
+            }
         };
     }
 }

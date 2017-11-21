@@ -4,29 +4,44 @@
         background-color: lighten($color, $lightenAmount);
     }
     .grid-item-text-container-box {
-        color: $foreground;
-        p {
-            text-shadow: 3px 3px rgba($color, 0.50);
-        }
-        .git-link {
-            background-color: rgba(255, 255, 255, 0.33);
-            &:hover {
-                background-color: $foreground;
+        @include respond-to-mobile {
+            color: #303030;
+            .git-link {
+                background-color: rgba($color, 0.10);
                 svg g g {
                     fill: $color;
                 }
             }
-            svg g g {
-                fill: $foreground;
+        }
+        @include respond-to-except-mobile {
+            color: $foreground;
+            p {
+                text-shadow: 3px 3px rgba($color, 0.50);
+            }
+            .git-link {
+                background-color: rgba(255, 255, 255, 0.33);
+                &:hover {
+                    background-color: $foreground;
+                    svg g g {
+                        fill: $color;
+                    }
+                }
+                svg g g {
+                    fill: $foreground;
+                }
             }
         }
     }
-    .grid-item-text-container:hover {
-        -webkit-box-shadow: 0px 13px 71px -2px rgba($color, 1);
-        -moz-box-shadow: 0px 13px 71px -2px rgba($color, 1);
-        box-shadow: 0px 13px 71px -2px rgba($color, 1);
-        background: $color;
-        background: rgba($color, 0.8) 20px 20px no-repeat;
+    @include respond-to-except-mobile {
+        .grid-item-text-container:hover {
+            -webkit-box-shadow: 0px 13px 71px -2px rgba($color, 1);
+            -moz-box-shadow: 0px 13px 71px -2px rgba($color, 1);
+            box-shadow: 0px 13px 71px -2px rgba($color, 1);
+            background: $color;
+            background: rgba($color, 0.8) 20px 20px no-repeat;
+        }
+    }
+    @include respond-to-mobile {
     }
 }
 
@@ -34,7 +49,9 @@
     margin: 60px auto;
     padding: 0;
     list-style: none;
-    min-height: 400px;
+    @include respond-to-except-mobile {
+        min-height: 400px;
+    }
     max-width: 1200px;
     &:nth-child(1){
         margin-bottom: 10px;
@@ -53,6 +70,7 @@
         max-width: 1260px;
         @include respond-to-mobile {
             margin-bottom: 0 !important;
+            padding: 12px;
         }
         &-separator {
             background: linear-gradient(-45deg, #e1f0fa 16px, red 16px, #e1f0fa 16px, transparent 0), linear-gradient(45deg, #e1f0fa 16px, transparent 0);
@@ -85,7 +103,9 @@
         background: none;
         .grid-item {
             display: inline-block;
-            float: left;
+            @include respond-to-except-mobile {
+                float: left;
+            }
             .grid-item-text-container {
                 visibility: hidden;
             }
@@ -139,12 +159,14 @@
                         }
                     }
                 }
-                .grid-item-text-container:hover {
-                    -webkit-box-shadow: 0px 13px 71px -2px rgba(#000, 1);
-                    -moz-box-shadow: 0px 13px 71px -2px rgba(#000, 1);
-                    box-shadow: 0px 13px 71px -2px rgba(#000, 1);
-                    background: #000;
-                    background: rgba(#000, 0.8) 20px 20px no-repeat;
+                @include respond-to-except-mobile {
+                    .grid-item-text-container:hover {
+                        -webkit-box-shadow: 0px 13px 71px -2px rgba(#000, 1);
+                        -moz-box-shadow: 0px 13px 71px -2px rgba(#000, 1);
+                        box-shadow: 0px 13px 71px -2px rgba(#000, 1);
+                        background: #000;
+                        background: rgba(#000, 0.8) 20px 20px no-repeat;
+                    }
                 }
             }
             &-content-container {
@@ -157,6 +179,9 @@
                 &-box {
                     h3 {
                         border-top: 5px solid rgba(255, 255, 255, 0.33);
+                        @include respond-to-mobile {
+                            border-top: none;
+                        }
                     }
                 }
             }
@@ -171,6 +196,9 @@
         .grid-item {
             display: none;
             float: left;
+            @include respond-to-mobile {
+                display: block;
+            }
         }
     }
     .grid-item {
@@ -183,13 +211,22 @@
         @include respond-to-mobile {
             width:100% !important;
             padding:0 !important;
+            margin-bottom: 12px;
         }
         &[size="double"] {
             width: 100%;
             .grid-item-text-container-box p {
                 width:50%;
-                @include respond-to-mobile {
-                    width: calc(100% - 60px) !important;
+                &:not(.full) {
+                    @include respond-to-mobile {
+                        width: calc(100% - 60px) !important;
+                    }
+                }
+
+                &.full {
+                    @include respond-to-mobile {
+                        width: 100% !important;
+                    }
                 }
             }
         }
@@ -250,7 +287,15 @@
             @include INSERT_HOVER_BGS($BELIZE_HOLE, 40, #fff)
         }
         &-content-container {
-            height: 400px;
+            @include respond-to-mobile {
+                height: 100%;
+                img {
+                    display: none !important;
+                }
+            }
+            @include respond-to-except-mobile {
+                height: 400px;
+            }
             width: 100%;
             position: absolute;
             top: 0;
@@ -280,7 +325,9 @@
             }
         }
         &-text-container {
-            height: 400px;
+            @include respond-to-except-mobile {
+                height: 400px;
+            }
             width: 100%;
             display: block;
             outline: none;
@@ -288,12 +335,6 @@
             position: relative;
             z-index: 10;
             overflow: hidden;
-            &:hover,
-            &.active {
-                .grid-item-text-container-box {
-                    animation: move-up-text 0.5s linear forwards;
-                }
-            }
             &-box {
                 width: 100%;
                 height: 100%;
@@ -301,9 +342,12 @@
                 padding: 30px;
                 opacity: 0;
                 transform: translateY(100%);
+                @include respond-to-mobile {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
                 h3 {
                     display: inline-block;
-                    position: absolute;
                     bottom: 30px;
                     margin: 0;
                     padding-top: 15px;
@@ -315,12 +359,28 @@
                     box-sizing: border-box;
                     font-size: medium;
                     border-top: 5px solid rgba(255, 255, 255, 0.33);
+                    @include respond-to-mobile {
+                        border-top: none;
+                        font-size: large;
+                        transition: transform 16ms, color 16s;
+                        padding-top: 0;
+                    }
                     transition: transform 0.2s, color 0.2s;
                     text-decoration: none;
                     max-width: calc(100% - 90px);
+                    @include respond-to-except-mobile {
+                        position: absolute;
+                    }
                 }
                 p {
-                    position: absolute;
+                    @include respond-to-except-mobile {
+                        position: absolute;
+                    }
+                    @include respond-to-mobile {
+                        border-top: none;
+                        font-size: large;
+                        margin-bottom: 0;
+                    }
                     top: 45px;
                     display: block;
                     font-family: 'Open sans', sans-serif;
@@ -349,10 +409,20 @@
             }
         }
         &.shown {
-            .grid-item-content-container {
-                animation: show-container 1s linear forwards;
-                img {
-                    display: block;
+            @include respond-to-except-mobile {
+                .grid-item-content-container {
+                    animation: show-container 1s linear forwards;
+                    img {
+                        display: block;
+                    }
+                }
+            }
+            @include respond-to-mobile {
+                .grid-item-content-container {
+                    animation: show-container 0.1s linear forwards;
+                    img {
+                        display: block;
+                    }
                 }
             }
             .grid-item-text-container {
@@ -363,11 +433,21 @@
             }
         }
         &.animate {
-            .grid-item-content-container {
-                animation: add-background 0.5s linear forwards;
+            @include respond-to-except-mobile {
+                .grid-item-content-container {
+                    animation: add-background 0.5s linear forwards;
+                }
+                .grid-item-text-container {
+                    animation: show-container 0.5s step-end forwards;
+                }
             }
-            .grid-item-text-container {
-                animation: show-container 0.5s step-end forwards;
+            @include respond-to-mobile {
+                .grid-item-content-container {
+                    animation: add-background 0.1s linear forwards;
+                }
+                .grid-item-text-container {
+                    animation: show-container 0.1s step-end forwards;
+                }
             }
         }
     }
@@ -386,6 +466,15 @@
         }
         .grid-item.animate .curtain {
             animation: swipeDown 0.5s cubic-bezier(0.6, 0, 0.4, 1) forwards;
+        }
+    }
+}
+
+@include respond-to-except-mobile {
+    .grid-item-text-container:hover,
+    .grid-item-text-container.active {
+        .grid-item-text-container-box {
+            animation: move-up-text 0.5s linear forwards;
         }
     }
 }

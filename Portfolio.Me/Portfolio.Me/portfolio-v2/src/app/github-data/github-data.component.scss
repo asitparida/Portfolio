@@ -34,7 +34,9 @@
     margin: 60px auto;
     padding: 0;
     list-style: none;
-    min-height: 400px;
+    @include respond-to-except-mobile {
+        min-height: 400px;
+    }
     max-width: 1200px;
     &:nth-child(1){
         margin-bottom: 10px;

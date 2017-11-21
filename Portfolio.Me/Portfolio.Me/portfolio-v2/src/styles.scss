@@ -16,9 +16,11 @@
 }
 
 html {
-    background: #e1f0fa;
-    &.dark {
-        background-color: $DARKMODE_BG_SECONDARY;
+    @include respond-to-except-mobile {
+        background: #e1f0fa;
+        &.dark {
+            background-color: $DARKMODE_BG_SECONDARY;
+        }
     }
 }
 
