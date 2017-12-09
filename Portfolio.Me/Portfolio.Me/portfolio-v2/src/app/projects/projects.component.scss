@@ -597,6 +597,16 @@
     }
 }
 
+body.dark {
+    .project-drawer-container .project-drawer {
+        background: #fff !important;
+        a.project-links {
+            background: #000 !important;
+            color: #fff !important;
+        }
+    }
+}
+
 @keyframes expand-drawer {
     0% {
         transform: scale3d(0,0,0);
