@@ -46,7 +46,7 @@
 }
 
 .grid {
-    margin: 60px auto;
+    margin: 10px auto;
     padding: 0;
     list-style: none;
     @include respond-to-except-mobile {
@@ -467,6 +467,155 @@
         .grid-item.animate .curtain {
             animation: swipeDown 0.5s cubic-bezier(0.6, 0, 0.4, 1) forwards;
         }
+    }
+}
+.project-drawer-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    padding: 48px;
+    z-index: 999;
+    box-sizing: border-box;
+
+    @include respond-to-mobile {
+        padding: 0;
+    }
+    &.out {
+        transform: scale3d(0,0,0);
+    }
+    &.in {
+        transform: scale3d(1,1,1);
+    }
+    &.anim.in {
+        animation: expand-drawer 0.3s cubic-bezier(0.6, 0, 0.4, 1) forwards;
+    }
+    &.anim.out {
+        animation: collapse-drawer 0.3s cubic-bezier(0.6, 0, 0.4, 1) forwards;
+    }
+    .close {
+        position: absolute;
+        top:0;
+        right: 0;
+        width: 48px;
+        height: 48px;
+        background: rgba(0,0,0,0);
+        line-height: 48px;
+        text-align: center;
+        float: right;
+        cursor: pointer;
+        &:hover,
+        &:focus,
+        &:active {
+            background: rgba(0,0,0,0.03);
+        }
+        @include respond-to-mobile {
+            position: fixed;
+            top:0;
+            right: 0;
+        }
+    }
+    .project-drawer {
+        max-height: 80vh;
+        min-height: 400px;
+        width: calc(100% - 96px);
+        background: #fff;
+        transform-origin: center;
+        padding: 48px;
+        box-sizing: border-box;
+        position: relative;
+        box-shadow: 0px 0px 20px 1px rgba(0, 0,0, 0.20);
+        overflow-y: auto;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        -webkit-overflow-scrolling: touch;
+
+        @include respond-to-mobile {
+            max-height: 100vh;
+            height: 100%;
+            width: 100%;
+            padding: 24px;
+        }
+        label {
+            font-size: xx-large;
+            font-weight: 100;
+            display: block;
+        }
+        a.project-links {
+            display: none;
+            margin: 25px 10px 0 0;
+            padding: 0px 25px 0 15px;
+            line-height: 36px;
+            background-color: rgba(0,0,0,0.05);
+            outline: none;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 100;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: small;
+            transition: background-color 0.2s linear 0s;
+            position: relative;
+            text-shadow: 0px 0px 2px rgba(0,0,0,0.25);
+            &:after {
+                position: absolute;
+                top:0;
+                right: 0;
+                content: '\279C';
+                padding-right: 7px;
+            }
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: rgba(0,0,0, 1) !important;
+                color: #fff !important;
+            } 
+            &.show {
+                display: inline-block;
+            }
+        }
+        p {
+            font-size: medium;
+            font-weight: 300;
+            &[data-tag="project-drawer-description"] {
+                margin: 30px 0 0 0;
+                line-height: 1.50em;
+                display: block;
+                p {
+                    margin: 15px 0 15px 0;
+                }
+
+                ul, ol {
+                    padding-left: 20px;
+                }
+            }
+
+        }
+    }
+}
+
+@keyframes expand-drawer {
+    0% {
+        transform: scale3d(0,0,0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale3d(1,1,1);
+        opacity: 1;
+    }
+}
+
+@keyframes collapse-drawer {
+    0% {
+        transform: scale3d(1,1,1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale3d(0,0,0);
+        opacity: 0;
     }
 }
 
