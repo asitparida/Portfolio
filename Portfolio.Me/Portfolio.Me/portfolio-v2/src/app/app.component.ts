@@ -244,6 +244,16 @@ export class AppComponent implements OnInit, AfterViewInit {
         _dock.classList.add('shown');
       }, 100);
     }
+    document.addEventListener('load', (e: Event) => {
+      const elm = e.target as HTMLElement;
+      if (elm.tagName === 'IMG') {
+          if (elm.hasAttribute('data-lazy-load')) {
+              if (elm.getAttribute('data-lazy-load') === 'true') {
+                  elm.classList.add('show');
+              }
+          }
+      }
+  }, true);
   }
 
 }

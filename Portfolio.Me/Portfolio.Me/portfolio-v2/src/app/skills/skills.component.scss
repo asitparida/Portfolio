@@ -141,6 +141,11 @@
                     }
                     img {
                         height: 100px;
+                        opacity: 0;
+                        transition: opacity 0.2s ease-in 0s;
+                        &.show {
+                            opacity: 1;
+                        }
                         @include respond-to-mobile {
                             height: 70px;
                         }

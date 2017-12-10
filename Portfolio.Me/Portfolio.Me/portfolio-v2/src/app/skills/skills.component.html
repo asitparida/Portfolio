@@ -10,7 +10,7 @@
         <div class="content-skills-wrapper">
             <ul class="content-skills" id="contentSkillsList">
                 <li class="content-skills-badge" *ngFor="let item of skills">
-                    <img [attr.id]="item.id" [attr.src]="item.src" [attr.alt]="item.tag" [attr.title]="item.tag" />
+                    <img data-tag="skill-pic" data-lazy-load="true" class="hidden" [attr.id]="item.id" [attr.src]="item.src" [attr.alt]="item.tag" [attr.title]="item.tag" />
                 </li>
             </ul>
         </div>
