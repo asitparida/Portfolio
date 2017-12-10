@@ -16,9 +16,11 @@
 }
 
 html {
-    background: #e1f0fa;
-    &.dark {
-        background-color: $DARKMODE_BG_SECONDARY;
+    @include respond-to-except-mobile {
+        background: #e1f0fa;
+        &.dark {
+            background-color: $DARKMODE_BG_SECONDARY;
+        }
     }
 }
 
@@ -26,6 +28,9 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    &.no-overflow {
+        overflow-y: hidden;
+    }
     &.dark {
         background-color: $DARKMODE_BG;
     }

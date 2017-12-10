@@ -3,7 +3,7 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'git-link',
   template: 
-  ` <a class="git-link" target="_blank" [attr.href]="link">
+  ` <a class="git-link" target="_blank" (click)="onGitLink($event, link)" style="cursor: pointer;">
         <svg width="30px" height="47px" viewBox="0 0 48 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <title>Github</title>
             <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -19,4 +19,9 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 export class GitLinkComponent {
   @Input()
   link: string;
+  onGitLink(e: Event, link) {
+      e.stopPropagation();
+      e.preventDefault();
+      window.open(link, '_blank');
+  }
 }

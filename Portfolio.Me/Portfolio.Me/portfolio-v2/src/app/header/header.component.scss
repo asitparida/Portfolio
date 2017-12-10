@@ -59,7 +59,13 @@
         .layer-text {
             display: block;
             margin: 0 auto;
-            width: 400px;
+            @include respond-to-except-mobile {
+                width: 400px;
+            }
+            @include respond-to-mobile {
+                width: 100%;
+                display: none;
+            }
             height: 300px;
             position: relative;
             z-index: 10;
@@ -124,6 +130,39 @@
                     background: transparent;
                     margin: 0;
                 }
+            }
+        }
+        &-xs-img-holder {
+            height: 120px;
+            width: 120px;
+            border: 10px solid rgba(#3498db,0.10);
+            border-radius: 50%;
+            overflow: hidden;
+            display: block;
+            margin:  30px auto;
+            img {
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: opacity 0.2s ease-in 0s;
+                &.show {
+                    opacity: 1;
+                }
+            }
+        }
+        &-xs-title {
+            width: 100%;
+            padding: 0 15px 60px 15px;
+            box-sizing: border-box;
+            label
+            {
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+                font-weight: 100;
+                font-size: 3em;
+                text-transform: lowercase;
+                color: rgba(darken(#3498db, 15), 0.75);
             }
         }
     }
