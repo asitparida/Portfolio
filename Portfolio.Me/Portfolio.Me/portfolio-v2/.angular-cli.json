@@ -25,6 +25,7 @@
         "../node_modules/mo-js/build/mo.min.js",
         "shared/modernizr.custom.js",
         "shared/classie.js",
+        "shared/classlist.min.js",
         "shared/colorfinder-1.1.js",
         "shared/gridScrollFx.js",
         "shared/imagesloaded.pkgd.min.js",
