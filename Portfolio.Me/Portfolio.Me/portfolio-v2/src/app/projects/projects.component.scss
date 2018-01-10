@@ -481,6 +481,8 @@
     padding: 48px;
     z-index: 999;
     box-sizing: border-box;
+    color: #000;
+    background: #fff;
 
     @include respond-to-mobile {
         padding: 0;
@@ -508,6 +510,7 @@
         text-align: center;
         float: right;
         cursor: pointer;
+        color: #fff;
         &:hover,
         &:focus,
         &:active {
@@ -518,18 +521,22 @@
             top:0;
             right: 0;
         }
+        &.darker {
+            color: #000;
+        }
     }
     .project-drawer {
-        max-height: 80vh;
-        min-height: 400px;
-        width: calc(100% - 96px);
-        background: #fff;
+        max-height: 90vh;
+        overflow: hidden;
+        // min-height: 400px;
+        width: 800px;
+        // width: calc(100% - 96px);
+        // background: #fff;
         transform-origin: center;
-        padding: 48px;
+        padding: 0;
         box-sizing: border-box;
         position: relative;
         box-shadow: 0px 0px 20px 1px rgba(0, 0,0, 0.20);
-        overflow-y: auto;
         -ms-overflow-style: -ms-autohiding-scrollbar;
         -webkit-overflow-scrolling: touch;
 
@@ -537,59 +544,89 @@
             max-height: 100vh;
             height: 100%;
             width: 100%;
-            padding: 24px;
+            padding: 0;
         }
         label {
             font-size: xx-large;
             font-weight: 100;
             display: block;
+            background: rgba(0,0,0,0.20);
+            color: #fff;
+            padding:  36px 48px;
+            @include respond-to-mobile {
+                padding:  24px;
+            }
+            &.darker {
+                background: rgba(0,0,0,0);
+                color: #000;
+            }
         }
         a.project-links {
             display: none;
-            margin: 25px 10px 0 0;
-            padding: 0px 30px 0 15px;
-            line-height: 36px;
+            margin: 0 ;
+            padding: 0px 72px 0 48px;
+            line-height: 44px;
+            box-sizing: border-box;
+            border-bottom: 4px solid rgba(0,0,0,0.20);
+            border-top: 4px solid transparent;
             background-color: rgba(0,0,0,0.05);
             outline: none;
             text-decoration: none;
             color: #fff;
-            font-weight: 100;
+            font-weight: 500;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             font-size: small;
             transition: background-color 0.2s linear 0s;
             position: relative;
             text-shadow: 0px 0px 2px rgba(0,0,0,0.25);
+            // border-radius: 4px;
             &:after {
                 position: absolute;
                 top:0;
-                right: 0;
+                right: 36px;
                 content: '\279C';
                 padding-right: 7px;
+                @include respond-to-mobile {
+                    right: 6px;
+                }
             }
             &:hover,
             &:active,
             &:focus {
-                background-color: rgba(0,0,0, 1) !important;
+                background-color: rgba(0,0,0, 0.10) !important;
                 color: #fff !important;
             } 
             &.show {
                 display: inline-block;
+            }
+            @include respond-to-mobile {
+                padding: 0px 24px;  
+                width: 49%;
             }
         }
         p {
             font-size: medium;
             font-weight: 300;
             &[data-tag="project-drawer-description"] {
-                margin: 30px 0 0 0;
+                margin: 0;
+                padding: 14px 48px;
                 line-height: 1.50em;
                 display: block;
+                background: #fff;
+                overflow-y: auto;
+                max-height: calc(90vh - 280px);
                 p {
                     margin: 15px 0 15px 0;
                 }
 
                 ul, ol {
                     padding-left: 20px;
+                }
+                @include respond-to-mobile {
+                    height: calc(100vh - 190px);
+                    max-height: calc(100vh - 157px);
+                    padding: 24px 24px 48px 24px;
                 }
             }
 

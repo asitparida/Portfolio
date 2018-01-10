@@ -29,28 +29,26 @@ export const LEANCASE = {
 };
 export const Projects = [
     {
-        name: 'Quick References',
-        description: 'blog for tl;dr snips on tech stacks',
-        git: 'https://github.com/asitparida/QuickReferences',
-        img: 'assets/project-logos/quickref.png',
-        href: 'http://quick-ref.azurewebsites.net',
-        width: 'auto',
-        height: '50%',
+        name: 'Svg Flow Box',
+        description: 'Lightweight SVG based event highlighting on flows',
+        git: 'https://github.com/asitparida/SVGFlowBox',
+        img: 'assets/project-logos/svg-flow.png',
+        href: 'https://svg-flow-box.azurewebsites.net',
+        width: '100%',
+        height: 'auto',
         bgColor: '$PETER_RIVER',
         content:
         `
         <p><strong>Contribution</strong></p>
         <ul>
-          <li>Designed &amp; developed the working application</li>
+          <li>Designed &amp; developed the vanilla JS plugin&nbsp;</li>
         </ul>
         <p><strong>Description</strong></p>
-        <p>QuickReferences is a tl;dr styled blog intended for quick reads on various topics related to the web development process. Topics range from core JavaScript topics like closures, compositions, currying, web fundamentals like prototypal inheritance to implementations for problems like babylonian method to calculate square-roots and look-n-say sequences. The application features reading playlists curated on similar topics. Almost every article includes a working fiddle link. The blog has been built on top of ASP.Net and uses out of box features from Azure like CosmosDB.&nbsp;</p>
+        <p>Created as part of an freelance gig, the plugin can be used to paint a flow chart like graph representing a timeline of events.&nbsp;</p>
         <p><strong>Notes</strong></p>
         <ul>
-          <li>Angular 1.x/2.x + TypeScript + SASS</li>
-          <li>React + Redux &nbsp;+ TypeScript + SASS</li>
-          <li>Azure CosmosDB, Azure Web Apps</li>
-          <li>ASP .NET Core 2.x + Visual Studio for MacOS</li>
+          <li>Vanilla JS + SVG + SCSS</li>
+          <li>Written in TypeScript</li>
         </ul>
         `
     },
@@ -79,7 +77,7 @@ export const Projects = [
         `
     },
     {
-        name: 'Feeder',
+        name: 'Now',
         description: 'chrome extension for web notifications like github, mail, calendar etc',
         git: 'https://github.com/asitparida/Now',
         img: 'assets/project-logos/now.png',
@@ -162,6 +160,7 @@ export const Projects = [
         size: 'double',
         width: 'auto',
         height: '90%',
+        darker: true,
         bgColor: '$SUNFLOWER',
         content: 
         `
@@ -179,28 +178,15 @@ export const Projects = [
         `
     },
     {
-        name: 'Svg Flow Box',
-        description: 'Lightweight SVG based event highlighting on flows',
-        git: 'https://github.com/asitparida/SVGFlowBox',
-        img: 'assets/project-logos/svg-flow.png',
-        href: 'https://svg-flow-box.azurewebsites.net',
-        width: '100%',
+        name: 'Moosik',
+        description: 'An offline music player using Electron',
+        git: 'https://github.com/asitparida/Moosik',
+        img: 'assets/project-logos/moosik_app.png',
+        href: 'https://github.com/asitparida/Moosik/releases',
+        size: 'double',
+        width: '80%',
         height: 'auto',
-        bgColor: '$PETER_RIVER',
-        content:
-        `
-        <p><strong>Contribution</strong></p>
-        <ul>
-          <li>Designed &amp; developed the vanilla JS plugin&nbsp;</li>
-        </ul>
-        <p><strong>Description</strong></p>
-        <p>Created as part of an freelance gig, the plugin can be used to paint a flow chart like graph representing a timeline of events.&nbsp;</p>
-        <p><strong>Notes</strong></p>
-        <ul>
-          <li>Vanilla JS + SVG + SCSS</li>
-          <li>Written in TypeScript</li>
-        </ul>
-        `
+        bgColor: '$PETER_RIVER'
     },
     {
         name: 'Light Wizard ',
@@ -259,18 +245,34 @@ export const Projects = [
         size: 'double',
         width: '70%',
         height: 'auto',
+        darker: true,
         bgColor: '$SUNFLOWER'
     },
     {
-        name: 'Moosik',
-        description: 'An offline music player using Electron',
-        git: 'https://github.com/asitparida/Moosik',
-        img: 'assets/project-logos/moosik_app.png',
-        href: 'https://github.com/asitparida/Moosik/releases',
-        size: 'double',
-        width: '80%',
-        height: 'auto',
-        bgColor: '$PETER_RIVER'
+        name: 'Quick References',
+        description: 'blog for tl;dr snips on tech stacks',
+        git: 'https://github.com/asitparida/QuickReferences',
+        img: 'assets/project-logos/quickref.png',
+        href: 'http://quick-ref.azurewebsites.net',
+        width: 'auto',
+        height: '50%',
+        bgColor: '$PETER_RIVER',
+        content:
+        `
+        <p><strong>Contribution</strong></p>
+        <ul>
+          <li>Designed &amp; developed the working application</li>
+        </ul>
+        <p><strong>Description</strong></p>
+        <p>QuickReferences is a tl;dr styled blog intended for quick reads on various topics related to the web development process. Topics range from core JavaScript topics like closures, compositions, currying, web fundamentals like prototypal inheritance to implementations for problems like babylonian method to calculate square-roots and look-n-say sequences. The application features reading playlists curated on similar topics. Almost every article includes a working fiddle link. The blog has been built on top of ASP.Net and uses out of box features from Azure like CosmosDB.&nbsp;</p>
+        <p><strong>Notes</strong></p>
+        <ul>
+          <li>Angular 1.x/2.x + TypeScript + SASS</li>
+          <li>React + Redux &nbsp;+ TypeScript + SASS</li>
+          <li>Azure CosmosDB, Azure Web Apps</li>
+          <li>ASP .NET Core 2.x + Visual Studio for MacOS</li>
+        </ul>
+        `
     },
     {
         name: 'TopGit',

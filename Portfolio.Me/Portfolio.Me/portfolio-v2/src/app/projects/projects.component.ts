@@ -54,6 +54,7 @@ class Project {
     height: string;
     bgColor: string;
     content: string;
+    darker: boolean = false;
     constructor() {
         this.size = 'single';
         this.width = '100%';
@@ -87,6 +88,7 @@ export class ProjectsComponent implements AfterViewInit {
             _project.publishSrc = _item.href;
             _project.imgSrc = _item.img;
             _project.content = _item.content;
+            _project.darker = _item.darker || false;
             if (_item.size != null)
                 _project.landscapeSize = _item.size;
             if (_item.width != null)
@@ -209,27 +211,25 @@ export class ProjectsComponent implements AfterViewInit {
         document.removeEventListener('click', this.drawerClickListener);
         document.removeEventListener('keyup', this.drawerKeyUpListener);
         const elem: HTMLElement = document.getElementById(this.drawerId);
+        const drawerContainer: any = document.querySelector('[data-tag="project-drawer"]');
         if (elem) {
             projectDrawerOpened = !projectDrawerOpened;
             if (projectDrawerOpened) {
                 let bgColor = COLORS[item.bgColor];
+                const rgb = hexToRgb(bgColor);
+                drawerContainer.style.backgroundColor = `rgba(${rgb.r},${rgb.g},${rgb.b},0.80)`;
                 const projectElm = document.getElementById(item.id);
-                if (projectElm) {
-                    const bgElem = projectElm.querySelector('[data-tag="take-bg"]');
-                    if (bgElem) {
-                        const color = getStyle(bgElem as HTMLElement, 'backgroundColor');
-                        if (color && color !== '') {
-                            bgColor = color;
-                            const elemBg = elem.querySelector('[data-tag="project-drawer-bg"]');
-                            if (elemBg) {
-                                (elemBg as HTMLElement).style.backgroundColor = bgColor;
-                            }
-                        }
-                    }
+                const projectDrawerElm = document.querySelector('[data-tag="project-drawer-bg"]');
+                if (projectDrawerElm) {
+                    (projectDrawerElm as HTMLElement).style.backgroundColor = bgColor;
                 }
                 const elemTitle = elem.querySelector('[data-tag="project-drawer-title"]');
                 if (elemTitle) {
                     elemTitle.textContent = item.name;
+                    elemTitle.classList.remove('darker');
+                    if (item.darker) {
+                        elemTitle.classList.add('darker');
+                    }
                 }
                 const elemDescription = elem.querySelector('[data-tag="project-drawer-description"]');
                 if (elemDescription) {
@@ -246,6 +246,10 @@ export class ProjectsComponent implements AfterViewInit {
                         (webLnk as HTMLAnchorElement).href = item.publishSrc;
                         webLnk.classList.add('show');
                         (webLnk as HTMLElement).style.backgroundColor = COLORS[item.bgColor];
+                        (webLnk as HTMLElement).style.color = '#fff';
+                        if (item.darker) {
+                            (webLnk as HTMLElement).style.color = '#000';
+                        }
                     }
                 }
                 const gitLnk = elem.querySelector('[data-tag="source-code"]');
@@ -255,6 +259,17 @@ export class ProjectsComponent implements AfterViewInit {
                         (gitLnk as HTMLAnchorElement).href = item.githubSrc;
                         gitLnk.classList.add('show');
                         (gitLnk as HTMLElement).style.backgroundColor = COLORS[item.bgColor];
+                        (gitLnk as HTMLElement).style.color = '#fff';
+                        if (item.darker) {
+                            (gitLnk as HTMLElement).style.color = '#000';
+                        }
+                    }
+                }
+                const elemClose = elem.querySelector('.close');
+                if (elemClose) {
+                    elemClose.classList.remove('darker');
+                    if (item.darker) {
+                        elemClose.classList.add('darker');
                     }
                 }
                 elem.classList.remove('anim', 'out');
