@@ -160,7 +160,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       </div>
     </div>
     <div class="dock-container pull-right">
-      <a class="dock-item" target="_blank" href="https://1drv.ms/b/s!AOxIP7jZLLS4hpRN" aria-label="Asit Parida Resume" title="Resume">
+      <a class="dock-item" target="_blank" href="https://1drv.ms/b/s!AuxIP7jZLLS4hp91c8TRcAyS9rCmyw" aria-label="Asit Parida Resume" title="Resume">
         <svg width="20px" height="20px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
           stroke-linejoin="round" stroke-miterlimit="1.414">
           <g>
