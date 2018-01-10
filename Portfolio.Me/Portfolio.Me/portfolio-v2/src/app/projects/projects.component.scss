@@ -521,6 +521,9 @@
             top:0;
             right: 0;
         }
+        &.darker {
+            color: #000;
+        }
     }
     .project-drawer {
         max-height: 90vh;
@@ -552,6 +555,10 @@
             padding:  36px 48px;
             @include respond-to-mobile {
                 padding:  24px;
+            }
+            &.darker {
+                background: rgba(0,0,0,0);
+                color: #000;
             }
         }
         a.project-links {
@@ -617,9 +624,9 @@
                     padding-left: 20px;
                 }
                 @include respond-to-mobile {
-                    height: calc(100vh - 157px);
+                    height: calc(100vh - 190px);
                     max-height: calc(100vh - 157px);
-                    padding: 0 24px;
+                    padding: 24px 24px 48px 24px;
                 }
             }
 
