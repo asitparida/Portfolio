@@ -54,6 +54,7 @@
             box-sizing: border-box;
             text-align: center;
             color: #909090;
+            background: transparent;
             &.active {
                 font-weight: bold;
                 color: $PETER_RIVER;
