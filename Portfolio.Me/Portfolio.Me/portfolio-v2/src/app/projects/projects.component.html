@@ -1,7 +1,6 @@
-<!-- <div class="grid-wrap-separator hidden-on-xs" data-tag="dark-mode-applicable"></div> -->
 <section class="grid-wrap">
     <div class="project-drawer-container out" data-tag="project-drawer" [attr.id]="drawerId">
-        <div class="project-drawer" data-tag="project-drawer-bg" >
+        <div class="project-drawer" data-tag="project-drawer-bg">
             <div class="close" (click)="closeProjectDrawer()">x</div>
             <label data-tag="project-drawer-title"></label>
             <a class="project-links" href="" target="_blank" data-tag="app-link">Visit Website</a>
@@ -9,9 +8,8 @@
             <p data-tag="project-drawer-description"></p>
         </div>
     </div>
-    <ul class="grid loaded swipe-down" data-tag="dark-mode-applicable" id="highlight-grid">
+    <ul class="grid loaded swipe-down assign-grid-width assign-opacity" data-tag="dark-mode-applicable">
         <li data-color="$TURQUOISE" class="grid-item shown" id="pro_999" size="double">
-            <!-- <a href="http://www.lean-case.com/" target="_blank" data-tag="take-width"> -->
             <a target="_blank" data-tag="take-width" (click)="openProjectDrawer(LEANCASE)">
                 <div class="grid-item-content-container" data-tag="take-bg">
                     <img class="highlight-demo-pic" deferLoad src="assets/project-logos/lean-case.png" />
@@ -27,7 +25,6 @@
     </ul>
     <ul class="grid swipe-down" id="grid" data-tag="dark-mode-applicable">
         <li *ngFor="let item of projects; let i = index;" [attr.data-color]="item.bgColor" class="grid-item" [attr.id]="item.id">
-            <!-- <a [attr.href]="item.publishSrc" target="_blank"> -->
             <a target="_blank" (click)="openProjectDrawer(item)">
                 <div class="grid-item-content-container" data-tag="take-bg">
                     <img deferLoad [style.width]="item.width" [style.height]="item.height" [attr.data-tag-lazy]="item.imgSrc" />
@@ -44,4 +41,3 @@
     </ul>
     <div class="clear-xs-both"></div>
 </section>
-<div class="grid-wrap-separator hidden-on-xs reverse" data-tag="dark-mode-applicable"></div>

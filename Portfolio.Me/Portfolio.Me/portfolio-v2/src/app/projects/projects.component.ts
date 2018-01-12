@@ -116,6 +116,7 @@ export class ProjectsComponent implements AfterViewInit {
                     viewportFactor: 0.20
                 }, () => {
                     this.hightlightGridLayoutAdjuster();
+                    // this.showTimeline();
                 });
                 setTimeout(this.hightlightGridLayoutAdjuster);
                 this.currentWindowSize = 1;
@@ -143,6 +144,7 @@ export class ProjectsComponent implements AfterViewInit {
                     }
                 }
                 this.currentWindowSize = 0;
+                // this.showTimeline();
             } else {
                 this.reload();
             }
@@ -152,11 +154,16 @@ export class ProjectsComponent implements AfterViewInit {
     hightlightGridLayoutAdjuster() {
         setTimeout(() => {
             const gridElm: HTMLElement = document.getElementById('grid');
-            const highlightGridElm: HTMLElement = document.getElementById('highlight-grid');
-            if (gridElm && highlightGridElm) {
+            const highlightGridElms = document.querySelectorAll('.assign-grid-width');
+            if (gridElm && highlightGridElms.length > 0) {
                 const props: ClientRect = gridElm.getBoundingClientRect();
                 if (props) {
-                    highlightGridElm.style.width = props.width + 'px';
+                    for ( var i = 0; i < highlightGridElms.length; i ++) {
+                        (highlightGridElms[i] as HTMLElement).style.width = props.width + 'px';
+                        if ((highlightGridElms[i] as HTMLElement).classList.contains('assign-opacity')) {
+                            (highlightGridElms[i] as HTMLElement).style.opacity = '1';
+                        }
+                    }
                 }
             }
         });
