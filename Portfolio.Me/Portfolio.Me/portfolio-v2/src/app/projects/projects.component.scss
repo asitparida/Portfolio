@@ -635,11 +635,20 @@
 }
 
 body.dark {
+    .project-drawer-container {
+        background: rgba(#363636,0.80) !important;
+    }
     .project-drawer-container .project-drawer {
-        background: #fff !important;
+        background: #565656 !important;
         a.project-links {
-            background: #000 !important;
+            background: #565656 !important;
             color: #fff !important;
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: rgba(0,0,0, 0.10) !important;
+                color: #fff !important;
+            }
         }
     }
 }
