@@ -251,9 +251,9 @@ export const Projects = [
     {
         name: 'Quick References',
         description: 'blog for tl;dr snips on tech stacks',
-        git: 'https://github.com/asitparida/QuickReferences',
+        git: 'https://github.com/asitparida/tldr-xyz',
         img: 'assets/project-logos/quickref.png',
-        href: 'http://quick-ref.azurewebsites.net',
+        href: 'http://tl-dr.azurewebsites.net/',
         width: 'auto',
         height: '50%',
         bgColor: '$PETER_RIVER',
