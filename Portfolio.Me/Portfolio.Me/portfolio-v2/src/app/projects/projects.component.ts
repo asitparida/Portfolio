@@ -4,7 +4,7 @@ import {
     ViewEncapsulation,
     HostListener
 } from '@angular/core';
-import { Projects as PROJECTS_ARRAY, LEANCASE } from './projects.definitions';
+import { Projects as PROJECTS_ARRAY } from './projects.definitions';
 import * as _ from 'underscore';
 import { Element } from '@angular/compiler';
 
@@ -55,6 +55,7 @@ class Project {
     bgColor: string;
     content: string;
     darker: boolean = false;
+    isNew: boolean = false;
     constructor() {
         this.size = 'single';
         this.width = '100%';
@@ -76,7 +77,6 @@ export class ProjectsComponent implements AfterViewInit {
     projects: any[] = [];
     currentWindowSize = null;
     drawerId = 'drawer' + Math.floor(Math.random() * 100);
-    LEANCASE = LEANCASE;
     constructor() {
         let self = this;
         _.each(PROJECTS_ARRAY, (_item: any, _iter: number) => {
@@ -89,6 +89,7 @@ export class ProjectsComponent implements AfterViewInit {
             _project.imgSrc = _item.img;
             _project.content = _item.content;
             _project.darker = _item.darker || false;
+            _project.isNew = _item.isNew || false;
             if (_item.size != null)
                 _project.landscapeSize = _item.size;
             if (_item.width != null)

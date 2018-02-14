@@ -41,7 +41,11 @@
             background: rgba($color, 0.8) 20px 20px no-repeat;
         }
     }
-    @include respond-to-mobile {
+    label.featured {
+        span {
+            color: $foreground;
+            background: $color;
+        }
     }
 }
 
@@ -395,6 +399,27 @@
         }
         &[data-color="$BELIZE_HOLE"] {
             @include INSERT_HOVER_BGS($BELIZE_HOLE, 40, #fff)
+        }
+        label.featured {
+            margin: 0;
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            z-index: 11;
+            font-size: x-small;
+            text-align: left;
+            span {
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                padding: 4px;
+                display: inline-block;
+                margin: 0;
+                text-align: center;
+            }
+            @include respond-to-mobile {
+                text-align: right;
+            }
         }
         &-content-container {
             @include respond-to-mobile {

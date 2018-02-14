@@ -1,33 +1,86 @@
 // tslint:disable:max-line-length
-export const LEANCASE = {
-    name: 'Lean-Case',
-    description: 'a fintech app to plan and model day-to-day business operations and revenue subscriptions',
-    git: null,
-    img: 'assets/project-logos/quickref.png',
-    href: 'http://www.lean-case.com/',
-    width: 'auto',
-    height: '50%',
-    bgColor: '$TURQUOISE',
-    id: 'pro_999',
-    publishSrc: 'http://www.lean-case.com/',
-    githubSrc: null,
-    content:
-    `
-    <p><strong>Contribution</strong></p>
-    <ul>
-      <li>Serving as freelance consultant for the project wherein I am helping redesign the experience with modern UX</li>
-      <li>Contributing to the development process as a design/front-end developer</li>
-    </ul>
-    <p><strong>Description</strong></p>
-    <p>A fin-tech start-up, Lean-Case, is a business case portal for organizations to connect with&nbsp;customers to create, manage and track the right plans and gain insights. The SAAS tool allows us to model revenues mix and provides flexible cost planning tools. With an array of templates to choose from like Subscription B2B/B2C, eCommerce, Marketplace, Advertising, License, Professional Service, etc., the application helps understand the unit economics of a customer contract and a Sales Team and&nbsp;the viability of the business model.</p>
-    <p><strong>Notes</strong></p>
-    <ul>
-      <li>Angular 2.x/4.x + TypeScript + SASS</li>
-      <li>MongoDB, RabbitMQ, OAuth 2.0, AWS</li>
-    </ul>
-    `
-};
 export const Projects = [
+    {
+        name: 'Lean-Case',
+        description: 'a fintech app to plan and model day-to-day business operations and revenue subscriptions',
+        git: null,
+        img: 'assets/project-logos/lean-case.png',
+        href: 'http://www.lean-case.com/',
+        width: 'auto',
+        height: '65%',
+        isNew: true,
+        bgColor: '$TURQUOISE',
+        githubSrc: null,
+        content:
+            `
+        <p><strong>Contribution</strong></p>
+        <ul>
+            <li>Serving as freelance consultant for the project wherein I am helping redesign the experience with modern UX</li>
+            <li>Contributing to the development process as a design/front-end developer</li>
+        </ul>
+        <p><strong>Description</strong></p>
+        <p>A fin-tech start-up, Lean-Case, is a business case portal for organizations to connect with&nbsp;customers to create, manage and track the right plans and gain insights. The SAAS tool allows us to model revenues mix and provides flexible cost planning tools. With an array of templates to choose from like Subscription B2B/B2C, eCommerce, Marketplace, Advertising, License, Professional Service, etc., the application helps understand the unit economics of a customer contract and a Sales Team and&nbsp;the viability of the business model.</p>
+        <p><strong>Notes</strong></p>
+        <ul>
+            <li>Angular 2.x/4.x + TypeScript + SASS</li>
+            <li>MongoDB, RabbitMQ, OAuth 2.0, AWS</li>
+        </ul>
+    `
+    },
+    {
+        name: 'uif-fabric',
+        description: 'The unofficial Angular 2/4 components library built for Office UI fabric.',
+        git: 'https://github.com/asitparida/uif-fabric',
+        img: 'assets/project-logos/uif-fabric.png',
+        href: 'https://uif-fabric.azurewebsites.net',
+        width: 'auto',
+        height: '45%',
+        isNew: true,
+        bgColor: '$PETER_RIVER',
+        githubSrc: null,
+        content:
+            `
+        <p><strong>Contribution</strong></p>
+        <ul>
+          <li>Developing the working angular 2/4 components adapted from the fabric design language created by Microsoft</li>
+        </ul>
+        <p><strong>Description</strong></p>
+        <p>Fabric is the official UX design framework for Microsoft's Office Add-ins. With Fabric, add-ins blend seamlessly with Word, Excel, PowerPoint, and Outlook. </p>
+        <p>The component implemementations offers a variety of UI elements to help you create an experience in Angular front-end framework that delights users and complements Microsoft's design language.</p>
+        <p><strong>Notes</strong></p>
+        <ul>
+          <li>Angular 2.x/4.x + TypeScript + SASS</li>
+          <li>Office UI Fabric JS, Office UI Fabric Core, Azure</li>
+        </ul>
+        `
+    },
+    {
+        name: 'tl;dr',
+        description: 'blog for tl;dr snips on javascript concepts and problems',
+        git: 'https://github.com/asitparida/tldr-xyz',
+        img: 'assets/profile-skills/js.png',
+        href: 'http://tl-dr.azurewebsites.net/',
+        width: 'auto',
+        height: '25%',
+        isNew: true,
+        bgColor: '$SUNFLOWER',
+        content:
+            `
+        <p><strong>Contribution</strong></p>
+        <ul>
+          <li>Designed &amp; developed the working application</li>
+        </ul>
+        <p><strong>Description</strong></p>
+        <p>QuickReferences is a tl;dr styled blog intended for quick reads on various topics related to the web development process. Topics range from core JavaScript topics like closures, compositions, currying, web fundamentals like prototypal inheritance to implementations for problems like babylonian method to calculate square-roots and look-n-say sequences. The application features reading playlists curated on similar topics. Almost every article includes a working fiddle link. The blog has been built on top of ASP.Net and uses out of box features from Azure like CosmosDB.&nbsp;</p>
+        <p><strong>Notes</strong></p>
+        <ul>
+          <li>Angular 1.x/2.x + TypeScript + SASS</li>
+          <li>React + Redux &nbsp;+ TypeScript + SASS</li>
+          <li>Azure CosmosDB, Azure Web Apps</li>
+          <li>ASP .NET Core 2.x + Visual Studio for MacOS</li>
+        </ul>
+        `
+    },
     {
         name: 'Svg Flow Box',
         description: 'Lightweight SVG based event highlighting on flows',
@@ -38,7 +91,7 @@ export const Projects = [
         height: 'auto',
         bgColor: '$PETER_RIVER',
         content:
-        `
+            `
         <p><strong>Contribution</strong></p>
         <ul>
           <li>Designed &amp; developed the vanilla JS plugin&nbsp;</li>
@@ -62,7 +115,7 @@ export const Projects = [
         height: 'auto',
         bgColor: '$ALIZARIN',
         content:
-        `
+            `
         <p><strong>Contribution</strong></p>
         <ul>
           <li>Developed the working prototype based on a redesign by Dmitriy Kharaberyush's @ <a rel="nofollow" href="https://dribbble.com/shots/3257279-Reddit-Trainy/attachments/699302">https://dribbble.com/shots/3257279-Reddit-Trainy/attachments/699302</a></li>
@@ -86,7 +139,7 @@ export const Projects = [
         height: 'auto',
         bgColor: '$PETER_RIVER',
         content:
-        `
+            `
         <p><strong>Contribution</strong></p>
         <ul>
           <li>Designed and developed the working prototype</li>
@@ -111,7 +164,7 @@ export const Projects = [
         height: 'auto',
         bgColor: '$NEPHRITIS',
         content:
-        `
+            `
         <p><strong>Contribution</strong></p>
         <ul>
           <li>Developed the working prototype based on the original design by <a href="http://ahappyphase.com/">Sudeep Phase</a></li>
@@ -137,7 +190,7 @@ export const Projects = [
         height: 'auto',
         bgColor: '$PETER_RIVER',
         content:
-        `
+            `
         <p><strong>Contribution</strong></p>
         <ul>
           <li>Designed and developed the plugin</li>
@@ -162,8 +215,8 @@ export const Projects = [
         height: '90%',
         darker: true,
         bgColor: '$SUNFLOWER',
-        content: 
-        `
+        content:
+            `
         <p><strong>Contribution</strong></p>
         <ul>
           <li>Created and animated the illustrations and the storyline</li>
@@ -198,7 +251,7 @@ export const Projects = [
         height: 'auto',
         bgColor: '$ALIZARIN',
         content:
-        `
+            `
         <p><strong>Contribution</strong></p>
         <ul>
           <li>Designed &amp; developed the wizard plugin for Angular 2.X</li>
@@ -221,8 +274,8 @@ export const Projects = [
         width: '90%',
         height: 'auto',
         bgColor: '$PETER_RIVER',
-        content: 
-        `
+        content:
+            `
         <p><strong>Contribution</strong></p>
         <ul>
           <li>Designed &amp; developed the grid plugin for Angular 2.X</li>
@@ -258,7 +311,7 @@ export const Projects = [
         height: '50%',
         bgColor: '$PETER_RIVER',
         content:
-        `
+            `
         <p><strong>Contribution</strong></p>
         <ul>
           <li>Designed &amp; developed the working application</li>
