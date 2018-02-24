@@ -678,6 +678,9 @@ body.dark {
     box-sizing: border-box;
     color: #000;
     background: #fff;
+    &:not(.visible) {
+        display: none;
+    }
 
     @include respond-to-mobile {
         padding: 0;

@@ -8,6 +8,8 @@ import { Projects as PROJECTS_ARRAY } from './projects.definitions';
 import * as _ from 'underscore';
 import { Element } from '@angular/compiler';
 
+declare var gtag;
+
 function getStyle(el, styleProp) {
     if (el.currentStyle) {
         return el.currentStyle[styleProp];
@@ -159,7 +161,7 @@ export class ProjectsComponent implements AfterViewInit {
             if (gridElm && highlightGridElms.length > 0) {
                 const props: ClientRect = gridElm.getBoundingClientRect();
                 if (props) {
-                    for ( var i = 0; i < highlightGridElms.length; i ++) {
+                    for (var i = 0; i < highlightGridElms.length; i++) {
                         (highlightGridElms[i] as HTMLElement).style.width = props.width + 'px';
                         if ((highlightGridElms[i] as HTMLElement).classList.contains('assign-opacity')) {
                             (highlightGridElms[i] as HTMLElement).style.opacity = '1';
@@ -216,13 +218,21 @@ export class ProjectsComponent implements AfterViewInit {
     }
 
     openProjectDrawer(item) {
+        if (gtag) {
+            gtag('event', 'open-project-detail', {
+                'event_category': 'Projects',
+                'event_label': item.name
+            });
+        }
         document.removeEventListener('click', this.drawerClickListener);
         document.removeEventListener('keyup', this.drawerKeyUpListener);
         const elem: HTMLElement = document.getElementById(this.drawerId);
         const drawerContainer: any = document.querySelector('[data-tag="project-drawer"]');
         if (elem) {
             projectDrawerOpened = !projectDrawerOpened;
+            (drawerContainer as HTMLElement).classList.remove('visible');
             if (projectDrawerOpened) {
+                (drawerContainer as HTMLElement).classList.add('visible');
                 let bgColor = COLORS[item.bgColor];
                 const rgb = hexToRgb(bgColor);
                 drawerContainer.style.backgroundColor = `rgba(${rgb.r},${rgb.g},${rgb.b},0.80)`;

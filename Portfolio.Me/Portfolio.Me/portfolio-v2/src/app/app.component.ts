@@ -10,6 +10,8 @@ declare var mojs: {
   ShapeSwirl: any
 };
 
+declare var gtag;
+
 const CIRCLE_OPTS = {
   left: 0, top: 0,
   scale: { 0: 1 },
@@ -136,6 +138,18 @@ export class AppComponent implements OnInit, AfterViewInit {
         .replay();
 
     });
+  }
+
+  activateTab(index) {
+    if (this.currentTab !== index) {
+      if (gtag) {
+        gtag('event', 'open-navigation-detail', {
+          'event_category': 'Navigation',
+          'event_label': index === 1 ? 'About Me' : 'Projects'
+        });
+      }
+      this.currentTab = index;
+    }
   }
 
   ngOnInit() {
@@ -271,13 +285,13 @@ export class AppComponent implements OnInit, AfterViewInit {
     document.addEventListener('load', (e: Event) => {
       const elm = e.target as HTMLElement;
       if (elm.tagName === 'IMG') {
-          if (elm.hasAttribute('data-lazy-load')) {
-              if (elm.getAttribute('data-lazy-load') === 'true') {
-                  elm.classList.add('show');
-              }
+        if (elm.hasAttribute('data-lazy-load')) {
+          if (elm.getAttribute('data-lazy-load') === 'true') {
+            elm.classList.add('show');
           }
+        }
       }
-  }, true);
+    }, true);
   }
 
 }

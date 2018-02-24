@@ -34,7 +34,9 @@ body {
     padding: 0;
     overflow-x: hidden;
     &.no-overflow {
-        overflow-y: hidden;
+        @include respond-to-mobile {
+            overflow-y: hidden;
+        }
     }
     &.dark {
         background-color: $DARKMODE_BG;

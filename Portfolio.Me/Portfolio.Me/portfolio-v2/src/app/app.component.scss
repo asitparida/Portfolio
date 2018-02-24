@@ -27,7 +27,7 @@
     }
 }
 .tabs {
-    text-align: left;
+    text-align: center;
     display: block;
     margin: 15px auto 0 auto;
     padding: 0  ;
@@ -40,7 +40,8 @@
         border-bottom: 1px dashed rgba($PETER_RIVER, 0.50);
         @include respond-to-except-mobile{
             text-align: center;
-            border-bottom: none;   
+            display: inline-block;
+            // border-bottom: none;   
         }
         @include respond-to-mobile {
             padding: 0;
@@ -66,9 +67,9 @@
                 color: $PETER_RIVER;
                 @include respond-to-except-mobile{
                     width: auto;
-                    border-radius: 30px;
-                    padding: 0 20px;
-                    background: lighten(#3498db, 40);
+                    // border-radius: 30px;
+                    // padding: 0 20px;
+                    // background: lighten(#3498db, 40);
                 }
             }
             @include respond-to-mobile {
