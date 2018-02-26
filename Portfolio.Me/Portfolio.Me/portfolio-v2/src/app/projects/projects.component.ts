@@ -69,6 +69,13 @@ class Project {
 declare var GridScrollFx: any;
 let projectDrawerOpened = false;
 
+function RemoveVisibleInDrawer() {
+    const drawerContainer: any = document.querySelector('[data-tag="project-drawer"]');
+    if (drawerContainer) {
+        (drawerContainer as HTMLElement).classList.remove('visible');
+    }
+}
+
 @Component({
     selector: 'app-projects',
     templateUrl: './projects.component.html',
@@ -193,6 +200,7 @@ export class ProjectsComponent implements AfterViewInit {
             }
         }
         projectDrawerOpened = false;
+        RemoveVisibleInDrawer();
     }
     drawerKeyUpListener(e: KeyboardEvent) {
         if (e.keyCode === 27) {
@@ -202,6 +210,7 @@ export class ProjectsComponent implements AfterViewInit {
                 elemTarget.classList.add('anim', 'out');
                 document.body.classList.remove('no-overflow');
                 projectDrawerOpened = false;
+                RemoveVisibleInDrawer();
             }
         }
     }
@@ -215,6 +224,7 @@ export class ProjectsComponent implements AfterViewInit {
         }
         document.removeEventListener('click', this.drawerClickListener);
         document.body.classList.remove('no-overflow');
+        RemoveVisibleInDrawer();
     }
 
     openProjectDrawer(item) {
