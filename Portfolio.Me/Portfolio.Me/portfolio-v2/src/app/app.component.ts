@@ -213,7 +213,7 @@ export class AppComponent implements OnInit, AfterViewInit {
           </g>
         </svg>
       </a>
-      <a class="dock-item" target="_blank" href="https://in.linkedin.com/in/asparida" aria-label="linked in profile" title="LinkedIn">
+      <a class="dock-item" target="_blank" href="https://www.linkedin.com/in/asitparida/" aria-label="linked in profile" title="LinkedIn">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 485 485" style="enable-background:new 0 0 485 485;" xml:space="preserve" width="20px" height="20px">
           <g>
             <rect x="89.016" y="189.906" width="67.506" height="203.096"/>
