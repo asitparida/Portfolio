@@ -1,0 +1,23 @@
+@import '../../shared';
+
+.app {
+    &-footer {
+        height: 72px;
+        width: 100%;
+        background: #fff;
+        display: block;
+       &:before {
+            background: linear-gradient(-45deg, #fff 16px, red 16px, #fff 16px, transparent 0), linear-gradient(45deg,  #fff 16px, transparent 0);
+            background-position: left top;
+            background-repeat: repeat-x;
+            background-size: 18px 32px;
+            content: " ";
+            display: block;
+            height: 32px;
+            width: 100%;
+            position: relative;
+            bottom: 32px;
+            left: 0;
+        }
+    }
+}

@@ -1,0 +1,163 @@
+@import '../../shared';
+.app {
+    &-skills {
+        width: 100%;
+        @include respond-to-mobile {
+            background: none;
+        }
+        background: lighten(#3498db, 40);
+        display: block;
+        &.dark {
+            background: $DARKMODE_BG_SECONDARY;
+            .content {
+                &-skills-label {
+                    color:rgba(255, 255, 255, 0.8);
+                }
+                &-skills-holder {
+                    &-arrow-holder {
+                        background: $DARKMODE_BG;
+                        &.disabled {
+                            .content-skills-holder-arrow-holder-arrow {
+                                opacity: 0.65;
+                            }
+                        }
+                        &-arrow {
+                            &--mover {
+                                border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+                                border-left: 2px solid rgba(255, 255, 255, 0.8);
+                            }
+                        }
+                    }
+                }
+                &-skills {
+                    &-badge {
+                        img {
+                            filter:grayscale(100%);
+                        }
+                    }
+                }
+            }
+        }
+        .content {
+            &-skills-label {
+                margin: 0;
+                font-size: medium;
+                line-height: 60px;
+                font-weight: 500;
+                padding: 45px 30px 30px 30px;
+                font-family: 'Open sans', sans-serif;
+                color: $PETER_RIVER;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: bold;
+                width: 100%;
+                display: block;
+                box-sizing: border-box;
+                @include respond-to-mobile {
+                    text-align: center;
+                    width: 100%;
+                    padding: 0 0 30px 0;
+                    border-bottom-width: 3px;
+                    font-size: large;
+                    font-weight: 100;
+                    text-transform: capitalize;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+            }
+            &-skills-holder {
+                width: 100%;
+                height: 220px;
+                position: relative;
+                overflow: hidden;
+                @include respond-to-mobile {
+                    height: 130px;
+                    margin-bottom: 0;
+                }
+                &-arrow-holder {
+                    position: absolute;
+                    top: 50px;
+                    height: 60px;
+                    background: lighten(#3498db, 30);
+                    width: 30px;
+                    cursor: pointer;
+                    outline: none;
+                    @include respond-to-mobile {
+                        top: 35px;
+                        background: lighten(#3498db, 40);
+                    }
+                    &.disabled {
+                        .content-skills-holder-arrow-holder-arrow {
+                            opacity: 0.65;
+                        }
+                    }
+                    &-arrow {
+                        position: absolute;
+                        overflow: hidden;
+                        display: inline-block;
+                        font-size: 12px;
+                        width: 1em;
+                        height: 1em;
+                        margin-top: 11px;
+                        &--mover {
+                            border-bottom: 2px solid $PETER_RIVER;
+                            border-left: 2px solid $PETER_RIVER;
+                            transform: rotate(-45deg) skew(0deg);
+                            top: 12px;
+                        }
+                    }
+                    &.left {
+                        left: 0;
+                        .content-skills-holder-arrow-holder-arrow--mover {
+                            transform: rotate(46deg) skew(0deg);
+                            left: 10px;
+                        }
+                    }
+                    &.right {
+                        right: 0;
+                        .content-skills-holder-arrow-holder-arrow--mover {
+                            transform: rotate(-135deg) skew(0deg);
+                            right: 10px;
+                        }
+                    }
+                }
+            }
+            &-skills {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                height: 260px;
+                overflow-y: hidden;
+                overflow-x: auto;
+                white-space: nowrap;
+                @include respond-to-mobile {
+                    height: 150px;
+                }
+                &-wrapper {
+                    width: calc(100% - 90px);
+                    margin-left: 45px;
+                    height: 100%;
+                    overflow: hidden;
+                }
+                &-badge {
+                    display: inline-block;
+                    margin: 30px 45px 0 45px;
+                    @include respond-to-mobile {
+                        margin: 30px 10px 0 10px;
+                    }
+                    img {
+                        height: 100px;
+                        opacity: 0;
+                        transition: opacity 0.2s ease-in 0s;
+                        &.show {
+                            opacity: 1;
+                        }
+                        @include respond-to-mobile {
+                            height: 70px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
