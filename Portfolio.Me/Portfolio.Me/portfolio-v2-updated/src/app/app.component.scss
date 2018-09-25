@@ -37,7 +37,6 @@
     }
     .tab-toggler {
         padding: 5px 5px 0 5px;
-        border-bottom: 1px dashed rgba($PETER_RIVER, 0.50);
         @include respond-to-except-mobile{
             text-align: center;
             display: inline-block;
@@ -62,14 +61,13 @@
             text-align: center;
             color: #909090;
             background: transparent;
+            border-bottom: 3px solid rgba($PETER_RIVER, 0.10);
             &.active {
                 font-weight: bold;
                 color: $PETER_RIVER;
+                border-bottom: 3px solid rgba($PETER_RIVER, 1);
                 @include respond-to-except-mobile{
                     width: auto;
-                    // border-radius: 30px;
-                    // padding: 0 20px;
-                    // background: lighten(#3498db, 40);
                 }
             }
             @include respond-to-mobile {
@@ -81,7 +79,6 @@
             }
             @include respond-to-except-mobile{
                 width: auto;
-                border-radius: 30px;
                 padding: 0 15px;
             }
         }

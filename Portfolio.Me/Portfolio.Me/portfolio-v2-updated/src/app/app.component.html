@@ -1,8 +1,8 @@
 <app-header></app-header>
-<div style="background:#fff">
+<div style="background:#fff" id="mainContent">
     <div class="grid-separator hidden-on-xs" data-tag="dark-mode-applicable"></div>
     <div class="tabs responsive-grid-width">
-        <div class="tab-toggler">
+        <div class="tab-toggler" >
             <button [class.active]="currentTab === 0" (click)="activateTab(0)">Projects</button>
             <button [class.active]="currentTab === 1" (click)="activateTab(1)">About Me</button>
         </div>
@@ -12,3 +12,4 @@
     <div class="grid-separator hidden-on-xs reverse" data-tag="dark-mode-applicable"></div>
 </div>
 <app-skills></app-skills>
+<app-top-scroller></app-top-scroller>

@@ -11,6 +11,7 @@ import { FooterComponent } from '../app/footer/footer.component';
 import { GitLinkComponent } from './git-link.component';
 import { BioComponent } from './bio/bio.component';
 import { DeferLoadDirective } from './projects/defer-load.directive';
+import { TopScrollerComponent } from './top-scroller/top-scroller.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DeferLoadDirective } from './projects/defer-load.directive';
     FooterComponent,
     GitLinkComponent,
     DeferLoadDirective,
-    BioComponent
+    BioComponent,
+    TopScrollerComponent
   ],
   imports: [
     BrowserModule,

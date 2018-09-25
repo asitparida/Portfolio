@@ -17,6 +17,8 @@ const CIRCLE_OPTS = {
   scale: { 0: 1 },
 };
 
+const ENABLE_BURST_ON_CLICK = false;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -114,30 +116,32 @@ export class AppComponent implements OnInit, AfterViewInit {
   currentTab = 0;
   constructor() {
     const self = this;
-    self.burst1.el.style.zIndex = 999;
-    self.largeBurst.el.style.zIndex = 999;
-    self.largeCircle.el.style.zIndex = 999;
-    self.smallCircle.el.style.zIndex = 999;
-    document.addEventListener('click', function (e) {
+    if (ENABLE_BURST_ON_CLICK) {
+      self.burst1.el.style.zIndex = 999;
+      self.largeBurst.el.style.zIndex = 999;
+      self.largeCircle.el.style.zIndex = 999;
+      self.smallCircle.el.style.zIndex = 999;
+      document.addEventListener('click', function (e) {
 
-      self.burst1
-        .tune({ x: e.pageX, y: e.pageY })
-        .generate()
-        .replay();
+        self.burst1
+          .tune({ x: e.pageX, y: e.pageY })
+          .generate()
+          .replay();
 
-      self.largeBurst
-        .tune({ x: e.pageX, y: e.pageY })
-        .replay();
+        self.largeBurst
+          .tune({ x: e.pageX, y: e.pageY })
+          .replay();
 
-      self.largeCircle
-        .tune({ x: e.pageX, y: e.pageY })
-        .replay();
+        self.largeCircle
+          .tune({ x: e.pageX, y: e.pageY })
+          .replay();
 
-      self.smallCircle
-        .tune({ x: e.pageX, y: e.pageY })
-        .replay();
+        self.smallCircle
+          .tune({ x: e.pageX, y: e.pageY })
+          .replay();
 
-    });
+      });
+    }
   }
 
   activateTab(index) {
@@ -174,7 +178,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       </div>
     </div>
     <div class="dock-container pull-right">
-      <a class="dock-item" target="_blank" href="https://1drv.ms/b/s!AuxIP7jZLLS4hp91c8TRcAyS9rCmyw" aria-label="Asit Parida Resume" title="Resume">
+      <a class="dock-item" target="_blank" href="https://1drv.ms/b/s!AuxIP7jZLLS4hqokWCj6I_L7-1_4lg" aria-label="Asit Parida Resume" title="Resume">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="22px" height="22px">
           <g>
             <g>

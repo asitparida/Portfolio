@@ -322,6 +322,9 @@
         box-sizing: border-box;
         text-align: left;
         vertical-align: top;
+        * {
+            cursor: pointer;
+        }
         @include respond-to-mobile {
             width:100% !important;
             padding:0 !important;
