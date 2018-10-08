@@ -196,7 +196,7 @@
 			var onScrollFn = function () {
 				if (!self.didScroll) {
 					self.didScroll = true;
-					setTimeout(function () { self._scrollPage(); }, 200);
+					setTimeout(function () { self._scrollPage(); }, 33);
 				}
 
 				if (self.itemsRenderedCount === self.itemsCount) {
