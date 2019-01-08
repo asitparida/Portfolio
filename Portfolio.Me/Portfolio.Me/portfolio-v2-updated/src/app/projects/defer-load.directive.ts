@@ -1,5 +1,6 @@
 import { Directive, ElementRef, Input, AfterViewInit } from '@angular/core';
 
+// tslint:disable-next-line:directive-selector
 @Directive({ selector: '[deferLoad]' })
 export class DeferLoadDirective implements AfterViewInit {
     element: HTMLImageElement;

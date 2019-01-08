@@ -28,7 +28,7 @@ export class HeaderComponent implements AfterViewInit, OnInit {
     if (!this.showLightHeader) {
       setTimeout(() => {
         const mainTimeline = new mojs.Timeline;
-        let _ch = new Characters(1000);
+        const _ch = new Characters(1000);
         _ch.setWord('asit');
         mainTimeline.add(
           _ch

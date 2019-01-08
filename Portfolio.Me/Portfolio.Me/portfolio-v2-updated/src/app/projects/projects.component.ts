@@ -40,7 +40,7 @@ const COLORS = {
     $POMEGRANATE: '#c0392b',
     $WISTERIA: '#8e44ad',
     $BELIZE_HOLE: '#2980b9'
-}
+};
 
 class Project {
     id: string;
@@ -56,8 +56,8 @@ class Project {
     height: string;
     bgColor: string;
     content: string;
-    darker: boolean = false;
-    isNew: boolean = false;
+    darker = false;
+    isNew = false;
     constructor() {
         this.size = 'single';
         this.width = '100%';
@@ -87,9 +87,9 @@ export class ProjectsComponent implements AfterViewInit {
     currentWindowSize = null;
     drawerId = 'drawer' + Math.floor(Math.random() * 100);
     constructor() {
-        let self = this;
+        const self = this;
         _.each(PROJECTS_ARRAY, (_item: any, _iter: number) => {
-            let _project = new Project();
+            const _project = new Project();
             _project.id = 'pro_' + _iter;
             _project.name = _item.name;
             _project.description = _item.description;
@@ -99,14 +99,18 @@ export class ProjectsComponent implements AfterViewInit {
             _project.content = _item.content;
             _project.darker = _item.darker || false;
             _project.isNew = _item.isNew || false;
-            if (_item.size != null)
+            if (_item.size != null) {
                 _project.landscapeSize = _item.size;
-            if (_item.width != null)
+            }
+            if (_item.width != null) {
                 _project.width = _item.width;
-            if (_item.height != null)
+            }
+            if (_item.height != null) {
                 _project.height = _item.height;
-            if (_item.bgColor != null)
+            }
+            if (_item.bgColor != null) {
                 _project.bgColor = _item.bgColor;
+            }
             self.projects.push(_project);
         });
     }
@@ -168,7 +172,7 @@ export class ProjectsComponent implements AfterViewInit {
             if (gridElm && highlightGridElms.length > 0) {
                 const props: ClientRect = gridElm.getBoundingClientRect();
                 if (props) {
-                    for (var i = 0; i < highlightGridElms.length; i++) {
+                    for (let i = 0; i < highlightGridElms.length; i++) {
                         (highlightGridElms[i] as HTMLElement).style.width = props.width + 'px';
                         if ((highlightGridElms[i] as HTMLElement).classList.contains('assign-opacity')) {
                             (highlightGridElms[i] as HTMLElement).style.opacity = '1';
@@ -243,7 +247,7 @@ export class ProjectsComponent implements AfterViewInit {
             (drawerContainer as HTMLElement).classList.remove('visible');
             if (projectDrawerOpened) {
                 (drawerContainer as HTMLElement).classList.add('visible');
-                let bgColor = COLORS[item.bgColor];
+                const bgColor = COLORS[item.bgColor];
                 const rgb = hexToRgb(bgColor);
                 drawerContainer.style.backgroundColor = `rgba(${rgb.r},${rgb.g},${rgb.b},0.80)`;
                 const projectElm = document.getElementById(item.id);

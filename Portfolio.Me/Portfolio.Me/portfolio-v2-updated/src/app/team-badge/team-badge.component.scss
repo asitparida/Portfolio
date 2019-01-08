@@ -1,0 +1,24 @@
+.svg-badge {
+    background: rgba(#000, 0.03);
+    padding: 10px 30px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .svg-container {
+        height: 36px;
+        width: 36px;
+        // border-radius: 50%;
+        // overflow: hidden;
+    }
+    label {
+        margin: 0 0 0 15px;
+        line-height: 48px;
+        font-size: medium;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: rgba(#000, 0.33);
+        padding: 0;
+    }
+}
