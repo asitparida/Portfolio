@@ -158,6 +158,16 @@
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
+        &.centered {
+            justify-content: center;
+            .tag {
+                width: 250px;
+                align-items: center;
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
         .tag {
             line-height: 36px;
             padding: 5px 15px;
@@ -206,6 +216,14 @@
             margin-right: 10px;
             text-decoration: none;
         }
+    }
+    .macbook-wrapper {
+        padding: 60px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row;
+        width: 100%;
     }
 }
 .alignItemsCenter {

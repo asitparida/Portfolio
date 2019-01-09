@@ -1,4 +1,4 @@
-<div class="navigation">
+<div class="navigation" [attr.id]="navigationBarId">
     <ul>
         <li>
             <a [routerLink]="['home']" routerLinkActive="active-link">Home</a>
@@ -13,7 +13,7 @@
             <a [routerLink]="['tools']" routerLinkActive="active-link">Proficiencies</a>
         </li>
         <li>
-                <a [routerLink]="['contact']" routerLinkActive="active-link">Contact</a>
-            </li>
+            <a [routerLink]="['contact']" routerLinkActive="active-link">Contact</a>
+        </li>
     </ul>
 </div>

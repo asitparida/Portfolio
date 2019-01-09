@@ -7,8 +7,6 @@ declare var Plyr;
     styleUrls: ['./veritas.component.scss']
 })
 export class VeritasComponent implements AfterViewInit, OnInit, OnDestroy {
-
-    tags = ['design', 'evaluative research', 'prototyping', 'react-native'];
     isVideoPlayed = false;
     videoPlayer = null;
     isVideoPiped = false;

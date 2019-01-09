@@ -9,6 +9,10 @@
     top: 0;
     left: 0;
     background: #fff;
+    transition: transform 0.3s ease-out 0s;
+    &.out-of-view {
+        transform: translateY(-100%);
+    }
     ul {
         width: 100%;
         white-space: nowrap;
@@ -16,8 +20,6 @@
         display: flex;
         flex-flow: row;
         justify-content: center;
-        // opacity: 0.50;
-        // border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         &:hover {
             opacity: 1;
         }

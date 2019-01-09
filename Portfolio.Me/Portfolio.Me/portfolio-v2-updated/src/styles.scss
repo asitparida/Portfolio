@@ -351,11 +351,15 @@ table {
     letter-spacing: 1px;
     margin-top: 30px;
     min-width: 100px;
+    display: inline-block;
     &:hover {
         background: #000;
         border-color: #000;
         color: #fff;
         outline: none;
+    }
+    + .portfolio-btn {
+        margin-left: 15px;
     }
 }
 a.portfolio-btn {
