@@ -8,7 +8,7 @@ export const Projects = [
         href: 'http://www.lean-case.com/',
         width: 'auto',
         height: '65%',
-        isNew: true,
+        isNew: false,
         bgColor: '$TURQUOISE',
         githubSrc: null,
         content:
@@ -35,7 +35,7 @@ export const Projects = [
         href: 'https://uif-fabric.azurewebsites.net',
         width: 'auto',
         height: '45%',
-        isNew: true,
+        isNew: false,
         bgColor: '$PETER_RIVER',
         githubSrc: null,
         content:
@@ -62,7 +62,7 @@ export const Projects = [
         href: 'http://tl-dr.azurewebsites.net/',
         width: 'auto',
         height: '25%',
-        isNew: true,
+        isNew: false,
         bgColor: '$SUNFLOWER',
         content:
             `

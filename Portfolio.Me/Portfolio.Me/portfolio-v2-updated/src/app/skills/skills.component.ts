@@ -3,7 +3,7 @@ import * as $ from 'jquery';
 import * as _ from 'underscore';
 import { AfterViewInit } from '@angular/core/src/metadata/lifecycle_hooks';
 
-class Skill {
+export class Skill {
     id: string;
     src: string;
     tag: string;

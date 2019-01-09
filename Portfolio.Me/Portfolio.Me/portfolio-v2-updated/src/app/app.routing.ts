@@ -9,10 +9,18 @@ import { PrivacyGradeComponent } from './collection/privacy-grade/privacy-grade.
 import { TransitDisplayComponent } from './collection/transit-display/transit-display.component';
 import { IdiffComponent } from './collection/idiff/idiff.component';
 import { MoosikComponent } from './collection/moosik/moosik.component';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { OtherProjectsComponent } from './other-projects/other-projects.component';
+import { MySkillsComponent } from './my-skills/my-skills.component';
+import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
     { path: '',   redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
+    { path: 'about-me', component: AboutMeComponent },
+    { path: 'contact', component: ContactComponent },
+    { path: 'other-projects', component: OtherProjectsComponent },
+    { path: 'tools', component: MySkillsComponent },
     { path: 'bun-bun', component: BunBunComponent },
     { path: 'not-so-grey', component: NotSoGreyComponent },
     { path: 'veritas', component: VeritasComponent },

@@ -1,5 +1,9 @@
 @import '../_shared';
 
+.router-content {
+    padding: 60px 0;
+}
+
 .grid-separator {
     background: linear-gradient(-45deg, #e1f0fa 16px, red 16px, #e1f0fa 16px, transparent 0), linear-gradient(45deg, #e1f0fa 16px, transparent 0);
     background-position: left top;

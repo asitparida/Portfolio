@@ -5,6 +5,8 @@ import { Element } from '@angular/compiler';
 
 declare var mojs: any;
 
+const SHOW_HEADER_ANIMATION = false;
+
 
 @Component({
   selector: 'app-header',
@@ -23,9 +25,10 @@ export class HeaderComponent implements AfterViewInit, OnInit {
     } else {
       this.showLightHeader = false;
     }
+    this.showLightHeader = true;
   }
   ngAfterViewInit() {
-    if (!this.showLightHeader) {
+    if (!this.showLightHeader && SHOW_HEADER_ANIMATION) {
       setTimeout(() => {
         const mainTimeline = new mojs.Timeline;
         const _ch = new Characters(1000);

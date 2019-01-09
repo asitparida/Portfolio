@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from '../app/header/header.component';
 import { ProjectsComponent } from '../app/projects/projects.component';
 import { SkillsComponent } from '../app/skills/skills.component';
-import { FooterComponent } from '../app/footer/footer.component';
 import { GitLinkComponent } from './git-link.component';
 import { BioComponent } from './bio/bio.component';
 import { DeferLoadDirective } from './projects/defer-load.directive';
@@ -24,6 +23,11 @@ import { IdiffComponent } from './collection/idiff/idiff.component';
 import { PrivacyGradeComponent } from './collection/privacy-grade/privacy-grade.component';
 import { PictureCarouselComponent } from './picture-carousel/picture-carousel.component';
 import { TeamBadgeComponent } from './team-badge/team-badge.component';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { OtherProjectsComponent } from './other-projects/other-projects.component';
+import { MySkillsComponent } from './my-skills/my-skills.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,6 @@ import { TeamBadgeComponent } from './team-badge/team-badge.component';
     HeaderComponent,
     ProjectsComponent,
     SkillsComponent,
-    FooterComponent,
     GitLinkComponent,
     DeferLoadDirective,
     BioComponent,
@@ -46,7 +49,12 @@ import { TeamBadgeComponent } from './team-badge/team-badge.component';
     IdiffComponent,
     PrivacyGradeComponent,
     PictureCarouselComponent,
-    TeamBadgeComponent
+    TeamBadgeComponent,
+    AboutMeComponent,
+    OtherProjectsComponent,
+    MySkillsComponent,
+    NavigationComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

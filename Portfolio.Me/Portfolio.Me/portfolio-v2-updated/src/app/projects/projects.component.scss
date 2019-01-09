@@ -54,7 +54,7 @@
     padding: 0;
     list-style: none;
     @include respond-to-except-mobile {
-        min-height: 400px;
+        min-height: 300px;
     }
     max-width: 1200px;
     &:nth-child(1){
@@ -76,7 +76,8 @@
             box-sizing: border-box;
             display: block;
             margin: 0 auto;
-            padding: 0 45px 5px 45px;
+            padding: 0 0 0px 0;
+            width: 80%;
             @include respond-to-mobile {
                 padding: 5px 5px 15px 5px;
                 p.info{
@@ -84,7 +85,7 @@
                 }
             }
             p.info {
-                font-weight: 100;
+                // font-weight: 100;
                 line-height: 1.45em;
                 padding-bottom: 15px;
                 @include respond-to-mobile {
@@ -94,6 +95,7 @@
             .timeline-content {
                 width: 100%;
                 display: block;
+                margin-top: 45px;
                 .stop {
                     margin: 0;
                     position: relative;
@@ -111,7 +113,7 @@
                     .stop-content {
                         width: 100%;
                         padding: 0 0 36px 36px;
-                        border-left: 1px dashed rgba($PETER_RIVER, 0.50);
+                        border-left: 1px dashed rgba($NEPHRITIS, 0.50);
                         box-sizing: border-box;
                         float: left;
                         @include respond-to-mobile {
@@ -129,7 +131,7 @@
                             width: 16px;
                             height: 16px;
                             border-radius: 50%;
-                            border: 1px solid $PETER_RIVER;
+                            border: 1px solid $NEPHRITIS;
                             padding: 2px;
                             background: #ffffff;
                             box-sizing: border-box;
@@ -145,15 +147,15 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
-                            background: $PETER_RIVER;
+                            background: $NEPHRITIS;
                             @include respond-to-mobile {
                                 display: none;
                             }
                         }
                         .stop-title {
-                            color: $PETER_RIVER;
+                            color: $NEPHRITIS;
                             letter-spacing: 1px;
-                            font-weight: 500;
+                            font-weight: bold;
                             @include respond-to-mobile {
                                 border-left: none;
                                 padding-left: 36px;
@@ -167,7 +169,7 @@
                                 margin: 6px 0;
                                 list-style: none;
                                 li {
-                                    font-weight: 100;
+                                    // font-weight: 100;
                                     line-height: 1.45em;
                                     position: relative;
                                     padding-left: 5px;
@@ -176,9 +178,9 @@
                                         width: 5px;
                                         height: 5px;
                                         border-radius: 50%;
-                                        background: $PETER_RIVER;
+                                        background: $NEPHRITIS;
                                         position: absolute;
-                                        top: 8px;
+                                        top: 9px;
                                         left: - 15px;
                                     }
                                 }
@@ -186,7 +188,7 @@
                         }
                         label {
                             margin-bottom: 0px;
-                            font-weight: 100;
+                            // font-weight: 100;
                             font-size: medium;
                             strong {
                                 @include respond-to-mobile {
@@ -198,7 +200,7 @@
                         p {
                             margin-bottom: 0;
                             margin-top: 6px;
-                            font-weight: 100;
+                            // font-weight: 100;
                             line-height: 1.45em;
                             @include respond-to-mobile {
                                 text-align: justify;
@@ -316,7 +318,7 @@
         }
     }
     .grid-item {
-        width: 400px;
+        width: 300px;
         padding: 5px;
         box-sizing: border-box;
         box-sizing: border-box;
@@ -432,7 +434,7 @@
                 }
             }
             @include respond-to-except-mobile {
-                height: 400px;
+                height: 300px;
             }
             width: 100%;
             position: absolute;
@@ -464,7 +466,7 @@
         }
         &-text-container {
             @include respond-to-except-mobile {
-                height: 400px;
+                height: 300px;
             }
             width: 100%;
             display: block;
@@ -523,7 +525,8 @@
                     display: block;
                     font-family: 'Open sans', sans-serif;
                     width: calc(100% - 60px);
-                    font-size: x-large;
+                    font-size: large;
+                    font-weight: bold;
                     text-align: left;
                     text-decoration: none;
                     text-transform: lowercase;
