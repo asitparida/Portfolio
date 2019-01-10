@@ -1,7 +1,7 @@
 <div class="picture-carousel-preview" [style.height]="previewHeight" [style.width]="previewWidth" (click)="carouselShown = true;">
     <div class="picture-wrapper" [style.marginRight]="marginRightAdjust" *ngFor="let item of pictureItems; let i = index;"
         [style.right]="(i*25) + 'px'">
-        <div class="picture-card" [style.backgroundImage]="item"></div>
+        <div class="picture-card" [style.backgroundImage]="item.img"></div>
     </div>
 </div>
 <div class="picture-carousel-wrapper" *ngIf="carouselShown">
@@ -13,7 +13,7 @@
         <div class="picture-control right" (click)="move(1)">
             <i></i>
         </div>
-        <img [ngClass]="currentClass" [src]="activeSrc" />
+        <img [ngClass]="currentClass" [src]="activeItem.img" />
         <div class="picture-footer">
             <div class="marker" *ngFor="let item of pictureItems; let i = index;" [class.active]="i === activeIndex"></div>
         </div>

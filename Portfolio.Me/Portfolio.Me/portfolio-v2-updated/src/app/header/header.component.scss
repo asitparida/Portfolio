@@ -165,6 +165,9 @@
                 font-size: 3em;
                 text-transform: capitalize;
                 color: rgba(darken($NEPHRITIS, 0), 1);
+                @include respond-to-mobile {
+                    font-size: 2em;
+                }
             }
         }
     }

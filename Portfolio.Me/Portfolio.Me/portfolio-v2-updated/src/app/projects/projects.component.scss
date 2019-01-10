@@ -79,7 +79,8 @@
             padding: 0 0 0px 0;
             width: 80%;
             @include respond-to-mobile {
-                padding: 5px 5px 15px 5px;
+                padding: 5px 15px 15px 15px;
+                width: 100%;
                 p.info{
                     margin-top: 0;
                 }
@@ -120,6 +121,7 @@
                             border-left: none;
                             padding-left: 0;
                             padding-bottom: 20px;
+                            margin-bottom: 20px;
                         }
                         &.noPaddingBottom {
                             padding-bottom: 0;
@@ -154,7 +156,6 @@
                         }
                         .stop-title {
                             color: $NEPHRITIS;
-                            letter-spacing: 1px;
                             font-weight: bold;
                             @include respond-to-mobile {
                                 border-left: none;
@@ -515,18 +516,19 @@
                 p {
                     @include respond-to-except-mobile {
                         position: absolute;
+                        font-weight: bold;
                     }
                     @include respond-to-mobile {
                         border-top: none;
                         font-size: large;
                         margin-bottom: 0;
+                        font-weight: 500;
                     }
                     top: 45px;
                     display: block;
                     font-family: 'Open sans', sans-serif;
                     width: calc(100% - 60px);
                     font-size: large;
-                    font-weight: bold;
                     text-align: left;
                     text-decoration: none;
                     text-transform: lowercase;

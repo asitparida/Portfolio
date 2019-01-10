@@ -23,14 +23,20 @@
         display: none !important;
     }
 }
+@function to-string($value) {
+    @return inspect($value);
+}
 
 @mixin COLORED_BG($color, $lightenAmount) {
     background-color: #fff;
     /deep/ .project-contents .project-section {
         &:nth-child(2n + 2) {
             background-color: lighten(lighten($color, $lightenAmount), 5) !important;
-        }
-        
+        }   
+    }
+    /deep/ .arrow-holder {
+        background: lighten($color, $lightenAmount);
+        box-shadow: 0px 2px 4px rgba($color,0.75);
     }
 }
 
@@ -59,7 +65,7 @@ html {
         @include COLORED_BG($CARROT, 40)
     }
     &[data-color="$ALIZARIN"] {
-        @include COLORED_BG($ALIZARIN, 40)
+        @include COLORED_BG($ALIZARIN, 35)
     }
     &[data-color="$ORANGE"] {
         @include COLORED_BG($ORANGE, 40)
@@ -71,10 +77,10 @@ html {
         @include COLORED_BG($POMEGRANATE, 40)
     }
     &[data-color="$WISTERIA"] {
-        @include COLORED_BG($WISTERIA, 40)
+        @include COLORED_BG($WISTERIA, 43)
     }
     &[data-color="$BELIZE_HOLE"] {
-        @include COLORED_BG($BELIZE_HOLE, 40)
+        @include COLORED_BG($BELIZE_HOLE, 47);
     }
     &[data-color="$NONE"] {
         @include COLORED_BG(#fff, 100)

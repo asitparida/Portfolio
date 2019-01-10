@@ -13,7 +13,7 @@ export class IdiffComponent implements AfterViewInit, OnDestroy, OnInit {
     constructor() { }
 
     ngOnInit() {
-        document.documentElement.setAttribute('data-color', '$TURQUOISE');
+        document.documentElement.setAttribute('data-color', '$WISTERIA');
     }
 
     ngOnDestroy() {

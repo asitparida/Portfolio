@@ -1,1 +1,10 @@
 @import '../app.component';
+.about-me-container {
+    background: #fff;
+    margin-bottom: -60px;
+}
+.portfolio-btn {
+    @include respond-to-mobile {
+        margin-top: 0;
+    }
+}

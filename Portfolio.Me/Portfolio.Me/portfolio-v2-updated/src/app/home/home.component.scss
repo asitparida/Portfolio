@@ -5,6 +5,9 @@
     align-items: center;
     padding: 60px 60px 45px 60px;
     flex-direction: column;
+    @include respond-to-mobile {
+        padding: 30px 12px 5px 12px;
+    }
     .titles {
         width: 100%;
         display: flex;
@@ -12,6 +15,9 @@
         align-items: center;
         padding: 60px 0;
         flex-direction: column;
+        @include respond-to-mobile {
+            padding: 30px 0;
+        }
     }
     h1 {
         font-size: 6em;
@@ -19,28 +25,54 @@
         margin: 30px 0;
         padding: 0;
         text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.10);
+        text-align: center;
+        @include respond-to-mobile {
+            font-size: 4em;
+            margin: 15px 0;
+            padding: 0 15px;
+        }
     }
     h2 {
         font-size: 2em;
         font-weight: 100;
         margin: 5px 0;
         padding: 0;
+        text-align: center;
+        @include respond-to-mobile {
+            font-size: 1.5em;
+            padding: 0 15px;
+        }
     }
     h3 {
         font-size: 2em;
         font-weight: 100;
         margin: 0;
         padding: 0;
+        text-align: center;
+        @include respond-to-mobile {
+            font-size: 1.5em;
+            padding: 0 12px;
+        }
     }
     .project-wrapper {
         margin: 90px 0 0 0;
         width: 80%;
         display: flex;
         flex-wrap: wrap;
+        @include respond-to-mobile {
+            width: 100%;
+            padding: 0;
+        }
         .project-item-wrapper {
             flex: 1 1 calc(50%);
             padding: 5px;
             height: 300px;
+            @include respond-to-mobile {
+                flex: 1 1 calc(100%);
+                height: auto;
+                margin-bottom: 12px;
+                padding: 0;
+            }
             a {
                 *,
                 & {
@@ -58,6 +90,14 @@
                 padding: 30px 0;
                 flex-flow: column;
                 transition: all 0.3s linear 0s;
+                position: relative;
+                z-index: 1;
+                @include respond-to-mobile {
+                    padding: 30px 0;
+                }
+                &:hover {
+                    z-index: 2;
+                }
                 label {
                     margin: 0;
                     padding: 0;
@@ -69,9 +109,53 @@
                     font-size: medium;
                     text-align: center;
                 }
-                &:hover {
-                    background: rgba(0, 0, 0, 1);
-                    color: #fff;
+                &[data-bg-color="$TURQUOISE"] {
+                    background: lighten($TURQUOISE, 38);
+                    @include respond-to-except-mobile {
+                        &:hover {
+                            background: rgba(darken($TURQUOISE, 10), 1);
+                            color: #fff !important;
+                            -webkit-box-shadow: 0px 13px 71px -2px rgba($TURQUOISE, 1);
+                            -moz-box-shadow: 0px 13px 71px -2px rgba($TURQUOISE, 1);
+                            box-shadow: 0px 13px 71px -2px rgba($TURQUOISE, 1);
+                        }
+                    }
+                }
+                &[data-bg-color="$BELIZE_HOLE"] {
+                    background: lighten($BELIZE_HOLE, 48);
+                    @include respond-to-except-mobile {
+                        &:hover {
+                            background: rgba($BELIZE_HOLE, 1);
+                            color: #fff !important;
+                            -webkit-box-shadow: 0px 13px 71px -2px rgba($BELIZE_HOLE, 1);
+                            -moz-box-shadow: 0px 13px 71px -2px rgba($BELIZE_HOLE, 1);
+                            box-shadow: 0px 13px 71px -2px rgba($BELIZE_HOLE, 1);
+                        }
+                    }
+                }
+                &[data-bg-color="$ALIZARIN"] {
+                    background: lighten($ALIZARIN, 38);
+                    @include respond-to-except-mobile {
+                        &:hover {
+                            background: rgba($PUMPKIN, 1);
+                            color: #fff !important;
+                            -webkit-box-shadow: 0px 13px 71px -2px rgba($PUMPKIN, 1);
+                            -moz-box-shadow: 0px 13px 71px -2px rgba($PUMPKIN, 1);
+                            box-shadow: 0px 13px 71px -2px rgba($PUMPKIN, 1);
+                        }
+                    }
+                }
+                &[data-bg-color="$WISTERIA"] {
+                    background: lighten($WISTERIA, 47); 
+                    @include respond-to-except-mobile {
+                        &:hover {
+                            background: rgba($WISTERIA, 1);
+                            color: #fff !important;
+                            -webkit-box-shadow: 0px 13px 71px -2px rgba($WISTERIA, 1);
+                            -moz-box-shadow: 0px 13px 71px -2px rgba($WISTERIA, 1);
+                            box-shadow: 0px 13px 71px -2px rgba($WISTERIA, 1);
+                        }
+                    }
                 }
             }
         }

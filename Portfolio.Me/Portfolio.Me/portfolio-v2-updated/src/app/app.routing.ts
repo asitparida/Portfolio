@@ -16,11 +16,11 @@ import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
     { path: '',   redirectTo: '/home', pathMatch: 'full' },
-    { path: 'home', component: HomeComponent },
-    { path: 'about-me', component: AboutMeComponent },
+    { path: 'home', component: HomeComponent, data: { uid: 1 } },
+    { path: 'about-me', component: AboutMeComponent, data: { uid: 4 } },
     { path: 'contact', component: ContactComponent },
-    { path: 'other-projects', component: OtherProjectsComponent },
-    { path: 'tools', component: MySkillsComponent },
+    { path: 'other-projects', component: OtherProjectsComponent, data: { uid: 2 } },
+    { path: 'tools', component: MySkillsComponent, data: { uid: 3 } },
     { path: 'bun-bun', component: BunBunComponent },
     { path: 'not-so-grey', component: NotSoGreyComponent },
     { path: 'veritas', component: VeritasComponent },
