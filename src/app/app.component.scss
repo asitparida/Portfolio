@@ -1,0 +1,104 @@
+@import '../_shared';
+
+.router-content {
+    padding: 60px 0;
+}
+
+.grid-separator {
+    background: linear-gradient(-45deg, #e1f0fa 16px, red 16px, #e1f0fa 16px, transparent 0), linear-gradient(45deg, #e1f0fa 16px, transparent 0);
+    background-position: left top;
+    background-repeat: repeat-x;
+    background-size: 18px 32px;
+    content: " ";
+    display: block;
+    height: 32px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: scaleY(-1);
+    &.top {
+        top: 0;
+    }
+    &.reverse {
+        transform: scaleY(1);
+    }
+    &.dark {
+        background: linear-gradient(-45deg, #444 16px, red 16px, #444 16px, transparent 0), linear-gradient(45deg, #444 16px, transparent 0);
+        background-position: left top;
+        background-repeat: repeat-x;
+        background-size: 18px 32px;
+    }
+}
+.tabs {
+    text-align: center;
+    display: block;
+    margin: 15px auto 0 auto;
+    padding: 0  ;
+    box-sizing: border-box;
+    @include respond-to-except-mobile{
+        margin-top: 20px; 
+    }
+    .tab-toggler {
+        padding: 5px 5px 0 5px;
+        @include respond-to-except-mobile{
+            text-align: center;
+            display: inline-block;
+            // border-bottom: none;   
+        }
+        @include respond-to-mobile {
+            padding: 0;
+        }
+        button {
+            display: inline-block;
+            line-height: 60px;
+            height: 60px;
+            padding: 0;
+            border: none;
+            font-weight: 100;
+            outline: none;
+            font-size: medium;
+            font-weight: 100;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-sizing: border-box;
+            text-align: center;
+            color: #909090;
+            background: transparent;
+            border-bottom: 3px solid rgba($PETER_RIVER, 0.10);
+            &.active {
+                font-weight: bold;
+                color: $PETER_RIVER;
+                border-bottom: 3px solid rgba($PETER_RIVER, 1);
+                @include respond-to-except-mobile{
+                    width: auto;
+                }
+            }
+            @include respond-to-mobile {
+                border-bottom-width: 3px;
+                font-size: medium;
+                font-weight: 100;
+                text-transform: uppercase;
+                width: 49%;
+            }
+            @include respond-to-except-mobile{
+                width: auto;
+                padding: 0 15px;
+            }
+        }
+    }
+    @include respond-to-mobile {
+        padding: 12px 12px 0 12px;
+        margin-top: 0;
+    }
+}
+@media only screen and (min-width: 1210px) {
+    .tabs {
+        width: 1200px !important;
+    }
+}
+@media (min-width: 800px) and (max-width: 1209px) {
+    .tabs {
+        width: 800px !important;
+    }
+}
