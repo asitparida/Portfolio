@@ -23,7 +23,7 @@ export class NavigationComponent implements AfterViewInit, OnInit {
                 const uid = data.state.root.firstChild.data['uid'] || -1;
             if (uid < this.lastUid) {
                 this.directionFill = 'right';
-            } else if ( uid - this.lastUid >= 100) {
+            } else {
                 this.directionFill = 'left';
             }
             this.lastUid = uid;
@@ -33,15 +33,15 @@ export class NavigationComponent implements AfterViewInit, OnInit {
     ngAfterViewInit() {
         const elem = document.getElementById(this.navigationBarId);
         document.addEventListener('scroll', (event) => {
-            if (window.scrollY > this.lastScrollPosition) {
-                if (!this.classAdded) {
-                    elem.classList.add('out-of-view');
-                    this.classAdded = true;
-                }
-            } else {
+            if (window.scrollY < this.lastScrollPosition) {
                 if (this.classAdded) {
                     elem.classList.remove('out-of-view');
                     this.classAdded = false;
+                }
+            } else if (window.scrollY - this.lastScrollPosition >= 100) {
+                if (!this.classAdded) {
+                    elem.classList.add('out-of-view');
+                    this.classAdded = true;
                 }
             }
             this.lastScrollPosition = window.scrollY;
