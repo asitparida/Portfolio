@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --prod --aot",
+    "start": "ng build --prod --aot && lite-server dist/",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -26,7 +26,8 @@
     "plyr": "^3.4.7",
     "rxjs": "^6.0.0",
     "underscore": "1.9.1",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "lite-server": "2.4.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.7.0",
