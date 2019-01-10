@@ -23,7 +23,7 @@ export class NavigationComponent implements AfterViewInit, OnInit {
                 const uid = data.state.root.firstChild.data['uid'] || -1;
             if (uid < this.lastUid) {
                 this.directionFill = 'right';
-            } else {
+            } else if ( uid - this.lastUid >= 100) {
                 this.directionFill = 'left';
             }
             this.lastUid = uid;
