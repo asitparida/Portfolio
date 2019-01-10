@@ -33,6 +33,7 @@
             margin: 0;
             position: relative;
             height: 64px;
+            background: #fff;
             @include respond-to-mobile {
                 width: 25%;
                 height: 84px;

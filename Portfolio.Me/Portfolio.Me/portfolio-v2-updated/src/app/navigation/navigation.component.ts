@@ -38,8 +38,8 @@ export class NavigationComponent implements AfterViewInit, OnInit {
                     elem.classList.remove('out-of-view');
                     this.classAdded = false;
                 }
-            } else if (window.scrollY - this.lastScrollPosition >= 100) {
-                if (!this.classAdded) {
+            } else if (window.scrollY > this.lastScrollPosition) {
+                if (!this.classAdded && window.scrollY > 150) {
                     elem.classList.add('out-of-view');
                     this.classAdded = true;
                 }
