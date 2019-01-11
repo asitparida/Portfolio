@@ -143,6 +143,9 @@
         br {
             line-height: 3em;
         }
+        &.maxWidth80 {
+            max-width: 75%;
+        }
     }
     img {
         max-width: 100%;

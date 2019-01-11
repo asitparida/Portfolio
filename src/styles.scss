@@ -83,7 +83,16 @@ html {
         @include COLORED_BG($BELIZE_HOLE, 47);
     }
     &[data-color="$NONE"] {
-        @include COLORED_BG(#fff, 100)
+        background-color: #fff;
+        /deep/ .project-contents .project-section {
+            &:nth-child(2n + 2) {
+                background-color: #fff !important;
+            }   
+        }
+        /deep/ .arrow-holder {
+            background: #fff;
+            box-shadow: 0px 2px 4px rgba(#000,0.20);
+        }
     }
     @include respond-to-except-mobile {
         // background: #e1f0fa;
@@ -350,7 +359,7 @@ table {
 .portfolio-btn {
     border: 2px solid #565656;
     color: #565656;
-    padding: 0 15px;
+    padding: 0 15px !important;
     line-height: 48px;
     background: transparent;
     font-size: medium;
@@ -361,7 +370,7 @@ table {
     &:hover {
         background: #000;
         border-color: #000;
-        color: #fff;
+        color: #fff !important;
         outline: none;
     }
     + .portfolio-btn {
@@ -373,4 +382,15 @@ a.portfolio-btn {
     height: 48px;
     text-decoration: none;
     line-height: 44px;
+}
+img {
+    transition: opacity 0.3s linear 0s;
+    &[data-lazy-load="true"] {
+        &:not(.show) {
+            opacity: 0;
+        }
+        &.show {
+            opacity: 1;
+        }
+    }
 }

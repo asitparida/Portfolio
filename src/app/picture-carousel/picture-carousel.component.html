@@ -14,7 +14,7 @@
         <div class="picture-control right" (click)="move(1)">
             <i></i>
         </div>
-        <img [ngClass]="currentClass" [src]="activeItem.img" />
+        <img data-lazy-load="true" [ngClass]="currentClass" [src]="activeItem.img" />
         <div class="picture-footer">
             <div class="marker" *ngFor="let item of pictureItems; let i = index;" [class.active]="i === activeIndex"></div>
         </div>

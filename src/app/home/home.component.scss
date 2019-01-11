@@ -253,7 +253,7 @@
                         .project-item-content-wrapper {
                             &:hover {
                                 .colored-bg {
-                                    background: rgba(darken($BELIZE_HOLE, 0), 1);
+                                    background: rgba(lighten($BELIZE_HOLE, 10), 1);
                                 }
                                 .tags {
                                     .tag {
@@ -264,7 +264,7 @@
                                 label {
                                     color: #f0f0f0;
                                 }
-                                background: rgba(darken($BELIZE_HOLE, 0), 1);
+                                background: rgba(lighten($BELIZE_HOLE, 10), 1);
                                 -webkit-box-shadow: 0px 13px 71px -2px rgba($BELIZE_HOLE, 1);
                                 -moz-box-shadow: 0px 13px 71px -2px rgba($BELIZE_HOLE, 1);
                                 box-shadow: 0px 13px 71px -2px rgba($BELIZE_HOLE, 1);

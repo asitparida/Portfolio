@@ -6,8 +6,8 @@ const SkillGroups = [
         title: 'Dev Stack',
         skills: [
             { id: 'web', src: 'assets/profile-skills/web.png', tag: 'Web' },
-            { id: 'aspnetmvc', src: 'assets/profile-skills/aspnetmvc.png', tag: 'Asp Net MVC' },
             { id: 'nodejs', src: 'assets/profile-skills/node-js.png', tag: 'NodeJS' },
+            { id: 'aspnetmvc', src: 'assets/profile-skills/aspnetmvc.png', tag: 'Asp Net MVC' },
             { id: 'sql', src: 'assets/profile-skills/sql.png', tag: 'SQL' },
         ]
     },
@@ -16,8 +16,8 @@ const SkillGroups = [
         skills: [
             { id: 'html5', src: 'assets/profile-skills/html5.png', tag: 'HTML5' },
             { id: 'css3', src: 'assets/profile-skills/css3.png', tag: 'CSS3' },
-            { id: 'scss', src: 'assets/profile-skills/scss.png', tag: 'SCSS' },
             { id: 'js', src: 'assets/profile-skills/js.png', tag: 'Javascript' },
+            { id: 'scss', src: 'assets/profile-skills/scss.png', tag: 'SCSS' },
             { id: 'ts', src: 'assets/profile-skills/ts.png', tag: 'Typescript' }
         ]
     },
