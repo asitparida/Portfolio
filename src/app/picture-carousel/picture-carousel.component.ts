@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-picture-carousel',
     templateUrl: './picture-carousel.component.html',
-    styleUrls: ['./picture-carousel.component.scss']
+    styleUrls: ['./picture-carousel.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class PictureCarouselComponent implements OnInit {
-    items = [
+    @Input() items = [
         { text: null, img: 'assets/veritas/IMG_1307_iphone8spacegrey_portrait.png' },
         { text: null, img: 'assets/veritas/IMG_1308_iphone8spacegrey_portrait.png' },
         { text: null, img: 'assets/veritas/IMG_1312_iphone8spacegrey_portrait.png' },
@@ -24,6 +25,9 @@ export class PictureCarouselComponent implements OnInit {
     activeIndex = 0;
     currentClass = '';
     carouselShown = false;
+    @Input() listWrapperClass = '';
+    @Input() carouselWrapperClass = '';
+    @Input() bottomStagger = false;
     constructor(private sanitizer: DomSanitizer) { }
 
     ngOnInit() {

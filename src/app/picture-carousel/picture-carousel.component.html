@@ -1,10 +1,11 @@
-<div class="picture-carousel-preview" [style.height]="previewHeight" [style.width]="previewWidth" (click)="carouselShown = true;">
-    <div class="picture-wrapper" [style.marginRight]="marginRightAdjust" *ngFor="let item of pictureItems; let i = index;"
-        [style.right]="(i*25) + 'px'">
+<div class="picture-carousel-preview" [ngClass]="listWrapperClass"  [style.height]="previewHeight" [style.width]="previewWidth" (click)="carouselShown = true;">
+    <div class="picture-wrapper"[style.marginRight]="marginRightAdjust" *ngFor="let item of pictureItems; let i = index;"
+        [style.right]="bottomStagger ? (i*15) + 'px' : (i*15) + 'px' "
+        [style.top]="bottomStagger ? (i*15) + 'px' : '0px'">
         <div class="picture-card" [style.backgroundImage]="item.img"></div>
     </div>
 </div>
-<div class="picture-carousel-wrapper" *ngIf="carouselShown">
+<div class="picture-carousel-wrapper" [ngClass]="carouselWrapperClass" *ngIf="carouselShown">
     <div class="picture-image-wrapper">
         <div class="close" (click)="carouselShown = false;">Close</div>
         <div class="picture-control left" (click)="move(-1)">

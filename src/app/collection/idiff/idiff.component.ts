@@ -10,6 +10,11 @@ export class IdiffComponent implements AfterViewInit, OnDestroy, OnInit {
     isVideoPlayed = false;
     videoPlayer = null;
     isVideoPiped = false;
+    pictureCarouselItems = [
+        { text: null, img: 'assets/idiff/Picture1.png' },
+        { text: null, img: 'assets/idiff/Picture2.png' },
+        { text: null, img: 'assets/idiff/Picture3.png' },
+    ];
     constructor() { }
 
     ngOnInit() {

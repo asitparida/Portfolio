@@ -10,6 +10,15 @@ export class VeritasComponent implements AfterViewInit, OnInit, OnDestroy {
     isVideoPlayed = false;
     videoPlayer = null;
     isVideoPiped = false;
+    pictureCarouselItems = [
+        { text: null, img: 'assets/veritas/IMG_1307_iphone8spacegrey_portrait.png' },
+        { text: null, img: 'assets/veritas/IMG_1308_iphone8spacegrey_portrait.png' },
+        { text: null, img: 'assets/veritas/IMG_1312_iphone8spacegrey_portrait.png' },
+        { text: null, img: 'assets/veritas/IMG_1313_iphone8spacegrey_portrait.png' },
+        { text: null, img: 'assets/veritas/IMG_1315_iphone8spacegrey_portrait.png' },
+        { text: null, img: 'assets/veritas/IMG_1316_iphone8spacegrey_portrait.png' },
+        { text: null, img: 'assets/veritas/IMG_1317_iphone8spacegrey_portrait.png' },
+    ];
     constructor() { }
 
     ngOnInit() {
