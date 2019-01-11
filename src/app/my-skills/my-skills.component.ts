@@ -67,6 +67,7 @@ export class MySkillsComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
+        document.documentElement.setAttribute('data-color', '$NONE');
     }
 
 }
