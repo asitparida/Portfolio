@@ -681,7 +681,7 @@ body.dark {
     display: flex;
     justify-content: center;
     align-items:  center;
-    padding: 48px;
+    padding: 45px;
     z-index: 999;
     box-sizing: border-box;
     color: #000;
@@ -716,7 +716,8 @@ body.dark {
         text-align: center;
         float: right;
         cursor: pointer;
-        color: #fff;
+        color: #909090;
+        font-size: large;
         &:hover,
         &:focus,
         &:active {
@@ -732,19 +733,24 @@ body.dark {
         }
     }
     .project-drawer {
-        max-height: 90vh;
+        padding: 45px;
         overflow: hidden;
         // min-height: 400px;
-        width: 800px;
+        width: 100%;
+        height: 100%;
         // width: calc(100% - 96px);
-        // background: #fff;
+        background: #fff;
         transform-origin: center;
-        padding: 0;
         box-sizing: border-box;
         position: relative;
         box-shadow: 0px 0px 20px 1px rgba(0, 0,0, 0.20);
         -ms-overflow-style: -ms-autohiding-scrollbar;
         -webkit-overflow-scrolling: touch;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+
 
         @include respond-to-mobile {
             max-height: 100vh;
@@ -753,12 +759,13 @@ body.dark {
             padding: 0;
         }
         label {
-            font-size: xx-large;
+            font-size: 3em;
             font-weight: 100;
             display: block;
-            background: rgba(0,0,0,0.20);
-            color: #fff;
-            padding:  36px 48px;
+            // background: rgba(0,0,0,0.03);
+            color: #000;
+            padding: 0;
+            margin: 0;
             @include respond-to-mobile {
                 padding:  24px;
             }
@@ -816,18 +823,20 @@ body.dark {
             font-weight: 300;
             &[data-tag="project-drawer-description"] {
                 margin: 0;
-                padding: 14px 48px;
+                padding: 14px 0;
                 line-height: 1.50em;
                 display: block;
-                background: #fff;
-                overflow-y: auto;
-                max-height: calc(90vh - 280px);
+                width: 80%;
+                // background: #fff;
+                // overflow-y: auto;
+                // max-height: calc(90vh - 280px);
                 p {
-                    margin: 15px 0 15px 0;
+                    margin: 15px 0 0 0;
                 }
 
                 ul, ol {
                     padding-left: 20px;
+                    margin: 5px 0;
                 }
                 @include respond-to-mobile {
                     height: calc(100vh - 190px);
@@ -842,7 +851,7 @@ body.dark {
 
 body.dark {
     .project-drawer-container {
-        background: rgba(#363636,0.80) !important;
+        background: rgba(#363636,0.90) !important;
     }
     .project-drawer-container .project-drawer {
         background: #565656 !important;

@@ -249,12 +249,7 @@ export class ProjectsComponent implements AfterViewInit {
                 (drawerContainer as HTMLElement).classList.add('visible');
                 const bgColor = COLORS[item.bgColor];
                 const rgb = hexToRgb(bgColor);
-                drawerContainer.style.backgroundColor = `rgba(${rgb.r},${rgb.g},${rgb.b},0.80)`;
-                const projectElm = document.getElementById(item.id);
-                const projectDrawerElm = document.querySelector('[data-tag="project-drawer-bg"]');
-                if (projectDrawerElm) {
-                    (projectDrawerElm as HTMLElement).style.backgroundColor = bgColor;
-                }
+                drawerContainer.style.backgroundColor = `rgba(${rgb.r},${rgb.g},${rgb.b},0.90)`;
                 const elemTitle = elem.querySelector('[data-tag="project-drawer-title"]');
                 if (elemTitle) {
                     elemTitle.textContent = item.name;
@@ -263,38 +258,16 @@ export class ProjectsComponent implements AfterViewInit {
                         elemTitle.classList.add('darker');
                     }
                 }
+                const elemSubtitle = elem.querySelector('[data-tag="project-drawer-subtitle"]');
+                if (elemSubtitle) {
+                    if (item.description) {
+                        elemSubtitle.innerHTML = item.description || '';
+                    }
+                }
                 const elemDescription = elem.querySelector('[data-tag="project-drawer-description"]');
                 if (elemDescription) {
                     if (item.content) {
                         elemDescription.innerHTML = item.content || '';
-                    } else {
-                        elemDescription.textContent = item.description || '';
-                    }
-                }
-                const webLnk = elem.querySelector('[data-tag="app-link"]');
-                webLnk.classList.remove('show');
-                if (item.publishSrc) {
-                    if (webLnk) {
-                        (webLnk as HTMLAnchorElement).href = item.publishSrc;
-                        webLnk.classList.add('show');
-                        (webLnk as HTMLElement).style.backgroundColor = COLORS[item.bgColor];
-                        (webLnk as HTMLElement).style.color = '#fff';
-                        if (item.darker) {
-                            (webLnk as HTMLElement).style.color = '#000';
-                        }
-                    }
-                }
-                const gitLnk = elem.querySelector('[data-tag="source-code"]');
-                gitLnk.classList.remove('show');
-                if (item.githubSrc) {
-                    if (gitLnk) {
-                        (gitLnk as HTMLAnchorElement).href = item.githubSrc;
-                        gitLnk.classList.add('show');
-                        (gitLnk as HTMLElement).style.backgroundColor = COLORS[item.bgColor];
-                        (gitLnk as HTMLElement).style.color = '#fff';
-                        if (item.darker) {
-                            (gitLnk as HTMLElement).style.color = '#000';
-                        }
                     }
                 }
                 const elemClose = elem.querySelector('.close');
@@ -304,9 +277,9 @@ export class ProjectsComponent implements AfterViewInit {
                         elemClose.classList.add('darker');
                     }
                 }
+                document.body.classList.add('no-overflow');
                 elem.classList.remove('anim', 'out');
                 elem.classList.add('anim', 'in');
-                document.body.classList.add('no-overflow');
                 setTimeout(() => {
                     document.addEventListener('click', this.drawerClickListener);
                     document.addEventListener('keyup', this.drawerKeyUpListener);
