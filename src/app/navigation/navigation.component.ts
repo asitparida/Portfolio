@@ -13,6 +13,9 @@ export class NavigationComponent implements AfterViewInit, OnInit {
     lastScrollPosition = null;
     lastUid = -1;
     directionFill = 'left';
+    featuredSubMenuHidden = true;
+    featuredSubMenuId = 'menu-' + Math.floor(Math.random() * 10e8);
+    leftAdjust = '0px';
     constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
     ngOnInit() {
         this.router.events
@@ -37,6 +40,9 @@ export class NavigationComponent implements AfterViewInit, OnInit {
                 if (this.classAdded) {
                     elem.classList.remove('out-of-view');
                     this.classAdded = false;
+                    setTimeout(() => {
+                        this.featuredSubMenuHidden = true;
+                    });
                 }
             } else if (window.scrollY > this.lastScrollPosition) {
                 if (!this.classAdded && window.scrollY > 150) {
@@ -46,6 +52,20 @@ export class NavigationComponent implements AfterViewInit, OnInit {
             }
             this.lastScrollPosition = window.scrollY;
         });
+        const fetauredElm = document.querySelector('.featured-link');
+        if (fetauredElm) {
+            const props = fetauredElm.getBoundingClientRect();
+            if (window.innerWidth > 768) {
+                if (props) {
+                    const adjust = (250 - props.width) / 2;
+                    this.leftAdjust = `-${adjust}px`;
+                }
+            } else {
+                this.leftAdjust = `-${props.left}px`;
+            }
+        }
     }
-
+    toggleFeaturedSubMenu() {
+        this.featuredSubMenuHidden = !this.featuredSubMenuHidden;
+    }
 }

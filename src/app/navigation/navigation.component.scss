@@ -11,8 +11,11 @@
     left: 0;
     background: #fff;
     transition: transform 0.3s ease-out 0s;
+    @include respond-to-mobile {
+        height: 80px;
+    }
     &.out-of-view {
-        transform: translateY(-200%);
+        transform: translateY(-1000%);
     }
     ul {
         width: 100%;
@@ -21,7 +24,6 @@
         display: flex;
         flex-flow: row;
         justify-content: center;
-        overflow: hidden;
         &:hover {
             opacity: 1;
         }
@@ -30,13 +32,64 @@
             margin: 0;
         }
         li {
+            // &.hidden-xs {
+            //     @include respond-to-mobile {
+            //         display: none !important;
+            //     }
+            // }
+            @include respond-to-mobile {
+                &.hidden-xs {
+                    display: none !important;
+                }
+                flex: 1;
+            }
             margin: 0;
             position: relative;
-            height: 64px;
-            background: #fff;
+            height: 60px;
             @include respond-to-mobile {
                 width: 25%;
-                height: 84px;
+                height: 80px;
+            }
+            &.featured-link {
+                position: relative;
+                > a {
+                    pointer-events: none;
+                }
+                ul.submenu {
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.30);
+                    position: absolute;
+                    white-space: normal;
+                    padding: 0;
+                    top: 59px;
+                    flex-flow: column;
+                    width: 250px;
+                    @include respond-to-mobile {
+                        width: 100vw !important;
+                        top: 79px;
+                    }
+                    li {
+                        width: 100%;
+                        @include respond-to-mobile {
+                            height: 60px;
+                        }
+                        a {
+                            width: 100%;
+                            display: block;
+                            background: #fff;
+                            white-space: nowrap;
+                            padding: 0 15px;
+                            border-left: 3px solid rgba(0, 0, 0, 0.00);
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+                            &.active-link {
+                                border-left-color: rgba(0, 0, 0, 0.5);
+                            }
+                            @include respond-to-mobile {
+                                height: 60px;
+                                line-height: 60px;
+                            }
+                        }
+                    }
+                }
             }
             a {
                 padding: 0;
@@ -64,7 +117,7 @@
                     width: 24px;
                     vertical-align: middle;
                     opacity: 0.50;
-                    margin-top: -6px;
+                    margin-top: -26px;
                     @include respond-to-except-mobile {
                         display: none;
                     }
@@ -84,7 +137,7 @@
                     padding: 0 30px;
                     @include respond-to-mobile {
                         position: absolute;
-                        bottom: 10px;
+                        bottom: 14px;
                         font-size: small;
                         left: 0;
                         line-height: 24px;
@@ -95,22 +148,23 @@
                 &:hover {
                     background: rgba(0, 0, 0, 0.03)
                 }
-                // border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-                &:after {
-                    content: '';
-                    width: 100%;
-                    bottom: 3px;
-                    height: 3px;
-                    background: rgba(0, 0, 0, 0.03);
-                    border-radius: 3px;
-                    display: block;
-                    z-index: 1;
-                    position: absolute;
+                &.first-level {
+                    &:after {
+                        content: '';
+                        width: 100%;
+                        bottom: 3px;
+                        height: 3px;
+                        background: rgba(0, 0, 0, 0.03);
+                        border-radius: 3px;
+                        display: block;
+                        z-index: 1;
+                        position: absolute;
+                    }
                 }
             }
         }
         &.left {
-            a.active-link {
+            a.active-link.first-level {
                 &:after {
                     content: '';
                     width: 100%;
@@ -127,7 +181,7 @@
             }
         }
         &.right {
-            a.active-link {
+            a.active-link.first-level {
                 &:after {
                     content: '';
                     right: 0;
