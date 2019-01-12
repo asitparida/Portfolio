@@ -18,6 +18,9 @@
             font-size: large;
             font-weight: bold;
             text-shadow: 0px 0px 4px rgba($color: #000000, $alpha: 0.1);
+            @include respond-to-mobile {
+                margin-bottom: 15px;    
+            }
         }
     }
     .content-skills {
@@ -47,7 +50,8 @@
             justify-content: flex-start;
             border-left: none;
             margin-bottom: 0;
-            height: 120px;
+            height: 100px;
+            margin-top: 5px;
         }
         img {
             max-width: 75%;

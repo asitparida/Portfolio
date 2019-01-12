@@ -486,6 +486,7 @@
                 @include respond-to-mobile {
                     transform: translateY(0);
                     opacity: 1;
+                    padding: 20px;
                 }
                 h3 {
                     display: inline-block;
@@ -502,7 +503,7 @@
                     border-top: 5px solid rgba(255, 255, 255, 0.33);
                     @include respond-to-mobile {
                         border-top: none;
-                        font-size: large;
+                        font-size: medium;
                         transition: transform 16ms, color 16s;
                         padding-top: 0;
                     }
@@ -520,14 +521,14 @@
                     }
                     @include respond-to-mobile {
                         border-top: none;
-                        font-size: large;
+                        font-size: medium;
                         margin-bottom: 0;
                         font-weight: 500;
                     }
                     top: 45px;
                     display: block;
                     font-family: 'Open sans', sans-serif;
-                    width: calc(100% - 60px);
+                    width: 100%;
                     font-size: large;
                     text-align: left;
                     text-decoration: none;
