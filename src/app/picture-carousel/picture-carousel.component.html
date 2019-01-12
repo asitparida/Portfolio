@@ -1,21 +1,30 @@
-<div class="picture-carousel-preview" [ngClass]="listWrapperClass"  [style.height]="previewHeight" [style.width]="previewWidth" (click)="carouselShown = true;">
-    <div class="picture-wrapper"[style.marginRight]="marginRightAdjust" *ngFor="let item of pictureItems; let i = index;"
-        [style.right]="bottomStagger ? (i*15) + 'px' : (i*15) + 'px' "
-        [style.top]="bottomStagger ? (i*15) + 'px' : '0px'">
-        <div class="picture-card" [style.backgroundImage]="item.img"></div>
+<ng-container *ngIf="!embeddedCarousel">
+    <div class="picture-carousel-preview" [ngClass]="listWrapperClass" [style.height]="previewHeight" [style.width]="previewWidth"
+        (click)="carouselShown = true;">
+        <div class="picture-wrapper" [style.marginRight]="marginRightAdjust" *ngFor="let item of pictureItems; let i = index;"
+            [style.right]="bottomStagger ? (i*15) + 'px' : (i*15) + 'px' " [style.top]="bottomStagger ? (i*15) + 'px' : '0px'">
+            <div class="picture-card" [style.backgroundImage]="item.img"></div>
+        </div>
     </div>
-</div>
-<div class="picture-carousel-wrapper" [ngClass]="carouselWrapperClass" *ngIf="carouselShown">
+</ng-container>
+<div class="picture-carousel-wrapper" [class.embeddedCarousel]="embeddedCarousel" [ngClass]="carouselWrapperClass" *ngIf="carouselShown || embeddedCarousel" tabindex="0"
+    (keyup.escape)="carouselShown = false;" (keyup.arrowleft)="move(-1)" (keyup.arrowright)="move(1)" (keyup.arrowup)="move(-1)"
+    (keyup.arrowdown)="move(1)">
     <div class="picture-image-wrapper">
-        <div class="close" (click)="carouselShown = false;">Close</div>
-        <div class="picture-control left" (click)="move(-1)">
+        <div class="close" *ngIf="!embeddedCarousel" tabindex="0" (keyup.enter)="carouselShown = false;" (click)="carouselShown = false;">Close</div>
+        <div class="picture-control left" (keyup.enter)="move(-1)" (click)="move(-1)" tabindex="0">
             <i></i>
         </div>
-        <div class="picture-control right" (click)="move(1)">
+        <div class="picture-control right" (keyup.enter)="move(1)" (click)="move(1)" tabindex="0">
             <i></i>
         </div>
-        <img data-lazy-load="true" [ngClass]="currentClass" [src]="activeItem.img" />
-        <div class="picture-footer">
+        <div class="img-container">
+            <img data-lazy-load="true" [ngClass]="currentClass" [src]="activeItem.img" />
+        </div>
+        <p class="text-container" *ngIf="activeItem.text">
+            <span>{{activeItem.text}}</span>
+        </p>
+        <div class="picture-footer" [class.embeddedCarouselFooter]="embeddedCarousel">
             <div class="marker" *ngFor="let item of pictureItems; let i = index;" [class.active]="i === activeIndex"></div>
         </div>
     </div>

@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation, SimpleChanges, OnChanges, ElementRef } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { AfterViewInit } from 'Portfolio.Me/Portfolio.Me/portfolio-v2-updated/node_modules/@angular/core/src/metadata/lifecycle_hooks';
 
 @Component({
     selector: 'app-picture-carousel',
@@ -7,7 +8,7 @@ import { DomSanitizer } from '@angular/platform-browser';
     styleUrls: ['./picture-carousel.component.scss'],
     encapsulation: ViewEncapsulation.None
 })
-export class PictureCarouselComponent implements OnInit {
+export class PictureCarouselComponent implements OnInit, AfterViewInit {
     @Input() items = [
         { text: null, img: 'assets/veritas/IMG_1307_iphone8spacegrey_portrait.png' },
         { text: null, img: 'assets/veritas/IMG_1308_iphone8spacegrey_portrait.png' },
@@ -28,7 +29,10 @@ export class PictureCarouselComponent implements OnInit {
     @Input() listWrapperClass = '';
     @Input() carouselWrapperClass = '';
     @Input() bottomStagger = false;
-    constructor(private sanitizer: DomSanitizer) { }
+    @Input() embeddedCarousel = false;
+    constructor(
+        private sanitizer: DomSanitizer,
+        private elRef: ElementRef) { }
 
     ngOnInit() {
         this.pictureItems = [].concat(this.items).reverse()
@@ -36,6 +40,14 @@ export class PictureCarouselComponent implements OnInit {
             img: `url(${x.img})`
         }));
         this.activeItem = this.items[this.activeIndex];
+    }
+    ngAfterViewInit() {
+        if (this.embeddedCarousel) {
+            const elem = this.elRef.nativeElement;
+            if (elem) {
+                (elem as HTMLElement).style.width = '100%';
+            }
+        }
     }
     move(dir) {
         const direction = dir === -1 ? 'left' : 'right';

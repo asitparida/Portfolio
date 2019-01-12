@@ -39,15 +39,54 @@
     </section>
     <section class="project-section alignItemsCenter h75">
         <div class="section-wrapper alignItemsFlexStart w100 p-b-0">
-            <div class="tri-section">
+            <div class="tri-section ">
                 <h2>What</h2>
                 <h3>are we building ?</h3>
                 <p>
-                    The assignment
-                    <br />
-                    We took into account papers which spoke of how people were influenced by
-                    virtual pets and how they serve as catalysts for behaviour change.
+                    We are building a environmental display for the fictional Atlantis travel hub in the San Juan
+                    Islands.
+                    Passengers will get ample information to plan itineraries, take trips across the small islands and
+                    enjoy the peace and tranquility of the beautiful San Juan.
                 </p>
+            </div>
+        </div>
+        <div class="section-wrapper alignItemsFlexStart w100">
+            <div class="tri-section">
+                <h4 class="highlight">Tenet #1</h4>
+                <p class="highlight-text">People can plan itineraries to visit multiple islands and places of
+                    attractions in the island.</p>
+            </div>
+            <div class="tri-section">
+                <h4 class="highlight">Tenet #2</h4>
+                <p class="highlight-text">We will promote the specific attractions and sight-seeing options across the
+                    different islands.</p>
+            </div>
+            <div class="tri-section">
+                <h4 class="highlight">Tenet #3</h4>
+                <p class="highlight-text">The display would promote the PTF program through which passengers combine
+                    multiple trips across planes, trains and ferries operating across all airports, harbours and POIs
+                    in the islands.</p>
+            </div>
+        </div>
+    </section>
+    <section class="project-section h50 justifyAlignCenter">
+        <div class="section-wrapper w100">
+            <div class="tri-section w2">
+                <h2>Analyzing stakeholders</h2>
+                <p>
+                    We studied the personas and the available transit information for the islands to dissect through
+                    the data.
+                    <br />
+                    To plot the inferred information, we used <strong>Wurman's LATCH</strong> model and observed data
+                    across multiple features and axes.
+                    <br />
+                    We created multiple tables to see what factors were absolutlely vital and what information could be
+                    ommitted from views.
+                </p>
+            </div>
+            <div class="tri-section w1 justifyAlignCenter">
+                <app-picture-carousel [bottomStagger]="true" carouselWrapperClass="transit-carousel" listWrapperClass="transit-list"
+                    [items]="pictureCarouselItems"></app-picture-carousel>
             </div>
         </div>
     </section>
@@ -57,49 +96,46 @@
                 <h2>Persona #1</h2>
                 <h3>Elizabeth Duarte</h3>
                 <p>
-                    Dictionary.com’s word of year for 2018 is “<a href="https://www.dictionary.com/e/word-of-the-year/"
-                        target="_blank">misinformation</a>". We are trying to mitigate the dissonance created by the
-                    "fake" news around us.
-                    The propagation of such malicious content can be attributed to our own social circles.
+                    Our Stakeholder serves as the transportation director of the municipality of San Juan Islands which
+                    is financing the environmental display for <strong>showing transportation data</strong> across the
+                    island.
+                    She aims to <strong>promote the new program</strong>, PTF pass, which would allow customers great
+                    ease and flexibility to travel across the islands
                 </p>
             </div>
             <div class="tri-section">
                 <h2>Persona #2</h2>
                 <h3>George Shimko</h3>
                 <p>
-                    The rampant spread of “fake” news is due to people seeking out and believing information which
-                    aligns with their currently-held attitudes.
-                    We blindly trust the source i.e. a friend of ours who re-tweeted or shared the article from
-                    somewhere (<a href="https://en.wikipedia.org/wiki/Elaboration_likelihood_model" target="_blank">ELM</a>).
+                    He is a long-time resident of island and owns modest fishing cabins on nearby Orcas Island and
+                    Stuart Island. He regularly invites his children
+                    and grandchildren to his house on San Juan Island and intends to give them PTF passes so that
+                    they can <strong>travel across</strong> San Juan Islands.
                 </p>
             </div>
             <div class="tri-section">
                 <h2>Persona #3</h2>
                 <h3>Patrick Mulvaney</h3>
                 <p>
-                    We are designing an avatar based mobile game to empower folks against such misinformation.
-                    As they progress through this <a href="https://cyberpsychology.eu/article/view/4343/3418" target="_blank">embedded
-                        game design</a>, they learn to look at content critically.
-                    We are employing multiple persuasive design strategies like fictionalization and obfuscation.
+                    Patrick Mulvaney is an environmental engineer stationed in Seattle. He spends an average of three
+                    days per
+                    week visiting drilling and wind power sites throughout the San Juan Islands. Weather
+                    often influences his travel and so Patrick welcomes the new Pass program that allows him to
+                    purchase multiple trips and optimize his travel on-the-fly.
                 </p>
             </div>
         </div>
     </section>
     <section class="project-section h75 justifyAlignCenter">
         <div class="section-wrapper w100">
-            <div class="tri-section w2">
+            <div class="tri-section">
                 <h2>Hand Drawn Sketches</h2>
-                <p>We created a fictional world in which users are given a creature, affectionately called a Worble, to
-                    take care of.<br />Throughout the course of the game, users receive information from friends in
-                    their
-                    pet community on how to take care of their Worble. The correct information will help
-                    their Worble grow whereas the malicious ones will make it sick.
-                    <br />Users accelerate their experience points as they correctly differentiate between the true and
-                    false
-                    information.</p>
-            </div>
-            <div class="tri-section w1 justifyAlignCenter">
-                <img data-lazy-load="true" src="assets/veritas/worble.gif" />
+                <p>
+                    After gathering and analyzing the data set and the user infomation, we moved on to hand drawn
+                    sketches to figure out most efficient and clear display.
+                </p>
+                <app-picture-carousel [embeddedCarousel]="true" [bottomStagger]="true" carouselWrapperClass="transit-carousel" listWrapperClass="transit-list"
+                    [items]="pictureCarouselItems"></app-picture-carousel>
             </div>
         </div>
     </section>
@@ -127,7 +163,6 @@
                 </div>
             </div>
             <div class="tri-section w1">
-                <app-picture-carousel></app-picture-carousel>
             </div>
         </div>
     </section>
