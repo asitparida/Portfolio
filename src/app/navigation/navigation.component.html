@@ -7,7 +7,7 @@
             <a class="first-level" [routerLink]="['featured']" routerLinkActive="active-link"><span>Featured</span><img
                     src="assets/navigation/baseline_star_border_black_36dp.png" /></a>
             <ng-container *ngIf="!featuredSubMenuHidden">
-                <ul class="submenu" [attr.id]="featuredSubMenuId" [style.left]="leftAdjust" >
+                <ul class="submenu" [attr.id]="featuredSubMenuId" [style.left]="leftAdjust" (clickOutside)="onClickOutside()" >
                     <li>
                         <a [routerLink]="['featured/veritas']" routerLinkActive="active-link">Veritas</a>
                     </li>

@@ -29,6 +29,7 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ContactComponent } from './contact/contact.component';
 import { ImgZoomerDirective } from './img-zoomer.directive';
+import { ClickOutsideDirective } from './click-outside.directive';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { ImgZoomerDirective } from './img-zoomer.directive';
     MySkillsComponent,
     NavigationComponent,
     ContactComponent,
-    ImgZoomerDirective
+    ImgZoomerDirective,
+    ClickOutsideDirective
   ],
   imports: [
     BrowserModule,

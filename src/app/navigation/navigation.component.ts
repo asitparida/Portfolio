@@ -66,6 +66,14 @@ export class NavigationComponent implements AfterViewInit, OnInit {
         }
     }
     toggleFeaturedSubMenu() {
-        this.featuredSubMenuHidden = !this.featuredSubMenuHidden;
+        setTimeout(() => {
+            this.featuredSubMenuHidden = !this.featuredSubMenuHidden;
+        });
+    }
+    onClickOutside() {
+        console.log('onClickOutside');
+        if (!this.featuredSubMenuHidden) {
+            this.featuredSubMenuHidden = true;
+        }
     }
 }
