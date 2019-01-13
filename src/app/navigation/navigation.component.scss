@@ -6,7 +6,7 @@
     align-items: center;
     width: 100%;
     position: fixed;
-    z-index: 999;
+    z-index: 998;
     top: 0;
     left: 0;
     background: #fff;
@@ -32,11 +32,7 @@
             margin: 0;
         }
         li {
-            // &.hidden-xs {
-            //     @include respond-to-mobile {
-            //         display: none !important;
-            //     }
-            // }
+            background: #fff;
             @include respond-to-mobile {
                 &.hidden-xs {
                     display: none !important;
@@ -51,18 +47,23 @@
                 height: 80px;
             }
             &.featured-link {
+                cursor: pointer;
                 position: relative;
                 > a {
                     pointer-events: none;
+                    background: #fff;
+                    position: relative;
                 }
                 ul.submenu {
-                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.30);
+                    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.30);
                     position: absolute;
                     white-space: normal;
                     padding: 0;
                     top: 59px;
                     flex-flow: column;
                     width: 250px;
+                    z-index: 1;
+                    animation: slide-fade-in 0.2s ease-out forwards 0s;
                     @include respond-to-mobile {
                         width: 100vw !important;
                         top: 79px;
@@ -103,6 +104,7 @@
                 text-align: center;
                 outline: none;
                 z-index: 1;
+                background: #fff;
                 @include respond-to-mobile {
                     width: 100%;
                     line-height: 80px;
@@ -175,7 +177,7 @@
                     border-radius: 3px;
                     display: block;
                     animation: fill-in-from-left 0.5s ease-out forwards 0s;
-                    z-index: 2;
+                    z-index: 5;
                     position: absolute;
                 }
             }
@@ -192,7 +194,7 @@
                     border-radius: 3px;
                     display: block;
                     animation: fill-in-from-right 0.5s ease-out forwards 0s;
-                    z-index: 2;
+                    z-index: 5;
                     position: absolute;
                 }
             }
@@ -213,5 +215,15 @@
     }
     100% {
         transform: translateX(0);
+    }
+}
+@keyframes slide-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
     }
 }

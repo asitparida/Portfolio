@@ -33,6 +33,9 @@
     &.h50 {
         min-height: 50vh;
     }
+    &.h60 {
+        min-height: 60vh;
+    }
     &.h33 {
         min-height: 33vh;
     }
@@ -272,6 +275,7 @@
     color: #707070;
     margin-top: 15px !important;
     padding-left: 20px;
+    max-width: 90%;
 }
 .order1 {
     order: 1 !important;

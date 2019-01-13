@@ -23,6 +23,7 @@
     }   
 }
 .picture-carousel-wrapper {
+    outline: none;
     &:not(.embeddedCarousel) {
         height: 100vh;
         width:  100vw;
@@ -106,6 +107,11 @@
         justify-content: center;
         &.embeddedCarouselFooter {
             height: 18px;
+            align-items: flex-end;
+            .marker {
+                position: relative;
+                top: 6px;
+            }
         }
         .marker {
             border-radius: 50%;
@@ -211,4 +217,7 @@
         opacity: 1;
         transform: translateX(0);
     }
+}
+.zoomIcon {
+    cursor: zoom-in;
 }

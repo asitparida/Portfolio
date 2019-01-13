@@ -5,14 +5,14 @@
         </li>
         <li class="featured-link" (click)="toggleFeaturedSubMenu()">
             <a class="first-level" [routerLink]="['featured']" routerLinkActive="active-link"><span>Featured</span><img
-                    src="assets/navigation/outline_home_black_36dp.png" /></a>
+                    src="assets/navigation/baseline_star_border_black_36dp.png" /></a>
             <ng-container *ngIf="!featuredSubMenuHidden">
                 <ul class="submenu" [attr.id]="featuredSubMenuId" [style.left]="leftAdjust" >
                     <li>
                         <a [routerLink]="['featured/veritas']" routerLinkActive="active-link">Veritas</a>
                     </li>
                     <li>
-                        <a [routerLink]="['featured/idiff']" routerLinkActive="active-link">i Diff</a>
+                        <a [routerLink]="['featured/idiff']" routerLinkActive="active-link">iDiff</a>
                     </li>
                     <li>
                         <a [routerLink]="['featured/transit-display']" routerLinkActive="active-link">Transit Hub

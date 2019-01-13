@@ -28,6 +28,7 @@ export class PictureCarouselComponent implements OnInit, AfterViewInit {
     carouselShown = false;
     @Input() listWrapperClass = '';
     @Input() carouselWrapperClass = '';
+    @Input() inplaceCarouselWrapperClass = '';
     @Input() bottomStagger = false;
     @Input() embeddedCarousel = false;
     constructor(

@@ -1,21 +1,9 @@
-<!-- <div class="project-contents">
-    <div class="marvel-device macbook television">
-        <div class="camera"></div>
-        <div class="screen">
-            <div class="player-holder">
-                <video controls crossorigin playsinline id="player">
-                    <source src="https://s3.us-east-2.amazonaws.com/asitparida-portfolio/TransitBoardDisplay.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-    </div>
-</div> -->
 <div class="project-contents">
-    <section class="project-section h100Adjusted justifyAlignCenter">
+    <section class="project-section h75 justifyAlignCenter">
         <div class="section-wrapper alignItemsBottom">
             <div class="left-section alignItemsCenter">
                 <app-team-badge></app-team-badge>
-                <h1 style="margin-top: 100px;">Transit Hub Display</h1>
+                <h1 style="margin-top: 50px;">Transit Hub Display</h1>
                 <p style="margin: 0 0 30px 0;">Designing a data driven display for a tourist hub</p>
                 <div class="tags centered">
                     <div class="tag">
@@ -64,8 +52,7 @@
             <div class="tri-section">
                 <h4 class="highlight">Tenet #3</h4>
                 <p class="highlight-text">The display would promote the PTF program through which passengers combine
-                    multiple trips across planes, trains and ferries operating across all airports, harbours and POIs
-                    in the islands.</p>
+                    multiple trips across POIs in the islands.</p>
             </div>
         </div>
     </section>
@@ -132,101 +119,99 @@
                 <h2>Hand Drawn Sketches</h2>
                 <p>
                     After gathering and analyzing the data set and the user infomation, we moved on to hand drawn
-                    sketches to figure out most efficient and clear display.
+                    sketches. We did the <strong>3-2-1 parallel sketching</strong> to get as many initial versions as
+                    possible.
                 </p>
-                <app-picture-carousel [embeddedCarousel]="true" [bottomStagger]="true" carouselWrapperClass="transit-carousel" listWrapperClass="transit-list"
-                    [items]="pictureCarouselItems"></app-picture-carousel>
+                <app-picture-carousel inplaceCarouselWrapperClass="transit-hand-drawn-inplace-carousel"
+                    [embeddedCarousel]="true" [bottomStagger]="true" carouselWrapperClass="transit-hand-drawn-place-carousel"
+                    [items]="handDrawnSketchesCarouselItems"></app-picture-carousel>
             </div>
         </div>
     </section>
     <section class="project-section h75 justifyAlignCenter">
         <div class="section-wrapper w100 ">
             <div class="tri-section w2">
-                <h2>Diigital Protoyping</h2>
-                <h3>Iteration #1</h3>
+                <h2>Iteration #1</h2>
+                <h3>Moving to digital protoyping</h3>
                 <p>
-                    The brainstorming sessions put us on a path towards the tamagotchi-like game concept We created
-                    multiple fidelities for our initial designs.
-                    To help us validate the needs we were addressing, we conducted think aloud sessions on our paper
-                    prototypes .
+                    Combining the best of the hand-drawn-sketched till now, we decided to have an individual section
+                    for promoting the PTF pass.
+                    To connect the information, we used coupling which highlights both trip data and map info. The
+                    highlighted part in the map keeps rotating to display the current island.
                 </p>
                 <div class="comments-wrapper">
                     <div class="comment">
-                        <h4 class="highlight">Feedback #1</h4>
-                        <p class="highlight-text">I think it’s fun and learning how to care for your worble seems like
-                            it’ll be really entertaining...</p>
+                        <h4 class="highlight">Critique #1</h4>
+                        <p class="highlight-text">The lack of accuracy of the map took some credibility of the design
+                            away
+                        </p>
                     </div>
                     <div class="comment">
-                        <h4 class="highlight">Feedback #2</h4>
-                        <p class="highlight-text">I loved decorating the creature.</p>
+                        <h4 class="highlight">Critique #2</h4>
+                        <p class="highlight-text">Moving far away from the display, the subtle color hide a lot
+                            information </p>
                     </div>
                 </div>
             </div>
-            <div class="tri-section w1">
+            <div class="tri-section w1 justifyAlignCenter">
+                <img imgZoomer data-lazy-load="true" class="boxed" src="assets/transit-display/digital-iteration-1.png" />
             </div>
         </div>
     </section>
-    <section class="project-section h75 justifyAlignCenter">
+    <section class="project-section h50 justifyAlignCenter">
         <div class="section-wrapper w100 ">
-            <div class="tri-section w2">
-                <h2>&nbsp;</h2>
-                <h3>Iteration #2</h3>
+            <div class="tri-section">
+                <h2>Iteration #2</h2>
+                <h3>Using motion as feedback</h3>
                 <p>
-                    The brainstorming sessions put us on a path towards the tamagotchi-like game concept We created
-                    multiple fidelities for our initial designs.
-                    To help us validate the needs we were addressing, we conducted think aloud sessions on our paper
-                    prototypes .
+                    Based on the feedback, we went with a darker color palette, gave the map a greater bit of space and
+                    worked on typographgy choices to enahnce the text on the screen.
                 </p>
-                <div class="comments-wrapper">
-                    <div class="comment">
-                        <h4 class="highlight">Feedback #1</h4>
-                        <p class="highlight-text">I think it’s fun and learning how to care for your worble seems like
-                            it’ll be really entertaining...</p>
-                    </div>
-                    <div class="comment">
-                        <h4 class="highlight">Feedback #2</h4>
-                        <p class="highlight-text">I loved decorating the creature.</p>
+                <div class="p-t-b-60 centered-in-box">
+                    <div class="marvel-device macbook television">
+                        <div class="camera"></div>
+                        <div class="screen">
+                            <div class="player-holder">
+                                <video controls crossorigin playsinline id="player">
+                                    <source src="https://s3.us-east-2.amazonaws.com/asitparida-portfolio/TransitDisplayIterarion2.mp4"
+                                        type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="tri-section w1">
-                <app-picture-carousel></app-picture-carousel>
-            </div>
-        </div>
-    </section>
-    <section class="project-section h75 justifyAlignCenter">
-        <div class="section-wrapper w100">
-            <div class="tri-section w2">
-                <h2>Using motion as feedback</h2>
-                <p>We created a fictional world in which users are given a creature, affectionately called a Worble, to
-                    take care of.<br />Throughout the course of the game, users receive information from friends in
-                    their
-                    pet community on how to take care of their Worble. The correct information will help
-                    their Worble grow whereas the malicious ones will make it sick.
-                    <br />Users accelerate their experience points as they correctly differentiate between the true and
-                    false
-                    information.</p>
-            </div>
-            <div class="tri-section w1">
-                <app-picture-carousel></app-picture-carousel>
+                <div class="comments-wrapper p-b-60">
+                    <div class="comment">
+                        <h4 class="highlight">Motion Use #1</h4>
+                        <p class="highlight-text">We added motion to show where the vehicle is relative to the origin and destinations.
+                        </p>
+                    </div>
+                    <div class="comment">
+                        <h4 class="highlight">Motion Use #2</h4>
+                        <p class="highlight-text">Each card had a status that changes when the vehicle arrived, is ready to board or is boarding.
+                            </p>
+                    </div>
+                    <div class="comment">
+                        <h4 class="highlight">Motion Use #3</h4>
+                        <p class="highlight-text">We wanted the card to disappear when the vehicle departs from the station bringing in the next trip.
+                            </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <section class="project-section h50 justifyAlignCenter">
         <div class="section-wrapper w100 alignItemsBottom">
-            <div class="tri-section w2">
+            <div class="tri-section">
                 <h2>Final Prototype</h2>
                 <p>
-                    After three iterations of testing our fidelities, we chose react-native for digital prototyping.
-                    The platform was new to us but offered a little bit of familiarity with its use of flex-based
-                    layouts.
-                    The richer native integrations, like using accelerometer for detecting a shake gesture, has been
-                    well-received.
+                    The final iteration displays the next departures per location.
+                    Users can find out more if they are interested by interacting with a physical control (this has an up and a down arrow).
+                    <br />
+                    We used a card layout which reveals more information when interacted with.
+                    In addition, the map highlights the routes related to the currently highlighted point of interest in the San Juan Islands.
                 </p>
                 <button class="portfolio-btn" (click)="watchVideo()">Watch Video</button>
-            </div>
-            <div class="tri-section w1">
-                <app-picture-carousel></app-picture-carousel>
             </div>
         </div>
         <div class="section-wrapper w100 alignItemsBottom">
