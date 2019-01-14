@@ -253,7 +253,12 @@
         </div>
     </section>
 </div>
-<div class="prototype-viewer" *ngIf="showProtoType" (keyup.escape)=" showProtoType = false;">
+<div class="prototype-callout" *ngIf="showPrototypeCallout">
+    <div class="close" (click)="showPrototypeCallout = false">Dismiss</div>
+    <label>Working prototype available !</label>
+    <button class="portfolio-btn" (click)="launchPrototypeFromCallout()">View Prototype</button>
+</div>
+<div class="prototype-viewer" *ngIf="showProtoType" (keyup.escape)=" showProtoType = false;" tabindex="0">
     <div class="close" (keyup.enter)=" showProtoType = false;" (click)=" showProtoType = false;">Close</div>
     <div class="marvel-device macbook television">
         <div class="camera"></div>

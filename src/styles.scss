@@ -38,6 +38,10 @@
         background: lighten($color, $lightenAmount);
         box-shadow: 0px 2px 4px rgba($color,0.75);
     }
+    /deep/ .prototype-callout {
+        // background-image: linear-gradient(to top, rgba($color, 1), rgba($color, 0.80));
+        background: rgba($color, 0.90);
+    }
 }
 
 html {
