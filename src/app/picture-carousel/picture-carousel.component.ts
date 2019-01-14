@@ -1,6 +1,5 @@
-import { Component, OnInit, Input, ViewEncapsulation, SimpleChanges, OnChanges, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation, SimpleChanges, OnChanges, ElementRef, AfterViewInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { AfterViewInit } from 'Portfolio.Me/Portfolio.Me/portfolio-v2-updated/node_modules/@angular/core/src/metadata/lifecycle_hooks';
 
 @Component({
     selector: 'app-picture-carousel',

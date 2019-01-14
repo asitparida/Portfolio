@@ -172,7 +172,7 @@
                         <div class="camera"></div>
                         <div class="screen">
                             <div class="player-holder">
-                                <video controls crossorigin playsinline id="player">
+                                <video controls crossorigin playsinline id="player1" class="plyr-player">
                                     <source src="https://s3.us-east-2.amazonaws.com/asitparida-portfolio/TransitDisplayIterarion2.mp4"
                                         type="video/mp4">
                                 </video>
@@ -183,18 +183,21 @@
                 <div class="comments-wrapper p-b-60">
                     <div class="comment">
                         <h4 class="highlight">Motion Use #1</h4>
-                        <p class="highlight-text">We added motion to show where the vehicle is relative to the origin and destinations.
+                        <p class="highlight-text">We added motion to show where the vehicle is relative to the origin
+                            and destinations.
                         </p>
                     </div>
                     <div class="comment">
                         <h4 class="highlight">Motion Use #2</h4>
-                        <p class="highlight-text">Each card had a status that changes when the vehicle arrived, is ready to board or is boarding.
-                            </p>
+                        <p class="highlight-text">Each card had a status that changes when the vehicle arrived, is
+                            ready to board or is boarding.
+                        </p>
                     </div>
                     <div class="comment">
                         <h4 class="highlight">Motion Use #3</h4>
-                        <p class="highlight-text">We wanted the card to disappear when the vehicle departs from the station bringing in the next trip.
-                            </p>
+                        <p class="highlight-text">We wanted the card to disappear when the vehicle departs from the
+                            station bringing in the next trip.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -206,12 +209,17 @@
                 <h2>Final Prototype</h2>
                 <p>
                     The final iteration displays the next departures per location.
-                    Users can find out more if they are interested by interacting with a physical control (this has an up and a down arrow).
+                    Users can find out more if they are interested by interacting with a physical control (this has an
+                    up and a down arrow).
                     <br />
                     We used a card layout which reveals more information when interacted with.
-                    In addition, the map highlights the routes related to the currently highlighted point of interest in the San Juan Islands.
+                    In addition, the map highlights the routes related to the currently highlighted point of interest
+                    in the San Juan Islands.
                 </p>
-                <button class="portfolio-btn" (click)="watchVideo()">Watch Video</button>
+                <div>
+                    <button class="portfolio-btn" (click)="watchVideo()">Watch Video</button>
+                    <button class="portfolio-btn" (click)="launchPrototype()">View Prototype</button>
+                </div>
             </div>
         </div>
         <div class="section-wrapper w100 alignItemsBottom">
@@ -219,7 +227,7 @@
                 <div class="camera"></div>
                 <div class="screen">
                     <div class="player-holder">
-                        <video controls crossorigin playsinline id="player">
+                        <video controls crossorigin playsinline id="player2" class="plyr-player">
                             <source src="https://s3.us-east-2.amazonaws.com/asitparida-portfolio/TransitBoardDisplay.mp4"
                                 type="video/mp4">
                         </video>
@@ -244,4 +252,22 @@
             </div>
         </div>
     </section>
+</div>
+<div class="prototype-viewer" *ngIf="showProtoType" (keyup.escape)=" showProtoType = false;">
+    <div class="close" (keyup.enter)=" showProtoType = false;" (click)=" showProtoType = false;">Close</div>
+    <div class="marvel-device macbook television">
+        <div class="camera"></div>
+        <div class="screen">
+            <iframe src="https://transit-hub-display.azurewebsites.net/"></iframe>
+        </div>
+        <div class="control-wrapper">
+            <div class="up">
+                <img data-lazy-load="true" src="assets/arrow_upward.png" />
+            </div>
+            <div class="down">
+                <img data-lazy-load="true" src="assets/arrow_upward.png" />
+            </div>
+        </div>
+    </div>
+    <label>To highlight an island or destination, click on it or use keyboard UP (↑) and DOWN (↓) arrow keys.</label>
 </div>

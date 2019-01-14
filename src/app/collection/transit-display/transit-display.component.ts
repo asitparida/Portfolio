@@ -1,4 +1,5 @@
 import { Component, AfterViewInit, OnDestroy, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 declare var Plyr;
 
 @Component({
@@ -8,7 +9,7 @@ declare var Plyr;
 })
 export class TransitDisplayComponent implements AfterViewInit, OnDestroy, OnInit {
     isVideoPlayed = false;
-    videoPlayer = null;
+    videoPlayers = [];
     isVideoPiped = false;
     pictureCarouselItems = [
         // tslint:disable:max-line-length
@@ -28,7 +29,8 @@ export class TransitDisplayComponent implements AfterViewInit, OnDestroy, OnInit
         { text: null, img: 'assets/transit-display/hand-drawn-sketches/Slide8.png' },
         { text: null, img: 'assets/transit-display/hand-drawn-sketches/Slide7.png' },
     ];
-    constructor() { }
+    showProtoType = false;
+    constructor(private santizer: DomSanitizer) { }
 
     ngOnInit() {
         document.documentElement.setAttribute('data-color', '$BELIZE_HOLE');
@@ -38,21 +40,20 @@ export class TransitDisplayComponent implements AfterViewInit, OnDestroy, OnInit
     }
 
     ngAfterViewInit() {
-        this.videoPlayer = new Plyr('#player', {
-            loop: { active: true }
-        });
-        this.videoPlayer.toggleControls(false);
-        this.videoPlayer.on('canplay', event => {
-            const instance = event.detail.plyr;
-            this.videoPlayer.play();
-            this.videoPlayer.toggleControls(true);
-        });
-        this.videoPlayer.on('playing', event => {
-            this.isVideoPlayed = true;
-        });
-        this.videoPlayer.on('pause', event => {
-            this.isVideoPlayed = false;
-        });
+        const players = document.querySelectorAll('.plyr-player') as any;
+        if (players && players.length > 0) {
+            (players as Array<any>).forEach(p => {
+                const videoPlayer = new Plyr(p, {
+                    loop: { active: true }
+                });
+                videoPlayer.toggleControls(false);
+                videoPlayer.on('canplay', event => {
+                    videoPlayer.play();
+                    videoPlayer.toggleControls(true);
+                });
+                this.videoPlayers.push(videoPlayer);
+            });
+        }
     }
     scrollTop() {
         if (typeof window.scrollTo !== 'undefined') {
@@ -60,11 +61,13 @@ export class TransitDisplayComponent implements AfterViewInit, OnDestroy, OnInit
         }
     }
     watchVideo() {
-        this.videoPlayer.stop();
+        this.videoPlayers[1].stop();
         setTimeout(() => {
             this.scrollTop();
-            this.videoPlayer.play();
+            this.videoPlayers[1].play();
         });
     }
-
+    launchPrototype() {
+        this.showProtoType = true;
+    }
 }
