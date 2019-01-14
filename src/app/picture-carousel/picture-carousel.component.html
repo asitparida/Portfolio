@@ -2,7 +2,7 @@
     <div class="picture-carousel-preview" [ngClass]="listWrapperClass" [style.height]="previewHeight" [style.width]="previewWidth"
         (click)="carouselShown = true;">
         <div class="picture-wrapper" [style.marginRight]="marginRightAdjust" *ngFor="let item of pictureItems; let i = index;"
-            [style.right]="bottomStagger ? (i*15) + 'px' : (i*15) + 'px' " [style.top]="bottomStagger ? (i*15) + 'px' : '0px'">
+            [style.right]="bottomStagger ? (i*staggerStep) + 'px' : (i*staggerStep) + 'px' " [style.top]="bottomStagger ? (i*staggerStep) + 'px' : '0px'">
             <div class="picture-card" [style.backgroundImage]="item.img"></div>
         </div>
     </div>

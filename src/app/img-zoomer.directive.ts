@@ -14,6 +14,7 @@ export class ImgZoomerDirective implements AfterViewInit {
     ngAfterViewInit() {
         this.spanNode = document.createElement('span');
         (this.spanNode as HTMLElement).classList.add('zoomed-in-bg');
+        (this.el.nativeElement as HTMLElement).classList.add('cursor-zoom-in');
         ((this.el.nativeElement as HTMLElement).parentNode as any).append(this.spanNode);
     }
     @HostListener('click') onClick() {

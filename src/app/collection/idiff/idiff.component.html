@@ -1,5 +1,5 @@
 <div class="project-contents">
-    <section class="project-section h75 justifyAlignCenter">
+    <section class="project-section h100Adjusted justifyAlignCenter">
         <div class="section-wrapper alignItemsBottom">
             <div class="left-section alignItemsCenter">
                 <h1>iDiff</h1>
@@ -28,46 +28,56 @@
             </div>
         </div>
     </section>
-    <section class="project-section alignItemsCenter h75">
+    <section class="project-section alignItemsCenter h50">
         <div class="section-wrapper w100 alignItemsFlexStart">
             <div class="tri-section">
                 <h2>Why</h2>
                 <h3>did I build it ?</h3>
                 <p>
-                    The users would be able to compare interactions, levels of visual progress and <strong>delta changes</strong> in different screens.
-                    The tool could also be used to <strong>communicate</strong> the intent of the designers and project a <strong>design evolution</strong> to be used in portfolios. 
+                    The users would be able to compare interactions, levels of visual progress and <strong>delta
+                        changes</strong> in different screens.
+                    The tool could also be used to <strong>communicate</strong> the intent of the designers and project
+                    a <strong>design evolution</strong> to be used in portfolios.
                 </p>
             </div>
             <div class="tri-section">
                 <h2>What</h2>
                 <h3>are the use-cases ?</h3>
                 <p>
-                    I combined the <strong>click-through</strong> prototyping features (e.g. Invision) for visualizing multiple levels of prototypes at the same time. Meaning we would be able to compare lo-fi, mid-fi and hi-fi prototypes all <strong>together</strong>.
+                    I combined the <strong>click-through</strong> prototyping features (e.g. Invision) for visualizing
+                    multiple levels of prototypes at the same time. Meaning we would be able to compare lo-fi, mid-fi
+                    and hi-fi prototypes all <strong>together</strong>.
                 </p>
             </div>
             <div class="tri-section">
                 <h2>Who</h2>
                 <h3>is my audience ?</h3>
                 <p>
-                    The target audience are primarily designers working in <strong>visual design</strong> space. Folks here nominally create <strong>multiple fidelities</strong> for designs.
-                    This tool would be helpful for them to allow click-through prototyping while comparing two designs or screens <strong>side-by-side</strong>. 
+                    The target audience are primarily designers working in <strong>visual design</strong> space. Folks
+                    here nominally create <strong>multiple fidelities</strong> for designs.
+                    This tool would be helpful for them to allow click-through prototyping while comparing two designs
+                    or screens <strong>side-by-side</strong>.
                 </p>
             </div>
         </div>
     </section>
-    <section class="project-section alignItemsCenter h75">
-        <div class="section-wrapper alignItemsFlexStart w100 p-b-0">
+    <section class="project-section alignItemsCenter h50">
+        <div class="section-wrapper alignItemsFlexStart w100">
             <div class="tri-section">
                 <h2>Ideation</h2>
                 <p class="maxWidth80">
-                    The challenge was to create a web-based tool for aiding fellow designers and HCI students in my cohort at university.
-                    Just two weeks earlier, I was creating paper-prototypes for my very first classroom project. I was fascinated by the design evolution between iterations.
+                    The challenge was to create a web-based tool for aiding fellow designers and HCI students in my
+                    cohort at university.
+                    Just two weeks earlier, I was creating paper-prototypes for my very first classroom project. I was
+                    fascinated by the design evolution between iterations.
                     <br />
                     So, I thought of somehow combining the most enjoyable parts of projects.
-                    After hours of brainstorming, I finally decided build a collborative showcase tool for UX practitioners to visualize lo-fi and hi-fi resolution of designs we work on.
-                    These users can showcase their multiple screens on a split-screen like display. 
+                    After hours of brainstorming, I finally decided build a collborative showcase tool for UX
+                    practitioners to visualize lo-fi and hi-fi resolution of designs we work on.
+                    These users can showcase their multiple screens on a split-screen like display.
                     <br />
-                    In addition, the tool would have to extend the current click-through capabilities for existing services like Invision. 
+                    In addition, the tool would have to extend the current click-through capabilities for existing
+                    services like Invision.
                 </p>
             </div>
         </div>
@@ -86,17 +96,20 @@
                 </p>
             </div>
             <div class="tri-section w1">
-                <app-picture-carousel [bottomStagger]="true" carouselWrapperClass="idiff-carousel" listWrapperClass="idiff-list" [items]="pictureCarouselItems"></app-picture-carousel>
+                <app-picture-carousel [bottomStagger]="true" carouselWrapperClass="idiff-carousel" listWrapperClass="idiff-list"
+                    [items]="pictureCarouselItems"></app-picture-carousel>
             </div>
         </div>
         <div class="section-wrapper alignItemsFlexStart w100">
             <div class="tri-section">
                 <h4 class="highlight">Tenet #1</h4>
-                <p class="highlight-text">For authoring view, move controls to a single pane, either to left or right, to minmise jumping around the screens.</p>
+                <p class="highlight-text">For authoring view, move controls to a single pane, either to left or right,
+                    to minmise jumping around the screens.</p>
             </div>
             <div class="tri-section">
                 <h4 class="highlight">Tenet #2</h4>
-                <p class="highlight-text">For previewing, look to enable both horizontal and vertical splits for comparing fidelities.</p>
+                <p class="highlight-text">For previewing, look to enable both horizontal and vertical splits for
+                    comparing fidelities.</p>
             </div>
             <div class="tri-section">
                 <h4 class="highlight">Tenet #3</h4>
@@ -109,7 +122,8 @@
             <div class="tri-section ">
                 <h2>Authoring Flow</h2>
                 <p class="centered">
-                        This is the prototyping flow wherein we compose our showcase preview by adding images for multiple fidelities. We add hotspots, define their destination states and then publish the preview.
+                    This is the prototyping flow wherein we compose our showcase preview by adding images for multiple
+                    fidelities. We add hotspots, define their destination states and then publish the preview.
                 </p>
                 <div class="macbook-wrapper">
                     <div class="marvel-device macbook">
@@ -130,31 +144,33 @@
         </div>
     </section>
     <section class="project-section h100 justifyAlignCenter">
-            <div class="section-wrapper w100">
-                <div class="tri-section ">
-                    <h2>Previewing Flow</h2>
-                    <p>
-                        Lets have a look at the previewing of the flow we prototypes above. In the online tool, we support previewing both with a laptop and iPad skin.
-                        When we open the preview link in a iPad, the skin disappears automatically so as to allow users to easily play around with a hand-held device.
-                    </p>
-                    <div class="macbook-wrapper">
-                        <div class="marvel-device ipad landscape">
-                            <div class="top-bar"></div>
-                            <div class="camera"></div>
-                            <div class="screen">
-                                <div class="player-holder">
-                                    <video controls crossorigin playsinline id="player">
-                                        <source src="https://s3.us-east-2.amazonaws.com/asitparida-portfolio/idiff-ipad-preview.mp4"
-                                            type="video/mp4">
-                                    </video>
-                                </div>
+        <div class="section-wrapper w100">
+            <div class="tri-section ">
+                <h2>Previewing Flow</h2>
+                <p>
+                    Lets have a look at the previewing of the flow we prototypes above. In the online tool, we support
+                    previewing both with a laptop and iPad skin.
+                    When we open the preview link in a iPad, the skin disappears automatically so as to allow users to
+                    easily play around with a hand-held device.
+                </p>
+                <div class="macbook-wrapper">
+                    <div class="marvel-device ipad landscape">
+                        <div class="top-bar"></div>
+                        <div class="camera"></div>
+                        <div class="screen">
+                            <div class="player-holder">
+                                <video controls crossorigin playsinline id="player">
+                                    <source src="https://s3.us-east-2.amazonaws.com/asitparida-portfolio/idiff-ipad-preview.mp4"
+                                        type="video/mp4">
+                                </video>
                             </div>
-                            <div class="bottom-bar"></div>
                         </div>
+                        <div class="bottom-bar"></div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     <section class="project-section h20 justifyAlignCenter">
         <div class="section-wrapper w100 footer-section">
             <div class="tri-section w2">
@@ -172,4 +188,9 @@
             </div>
         </div>
     </section>
+</div>
+<div class="prototype-callout" *ngIf="showPrototypeCallout">
+    <div class="close" (click)="showPrototypeCallout = false">Dismiss</div>
+    <label>Working prototype available !</label>
+    <a href="https://idiff.azurewebsites.net" target="_blank" class="portfolio-btn">Visit Website</a>
 </div>

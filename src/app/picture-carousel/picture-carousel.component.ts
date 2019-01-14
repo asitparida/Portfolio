@@ -30,6 +30,7 @@ export class PictureCarouselComponent implements OnInit, AfterViewInit {
     @Input() inplaceCarouselWrapperClass = '';
     @Input() bottomStagger = false;
     @Input() embeddedCarousel = false;
+    @Input() staggerStep = 15;
     constructor(
         private sanitizer: DomSanitizer,
         private elRef: ElementRef) { }

@@ -2,7 +2,7 @@
     <section class="project-section h75 justifyAlignCenter">
         <div class="section-wrapper alignItemsBottom">
             <div class="left-section alignItemsCenter">
-                <h1 style="margin-top: 0px;">Bun Bun Bakery</h1>
+                <h1 style="margin-top: 0;">Bun Bun Bakery</h1>
                 <p style="margin: 0 0 30px 0;">An online shop for the best cinnamon buns in town</p>
                 <div class="tags centered">
                     <div class="tag">
@@ -24,115 +24,121 @@
             </div>
         </div>
     </section>
-    <section class="project-section alignItemsCenter h75">
+    <section class="project-section alignItemsCenter h50">
         <div class="section-wrapper w100 alignItemsFlexStart">
-            <div class="tri-section">
-                <h2>What</h2>
-                <h3>is the use-case ?</h3>
-                <p>
-                    Dictionary.com’s word of year for 2018 is “<a href="https://www.dictionary.com/e/word-of-the-year/"
-                        target="_blank">misinformation</a>". We are trying to mitigate the dissonance created by the
-                    "fake" news around us.
-                    The propagation of such malicious content can be attributed to our own social circles.
-                </p>
-            </div>
             <div class="tri-section">
                 <h2>Why</h2>
                 <h3>did I pick this project ?</h3>
                 <p>
-                    The rampant spread of “fake” news is due to people seeking out and believing information which
-                    aligns with their currently-held attitudes.
-                    We blindly trust the source i.e. a friend of ours who re-tweeted or shared the article from
-                    somewhere (<a href="https://en.wikipedia.org/wiki/Elaboration_likelihood_model" target="_blank">ELM</a>).
-                </p>
-            </div>
-            <div class="tri-section">
-                <h2>How</h2>
-                <h3>did I build it ?</h3>
-                <p>
-                    We are designing an avatar based mobile game to empower folks against such misinformation.
-                    As they progress through this <a href="https://cyberpsychology.eu/article/view/4343/3418" target="_blank">embedded
-                        game design</a>, they learn to look at content critically.
-                    We are employing multiple persuasive design strategies like fictionalization and obfuscation.
+                    This project was my first segway into paper-prototyping after I joined my master's program.
+                    The evolution of the design from lo-fi iterations to mid-fi and then building out the exact pixel
+                    perfect screens for a web-app was a fascinating experience.
+                    I could see the gradual improvement of the screens and understand why lo-fi protoypping and
+                    guerilla testing are essential during the ideation and discovery phases
                 </p>
             </div>
         </div>
     </section>
-    <section class="project-section alignItemsCenter h75">
-        <div class="section-wrapper alignItemsFlexStart w100 p-b-0">
-            <div class="tri-section">
-                <h2>Secondary Research</h2>
-                <p>
-                    We went through research papers we spoke about the different pathways people receive misinformation
-                    and important characteristics of
-                    misinformation, especially in the form of blurbs that are “convenient”, “efficient”, and
-                    “trustworthy” sources.
-                    <br />
-                    We took into account papers which spoke of how people were influenced by
-                    virtual pets and how they serve as catalysts for behaviour change.
-                </p>
-            </div>
-        </div>
-    </section>
-    <section class="project-section h75 justifyAlignCenter">
-        <div class="section-wrapper w100">
+    <section class="project-section alignItemsCenter h50">
+        <div class="section-wrapper alignItemsFlexStart w100">
             <div class="tri-section w2">
+                <h2>Visual Design</h2>
+                <p>
+                    The first step was to create a visual language for the design.
+                    I looked at current phone and web apps for inspiration which did a pretty awesome job with in the
+                    food-commerce space.
+                    The <a href="https://coolors.co/" target="_blank">Coolors</a> site was an awesome tool to browse
+                    through some cool color palettes which related to cinnamon rolls and bakery in general.
+                </p>
+            </div>
+            <div class="tri-section w2 justifyAlignCenter">
+                <img imgZoomer data-lazy-load="true" class="boxed" src="assets/bun-bun/bun-bun.jpg" />
+            </div>
+        </div>
+    </section>
+    <section class="project-section h50 justifyAlignCenter">
+        <div class="section-wrapper w100">
+            <div class="tri-section w1">
                 <h2>Paper Prototyping</h2>
-                <p>We created a fictional world in which users are given a creature, affectionately called a Worble, to
-                    take care of.<br />Throughout the course of the game, users receive information from friends in
-                    their
-                    pet community on how to take care of their Worble. The correct information will help
-                    their Worble grow whereas the malicious ones will make it sick.
-                    <br />Users accelerate their experience points as they correctly differentiate between the true and
-                    false
-                    information.</p>
+                <h3>Iteration #1</h3>
+                <p>
+                    I created low-fidelity paper prototypes to quickly test out the screens.
+                    The idea was to validate out the skeleton for the web-app.
+                    The online e-shopping experience was created using papers, post-its and sharpies. 
+                    I also created simplied use-cases for baseline testing.
+                </p>
+                <div class="comments-wrapper">
+                    <div class="comment">
+                        <h4 class="highlight">Use-Case #1</h4>
+                        <p class="highlight-text">Alex is Business Person who knows what exactly she wants. She wants quick ordering and a custom order.
+                        </p>
+                    </div>
+                    <div class="comment">
+                        <h4 class="highlight">Use-Case #2</h4>
+                        <p class="highlight-text">Pam is a  Business Event Organizer. She is looking for good offers on catering. She also prefers to bulk order for a large event. </p>
+                    </div>
+                </div>
             </div>
             <div class="tri-section w1 justifyAlignCenter">
-                <img data-lazy-load="true" class="boxed" src="assets/veritas/worble.gif" />
+                <app-picture-carousel staggerStep="10" listWrapperClass="bun-bun-hand-drawn-list-carousel"
+                    [bottomStagger]="true" carouselWrapperClass="bun-bun-hand-drawn-place-carousel" [items]="poaperPrototypesFirstCarouselItems"></app-picture-carousel>
             </div>
         </div>
-        <div class="section-wrapper alignItemsFlexStart w100">
+    </section>
+    <section class="project-section h50 justifyAlignCenter">
+        <div class="section-wrapper w100">
             <div class="tri-section">
-                <h4 class="highlight">Critique #1</h4>
-                <p class="highlight-text">People are susceptible to misinformation due to confirmation bias, motivated
-                    reasoning, and the sleeper effect.</p>
+                <h2></h2>
+                <h3>Guerilla Testing & Next Iterations</h3>
+            </div>
+        </div>
+        <div class="section-wrapper alignItemsFlexStart w100 p-t-b-0">
+            <div class="tri-section">
+                <h4 class="highlight">Feedback #1</h4>
+                <p class="highlight-text">Images inside the carousel in the homepage dont make sense and could be just
+                    changed to full bleed images.</p>
             </div>
             <div class="tri-section">
-                <h4 class="highlight">Critique #2</h4>
-                <p class="highlight-text">Employ fictionalization and intermixing to prevent psychological reactance.</p>
+                <h4 class="highlight">Feedback #2</h4>
+                <p class="highlight-text">In the final confirmation page – the details after order is processed did not
+                    reflect the context earlier i.e. if store pick or delivery was selected.</p>
             </div>
             <div class="tri-section">
-                <h4 class="highlight">Critique #3</h4>
-                <p class="highlight-text">Utilizing personalization techniques increase the efficacy of the persuasive
-                    message and
-                    connection with the user.</p>
+                <h4 class="highlight">Feedback #3</h4>
+                <p class="highlight-text">The call-to-action in the this iterations doesn't make sense as the ‘ORDER’
+                    button is not easily discoverable. </p>
+            </div>
+        </div>
+        <div class="section-wrapper w100">
+            <div class="tri-section">
+                <button class="portfolio-btn" (click)="showProtoTypeViewer = true;"> Compare fidelities in iDiff</button>
             </div>
         </div>
     </section>
     <section class="project-section h75 justifyAlignCenter">
         <div class="section-wrapper w100 ">
-            <div class="tri-section w2">
+            <div class="tri-section">
                 <h2>Digital Prototyping</h2>
                 <p>
-                    The brainstorming sessions put us on a path towards the tamagotchi-like game concept We created
-                    multiple fidelities for our initial designs.
-                    To help us validate the needs we were addressing, we conducted think aloud sessions on our paper
-                    prototypes .
+                    Once the paper-prototypes were locked in, I moved to high-fi static designs created in Adobe XD and
+                    then to wokring prototype using Angular 5 & TypeScript.
+                    Below is a video preview of the working prototype.
                 </p>
-                <div class="comments-wrapper">
-                    <div class="comment">
-                        <h4 class="highlight">User #1</h4>
-                        <p class="highlight-text">I think it’s fun and learning how to care for your worble seems like
-                            it’ll be really entertaining...</p>
-                    </div>
-                    <div class="comment">
-                        <h4 class="highlight">User #2</h4>
-                        <p class="highlight-text">I loved decorating the creature.</p>
+                <div class="macbook-wrapper">
+                    <div class="marvel-device macbook">
+                        <div class="top-bar"></div>
+                        <div class="camera"></div>
+                        <div class="screen">
+                            <div class="player-holder">
+                                <video controls crossorigin playsinline id="player" class="plyr-player">
+                                    <source src="https://s3.us-east-2.amazonaws.com/asitparida-portfolio/BunBun.mp4"
+                                        type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="bottom-bar"></div>
                     </div>
                 </div>
-            </div>
-            <div class="tri-section w1">
-                <app-picture-carousel></app-picture-carousel>
             </div>
         </div>
     </section>
@@ -141,8 +147,8 @@
             <div class="tri-section w2">
                 <h4>Links</h4>
                 <div class="btn-containers">
-                    <button class="portfolio-btn">Visit GitHub</button>
-                    <button class="portfolio-btn">Visit Website</button>
+                    <a href="https://github.com/asitparida/bunbun" target="_blank" class="portfolio-btn">Visit GitHub</a>
+                    <a href="https://bun-bun.azurewebsites.net" target="_blank" class="portfolio-btn">Visit Website</a>
                 </div>
             </div>
             <div class="tri-section w1 justifyAlignFlexStart">
@@ -153,4 +159,23 @@
             </div>
         </div>
     </section>
+</div>
+<div class="prototype-callout" *ngIf="showPrototypeCallout">
+    <div class="close" (click)="showPrototypeCallout = false">Dismiss</div>
+    <label>Working prototype available !</label>
+    <div>
+        <a class="portfolio-btn" style="margin-right: 15px;" href="https://bun-bun.azurewebsites.net" target="_blank">Visit Website</a>
+        <button class="portfolio-btn" style="margin-left: 15px;" (click)="showProtoTypeViewer = true;"> Compare fidelities in iDiff</button>
+    </div>
+
+</div>
+<div class="prototype-viewer" *ngIf="showProtoTypeViewer" (keyup.escape)=" showProtoTypeViewer = false;" tabindex="0">
+    <div class="close" (keyup.enter)=" showProtoTypeViewer = false;" (click)=" showProtoTypeViewer = false;">Close</div>
+    <div class="marvel-device ipad diff-ipad">
+        <div class="camera"></div>
+        <div class="screen">
+            <iframe class="iframe-wrapper" src="https://idiff.azurewebsites.net/preview/5e91671d-21e1-f2ee-d00c-750421a30c01?forceResolution=full"></iframe>
+        </div>
+    </div>
+    <label>Use the drag handler to compare the low-fidelity and high-fidelity designs side-by-side</label>
 </div>

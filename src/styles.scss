@@ -78,7 +78,7 @@ html {
         @include COLORED_BG($PUMPKIN, 40)
     }
     &[data-color="$POMEGRANATE"] {
-        @include COLORED_BG($POMEGRANATE, 40)
+        @include COLORED_BG($POMEGRANATE, 45)
     }
     &[data-color="$WISTERIA"] {
         @include COLORED_BG($WISTERIA, 43)
@@ -458,9 +458,16 @@ img {
     padding-top: 60px !important;
     padding-bottom: 60px !important;
 }
+.p-t-b-0 {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
 .centered-in-box {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.cursor-zoom-in {
+    cursor: zoom-in;
 }
