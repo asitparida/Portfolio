@@ -184,6 +184,12 @@
                 }
             }
         }
+        &.flexEnded {
+            justify-content: flex-end;
+            .tag {
+                width: 250px;
+            }
+        }
         .tag {
             line-height: 36px;
             padding: 5px 15px;
