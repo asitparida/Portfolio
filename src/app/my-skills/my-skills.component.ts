@@ -3,6 +3,15 @@ import { Skill } from '../skills/skills.component';
 
 const SkillGroups = [
     {
+        title: 'Design Tools',
+        skills: [
+            { id: 'adobe-ps', src: 'assets/profile-skills/adobe-ps.png', tag: 'Adobe Photoshop' },
+            { id: 'adobe-ai', src: 'assets/profile-skills/adobe-ai.png', tag: 'Adobe Illustrator' },
+            { id: 'adobe-xd', src: 'assets/profile-skills/adobe-xd.png', tag: 'Adobe XD' },
+            { id: 'figma', src: 'assets/profile-skills/figma.png', tag: 'Figma' },
+        ]
+    },
+    {
         title: 'Dev Stack',
         skills: [
             { id: 'web', src: 'assets/profile-skills/web.png', tag: 'Web' },
@@ -19,15 +28,6 @@ const SkillGroups = [
             { id: 'js', src: 'assets/profile-skills/js.png', tag: 'Javascript' },
             { id: 'scss', src: 'assets/profile-skills/scss.png', tag: 'SCSS' },
             { id: 'ts', src: 'assets/profile-skills/ts.png', tag: 'Typescript' }
-        ]
-    },
-    {
-        title: 'Design Tools',
-        skills: [
-            { id: 'adobe-ps', src: 'assets/profile-skills/adobe-ps.png', tag: 'Adobe Photoshop' },
-            { id: 'adobe-ai', src: 'assets/profile-skills/adobe-ai.png', tag: 'Adobe Illustrator' },
-            { id: 'adobe-xd', src: 'assets/profile-skills/adobe-xd.png', tag: 'Adobe XD' },
-            { id: 'figma', src: 'assets/profile-skills/figma.png', tag: 'Figma' },
         ]
     },
     {

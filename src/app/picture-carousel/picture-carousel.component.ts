@@ -43,6 +43,9 @@ export class PictureCarouselComponent implements OnInit, AfterViewInit {
         this.activeItem = this.items[this.activeIndex];
     }
     ngAfterViewInit() {
+        if (window.innerWidth <= 768) {
+            this.embeddedCarousel = true;
+        }
         if (this.embeddedCarousel) {
             const elem = this.elRef.nativeElement;
             if (elem) {
