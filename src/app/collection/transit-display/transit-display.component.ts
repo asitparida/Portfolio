@@ -30,7 +30,6 @@ export class TransitDisplayComponent implements AfterViewInit, OnDestroy, OnInit
         { text: null, img: 'assets/transit-display/hand-drawn-sketches/Slide7.png' },
     ];
     showProtoType = false;
-    showPrototypeCallout = false;
     constructor(private santizer: DomSanitizer) { }
 
     ngOnInit() {
@@ -55,9 +54,6 @@ export class TransitDisplayComponent implements AfterViewInit, OnDestroy, OnInit
                 this.videoPlayers.push(videoPlayer);
             });
         }
-        setTimeout(() => {
-            this.showPrototypeCallout = true;
-        }, 2500);
     }
     scrollTop() {
         if (typeof window.scrollTo !== 'undefined') {

@@ -15,7 +15,6 @@ export class IdiffComponent implements AfterViewInit, OnDestroy, OnInit {
         { text: null, img: 'assets/idiff/Picture2.png' },
         { text: null, img: 'assets/idiff/Picture3.png' },
     ];
-    showPrototypeCallout = false;
     constructor() { }
 
     ngOnInit() {
@@ -26,9 +25,6 @@ export class IdiffComponent implements AfterViewInit, OnDestroy, OnInit {
     }
 
     ngAfterViewInit() {
-        setTimeout(() => {
-            this.showPrototypeCallout = true;
-        }, 2500);
         const players = document.querySelectorAll('.plyr-player') as any;
         if (players && players.length > 0) {
             (players as Array<any>).forEach(p => {

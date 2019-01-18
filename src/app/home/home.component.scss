@@ -18,6 +18,24 @@
         @include respond-to-mobile {
             padding: 15px 0;
         }
+        span.code {
+            padding: 0;
+            color: $PETER_RIVER;
+            &:before {
+                content: '〈';
+                position: relative;
+                left: -6px;
+                color: $PETER_RIVER;
+                margin-right: 2px;
+            }
+            &:after {
+                content: '〉';
+                position: relative;
+                right: -6px;
+                color: $PETER_RIVER;
+                margin-left: 2px;
+            }
+        }
     }
     h1 {
         font-size: 6em;

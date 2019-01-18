@@ -1,5 +1,5 @@
 <div class="project-contents">
-    <section class="project-section h75 justifyAlignCenter">
+    <section class="project-section h100Adjusted justifyAlignCenter">
         <div class="section-wrapper alignItemsBottom">
             <div class="left-section alignItemsCenter">
                 <h1 style="margin-top: 0;">Bun Bun Bakery</h1>
@@ -18,28 +18,31 @@
                         <label>prototyping</label>
                     </div>
                 </div>
+                <div class="live-proto-btn">
+                    <a class="portfolio-btn" style="margin-right: 15px;" href="https://bun-bun.azurewebsites.net" target="_blank">Visit Website</a>
+                </div>
             </div>
             <div class="content-available-below-fold">
                 <img data-lazy-load="true" src="assets/arrow_upward.png" />
             </div>
         </div>
     </section>
-    <section class="project-section alignItemsCenter h50">
+    <section class="project-section alignItemsCenter h60">
         <div class="section-wrapper w100 alignItemsFlexStart">
             <div class="tri-section">
                 <h2>Why</h2>
                 <h3>did I pick this project ?</h3>
                 <p>
-                    This project was my first segway into paper-prototyping after I joined my master's program.
-                    The evolution of the design from lo-fi iterations to mid-fi and then building out the exact pixel
+                    This project was <strong>my first segway into paper-prototyping</strong> after I joined my master's program.
+                    The <strong>evolution</strong> of the design from lo-fi iterations to mid-fi and then building out the exact pixel
                     perfect screens for a web-app was a fascinating experience.
-                    I could see the gradual improvement of the screens and understand why lo-fi protoypping and
-                    guerilla testing are essential during the ideation and discovery phases
+                    I could see the gradual improvement of the screens and understand <strong>why lo-fi protoypping</strong> and
+                    guerilla testing are essential during the ideation and discovery phases.
                 </p>
             </div>
         </div>
     </section>
-    <section class="project-section alignItemsCenter h50">
+    <section class="project-section alignItemsCenter h60">
         <div class="section-wrapper alignItemsFlexStart w100">
             <div class="tri-section w2">
                 <h2>Visual Design</h2>
@@ -159,15 +162,6 @@
             </div>
         </div>
     </section>
-</div>
-<div class="prototype-callout" *ngIf="showPrototypeCallout">
-    <div class="close" (click)="showPrototypeCallout = false">Dismiss</div>
-    <label>Working prototype available !</label>
-    <div>
-        <a class="portfolio-btn" style="margin-right: 15px;" href="https://bun-bun.azurewebsites.net" target="_blank">Visit Website</a>
-        <button class="portfolio-btn" style="margin-left: 15px;" (click)="showProtoTypeViewer = true;"> Compare fidelities in iDiff</button>
-    </div>
-
 </div>
 <div class="prototype-viewer" *ngIf="showProtoTypeViewer" (keyup.escape)=" showProtoTypeViewer = false;" tabindex="0">
     <div class="close" (keyup.enter)=" showProtoTypeViewer = false;" (click)=" showProtoTypeViewer = false;">Close</div>

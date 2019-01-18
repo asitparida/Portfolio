@@ -55,6 +55,9 @@
         text-decoration: underline;
         color:darken(#333, 10);
         padding: 0;
+        &.portfolio-btn {
+            text-decoration: none;
+        }
     }
     .left-section  {
         padding: 0px 30px;
@@ -237,6 +240,27 @@
         align-items: center;
         flex-flow: row;
         width: 100%;
+    }
+}
+.live-proto-btn {
+    margin-top: 30px;
+    button,
+    a {
+        &.portfolio-btn {
+            color: #565656;
+            border-color: #565656;
+            line-height: 44px;
+            height: 48px;
+            border-radius: 30px;
+            padding: 0 20px !important;
+            box-shadow: 0px 0px 4px rgba(#000000, 0.20);
+            transition: all 0.3s linear 0s;
+            &:hover {
+                background: #000;
+                color: #fff !important;
+                border-color: #000; 
+            }
+        }
     }
 }
 .alignItemsCenter {

@@ -44,9 +44,6 @@ export class BunBunComponent implements AfterViewInit, OnDestroy, OnInit {
     }
 
     ngAfterViewInit() {
-        setTimeout(() => {
-            this.showPrototypeCallout = true;
-        }, 2500);
         this.videoPlayer = new Plyr('#player', {
             loop: { active: true }
         });
