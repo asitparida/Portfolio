@@ -4,8 +4,8 @@
             <a class="first-level" [routerLink]="['home']" routerLinkActive="active-link"><span>Home</span><img src="assets/navigation/outline_home_black_36dp.png" /></a>
         </li>
         <li class="featured-link" (click)="toggleFeaturedSubMenu()">
-            <a class="first-level" [routerLink]="['featured']" routerLinkActive="active-link"><span>Featured</span><img
-                    src="assets/navigation/baseline_star_border_black_36dp.png" /></a>
+            <a class="first-level" [routerLink]="['featured']" routerLinkActive="active-link"><span>Projects</span><img
+                    src="assets/navigation/outline_widgets_black_36dp.png" /></a>
             <ng-container *ngIf="!featuredSubMenuHidden">
                 <ul class="submenu" [attr.id]="featuredSubMenuId" [style.left]="leftAdjust" (clickOutside)="onClickOutside()" >
                     <li>
