@@ -277,6 +277,24 @@ export class ProjectsComponent implements AfterViewInit {
                         elemClose.classList.add('darker');
                     }
                 }
+                const elemWebButton = elem.querySelector('[data-tag="app-link"]');
+                if (elemWebButton) {
+                    if (!_.isEmpty(item.publishSrc)) {
+                        (elemWebButton as HTMLAnchorElement).href = item.publishSrc;
+                        (elemWebButton as HTMLAnchorElement).style.display = '';
+                    } else {
+                        (elemWebButton as HTMLAnchorElement).style.display = 'NONE';
+                    }
+                }
+                const elemGithuButton = elem.querySelector('[data-tag="source-code"]');
+                if (elemGithuButton) {
+                    if (!_.isEmpty(item.githubSrc)) {
+                        (elemGithuButton as HTMLAnchorElement).href = item.githubSrc;
+                        (elemGithuButton as HTMLAnchorElement).style.display = '';
+                    } else {
+                        (elemGithuButton as HTMLAnchorElement).style.display = 'NONE';
+                    }
+                }
                 document.body.classList.add('no-overflow');
                 elem.classList.remove('anim', 'out');
                 elem.classList.add('anim', 'in');
