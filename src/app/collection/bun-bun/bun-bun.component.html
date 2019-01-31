@@ -1,7 +1,7 @@
 <div class="project-contents">
     <section class="project-section h100Adjusted justifyAlignCenter">
         <div class="section-wrapper alignItemsBottom">
-            <div class="left-section alignItemsCenter header-section">
+            <div class="main-section alignItemsCenter header-section">
                 <h1 style="margin-top: 0;">Bun Bun Bakery</h1>
                 <p style="margin: 0 0 30px 0;">An online shop for the best cinnamon buns in town</p>
                 <div class="tags centered">
@@ -36,8 +36,8 @@
                     This project was <strong>my first segway into paper-prototyping</strong> after I joined my master's program.
                     The <strong>evolution</strong> of the design from lo-fi iterations to mid-fi and then building out the exact pixel
                     perfect screens for a web-app was a fascinating experience.
-                    I could see the gradual improvement of the screens and understand <strong>why lo-fi protoypping</strong> and
-                    guerilla testing are essential during the ideation and discovery phases.
+                    I could clearly sense the gradual improvement of the screens and understand why<strong> lo-fi prototyping</strong> and
+                    <strong>guerilla testing</strong> are essential during the ideation and discovery phases.
                 </p>
             </div>
         </div>
@@ -48,10 +48,9 @@
                 <h2>Visual Design</h2>
                 <p>
                     The first step was to create a visual language for the design.
-                    I looked at current phone and web apps for inspiration which did a pretty awesome job with in the
-                    food-commerce space.
-                    The <a href="https://coolors.co/" target="_blank">Coolors</a> site was an awesome tool to browse
-                    through some cool color palettes which related to cinnamon rolls and bakery in general.
+                    I looked at the existing phone and web apps, in the food-commerce space, for inspiration.
+                    The <a href="https://coolors.co/" target="_blank">Coolors</a> site was an excellent tool to browse
+                    through some cool color palettes related to cinnamon rolls and bakery in general.
                 </p>
             </div>
             <div class="tri-section w2 justifyAlignCenter">
@@ -65,20 +64,16 @@
                 <h2>Paper Prototyping</h2>
                 <h3>Iteration #1</h3>
                 <p>
-                    I created low-fidelity paper prototypes to quickly test out the screens.
-                    The idea was to validate out the skeleton for the web-app.
-                    The online e-shopping experience was created using papers, post-its and sharpies. 
-                    I also created simplied use-cases for baseline testing.
+                        I created low-fidelity paper prototypes to test out the screens quickly. The idea was to validate out the skeleton for the web-app. The online e-shopping experience was created using papers, post-its, and sharpies. I also created simple use-cases for baseline testing.
                 </p>
                 <div class="comments-wrapper">
                     <div class="comment">
                         <h4 class="highlight">Use-Case #1</h4>
-                        <p class="highlight-text">Alex is Business Person who knows what exactly she wants. She wants quick ordering and a custom order.
-                        </p>
+                        <p class="highlight-text">Alex is a Business Person who knows what exactly she wants. She wants quick ordering and custom order.</p>
                     </div>
                     <div class="comment">
                         <h4 class="highlight">Use-Case #2</h4>
-                        <p class="highlight-text">Pam is a  Business Event Organizer. She is looking for good offers on catering. She also prefers to bulk order for a large event. </p>
+                        <p class="highlight-text">Pam is a Business Event organizer. She is looking for reasonable offers on catering. She also prefers to bulk order for an event.</p>
                     </div>
                 </div>
             </div>
@@ -98,7 +93,7 @@
         <div class="section-wrapper alignItemsFlexStart w100 p-t-b-0">
             <div class="tri-section">
                 <h4 class="highlight">Feedback #1</h4>
-                <p class="highlight-text">Images inside the carousel in the homepage dont make sense and could be just
+                <p class="highlight-text">In the homepage, images inside the carousel dont make sense and could be just
                     changed to full bleed images.</p>
             </div>
             <div class="tri-section">
@@ -112,9 +107,9 @@
                     button is not easily discoverable. </p>
             </div>
         </div>
-        <div class="section-wrapper w100 hidden-xs">
+        <div class="section-wrapper w100 hidden-xs" style="padding-top: 0;">
             <div class="tri-section">
-                <button class="portfolio-btn" (click)="showProtoTypeViewer = true;"> Compare fidelities in iDiff</button>
+                <button class="portfolio-btn" (click)="showProtoTypeViewer = true;"> Compare fidelities</button>
             </div>
         </div>
     </section>
@@ -124,7 +119,7 @@
                 <h2>Digital Prototyping</h2>
                 <p>
                     Once the paper-prototypes were locked in, I moved to high-fi static designs created in Adobe XD and
-                    then to wokring prototype using Angular 5 & TypeScript.
+                    then to building the working prototype using Angular 5 & TypeScript.
                     Below is a video preview of the working prototype.
                 </p>
                 <div class="macbook-wrapper hidden-xs">
@@ -168,7 +163,7 @@
     <div class="marvel-device ipad diff-ipad">
         <div class="camera"></div>
         <div class="screen">
-            <iframe class="iframe-wrapper" src="https://idiff.azurewebsites.net/preview/5e91671d-21e1-f2ee-d00c-750421a30c01?forceResolution=full"></iframe>
+            <app-prototype-viewer src="https://idiff.azurewebsites.net/preview/5e91671d-21e1-f2ee-d00c-750421a30c01?forceResolution=full"></app-prototype-viewer>
         </div>
     </div>
     <label>Use the drag handler to compare the low-fidelity and high-fidelity designs side-by-side</label>

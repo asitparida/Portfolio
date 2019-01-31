@@ -5,6 +5,8 @@
     align-items: center;
     padding: 60px 60px 45px 60px;
     flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
     @include respond-to-mobile {
         padding: 30px 12px 5px 12px;
     }
@@ -102,7 +104,7 @@
     }
     .project-wrapper {
         margin: 0;
-        width: 80%;
+        width: 100%;
         display: flex;
         align-items: center;
         flex-flow: column;
@@ -161,7 +163,7 @@
                         flex: initial;
                         display: flex;
                         justify-content: center;
-                        align-items: flex-start;
+                        align-items: center;
                         flex-direction: column;
                         padding: 45px;
                         transition: background 0.3s linear 0s;
@@ -177,6 +179,7 @@
                         }
                         &:not(.colored-bg) {
                             flex: 1;
+                            min-width: 400px
                         }
                     }
                     img {
@@ -384,5 +387,17 @@
                 }
             }
         }
+    }
+}
+.video-player {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    video {
+        width: 100%;
+        height: 100%;
     }
 }

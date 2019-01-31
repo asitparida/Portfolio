@@ -10,6 +10,7 @@ export class VeritasComponent implements AfterViewInit, OnInit, OnDestroy {
     isVideoPlayed = false;
     videoPlayer = null;
     isVideoPiped = false;
+    showProtoTypeViewer = false;
     pictureCarouselItems = [
         { text: null, img: 'assets/veritas/IMG_1307_iphone8spacegrey_portrait.png' },
         { text: null, img: 'assets/veritas/IMG_1308_iphone8spacegrey_portrait.png' },
@@ -29,6 +30,9 @@ export class VeritasComponent implements AfterViewInit, OnInit, OnDestroy {
     }
 
     ngAfterViewInit() {
+
+    }
+    initializeVideo() {
         this.videoPlayer = new Plyr('#player', {
             loop: { active: true }
         });
@@ -51,10 +55,15 @@ export class VeritasComponent implements AfterViewInit, OnInit, OnDestroy {
         }
     }
     watchVideo() {
-        this.videoPlayer.stop();
+        this.showProtoTypeViewer = true;
         setTimeout(() => {
-            this.scrollTop();
-            this.videoPlayer.play();
+            if (!this.videoPlayer) {
+                this.initializeVideo();
+            }
+            setTimeout(() => {
+                this.scrollTop();
+                this.videoPlayer.play();
+            }, 300);
         });
     }
 

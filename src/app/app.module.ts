@@ -30,6 +30,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ContactComponent } from './contact/contact.component';
 import { ImgZoomerDirective } from './img-zoomer.directive';
 import { ClickOutsideDirective } from './click-outside.directive';
+import { PrototypeViewerComponent } from './prototype-viewer/prototype-viewer.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { ClickOutsideDirective } from './click-outside.directive';
     NavigationComponent,
     ContactComponent,
     ImgZoomerDirective,
-    ClickOutsideDirective
+    ClickOutsideDirective,
+    PrototypeViewerComponent
   ],
   imports: [
     BrowserModule,

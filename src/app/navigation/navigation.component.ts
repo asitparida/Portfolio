@@ -71,7 +71,6 @@ export class NavigationComponent implements AfterViewInit, OnInit {
         });
     }
     onClickOutside() {
-        console.log('onClickOutside');
         if (!this.featuredSubMenuHidden) {
             this.featuredSubMenuHidden = true;
         }

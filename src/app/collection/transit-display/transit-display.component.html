@@ -1,10 +1,9 @@
 <div class="project-contents">
     <section class="project-section h100Adjusted justifyAlignCenter">
         <div class="section-wrapper alignItemsBottom">
-            <div class="left-section alignItemsCenter">
-                <!-- <app-team-badge></app-team-badge> -->
+            <div class="main-section alignItemsCenter">
                 <h1 style="margin-top: 0px;">Transit Hub Display</h1>
-                <p style="margin: 0 0 30px 0;">Designing a data driven display for a tourist hub</p>
+                <p style="margin: 0 0 30px 0;">Designing a data-driven display for a tourist hub</p>
                 <div class="tags centered">
                     <div class="tag">
                         <img data-lazy-load="true" src="assets/layers.png">
@@ -34,10 +33,7 @@
                 <h2>What</h2>
                 <h3>are we building ?</h3>
                 <p>
-                    We are building a environmental display for the fictional Atlantis travel hub in the San Juan
-                    Islands.
-                    Passengers will get ample information to plan itineraries, take trips across the small islands and
-                    enjoy the peace and tranquility of the beautiful San Juan.
+                    We are building an environmental display for the fictional Atlantis travel hub in the San Juan Islands. Passengers will get ample information to plan itineraries, take trips across the small islands and enjoy the peace and tranquility of the beautiful San Juan.
                 </p>
             </div>
         </div>
@@ -45,7 +41,7 @@
             <div class="tri-section">
                 <h4 class="highlight">Tenet #1</h4>
                 <p class="highlight-text">People can plan itineraries to visit multiple islands and places of
-                    attractions in the island.</p>
+                    attractions on the island.</p>
             </div>
             <div class="tri-section">
                 <h4 class="highlight">Tenet #2</h4>
@@ -63,9 +59,7 @@
         <div class="section-wrapper w100">
             <div class="tri-section w2">
                 <h2>Analyzing stakeholders</h2>
-                <p>
-                    We studied the personas and the available transit information for the islands to dissect through
-                    the data.
+                <p>To dissect through the data, we studied the personas and the available transit information for the islands.
                     <br />
                     To plot the inferred information, we used <strong>Wurman's LATCH</strong> model and observed data
                     across multiple features and axes.
@@ -86,8 +80,8 @@
                 <h2>Persona #1</h2>
                 <h3>Elizabeth Duarte</h3>
                 <p>
-                    Our Stakeholder serves as the transportation director of the municipality of San Juan Islands which
-                    is financing the environmental display for <strong>showing transportation data</strong> across the
+                    Our Stakeholder serves as the transportation director of the municipality of the San Juan Islands. Her department is
+                    is funding the environmental display for <strong>showing transportation data</strong> across the
                     island.
                     She aims to <strong>promote the new program</strong>, PTF pass, which would allow customers great
                     ease and flexibility to travel across the islands
@@ -97,7 +91,7 @@
                 <h2>Persona #2</h2>
                 <h3>George Shimko</h3>
                 <p>
-                    He is a long-time resident of island and owns modest fishing cabins on nearby Orcas Island and
+                    He is a long-time resident of the island and owns modest fishing cabins on nearby Orcas Island and
                     Stuart Island. He regularly invites his children
                     and grandchildren to his house on San Juan Island and intends to give them PTF passes so that
                     they can <strong>travel across</strong> San Juan Islands.
@@ -111,7 +105,7 @@
                     days per
                     week visiting drilling and wind power sites throughout the San Juan Islands. Weather
                     often influences his travel and so Patrick welcomes the new Pass program that allows him to
-                    purchase multiple trips and optimize his travel on-the-fly.
+                    <strong>purchase multiple trips</strong> and optimize his travel on-the-fly.
                 </p>
             </div>
         </div>
@@ -137,9 +131,9 @@
                 <h2>Iteration #1</h2>
                 <h3>Moving to digital protoyping</h3>
                 <p>
-                    Combining the best of the hand-drawn-sketched till now, we decided to have an individual section
+                    Combining the best of the hand-drawn sketches till now, we decided to have an individual section
                     for promoting the PTF pass.
-                    To connect the information, we used coupling which highlights both trip data and map info. The
+                    We focussed on visual coupling to highlight both trip data and map info. The
                     highlighted part in the map keeps rotating to display the current island.
                 </p>
                 <div class="comments-wrapper">
@@ -167,8 +161,8 @@
                 <h2>Iteration #2</h2>
                 <h3>Using motion as feedback</h3>
                 <p>
-                    Based on the feedback, we went with a darker color palette, gave the map a greater bit of space and
-                    worked on typographgy choices to enahnce the text on the screen.
+                    Based on the feedback, we went with a darker color palette, gave the map a more notable amount of space and
+                    worked on typographgy choices to enhance the text on the screen.
                 </p>
                 <div class="p-t-b-60 centered-in-box hidden-xs">
                     <div class="marvel-device macbook television">
@@ -212,15 +206,15 @@
                 <h2>Final Prototype</h2>
                 <p>
                     The final iteration displays the next departures per location.
-                    Users can find out more if they are interested by interacting with a physical control (this has an
+                    Users can find out more if they are interested, by interacting with a physical control (this has an
                     up and a down arrow).
                     <br />
                     We used a card layout which reveals more information when interacted with.
-                    In addition, the map highlights the routes related to the currently highlighted point of interest
+                    Also, the map highlights the routes related to the currently highlighted point of interest
                     in the San Juan Islands.
                 </p>
                 <div>
-                    <button class="portfolio-btn" (click)="watchVideo()">Watch Video</button>
+                    <!-- <button class="portfolio-btn" (click)="watchVideo()">Watch Video</button> -->
                     <button class="portfolio-btn" (click)="launchPrototype()">View Prototype</button>
                 </div>
             </div>
@@ -261,7 +255,7 @@
     <div class="marvel-device macbook television">
         <div class="camera"></div>
         <div class="screen">
-            <iframe src="https://transit-hub-display.azurewebsites.net/"></iframe>
+            <app-prototype-viewer src="https://transit-hub-display.azurewebsites.net/"></app-prototype-viewer>
         </div>
         <div class="control-wrapper">
             <div class="up">
