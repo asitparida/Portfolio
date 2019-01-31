@@ -33,6 +33,7 @@ import { ClickOutsideDirective } from './click-outside.directive';
 import { PrototypeViewerComponent } from './prototype-viewer/prototype-viewer.component';
 import { PitchVideoComponent } from './pitch-video/pitch-video.component';
 import { ProjectPreviewerComponent } from './project-previewer/project-previewer.component';
+import { GifLoaderDirective } from './gif-loader.directive';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { ProjectPreviewerComponent } from './project-previewer/project-previewer
     ClickOutsideDirective,
     PrototypeViewerComponent,
     PitchVideoComponent,
-    ProjectPreviewerComponent
+    ProjectPreviewerComponent,
+    GifLoaderDirective
   ],
   imports: [
     BrowserModule,

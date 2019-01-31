@@ -3,19 +3,22 @@
         <h1>Hi</h1>
         <h2>I am Asit Parida</h2>
         <h2>I am a designer and <span class="code">code</span> is my medium</h2>
-        <div class="play-icon" (click)="showVideo = true;">
+        <!-- <div class="play-icon" (click)="showVideo = true;">
             <i>▶</i>
-        </div>
+        </div> -->
     </div>
     <div class="projects-title">
-        <label>Featured Projects</label>
+        <label>Projects</label>
     </div>
     <div class="project-wrapper">
         <div class="project-item-wrapper">
             <a [routerLink]="['/featured/veritas']" data-bg-color="$TURQUOISE">
                 <div class="project-item-content-wrapper">
-                    <div class="content colored-bg">
-                        <img style="margin:0 45px;" data-lazy-load="true" src="assets/gifs/veritas.gif" alt="GIF for Veritas App" />
+                    <div class="content colored-bg" gifLoader>
+                        <img data-img="non-gif" class="" style="margin:0 45px;" data-lazy-load="true" src="assets/gifs/veritas-frame.gif"
+                            alt="GIF for Veritas App" />
+                        <img data-img="gif" class="hidden" style="margin:0 45px;" data-lazy-load="true" src="assets/gifs/veritas.gif"
+                            alt="GIF for Veritas App" />
                     </div>
                     <div class="content">
                         <label class="title">Veritas</label>
@@ -23,7 +26,7 @@
                         <div class="tags">
                             <div class="tag">research</div>
                             <div class="tag">prototyping</div>
-                            <div class="tag">react-native</div>
+                            <div class="tag">development</div>
                         </div>
                     </div>
                 </div>
@@ -38,11 +41,14 @@
                         <div class="tags">
                             <div class="tag">design</div>
                             <div class="tag">research</div>
-                            <div class="tag">angular</div>
+                            <div class="tag">development</div>
                         </div>
                     </div>
-                    <div class="content colored-bg">
-                        <img style="margin:0 45px;" data-lazy-load="true" src="assets/gifs/idiff.gif" alt="GIF for I-DIFF App" />
+                    <div class="content colored-bg" gifLoader>
+                        <img data-img="non-gif" class="" style="margin:0 45px;" data-lazy-load="true" src="assets/gifs/idiff-frame.gif"
+                            alt="GIF for I-DIFF App" />
+                        <img data-img="gif" class="hidden" style="margin:0 45px;" data-lazy-load="true" src="assets/gifs/idiff.gif"
+                            alt="GIF for I-DIFF App" />
                     </div>
                 </div>
             </a>
@@ -50,9 +56,11 @@
         <div class="project-item-wrapper">
             <a [routerLink]="['/featured/transit-display']" data-bg-color="$BELIZE_HOLE">
                 <div class="project-item-content-wrapper">
-                    <div class="content colored-bg">
-                        <img data-lazy-load="true" src="assets/gifs/transit-display.gif" alt="GIF for Transit Hub Display"
-                            style="max-height: 90%;" />
+                    <div class="content colored-bg" gifLoader>
+                        <img data-img="non-gif" class="" data-lazy-load="true" src="assets/gifs/transit-display-frame.gif"
+                            alt="GIF for Transit Hub Display" style="max-height: 90%;" />
+                        <img data-img="gif" class="hidden" data-lazy-load="true" src="assets/gifs/transit-display.gif"
+                            alt="GIF for Transit Hub Display" style="max-height: 90%;" />
                     </div>
                     <div class="content ">
                         <label class="title">Transit Hub Display</label>
@@ -75,22 +83,27 @@
                         <div class="tags">
                             <div class="tag">design</div>
                             <div class="tag">prototyping</div>
-                            <div class="tag">angular</div>
+                            <div class="tag">development</div>
                         </div>
                     </div>
-                    <div class="content colored-bg">
-                        <img data-lazy-load="true" src="assets/gifs/bun-bun.gif" alt="GIF for Bun Bun" style="max-height: 90%;" />
+                    <div class="content colored-bg" gifLoader>
+                        <img data-img="non-gif" class="" data-lazy-load="true" src="assets/gifs/bun-bun-frame.gif" alt="GIF for Bun Bun"
+                            style="max-height: 90%;" />
+                        <img data-img="gif" class="hidden" data-lazy-load="true" src="assets/gifs/bun-bun.gif" alt="GIF for Bun Bun"
+                            style="max-height: 90%;" />
                     </div>
                 </div>
             </a>
         </div>
+    </div>
+    <div class="project-wrapper">
         <div class="project-item-wrapper">
             <div class="project-items-list">
                 <div class="project-list-item">
                     <a (click)="openDrawer('Lean-Case')" data-bg-color="$TURQUOISE">
                         <div class="project-item-content-wrapper">
                             <div class="content colored-bg">
-                                <img data-lazy-load="true" src="assets/project-logos/lean-case.png" alt="GIF for Bun Bun"
+                                <img data-lazy-load="true" src="assets/project-logos/lean-case.png" alt="GIF for lean case"
                                     style="max-height: 90%;" />
                             </div>
                             <div class="content ">
@@ -147,6 +160,7 @@
         </div>
     </div>
 </div>
+
 <ng-container *ngIf="showVideo">
     <app-pitch-video [(showVideo)]="showVideo"></app-pitch-video>
 </ng-container>
