@@ -10,12 +10,39 @@
     @include respond-to-mobile {
         padding: 30px 12px 5px 12px;
     }
+    .play-icon {
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.05);
+        border-radius: 50%;
+        margin: 60px 0 0 0;
+        cursor: pointer;
+        i {
+            color: rgba(0, 0, 0, 0.30);
+            font-style: normal;
+            line-height: 48px;
+            cursor: pointer;
+            position: relative;
+            left: 2px;
+        }
+        &:hover {
+            background: rgba(0, 0, 0, 0.75);
+            i {
+                color: rgba(255, 255, 255, 0.90);
+            }
+        }
+        @include respond-to-mobile {
+            display: none;
+        }
+    }
     .titles {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 30px 0 75px 0;
+        padding: 30px 0 30px 0;
         flex-direction: column;
         @include respond-to-mobile {
             padding: 15px 0;
@@ -75,12 +102,13 @@
         }
     }
     .projects-title {
-        width: 80%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         border-top: 1px dashed rgba(0, 0, 0, 0.1);
-        margin: 60px 0 30px 0;
+        margin: 60px 0 45px 0;
+        position: relative;
         @include respond-to-mobile {
             width: 100%;
             padding: 0;
@@ -100,6 +128,23 @@
                 font-weight: 500;
                 line-height: 36px;
             }
+            @include respond-to-except-mobile {
+                margin: 25px 0 0 0;
+                padding: 0;
+                line-height: 36px;
+                font-size: 1em;
+                color: #707070;
+                font-weight: 100;
+                position: absolute;
+                left: 50%;
+                margin-left: -125px;
+                width: 250px;
+                background: #f9f9f9;
+                text-align: center;
+                top: -18px;
+                margin-top: 0;
+                border-radius: 25px;
+            }
         }
     }
     .project-wrapper {
@@ -113,8 +158,7 @@
             padding: 0;
         }
         .project-item-wrapper {
-            // flex: 1 1 calc(50%);
-            padding: 5px;
+            padding: 0;
             margin: 0 0 30px 0;
             max-width: 1200px;
             @include respond-to-mobile {
@@ -123,6 +167,115 @@
                 margin-bottom: 12px;
                 padding: 0;
                 width: 100%;
+            }
+            .project-items-list {
+                width: 100%;
+                display: flex;
+                @include respond-to-mobile {
+                    flex-flow: column;
+                }
+                @include respond-to-except-mobile {
+                    flex-flow: row wrap;
+                    justify-content: space-between;
+                }
+                .project-list-item {
+                    @include respond-to-except-mobile {
+                        flex: 1;
+                        margin: 0 15px;
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                    @include respond-to-mobile {
+                        width: 100%;
+                        &:not(:last-child) {
+                            margin-bottom: 12px;
+                        }
+                    }
+                    a {
+                        .project-item-content-wrapper {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            @include respond-to-except-mobile {
+                            }
+                            @include respond-to-mobile {
+                            }
+                            .content {
+                                min-width: auto;
+                                @include respond-to-except-mobile {
+                                    padding: 45px 20px 30px 30px;
+                                }
+                                @include respond-to-mobile {
+                                    padding: 20px;
+                                    align-items: flex-start;
+                                    width: 100%;
+                                }
+                                &.colored-bg {
+                                    height: 250px;
+                                    width: 100%;
+                                    padding: 15px;
+                                }
+                                &:not(.colored-bg) {
+                                    label {
+                                        @include respond-to-except-mobile {
+                                            &.title {
+                                                margin: 0 0 30px 0;
+                                           }
+                                            text-align: center;
+                                            &:not(.title) {
+                                                font-size: 1.15em;
+                                                font-weight: 400;
+                                                line-height: 1.50em;
+                                                margin: 0 0 20px 0;
+                                            }
+                                        }
+                                        @include respond-to-mobile {
+                                            &.title {
+                                                margin: 0 0 18px 0;
+                                           }
+                                            text-align: left;
+                                            &:not(.title) {
+                                                font-size: medium;
+                                                font-weight: 400;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .tags {
+                                display: flex;
+                                flex-flow: row wrap;
+                                margin-top: 20px;
+                                justify-content: center;
+                                @include respond-to-mobile {
+                                    justify-content: flex-start;
+                                    margin-top: 15px;
+                                }
+                                .tag {
+                                    @include respond-to-mobile {
+                                        padding: 0 7px;
+                                    }
+                                    @include respond-to-except-mobile {
+                                        padding: 0 15px;
+                                    }
+                                    &:first-child {
+                                        padding-left: 0;
+                                    }
+                                    &:last-child {
+                                        padding-right: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
             a {
                 *,
@@ -203,7 +356,7 @@
                                 font-size: x-large;
                                 font-weight: 300;
                                 text-align: left;
-                                text-transform: capitalize;
+                                // text-transform: capitalize;
                                 width: 100%;
                                 word-spacing: 3px;
                                 opacity: 0.75;
@@ -321,7 +474,7 @@
                         }
                     }
                 }
-                &[data-bg-color="$ALIZARIN"] {
+                &[data-bg-color="$PUMPKIN"] {
                     .project-item-content-wrapper {
                         .colored-bg {
                             background: lighten($ALIZARIN, 38);
@@ -349,6 +502,38 @@
                                 -webkit-box-shadow: 0px 13px 71px -2px rgba($PUMPKIN, 1);
                                 -moz-box-shadow: 0px 13px 71px -2px rgba($PUMPKIN, 1);
                                 box-shadow: 0px 13px 71px -2px rgba($PUMPKIN, 1);
+                            }
+                        }
+                    }
+                }
+                &[data-bg-color="$ALIZARIN"] {
+                    .project-item-content-wrapper {
+                        .colored-bg {
+                            background: lighten($ALIZARIN, 38);
+                        }
+                    }
+                    @include respond-to-mobile {
+                        background: lighten($ALIZARIN, 38);
+                    }
+                    @include respond-to-except-mobile {
+                        .project-item-content-wrapper {
+                            &:hover {
+                                .colored-bg {
+                                    background: rgba(darken($ALIZARIN, 0), 1);
+                                }
+                                .tags {
+                                    .tag {
+                                        color: #f0f0f0;
+                                        border-right-color: #e0e0e0;
+                                    }
+                                }
+                                label {
+                                    color: #f0f0f0;
+                                }
+                                background: rgba(darken($ALIZARIN, 0), 1);
+                                -webkit-box-shadow: 0px 13px 71px -2px rgba($ALIZARIN, 1);
+                                -moz-box-shadow: 0px 13px 71px -2px rgba($ALIZARIN, 1);
+                                box-shadow: 0px 13px 71px -2px rgba($ALIZARIN, 1);
                             }
                         }
                     }

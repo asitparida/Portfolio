@@ -31,6 +31,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ImgZoomerDirective } from './img-zoomer.directive';
 import { ClickOutsideDirective } from './click-outside.directive';
 import { PrototypeViewerComponent } from './prototype-viewer/prototype-viewer.component';
+import { PitchVideoComponent } from './pitch-video/pitch-video.component';
+import { ProjectPreviewerComponent } from './project-previewer/project-previewer.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,9 @@ import { PrototypeViewerComponent } from './prototype-viewer/prototype-viewer.co
     ContactComponent,
     ImgZoomerDirective,
     ClickOutsideDirective,
-    PrototypeViewerComponent
+    PrototypeViewerComponent,
+    PitchVideoComponent,
+    ProjectPreviewerComponent
   ],
   imports: [
     BrowserModule,

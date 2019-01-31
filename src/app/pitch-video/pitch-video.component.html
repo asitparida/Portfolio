@@ -1,0 +1,6 @@
+<div class="pitch-video-container" tabindex="0" (keyup.escape)="closeVideo()" #playerHolder>
+    <div class="overlay" (click)="closeVideo()"></div>
+    <video controls crossorigin playsinline [attr.id]="playerId" disablepictureinpicture>
+        <source src="https://s3.us-east-2.amazonaws.com/asitparida-portfolio/AsitParidaPitch.mp4" type="video/mp4">
+    </video>
+</div>

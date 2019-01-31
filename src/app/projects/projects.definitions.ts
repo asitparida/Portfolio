@@ -1,6 +1,7 @@
 // tslint:disable:max-line-length
 export const Projects = [
     {
+        hide: true,
         name: 'Lean-Case',
         description: 'a fintech app to plan and model day-to-day business operations and revenue subscriptions',
         git: null,
@@ -28,6 +29,7 @@ export const Projects = [
     `
     },
     {
+        hide: true,
         name: 'uif-fabric',
         description: 'The unofficial Angular 2/4 components library built for Office UI fabric.',
         git: 'https://github.com/asitparida/uif-fabric',
@@ -106,6 +108,7 @@ export const Projects = [
         `
     },
     {
+        hide: true,
         name: 'Reddit',
         description: 'Concept illustration for what Reddit may look like',
         git: 'https://github.com/asitparida/redesign-reddit',
@@ -302,6 +305,7 @@ export const Projects = [
         bgColor: '$SUNFLOWER'
     },
     {
+        hide: true,
         name: 'Quick References',
         description: 'blog for tl;dr snips on tech stacks',
         git: 'https://github.com/asitparida/tldr-xyz',

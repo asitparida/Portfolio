@@ -17,7 +17,7 @@ function getStyle(el, styleProp) {
     return document.defaultView.getComputedStyle(el, null)[styleProp];
 }
 
-function hexToRgb(hex: string) {
+export function hexToRgb(hex: string) {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result ? {
         r: parseInt(result[1], 16),
@@ -26,7 +26,7 @@ function hexToRgb(hex: string) {
     } : null;
 }
 
-const COLORS = {
+export const BASE_COLORS = {
     $EMERALD: '#2ecc71',
     $NEPHRITIS: '#27ae60',
     $TURQUOISE: '#1abc9c',
@@ -42,7 +42,7 @@ const COLORS = {
     $BELIZE_HOLE: '#2980b9'
 };
 
-class Project {
+export class Project {
     id: string;
     name: string;
     description: string;
@@ -88,7 +88,8 @@ export class ProjectsComponent implements AfterViewInit {
     drawerId = 'drawer' + Math.floor(Math.random() * 100);
     constructor() {
         const self = this;
-        _.each(PROJECTS_ARRAY, (_item: any, _iter: number) => {
+        const projects = PROJECTS_ARRAY.filter(p => p.hide !== true);
+        _.each(projects, (_item: any, _iter: number) => {
             const _project = new Project();
             _project.id = 'pro_' + _iter;
             _project.name = _item.name;
@@ -247,7 +248,7 @@ export class ProjectsComponent implements AfterViewInit {
             (drawerContainer as HTMLElement).classList.remove('visible');
             if (projectDrawerOpened) {
                 (drawerContainer as HTMLElement).classList.add('visible');
-                const bgColor = COLORS[item.bgColor];
+                const bgColor = BASE_COLORS[item.bgColor];
                 const rgb = hexToRgb(bgColor);
                 drawerContainer.style.backgroundColor = `rgba(${rgb.r},${rgb.g},${rgb.b},0.90)`;
                 const elemTitle = elem.querySelector('[data-tag="project-drawer-title"]');

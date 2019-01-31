@@ -32,7 +32,11 @@ export class TopScrollerComponent implements AfterViewInit {
   }
   scrollTop() {
     if (typeof window.scrollTo !== 'undefined') {
-      window.scrollTo(0, 0);
+      window.scrollBy({
+        top: - window.scrollY, // could be negative value
+        left: 0,
+        behavior: 'smooth'
+      });
     }
   }
 

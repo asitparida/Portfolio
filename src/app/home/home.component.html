@@ -3,6 +3,9 @@
         <h1>Hi</h1>
         <h2>I am Asit Parida</h2>
         <h2>I am a designer and <span class="code">code</span> is my medium</h2>
+        <div class="play-icon" (click)="showVideo = true;">
+            <i>▶</i>
+        </div>
     </div>
     <div class="projects-title">
         <label>Featured Projects</label>
@@ -64,7 +67,7 @@
             </a>
         </div>
         <div class="project-item-wrapper">
-            <a [routerLink]="['/featured/bun-bun']" data-bg-color="$ALIZARIN">
+            <a [routerLink]="['/featured/bun-bun']" data-bg-color="$PUMPKIN">
                 <div class="project-item-content-wrapper">
                     <div class="content ">
                         <label class="title">Bun Bun Bakery</label>
@@ -81,5 +84,72 @@
                 </div>
             </a>
         </div>
+        <div class="project-item-wrapper">
+            <div class="project-items-list">
+                <div class="project-list-item">
+                    <a (click)="openDrawer('Lean-Case')" data-bg-color="$TURQUOISE">
+                        <div class="project-item-content-wrapper">
+                            <div class="content colored-bg">
+                                <img data-lazy-load="true" src="assets/project-logos/lean-case.png" alt="GIF for Bun Bun"
+                                    style="max-height: 90%;" />
+                            </div>
+                            <div class="content ">
+                                <label class="title">Lean-Case</label>
+                                <label>A fintech app to plan and model day-to-day business operations</label>
+                                <div class="tags">
+                                    <div class="tag">design</div>
+                                    <div class="tag">prototyping</div>
+                                    <div class="tag">angular</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project-list-item">
+                    <a (click)="openDrawer('Reddit')" data-bg-color="$ALIZARIN">
+                        <div class="project-item-content-wrapper">
+                            <div class="content colored-bg" style="padding: 0;">
+                                <img data-lazy-load="true" src="assets/project-logos/reddit.png" alt="GIF for Bun Bun"
+                                    style="max-height: 100%;" />
+                            </div>
+                            <div class="content ">
+                                <label class="title">Reddit Redesign</label>
+                                <label>Concept illustration for what Reddit may look like</label>
+                                <div class="tags">
+                                    <div class="tag">redesign</div>
+                                    <div class="tag">prototyping</div>
+                                    <div class="tag">angular</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project-list-item">
+                    <a (click)="openDrawer('uif-fabric')" data-bg-color="$BELIZE_HOLE">
+                        <div class="project-item-content-wrapper">
+                            <div class="content colored-bg">
+                                <img data-lazy-load="true" src="assets/project-logos/uif-fabric.png" alt="GIF for Bun Bun"
+                                    style="max-height: 70%;" />
+                            </div>
+                            <div class="content ">
+                                <label class="title">uif-fabric</label>
+                                <label>Angular UI components library for Office UI fabric</label>
+                                <div class="tags">
+                                    <div class="tag">components</div>
+                                    <div class="tag">UI Library</div>
+                                    <div class="tag">angular</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<ng-container *ngIf="showVideo">
+    <app-pitch-video [(showVideo)]="showVideo"></app-pitch-video>
+</ng-container>
+<ng-container *ngIf="drawerOpened">
+    <app-project-previewer [(drawerOpened)]="drawerOpened" [projectId]="activeProjectId"></app-project-previewer>
+</ng-container>
