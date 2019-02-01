@@ -334,7 +334,9 @@
                         }
                         &:not(.colored-bg) {
                             flex: 1;
-                            min-width: 400px
+                            @include respond-to-except-mobile {
+                                min-width: 400px
+                            }
                         }
                     }
                     img {
