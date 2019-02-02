@@ -25,6 +25,9 @@
         position: absolute;
         z-index: 1;
     }
+    &[hidden] {
+        display: none !important;
+    }
 }
 
 @keyframes fade-in-video {

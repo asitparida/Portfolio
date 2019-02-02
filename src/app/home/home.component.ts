@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 declare var gtag;
 declare var Plyr;
+declare var MobileDetect: any;
 
 @Component({
     selector: 'app-home',
@@ -20,7 +21,17 @@ export class HomeComponent implements OnInit {
     showVideo = false;
     drawerOpened = false;
     activeProjectId = null;
-    constructor() { }
+    isMobile = false;
+    constructor() {
+        if (MobileDetect) {
+            const md = new MobileDetect(window.navigator.userAgent);
+            // tslint:disable-next-line:max-line-length
+            const value = md.mobile() || md.phone() || md.tablet() || md.is('iPhone') || md.is('Android') || md.is('android');
+            if (value) {
+                this.isMobile = true;
+            }
+        }
+    }
 
     ngOnInit() {
         document.documentElement.setAttribute('data-color', '$NONE');

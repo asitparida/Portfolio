@@ -11,6 +11,7 @@ export class PitchVideoComponent implements OnInit, AfterViewInit {
     videoPlayer;
     isVideoPlayed = false;
     isVideoPlayedPiped = false;
+    isVideoPip = false;
     @ViewChild('playerHolder') playerHolder: ElementRef;
     @Input() showVideo = false;
     @Output() showVideoChange = new EventEmitter<boolean>();
@@ -20,21 +21,29 @@ export class PitchVideoComponent implements OnInit, AfterViewInit {
     ngAfterViewInit() {
         (this.playerHolder.nativeElement as HTMLElement).focus();
         setTimeout(() => {
-            const videoElm = document.getElementById(this.playerId);
-            if (window.innerHeight < window.innerWidth) {
-                let width = window.innerWidth - 120;
-                let height = (width * (9 / 16));
-                if (height > (window.innerHeight - 120)) {
-                    height = window.innerHeight - 120;
-                    width = (height * (16 / 9));
-                }
-                (videoElm as HTMLVideoElement).style.width = width + 'px';
-                (videoElm as HTMLVideoElement).style.height = height + 'px';
-            }
+            this.adjustVideoSize();
             setTimeout(() => {
                 this.initializeVideo();
             }, 100);
         }, 1);
+    }
+    adjustVideoSize() {
+        const videoElm = document.getElementById(this.playerId);
+        if (window.innerHeight < window.innerWidth) {
+            let width = window.innerWidth - 120;
+            let height = (width * (9 / 16));
+            if (height > (window.innerHeight - 120)) {
+                height = window.innerHeight - 120;
+                width = (height * (16 / 9));
+            }
+            (videoElm as HTMLVideoElement).style.width = width + 'px';
+            (videoElm as HTMLVideoElement).style.height = height + 'px';
+        }
+    }
+    resetVideoSize() {
+        const videoElm = document.getElementById(this.playerId);
+        (videoElm as HTMLVideoElement).style.width = null;
+        (videoElm as HTMLVideoElement).style.height = null;
     }
     initializeVideo() {
         this.videoPlayer = new Plyr(`#${this.playerId}`, {
@@ -51,7 +60,8 @@ export class PitchVideoComponent implements OnInit, AfterViewInit {
                 'mute', // Toggle mute
                 'volume', // Volume control
                 'settings', // Settings menu
-                // 'fullscreen', // Toggle fullscreen
+                'fullscreen', // Toggle fullscreen
+                'pip', // picture-in-picture
             ]
         });
         this.videoPlayer.pip = false;
@@ -68,7 +78,20 @@ export class PitchVideoComponent implements OnInit, AfterViewInit {
             this.isVideoPlayed = false;
         });
         this.videoPlayer.on('enterpictureinpicture', event => {
-            console.log('hello');
+            setTimeout(() => {
+                this.isVideoPip = true;
+            });
+        });
+        this.videoPlayer.on('leavepictureinpicture', event => {
+            setTimeout(() => {
+                this.isVideoPip = false;
+            });
+        });
+        this.videoPlayer.on('enterfullscreen', event => {
+            this.resetVideoSize();
+        });
+        this.videoPlayer.on('exitfullscreen', event => {
+            this.adjustVideoSize();
         });
     }
     closeVideo() {
