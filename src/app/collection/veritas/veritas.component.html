@@ -195,6 +195,12 @@
                 </p>
             </div>
         </div>
+        <div class="section-wrapper w100 footer-section projects-hyperlinks hidden-xs" >
+            <div class="projects-hyperlinks-content">
+                <a class="project-nav-link" [routerLink]="['/home']"><img src="assets/keyboard_left.png" /><span class="text"><span class="text-uppercase override">Home</span></span></a>
+                <a class="project-nav-link" [routerLink]="['/featured/idiff']"><span class="text"><span class="text-uppercase">Next Project:</span> IDiff </span><img class="right" src="assets/keyboard_left.png" /></a>
+            </div>
+        </div>
     </section>
 </div>
 <div class="prototype-viewer" *ngIf="showProtoTypeViewer" (keyup.escape)=" showProtoTypeViewer = false;" tabindex="0">

@@ -111,6 +111,7 @@ body {
     padding: 0;
     overflow-x: hidden;
     &.no-overflow {
+        padding-right: 0.50em;
         @include respond-to-except-mobile {
             overflow-y: hidden;
         }

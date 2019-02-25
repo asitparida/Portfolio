@@ -53,6 +53,18 @@ export class PictureCarouselComponent implements OnInit, AfterViewInit {
             }
         }
     }
+    showCarousel() {
+        this.carouselShown = true;
+        setTimeout(() => {
+            const elem = this.elRef.nativeElement;
+            if (elem) {
+                const targetElm = (elem as HTMLElement).querySelector('.picture-carousel-wrapper');
+                if (targetElm) {
+                    (targetElm as HTMLElement).focus();
+                }
+            }
+        });
+    }
     move(dir) {
         const direction = dir === -1 ? 'left' : 'right';
         this.currentClass = `hide-${direction}`;

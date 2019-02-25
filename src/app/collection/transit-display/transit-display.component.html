@@ -33,7 +33,9 @@
                 <h2>What</h2>
                 <h3>are we building ?</h3>
                 <p>
-                    We are building an environmental display for the fictional Atlantis travel hub in the San Juan Islands. Passengers will get ample information to plan itineraries, take trips across the small islands and enjoy the peace and tranquility of the beautiful San Juan.
+                    We are building an environmental display for the fictional Atlantis travel hub in the San Juan
+                    Islands. Passengers will get ample information to plan itineraries, take trips across the small
+                    islands and enjoy the peace and tranquility of the beautiful San Juan.
                 </p>
             </div>
         </div>
@@ -59,7 +61,8 @@
         <div class="section-wrapper w100">
             <div class="tri-section w2">
                 <h2>Analyzing stakeholders</h2>
-                <p>To dissect through the data, we studied the personas and the available transit information for the islands.
+                <p>To dissect through the data, we studied the personas and the available transit information for the
+                    islands.
                     <br />
                     To plot the inferred information, we used <strong>Wurman's LATCH</strong> model and observed data
                     across multiple features and axes.
@@ -69,8 +72,8 @@
                 </p>
             </div>
             <div class="tri-section w1 justifyAlignCenter">
-                <app-picture-carousel [bottomStagger]="true" carouselWrapperClass="transit-carousel" listWrapperClass="transit-list"
-                    [items]="pictureCarouselItems"></app-picture-carousel>
+                <app-picture-carousel [bottomStagger]="true" carouselWrapperClass="transit-carousel"
+                    listWrapperClass="transit-list" [items]="pictureCarouselItems"></app-picture-carousel>
             </div>
         </div>
     </section>
@@ -80,7 +83,8 @@
                 <h2>Persona #1</h2>
                 <h3>Elizabeth Duarte</h3>
                 <p>
-                    Our Stakeholder serves as the transportation director of the municipality of the San Juan Islands. Her department is
+                    Our Stakeholder serves as the transportation director of the municipality of the San Juan Islands.
+                    Her department is
                     is funding the environmental display for <strong>showing transportation data</strong> across the
                     island.
                     She aims to <strong>promote the new program</strong>, PTF pass, which would allow customers great
@@ -120,8 +124,9 @@
                     possible.
                 </p>
                 <app-picture-carousel inplaceCarouselWrapperClass="transit-hand-drawn-inplace-carousel"
-                    [embeddedCarousel]="true" [bottomStagger]="true" carouselWrapperClass="transit-hand-drawn-place-carousel"
-                    [items]="handDrawnSketchesCarouselItems"></app-picture-carousel>
+                    [embeddedCarousel]="true" [bottomStagger]="true"
+                    carouselWrapperClass="transit-hand-drawn-place-carousel" [items]="handDrawnSketchesCarouselItems">
+                </app-picture-carousel>
             </div>
         </div>
     </section>
@@ -151,7 +156,8 @@
                 </div>
             </div>
             <div class="tri-section w1 justifyAlignCenter">
-                <img imgZoomer data-lazy-load="true" class="boxed" src="assets/transit-display/digital-iteration-1.png" />
+                <img imgZoomer data-lazy-load="true" class="boxed"
+                    src="assets/transit-display/digital-iteration-1.png" />
             </div>
         </div>
     </section>
@@ -161,7 +167,8 @@
                 <h2>Iteration #2</h2>
                 <h3>Using motion as feedback</h3>
                 <p>
-                    Based on the feedback, we went with a darker color palette, gave the map a more notable amount of space and
+                    Based on the feedback, we went with a darker color palette, gave the map a more notable amount of
+                    space and
                     worked on typographgy choices to enhance the text on the screen.
                 </p>
                 <div class="p-t-b-60 centered-in-box hidden-xs">
@@ -170,7 +177,8 @@
                         <div class="screen">
                             <div class="player-holder">
                                 <video controls crossorigin playsinline id="player1" class="plyr-player">
-                                    <source src="https://s3.us-east-2.amazonaws.com/asitparida-portfolio/TransitDisplayIterarion2.mp4"
+                                    <source
+                                        src="https://s3.us-east-2.amazonaws.com/asitparida-portfolio/TransitDisplayIterarion2.mp4"
                                         type="video/mp4">
                                 </video>
                             </div>
@@ -225,7 +233,8 @@
                 <div class="screen">
                     <div class="player-holder">
                         <video controls crossorigin playsinline id="player2" class="plyr-player">
-                            <source src="https://s3.us-east-2.amazonaws.com/asitparida-portfolio/TransitBoardDisplay.mp4"
+                            <source
+                                src="https://s3.us-east-2.amazonaws.com/asitparida-portfolio/TransitBoardDisplay.mp4"
                                 type="video/mp4">
                         </video>
                     </div>
@@ -246,6 +255,16 @@
                 <p>
                     <a href="https://www.flaticon.com/" target="_blank">Flat Icon</a>
                 </p>
+            </div>
+        </div>
+        <div class="section-wrapper w100 footer-section projects-hyperlinks hidden-xs">
+            <div class="projects-hyperlinks-content">
+                <a class="project-nav-link" [routerLink]="['/featured/idiff']"><img
+                        src="assets/keyboard_left.png" /><span class="text"><span class="text-uppercase">Previous
+                            Project:</span> IDiff</span></a>
+                <a class="project-nav-link" [routerLink]="['/featured/bun-bun']"><span class="text"><span
+                            class="text-uppercase">Next Project:</span> Bun Bun </span><img class="right"
+                        src="assets/keyboard_left.png" /></a>
             </div>
         </div>
     </section>

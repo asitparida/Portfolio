@@ -11,6 +11,7 @@
     padding: 0;
     min-height: 400px;
     position: relative;
+    overflow-x: hidden;
     @include respond-to-mobile {
         padding: 15px 0;
     }
@@ -110,6 +111,9 @@
         width: 60%;
         + .right-section {
             width: 40%;
+        }
+        @include respond-to-mobile {
+            width:100%;
         }
     }
     .right-section  {
@@ -281,6 +285,9 @@
                     width: 250px;
                 }
             }
+            @include respond-to-mobile {
+                justify-content: center;
+            }
         }
         .tag {
             line-height: 36px;
@@ -305,7 +312,7 @@
             }
             @include respond-to-mobile {
                 align-items: center;
-                padding: 5px 5px;
+                padding: 5px 10px;
                 &:last-child {
                     border-right: none;
                 }
@@ -314,7 +321,7 @@
                     max-height: 18px;
                 }
                 label {
-                    font-size: x-small;
+                    font-size: small;
                     text-align: center;
                 }
             }
@@ -349,6 +356,44 @@
             text-decoration: none;
             @include respond-to-mobile {
                 margin-right: 0px;
+            }
+        }
+        &.projects-hyperlinks {
+            justify-content: space-between;
+            padding: 45px 45px;
+            .projects-hyperlinks-content {
+                border-top: 1px dashed #e0e0e0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding: 60px 0 30px 0;
+            }
+            .project-nav-link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                line-height: 48px;
+                padding: 0;
+                margin: 0;
+                img {
+                    width: 24px;
+                    margin: 0 10px;
+                    opacity: 0.50;
+                    &.right {
+                        transform: rotate(180deg);
+                    }
+                }
+                .text-uppercase {
+                    letter-spacing: 1px;                    
+                    margin-right: 15px;
+                    &:not(.override) {
+                        font-size: small;
+                        color: #909090;
+                        text-transform: uppercase;
+                    }
+                }
+                
             }
         }
     }

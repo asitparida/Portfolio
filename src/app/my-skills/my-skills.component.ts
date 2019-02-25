@@ -3,6 +3,16 @@ import { Skill } from '../skills/skills.component';
 
 const SkillGroups = [
     {
+        title: 'Web Development',
+        skills: [
+            { id: 'html5', src: 'assets/profile-skills/html5.png', tag: 'HTML5' },
+            { id: 'css3', src: 'assets/profile-skills/css3.png', tag: 'CSS3' },
+            { id: 'js', src: 'assets/profile-skills/js.png', tag: 'Javascript' },
+            { id: 'scss', src: 'assets/profile-skills/scss.png', tag: 'SCSS' },
+            { id: 'ts', src: 'assets/profile-skills/ts.png', tag: 'Typescript' }
+        ]
+    },
+    {
         title: 'Design Tools',
         skills: [
             { id: 'adobe-ps', src: 'assets/profile-skills/adobe-ps.png', tag: 'Adobe Photoshop' },
@@ -18,16 +28,6 @@ const SkillGroups = [
             { id: 'nodejs', src: 'assets/profile-skills/node-js.png', tag: 'NodeJS' },
             { id: 'aspnetmvc', src: 'assets/profile-skills/aspnetmvc.png', tag: 'Asp Net MVC' },
             { id: 'sql', src: 'assets/profile-skills/sql.png', tag: 'SQL' },
-        ]
-    },
-    {
-        title: 'Web Development',
-        skills: [
-            { id: 'html5', src: 'assets/profile-skills/html5.png', tag: 'HTML5' },
-            { id: 'css3', src: 'assets/profile-skills/css3.png', tag: 'CSS3' },
-            { id: 'js', src: 'assets/profile-skills/js.png', tag: 'Javascript' },
-            { id: 'scss', src: 'assets/profile-skills/scss.png', tag: 'SCSS' },
-            { id: 'ts', src: 'assets/profile-skills/ts.png', tag: 'Typescript' }
         ]
     },
     {

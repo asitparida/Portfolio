@@ -1,6 +1,6 @@
 <ng-container *ngIf="!embeddedCarousel">
     <div class="picture-carousel-preview" [ngClass]="listWrapperClass" [style.height]="previewHeight" [style.width]="previewWidth"
-        (click)="carouselShown = true;">
+        (click)="showCarousel()">
         <div class="picture-wrapper" [style.marginRight]="marginRightAdjust" *ngFor="let item of pictureItems; let i = index;"
             [style.right]="bottomStagger ? (i*staggerStep) + 'px' : (i*staggerStep) + 'px' " [style.top]="bottomStagger ? (i*staggerStep) + 'px' : '0px'">
             <div class="picture-card" [style.backgroundImage]="item.img"></div>

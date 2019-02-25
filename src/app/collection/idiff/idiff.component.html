@@ -39,7 +39,8 @@
                 <p>
                     The users would be able to compare interactions, levels of visible progress and <strong>delta
                         changes</strong> in different screens.
-                    The tool could also be used to <strong>communicate</strong> the intent of the designers and and project <strong>the evolution of designs</strong>. The tool can be quite handy for portfolios.
+                    The tool could also be used to <strong>communicate</strong> the intent of the designers and and
+                    project <strong>the evolution of designs</strong>. The tool can be quite handy for portfolios.
                 </p>
             </div>
             <div class="tri-section">
@@ -55,7 +56,8 @@
                 <h2>Who</h2>
                 <h3>is my audience ?</h3>
                 <p>
-                    The target audience is primarily designers working in <strong>visual design</strong> space. These folks
+                    The target audience is primarily designers working in <strong>visual design</strong> space. These
+                    folks
                     nominally create <strong>multiple fidelities</strong> for designs.
                     The tool would be helpful for them to allow click-through prototyping while comparing two designs
                     or screens <strong>side-by-side</strong>.
@@ -70,7 +72,8 @@
                 <p class="maxWidth80">
                     The challenge was to create a web-based tool for aiding fellow designers and HCI students in my
                     cohort at university.
-                    Just two weeks earlier to this, I was creating paper-prototypes for my very first classroom project. I was
+                    Just two weeks earlier to this, I was creating paper-prototypes for my very first classroom project.
+                    I was
                     fascinated by the design evolution between iterations.
                     <br />
                     So, I thought of somehow combining the most enjoyable parts of projects.
@@ -91,13 +94,15 @@
                 <p class="maxWidth80">
                     I created paper prototypes after initial ideation to quick validate the project idea.
                     <br />
-                    I started sketching out both the authoring and the previewing views. I chose to focus on having a coherent stack of controls which would employ ample affordance. And so, the drag-bar handler was quite effective for feedforward.
+                    I started sketching out both the authoring and the previewing views. I chose to focus on having a
+                    coherent stack of controls which would employ ample affordance. And so, the drag-bar handler was
+                    quite effective for feedforward.
 
                 </p>
             </div>
             <div class="tri-section w1">
-                <app-picture-carousel [bottomStagger]="true" carouselWrapperClass="idiff-carousel" listWrapperClass="idiff-list"
-                    [items]="pictureCarouselItems"></app-picture-carousel>
+                <app-picture-carousel [bottomStagger]="true" carouselWrapperClass="idiff-carousel"
+                    listWrapperClass="idiff-list" [items]="pictureCarouselItems"></app-picture-carousel>
             </div>
         </div>
         <div class="section-wrapper alignItemsFlexStart w100">
@@ -122,7 +127,8 @@
             <div class="tri-section ">
                 <h2>Authoring Flow</h2>
                 <p class="centered">
-                        This is the prototyping flow wherein we compose our showcase preview by adding images for multiple fidelities. We add hotspots, define their destination states and then publish the preview.
+                    This is the prototyping flow wherein we compose our showcase preview by adding images for multiple
+                    fidelities. We add hotspots, define their destination states and then publish the preview.
                 </p>
                 <div class="macbook-wrapper hidden-xs">
                     <div class="marvel-device macbook">
@@ -131,7 +137,8 @@
                         <div class="screen">
                             <div class="player-holder">
                                 <video controls crossorigin playsinline id="player" class="plyr-player">
-                                    <source src="https://s3.us-east-2.amazonaws.com/asitparida-portfolio/idiff-authoring.mp4"
+                                    <source
+                                        src="https://s3.us-east-2.amazonaws.com/asitparida-portfolio/idiff-authoring.mp4"
                                         type="video/mp4">
                                 </video>
                             </div>
@@ -147,7 +154,9 @@
             <div class="tri-section ">
                 <h2>Previewing Flow</h2>
                 <p>
-                        Let's have a look at the previewing of the flow we prototyped above. In the online tool, we support previewing both with a laptop and iPad skin. When we open the preview link in an iPad, the device-skin disappears to allow users to play around with a hand-held device.
+                    Let's have a look at the previewing of the flow we prototyped above. In the online tool, we support
+                    previewing both with a laptop and iPad skin. When we open the preview link in an iPad, the
+                    device-skin disappears to allow users to play around with a hand-held device.
                 </p>
                 <div class="macbook-wrapper hidden-xs">
                     <div class="marvel-device ipad landscape">
@@ -156,7 +165,8 @@
                         <div class="screen">
                             <div class="player-holder">
                                 <video controls crossorigin playsinline id="player">
-                                    <source src="https://s3.us-east-2.amazonaws.com/asitparida-portfolio/idiff-ipad-preview.mp4"
+                                    <source
+                                        src="https://s3.us-east-2.amazonaws.com/asitparida-portfolio/idiff-ipad-preview.mp4"
                                         type="video/mp4">
                                 </video>
                             </div>
@@ -172,7 +182,8 @@
             <div class="tri-section w2">
                 <h4>Links</h4>
                 <div class="btn-containers">
-                    <a href="https://github.com/asitparida/fid-dif" target="_blank" class="portfolio-btn">Visit GitHub</a>
+                    <a href="https://github.com/asitparida/fid-dif" target="_blank" class="portfolio-btn">Visit
+                        GitHub</a>
                     <a href="https://idiff.azurewebsites.net" target="_blank" class="portfolio-btn">Visit Website</a>
                 </div>
             </div>
@@ -181,6 +192,16 @@
                 <p>
                     <a href="https://www.flaticon.com/" target="_blank">Flat Icon</a>
                 </p>
+            </div>
+        </div>
+        <div class="section-wrapper w100 footer-section projects-hyperlinks hidden-xs">
+            <div class="projects-hyperlinks-content">
+                <a class="project-nav-link" [routerLink]="['/featured/veritas']"><img
+                        src="assets/keyboard_left.png" /><span class="text"><span class="text-uppercase">Previous
+                            Project:</span> Veritas</span></a>
+                <a class="project-nav-link" [routerLink]="['/featured/transit-display']"><span class="text"><span
+                            class="text-uppercase">Next Project:</span> Transit Hub Display </span><img class="right"
+                        src="assets/keyboard_left.png" /></a>
             </div>
         </div>
     </section>
