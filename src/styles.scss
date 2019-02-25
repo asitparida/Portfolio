@@ -775,3 +775,11 @@ body.dark {
         }
     }
 }
+span{
+    &[data-type="anchor-elem"] {
+        visibility: hidden;
+        height: 1px;
+        width: 1px;
+        opacity: 0;
+    }
+}
