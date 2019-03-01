@@ -187,9 +187,25 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            flex-direction: column;
             @include respond-to-mobile {
                 flex: 1;
                 width: 100%;
+            }
+            label.title {
+                display: block;
+                max-width: 400px;
+                padding: 15px 30px;
+                font-weight: 400;
+                font-size: 1.75em;
+                @include respond-to-mobile {
+                    font-size: 1em;
+                        line-height: normal;
+                        text-align: center;
+                        padding: 15px 0;
+                        font-weight: 400;
+                        width: 100%;
+                }
             }
             span {
                 display: block;

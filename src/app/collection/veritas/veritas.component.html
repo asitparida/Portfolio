@@ -1,7 +1,7 @@
 <anchorage-holder></anchorage-holder>
 <div class="project-contents">
     <section class="project-section h100Adjusted justifyAlignCenter">
-        <span data-type="anchor-elem">Home</span>
+        <span data-type="anchor-elem">Introduction</span>
         <div class="section-wrapper alignItemsCenter">
             <div class="left-section alignItemsFlexEnd">
                 <h1 style="margin-top: 0px;">Veritas</h1>
@@ -49,8 +49,8 @@
                 <p>
                     The rampant spread of “fake” news is due to people seeking out and believing information which
                     aligns with their currently-held attitudes. We blindly trust the source, i.e., a friend of ours who
-                    re-tweeted or shared the article from somewhere (<a href="https://en.wikipedia.org/wiki/Elaboration_likelihood_model"
-                        target="_blank">ELM</a>).
+                    re-tweeted or shared the article from somewhere (<a
+                        href="https://en.wikipedia.org/wiki/Elaboration_likelihood_model" target="_blank">ELM</a>).
                 </p>
             </div>
             <div class="tri-section">
@@ -58,7 +58,8 @@
                 <h3>are we solving it ?</h3>
                 <p>
                     We are designing an avatar-based mobile game to empower folks against such misinformation. As they
-                    progress through this <a href="https://cyberpsychology.eu/article/view/4343/3418" target="_blank">embedded
+                    progress through this <a href="https://cyberpsychology.eu/article/view/4343/3418"
+                        target="_blank">embedded
                         game design</a>, they learn to look at content critically. We are employing multiple persuasive
                     design strategies like fictionalization and obfuscation.
                     We are designing an avatar based mobile game to empower folks against such misinformation.
@@ -86,7 +87,8 @@
             </div>
             <div class="tri-section comments-wrapper-section">
                 <h4 class="highlight">Tenet #2</h4>
-                <p class="highlight-text">Employ fictionalization and intermixing to prevent psychological reactance.</p>
+                <p class="highlight-text">Employ fictionalization and intermixing to prevent psychological reactance.
+                </p>
             </div>
             <div class="tri-section comments-wrapper-section">
                 <h4 class="highlight">Tenet #3</h4>
@@ -96,6 +98,7 @@
         </div>
     </section>
     <section class="project-section h75 justifyAlignCenter">
+        <span data-type="anchor-elem">Game Design</span>
         <div class="section-wrapper w100">
             <div class="tri-section w2">
                 <h2>Game Design</h2>
@@ -113,7 +116,6 @@
         </div>
     </section>
     <section class="project-section h75 justifyAlignCenter">
-        <span data-type="anchor-elem">Paper Prototyping</span>
         <div class="section-wrapper w100 ">
             <div class="tri-section w2">
                 <h2>Paper Prototyping</h2>
@@ -139,16 +141,103 @@
             </div>
         </div>
     </section>
+    <section class="project-section alignItemsCenter h75">
+        <span data-type="anchor-elem">Digital Prototyping</span>
+        <div class="section-wrapper alignItemsFlexStart w100 p-b-0">
+            <div class="tri-section">
+                <h2>Choosing React-Native</h2>
+                <p>
+                    With the scope of the prototype decided and the game sceens fleshed out, the next task was to pick up the right framework
+                    to build the initial version for the app and test with participants. Building on my experience of working in cross-functional
+                    teams, I started gathering all the data points to help the team choose the most <strong>affordable</strong> toolkit.
+                </p>
+            </div>
+        </div>
+        <div class="section-wrapper alignItemsFlexStart w100">
+            <div class="tri-section comments-wrapper-section">
+                <h4 class="highlight">Web vs Native</h4>
+                <p class="highlight-text">We had to go native because however well the web version of the game could be built, the <strong>look and feel</strong> of an native app, executed correctly, would accentuate the game experience.</p>
+            </div>
+            <div class="tri-section comments-wrapper-section">
+                <h4 class="highlight">Learning curve for team</h4>
+                <p class="highlight-text">The entire team wanted to contribute in coding. I felt react-native offered <strong>a little bit of familiarity</strong> as their most recent experience with prototyping had come in the form of the HTML5 programming class.
+                </p>
+            </div>
+            <div class="tri-section comments-wrapper-section">
+                <h4 class="highlight">HTML5 Syntax</h4>
+                <p class="highlight-text">Using the similar mark-up syntax offered <strong>the structural scaffolding</strong> for us and not learn the entire visual hierarchy of the app development process.</p>
+            </div>
+        </div>
+    </section>
+    <section class="project-section alignItemsCenter h75">
+        <div class="section-wrapper alignItemsFlexStart w100 p-b-0">
+            <div class="tri-section">
+                <h2>App Lifecycle</h2>
+                <p>
+                    I broke down the overall structure into three parts so as to ease interactions flows. The standalone pages would be active one at a time with other elements either overlaying full-page or partially.
+                    Throughout the game, user had to be aware of the current context. This translated to managing the state of the game as close as possible. <strong>Mirroring the app lifecyle to game design</strong> was essential to me.
+                </p>
+                <img imgZoomer data-lazy-load="true" class="boxed section-image-bleed"
+                    src="assets/veritas/veritas-app-structure.jpg" />
+            </div>
+        </div>
+        <div class="section-wrapper alignItemsFlexStart w100">
+            <div class="tri-section comments-wrapper-section">
+                <h4 class="highlight">Game States to UI States</h4>
+                <p class="highlight-text">With this my first game design, I learnt how most of the game development involved <strong>reflecting the current state</strong> in the game pipeline.</p>
+            </div>
+            <div class="tri-section comments-wrapper-section">
+                <h4 class="highlight">Flex based layouts</h4>
+                <p class="highlight-text">Perhaps the sweetest thing about reusing the know-how of HTML5 structures, thinking of every UI frame and component in terms of flex-based layout helped in <strong>building responsivenes out-of-box</strong>.</p>
+            </div>
+        </div>
+    </section>
+    <section class="project-section alignItemsCenter h75">
+        <div class="section-wrapper alignItemsFlexStart w100 p-b-0">
+            <div class="tri-section">
+                <h2>Using Observables for pipeline</h2>
+                <p>
+                    Since the app was a prototype with no back-end, I decided to go for a <strong>emitter-subscriber pattern</strong> fits in well as the same can be updated to listen to back-end events and update the game UI.
+                    I used <strong>RxJS based reactive programming</strong> for triggering several microinteractions.
+                    
+                </p>
+                <img imgZoomer data-lazy-load="true" class="boxed section-image-bleed"
+                    src="assets/veritas/veritas-app-states.jpg" />
+            </div>
+        </div>
+        <div class="section-wrapper alignItemsFlexStart w100">
+            <div class="tri-section comments-wrapper-section">
+                <h4 class="highlight">During state activation</h4>
+                <p class="highlight-text">When any state gets activated, the <strong>game UI</strong> is updated, the <strong>available actions</strong> get updated and the <strong>subsequent event listeners</strong> are setup.</p>
+            </div>
+            <div class="tri-section comments-wrapper-section">
+                <h4 class="highlight">Triggering Event</h4>
+                <p class="highlight-text">This is achieved through taking an action, for e.g. feeding the worble, shaking the phone. Both <strong>UI clicks</strong> and <strong>native sensor actions</strong> can trigger events. </p>
+            </div>
+        </div>
+    </section>
+    <section class="project-section alignItemsCenter h75">
+        <div class="section-wrapper alignItemsFlexStart w100">
+            <div class="tri-section">
+                <h2>Applying Motion</h2>
+                <p>
+                    Once the flow of the game was in place, I started animating components to direct user's attention towards it. The same interactions provide <strong>the necessary fluidity</strong> to the UI in general.
+                </p>
+                <app-picture-carousel inplaceCarouselWrapperClass="transit-hand-drawn-inplace-carousel"
+                    [embeddedCarousel]="true" [bottomStagger]="true"
+                    [useVideo]="true" [useDeviceSkin]="true"
+                    carouselWrapperClass="transit-hand-drawn-place-carousel" [items]="animationCarouselItems">
+                </app-picture-carousel>
+            </div>
+        </div>
+    </section>
     <section class="project-section h50 justifyAlignCenter">
-        <span data-type="anchor-elem">Developement</span>
         <div class="section-wrapper w100 alignItemsBottom">
             <div class="tri-section w2">
                 <h2>iOS App</h2>
                 <p>
-                    After three iterations of testing our fidelities, we chose react-native for digital prototyping.
-                    The platform was new to us but offered a little bit of familiarity with its use of flex-based
-                    layouts. The usage of native app capabilities like using the accelerometer for detecting a shake
-                    gesture was also appreciated.
+                    Further, I used <strong>native iOS capabilities</strong>, like using the accelerometer for detecting a shake, to enhance the game experience.
+                    After multiple iterations of design and parallel development cycles, we tested our app. We had favourable reviews with excellent critiques from the studio audience.
                 </p>
                 <button class="portfolio-btn" (click)="watchVideo()">Watch Video</button>
             </div>
@@ -162,8 +251,9 @@
             <div class="tri-section w2">
                 <h4>Other Team Members</h4>
                 <p>
-                    <a href="https://medium.com/@gabygayles" target="_blank">Gaby Gayles,</a> <a href="https://medium.com/@dylanssmith10"
-                        target="_blank">Dylan Smith,</a> <a href="https://medium.com/@katherinehjiang" target="_blank">Katherine
+                    <a href="https://medium.com/@gabygayles" target="_blank">Gaby Gayles,</a> <a
+                        href="https://medium.com/@dylanssmith10" target="_blank">Dylan Smith,</a> <a
+                        href="https://medium.com/@katherinehjiang" target="_blank">Katherine
                         Jiang,</a> <a href="https://medium.com/@duncan.katelynj" target="_blank">Katelyn Duncan,</a> <a
                         href="https://medium.com/@lenali" target="_blank">Lena Li</a>
                 </p>
@@ -175,10 +265,13 @@
                 </p>
             </div>
         </div>
-        <div class="section-wrapper w100 footer-section projects-hyperlinks hidden-xs" >
+        <div class="section-wrapper w100 footer-section projects-hyperlinks hidden-xs">
             <div class="projects-hyperlinks-content">
-                <a class="project-nav-link" [routerLink]="['/home']"><img src="assets/keyboard_left.png" /><span class="text"><span class="text-uppercase override">Home</span></span></a>
-                <a class="project-nav-link" [routerLink]="['/featured/idiff']"><span class="text"><span class="text-uppercase">Next Project:</span> IDiff </span><img class="right" src="assets/keyboard_left.png" /></a>
+                <a class="project-nav-link" [routerLink]="['/home']"><img src="assets/keyboard_left.png" /><span
+                        class="text"><span class="text-uppercase override">Home</span></span></a>
+                <a class="project-nav-link" [routerLink]="['/featured/idiff']"><span class="text"><span
+                            class="text-uppercase">Next Project:</span> IDiff </span><img class="right"
+                        src="assets/keyboard_left.png" /></a>
             </div>
         </div>
     </section>

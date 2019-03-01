@@ -10,7 +10,7 @@ import * as _ from 'lodash';
 export class AnchorageHolderComponent implements OnInit, AfterViewInit {
     anchors = [];
     anchorageHolderId = 'anchorageHolder' + Math.floor(Math.random() * 10e8);
-    ondebouncedScroll = _.debounce(this.onNewScroll, 33);
+    ondebouncedScroll = _.debounce(this.onNewScroll, 10);
     shown = false;
     constructor() { }
 
@@ -22,22 +22,32 @@ export class AnchorageHolderComponent implements OnInit, AfterViewInit {
         this.ondebouncedScroll();
     }
     onNewScroll() {
-        let single = false;
         const anchors = document.querySelectorAll('[data-type="anchor-elem"]');
         if (anchors && anchors.length > 0) {
-            (anchors as any).forEach((elem: HTMLElement) => {
+            for (let i = 0; i < anchors.length; i++) {
+                const elem = anchors[i] as HTMLElement;
                 const props = elem.getBoundingClientRect();
                 const circleId = 'circle' + elem.id;
                 const circle = document.getElementById(circleId);
-                if (circle) {
-                    circle.classList.remove('active');
-                }
                 if (props.top > 0 && props.top < window.innerHeight) {
                     if (circle) {
-                        if (!single) {
-                            circle.classList.add('active');
-                            single = true;
-                        }
+                        this.removeActiveFromAnchors(circleId);
+                        circle.classList.add('active');
+                        break;
+                    }
+                }
+            }
+        }
+    }
+    removeActiveFromAnchors(targetAnchorId) {
+        const anchors = document.querySelectorAll('[data-type="anchor-elem"]');
+        if (anchors && anchors.length > 0) {
+            (anchors as any).forEach((elem: HTMLElement) => {
+                const circleId = 'circle' + elem.id;
+                if (circleId !== targetAnchorId) {
+                    const circle = document.getElementById(circleId);
+                    if (circle) {
+                        circle.classList.remove('active');
                     }
                 }
             });

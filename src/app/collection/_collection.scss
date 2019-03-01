@@ -255,7 +255,15 @@
         max-height: 80%;
         &.boxed {
             border-radius: 4px;
-            box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.50);
+            box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.20);
+        }
+        &:not(.zoomed-in) {
+            &.section-image-bleed {
+                margin: 60px auto;
+                display: block;
+                max-width: 600px;
+                max-height: 400px;
+            }
         }
         @include respond-to-mobile {
             max-width: 80%;

@@ -48,12 +48,7 @@
                 border-radius: 15px;
                 line-height: 24px;
             }
-            &:hover,
-            &:focus {
-                .anchor-circle:not(.active) {
-                    background: rgba( #909090, 1);
-                    border-color: rgba( #909090, 1);
-                }
+            &:hover{
                 span {
                     animation: fade-slide-in 0.2s ease-out 0s forwards;
                     opacity: 1;
