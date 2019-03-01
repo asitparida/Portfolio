@@ -10,14 +10,14 @@
 <ng-container *ngIf="embeddedCarousel">
     <div class="picture-carousel-wrapper embeddedCarousel" [ngClass]="inplaceCarouselWrapperClass" tabindex="0" (keyup.escape)="carouselShown = false;"
         (keyup.arrowleft)="move(-1)" (keyup.arrowright)="move(1)" (keyup.arrowup)="move(-1)" (keyup.arrowdown)="move(1)">
-        <div class="picture-image-wrapper zoomIcon">
+        <div class="picture-image-wrapper">
             <div class="picture-control left" (keyup.enter)="move(-1)" (click)="move(-1)" tabindex="0">
                 <i></i>
             </div>
             <div class="picture-control right" (keyup.enter)="move(1)" (click)="move(1)" tabindex="0">
                 <i></i>
             </div>
-            <div class="img-container" (click)="carouselShown = true;">
+            <div class="img-container">
                 <img data-lazy-load="true" [ngClass]="currentClass" [src]="activeItem.img" *ngIf="!useVideo" />
                 <ng-container *ngIf="useVideo">
                         <div class="marvel-device iphone-x">

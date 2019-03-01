@@ -147,7 +147,7 @@
             <div class="tri-section">
                 <h2>Choosing React-Native</h2>
                 <p>
-                    With the scope of the prototype decided and the game sceens fleshed out, the next task was to pick up the right framework
+                    With the scope of the prototype decided and the game scenes fleshed out, the next task was to pick up the right framework
                     to build the initial version for the app and test with participants. Building on my experience of working in cross-functional
                     teams, I started gathering all the data points to help the team choose the most <strong>affordable</strong> toolkit.
                 </p>
@@ -155,12 +155,12 @@
         </div>
         <div class="section-wrapper alignItemsFlexStart w100">
             <div class="tri-section comments-wrapper-section">
-                <h4 class="highlight">Web vs Native</h4>
-                <p class="highlight-text">We had to go native because however well the web version of the game could be built, the <strong>look and feel</strong> of an native app, executed correctly, would accentuate the game experience.</p>
+                <h4 class="highlight">Web vs. Native</h4>
+                <p class="highlight-text">We had to go native because however well the web version of the game could be built, the <strong>look and feel</strong> of a native app, executed correctly, would accentuate the game experience.</p>
             </div>
             <div class="tri-section comments-wrapper-section">
-                <h4 class="highlight">Learning curve for team</h4>
-                <p class="highlight-text">The entire team wanted to contribute in coding. I felt react-native offered <strong>a little bit of familiarity</strong> as their most recent experience with prototyping had come in the form of the HTML5 programming class.
+                <h4 class="highlight">Learning curve for the team</h4>
+                <p class="highlight-text">The entire team wanted to contribute to coding. I felt react-native offered <strong>a little bit of familiarity</strong> as their most recent experience with prototyping had come in the form of the HTML5 programming class.
                 </p>
             </div>
             <div class="tri-section comments-wrapper-section">
@@ -174,8 +174,8 @@
             <div class="tri-section">
                 <h2>App Lifecycle</h2>
                 <p>
-                    I broke down the overall structure into three parts so as to ease interactions flows. The standalone pages would be active one at a time with other elements either overlaying full-page or partially.
-                    Throughout the game, user had to be aware of the current context. This translated to managing the state of the game as close as possible. <strong>Mirroring the app lifecyle to game design</strong> was essential to me.
+                    I broke down the overall structure into three parts to ease interactions flows. The standalone pages would be active one at a time with other elements either overlaying full-page or partially.
+                    Throughout the game, the user had to be aware of the current context. This translated to managing the state of the game as close as possible. <strong>Mirroring the app lifecycle to game design</strong> was essential to me.
                 </p>
                 <img imgZoomer data-lazy-load="true" class="boxed section-image-bleed"
                     src="assets/veritas/veritas-app-structure.jpg" />
@@ -184,11 +184,11 @@
         <div class="section-wrapper alignItemsFlexStart w100">
             <div class="tri-section comments-wrapper-section">
                 <h4 class="highlight">Game States to UI States</h4>
-                <p class="highlight-text">With this my first game design, I learnt how most of the game development involved <strong>reflecting the current state</strong> in the game pipeline.</p>
+                <p class="highlight-text">With this my first game design, I learned how most of the game development involved <strong>reflecting the current state</strong> in the game pipeline.</p>
             </div>
             <div class="tri-section comments-wrapper-section">
                 <h4 class="highlight">Flex based layouts</h4>
-                <p class="highlight-text">Perhaps the sweetest thing about reusing the know-how of HTML5 structures, thinking of every UI frame and component in terms of flex-based layout helped in <strong>building responsivenes out-of-box</strong>.</p>
+                <p class="highlight-text">Perhaps the sweetest thing about reusing the know-how of HTML5 structures, thinking of every UI frame and component in terms of flex-based layout helped in <strong>building responsiveness out-of-box</strong>.</p>
             </div>
         </div>
     </section>
@@ -197,7 +197,7 @@
             <div class="tri-section">
                 <h2>Using Observables for pipeline</h2>
                 <p>
-                    Since the app was a prototype with no back-end, I decided to go for a <strong>emitter-subscriber pattern</strong> fits in well as the same can be updated to listen to back-end events and update the game UI.
+                    Since the app was a prototype with no back-end, I decided to go for an <strong>emitter-subscriber pattern</strong> fits in well as the same can be updated to listen to back-end events and update the game UI.
                     I used <strong>RxJS based reactive programming</strong> for triggering several microinteractions.
                     
                 </p>
@@ -208,11 +208,11 @@
         <div class="section-wrapper alignItemsFlexStart w100">
             <div class="tri-section comments-wrapper-section">
                 <h4 class="highlight">During state activation</h4>
-                <p class="highlight-text">When any state gets activated, the <strong>game UI</strong> is updated, the <strong>available actions</strong> get updated and the <strong>subsequent event listeners</strong> are setup.</p>
+                <p class="highlight-text">When any state gets activated, the <strong>game UI</strong> is updated, the <strong>available actions</strong> get updated, and the <strong>subsequent event listeners</strong> are set up.</p>
             </div>
             <div class="tri-section comments-wrapper-section">
                 <h4 class="highlight">Triggering Event</h4>
-                <p class="highlight-text">This is achieved through taking an action, for e.g. feeding the worble, shaking the phone. Both <strong>UI clicks</strong> and <strong>native sensor actions</strong> can trigger events. </p>
+                <p class="highlight-text">This is achieved through taking action, for e.g. feeding the worble, shaking the phone. Both <strong>UI clicks</strong> and <strong>native sensor actions</strong> can trigger events. </p>
             </div>
         </div>
     </section>
@@ -221,7 +221,7 @@
             <div class="tri-section">
                 <h2>Applying Motion</h2>
                 <p>
-                    Once the flow of the game was in place, I started animating components to direct user's attention towards it. The same interactions provide <strong>the necessary fluidity</strong> to the UI in general.
+                    Once the flow of the game was in place, I started animating components to direct the user's attention towards it. The same interactions provide <strong>the necessary fluidity</strong> to the UI in general.
                 </p>
                 <app-picture-carousel inplaceCarouselWrapperClass="transit-hand-drawn-inplace-carousel"
                     [embeddedCarousel]="true" [bottomStagger]="true"
