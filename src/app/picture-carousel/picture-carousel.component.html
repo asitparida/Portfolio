@@ -1,15 +1,18 @@
 <ng-container *ngIf="!embeddedCarousel">
-    <div class="picture-carousel-preview" [ngClass]="listWrapperClass" [style.height]="previewHeight" [style.width]="previewWidth"
-        (click)="showCarousel()">
-        <div class="picture-wrapper" [style.marginRight]="marginRightAdjust" *ngFor="let item of pictureItems; let i = index;"
-            [style.right]="bottomStagger ? (i*staggerStep) + 'px' : (i*staggerStep) + 'px' " [style.top]="bottomStagger ? (i*staggerStep) + 'px' : '0px'">
+    <div class="picture-carousel-preview" [ngClass]="listWrapperClass" [style.height]="previewHeight"
+        [style.width]="previewWidth" (click)="showCarousel()">
+        <div class="picture-wrapper" [style.marginRight]="marginRightAdjust"
+            *ngFor="let item of pictureItems; let i = index;"
+            [style.right]="bottomStagger ? (i*staggerStep) + 'px' : (i*staggerStep) + 'px' "
+            [style.top]="bottomStagger ? (i*staggerStep) + 'px' : '0px'">
             <div class="picture-card" [style.backgroundImage]="item.img"></div>
         </div>
     </div>
 </ng-container>
 <ng-container *ngIf="embeddedCarousel">
-    <div class="picture-carousel-wrapper embeddedCarousel" [ngClass]="inplaceCarouselWrapperClass" tabindex="0" (keyup.escape)="carouselShown = false;"
-        (keyup.arrowleft)="move(-1)" (keyup.arrowright)="move(1)" (keyup.arrowup)="move(-1)" (keyup.arrowdown)="move(1)">
+    <div class="picture-carousel-wrapper embeddedCarousel" [ngClass]="inplaceCarouselWrapperClass" tabindex="0"
+        (keyup.escape)="carouselShown = false;" (keyup.arrowleft)="move(-1)" (keyup.arrowright)="move(1)"
+        (keyup.arrowup)="move(-1)" (keyup.arrowdown)="move(1)">
         <div class="picture-image-wrapper">
             <div class="picture-control left" (keyup.enter)="move(-1)" (click)="move(-1)" tabindex="0">
                 <i></i>
@@ -20,45 +23,52 @@
             <div class="img-container">
                 <img data-lazy-load="true" [ngClass]="currentClass" [src]="activeItem.img" *ngIf="!useVideo" />
                 <ng-container *ngIf="useVideo">
-                        <div class="marvel-device iphone-x">
-                                <div class="notch">
-                                    <div class="camera"></div>
-                                    <div class="speaker"></div>
-                                </div>
-                                <div class="top-bar"></div>
-                                <div class="sleep"></div>
-                                <div class="bottom-bar"></div>
-                                <div class="volume"></div>
-                                <div class="overflow">
-                                    <div class="shadow shadow--tr"></div>
-                                    <div class="shadow shadow--tl"></div>
-                                    <div class="shadow shadow--br"></div>
-                                    <div class="shadow shadow--bl"></div>
-                                </div>
-                                <div class="inner-shadow"></div>
-                                <div class="screen">
-                                    <div class="player-holder">
-                                        <video autoplay loop crossorigin playsinline [src]="activeItem.video"></video>
-                                    </div>
-                                </div>
+                    <div class="marvel-device iphone-x">
+                        <div class="notch">
+                            <div class="camera"></div>
+                            <div class="speaker"></div>
+                        </div>
+                        <div class="top-bar"></div>
+                        <div class="sleep"></div>
+                        <div class="bottom-bar"></div>
+                        <div class="volume"></div>
+                        <div class="overflow">
+                            <div class="shadow shadow--tr"></div>
+                            <div class="shadow shadow--tl"></div>
+                            <div class="shadow shadow--br"></div>
+                            <div class="shadow shadow--bl"></div>
+                        </div>
+                        <div class="inner-shadow"></div>
+                        <div class="screen">
+                            <div class="player-holder">
+                                <video autoplay loop crossorigin playsinline [src]="activeItem.video"></video>
                             </div>
+                        </div>
+                    </div>
                 </ng-container>
             </div>
-            <p class="text-container" *ngIf="activeItem.text" (click)="carouselShown = true;">
+            <p class="text-container" *ngIf="activeItem.text && !activeItem.code">
                 <label class="title" *ngIf="activeItem.title">{{activeItem.title}}</label>
                 <span>{{activeItem.text}}</span>
             </p>
+            <p class="code-container" *ngIf="activeItem.code">
+                <label class="title" *ngIf="activeItem.title">{{activeItem.title}}</label>
+                <span class="title-subtext">{{activeItem.text}}</span>
+                <prism-snippet class="code-host" [code]="activeItem.code" *ngIf="activeItem.code"></prism-snippet>
+            </p>
             <div class="picture-footer embeddedCarouselFooter">
-                <div class="marker" *ngFor="let item of pictureItems; let i = index;" [class.active]="i === activeIndex"></div>
+                <div class="marker" *ngFor="let item of pictureItems; let i = index;"
+                    [class.active]="i === activeIndex"></div>
             </div>
         </div>
     </div>
 </ng-container>
-<div class="picture-carousel-wrapper" [ngClass]="carouselWrapperClass"
-    *ngIf="carouselShown" tabindex="0" (keyup.escape)="carouselShown = false;" (keyup.arrowleft)="move(-1)"
-    (keyup.arrowright)="move(1)" (keyup.arrowup)="move(-1)" (keyup.arrowdown)="move(1)">
+<div class="picture-carousel-wrapper" [ngClass]="carouselWrapperClass" *ngIf="carouselShown" tabindex="0"
+    (keyup.escape)="carouselShown = false;" (keyup.arrowleft)="move(-1)" (keyup.arrowright)="move(1)"
+    (keyup.arrowup)="move(-1)" (keyup.arrowdown)="move(1)">
     <div class="picture-image-wrapper">
-        <div class="close" tabindex="0" (keyup.enter)="carouselShown = false;" (click)="carouselShown = false;">Close</div>
+        <div class="close" tabindex="0" (keyup.enter)="carouselShown = false;" (click)="carouselShown = false;">Close
+        </div>
         <div class="picture-control left" (keyup.enter)="move(-1)" (click)="move(-1)" tabindex="0">
             <i></i>
         </div>
@@ -72,7 +82,8 @@
             <span>{{activeItem.text}}</span>
         </p>
         <div class="picture-footer">
-            <div class="marker" *ngFor="let item of pictureItems; let i = index;" [class.active]="i === activeIndex"></div>
+            <div class="marker" *ngFor="let item of pictureItems; let i = index;" [class.active]="i === activeIndex">
+            </div>
         </div>
     </div>
 </div>

@@ -35,6 +35,7 @@ import { PitchVideoComponent } from './pitch-video/pitch-video.component';
 import { ProjectPreviewerComponent } from './project-previewer/project-previewer.component';
 import { GifLoaderDirective } from './gif-loader.directive';
 import { AnchorageHolderComponent } from './anchorage/anchorage-holder/anchorage-holder.component';
+import { PrismSnippetComponent } from './prism-snippet/prism-snippet.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { AnchorageHolderComponent } from './anchorage/anchorage-holder/anchorage
     PitchVideoComponent,
     ProjectPreviewerComponent,
     GifLoaderDirective,
-    AnchorageHolderComponent
+    AnchorageHolderComponent,
+    PrismSnippetComponent
   ],
   imports: [
     BrowserModule,

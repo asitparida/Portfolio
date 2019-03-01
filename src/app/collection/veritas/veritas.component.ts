@@ -1,4 +1,6 @@
 import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
+import { ProgressBarCode, StartButtonCode, ActionMenuCode } from './veritas.constants';
+import Prism from 'prismjs';
 declare var Plyr;
 
 @Component({
@@ -22,11 +24,23 @@ export class VeritasComponent implements AfterViewInit, OnInit, OnDestroy {
     ];
     // tslint:disable:max-line-length
     animationCarouselItems = [
-        { title: 'Start Button', text: 'The button wobbles to capture attention and provide a call-to-action.', video: 'https://s3.us-east-2.amazonaws.com/asitparida-portfolio/veritas/animations/Start+Button.mp4' },
-        { title: 'Progress Bar', text: 'The slider fills smoothly to show an indefinite loader.', video: 'https://s3.us-east-2.amazonaws.com/asitparida-portfolio/veritas/animations/Prograss+Bar.mp4' },
-        { title: 'Messages', text: 'The message slides-in to direct the user\'s  attention to it.', video: 'https://s3.us-east-2.amazonaws.com/asitparida-portfolio/veritas/animations/Message+Animation+In.mp4' },
-        { title: 'Action Menus', text: 'The panel slides into and out of view to maintain continuity and provide a point of entry.', video: 'https://s3.us-east-2.amazonaws.com/asitparida-portfolio/veritas/animations/Feed+Interaction+-+2.mp4' },
-        { title: 'Worble Edit Menu', text: 'The elements wobble to capture attention with the name field highlighted.', video: 'https://s3.us-east-2.amazonaws.com/asitparida-portfolio/veritas/animations/Egg+Interaction+-+2.mp4' }
+        { title: 'Start Button', text: 'The button wobbles to capture attention and provide a call-to-action.', video: 'https://s3.us-east-2.amazonaws.com/asitparida-portfolio/veritas/animations/Start+Button.mp4' , code: {
+            content: StartButtonCode,
+            parseTypeText: 'markup',
+            parseType: Prism.languages.markup
+        } },
+        { title: 'Progress Bar', text: 'The slider fills smoothly to show an indefinite loader.', video: 'https://s3.us-east-2.amazonaws.com/asitparida-portfolio/veritas/animations/Prograss+Bar.mp4', code: {
+            content: ProgressBarCode,
+            parseTypeText: 'javascript',
+            parseType: Prism.languages.javascript
+        } },
+        // { title: 'Messages', text: 'The message slides-in to direct the user\'s  attention to it.', video: 'https://s3.us-east-2.amazonaws.com/asitparida-portfolio/veritas/animations/Message+Animation+In.mp4' },
+        { title: 'Action Menus', text: 'The panel slides into and out of view to maintain continuity and provide a point of entry.', video: 'https://s3.us-east-2.amazonaws.com/asitparida-portfolio/veritas/animations/Feed+Interaction+-+2.mp4', code: {
+            content: ActionMenuCode,
+            parseTypeText: 'markup',
+            parseType: Prism.languages.markup
+        }  },
+        // { title: 'Worble Edit Menu', text: 'The elements wobble to capture attention with the name field highlighted.', video: 'https://s3.us-east-2.amazonaws.com/asitparida-portfolio/veritas/animations/Egg+Interaction+-+2.mp4' }
     ];
     constructor() { }
 
