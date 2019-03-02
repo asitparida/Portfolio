@@ -6,6 +6,7 @@ export const Projects = [
         description: 'a fintech app to plan and model day-to-day business operations and revenue subscriptions',
         git: null,
         img: 'assets/project-logos/lean-case.png',
+        video: 'https://s3.us-east-2.amazonaws.com/asitparida-portfolio/LeanCaseBeginnerMode.mp4',
         href: 'http://www.lean-case.com/',
         width: 'auto',
         height: '65%',
@@ -157,11 +158,12 @@ export const Projects = [
         `
     },
     {
-        name: 'Not So Grey',
+        name: 'NotSoGrey',
         description: 'A desktop app for folks who dream colors',
         git: 'https://github.com/asitparida/NotSoGrey',
         img: 'assets/project-logos/notsogrey_app.png',
         href: 'https://github.com/asitparida/NotSoGrey',
+        video: 'https://s3.us-east-2.amazonaws.com/asitparida-portfolio/NotSoGreyDefn.mp4',
         size: 'double',
         width: '90%',
         height: 'auto',

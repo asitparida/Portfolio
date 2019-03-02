@@ -58,6 +58,7 @@ export class Project {
     content: string;
     darker = false;
     isNew = false;
+    video = null;
     constructor() {
         this.size = 'single';
         this.width = '100%';
