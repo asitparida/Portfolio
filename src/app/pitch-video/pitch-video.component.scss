@@ -8,6 +8,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    .close {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        margin-left: -50px;
+        width: 100px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: small;
+        letter-spacing: 1px;
+        cursor: pointer;
+        background: rgba(#000000, 0.05);
+        color: #565656;
+        line-height: 48px;
+        text-align: center;
+        z-index: 2;
+        &:hover {
+            background: rgba(#000000, 1);
+            color: #fff;
+        }
+    }
     video {
         max-width: 100%;
         max-height: 100%;

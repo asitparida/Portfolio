@@ -23,7 +23,7 @@
             <div class="img-container">
                 <img data-lazy-load="true" [ngClass]="currentClass" [src]="activeItem.img" *ngIf="!useVideo" />
                 <ng-container *ngIf="useVideo">
-                    <div class="marvel-device iphone-x">
+                    <div class="marvel-device iphone-x" [ngClass]="currentClass">
                         <div class="notch">
                             <div class="camera"></div>
                             <div class="speaker"></div>
@@ -57,7 +57,7 @@
                 <prism-snippet class="code-host" [code]="activeItem.code" *ngIf="activeItem.code"></prism-snippet>
             </p>
             <div class="picture-footer embeddedCarouselFooter">
-                <div class="marker" *ngFor="let item of pictureItems; let i = index;"
+                <div class="marker" *ngFor="let item of pictureItems; let i = index;" (click)="activateIndex(i)"
                     [class.active]="i === activeIndex"></div>
             </div>
         </div>
@@ -75,14 +75,14 @@
         <div class="picture-control right" (keyup.enter)="move(1)" (click)="move(1)" tabindex="0">
             <i></i>
         </div>
-        <div class="img-container">
+        <div class="img-container" [class.justifyContentFlexEnd]="activeItem.text">
             <img data-lazy-load="true" [ngClass]="currentClass" [src]="activeItem.img" />
         </div>
-        <p class="text-container" *ngIf="activeItem.text">
+        <p class="text-container" *ngIf="activeItem.text" [class.justifyContentFlexStart]="activeItem.text">
             <span>{{activeItem.text}}</span>
         </p>
         <div class="picture-footer">
-            <div class="marker" *ngFor="let item of pictureItems; let i = index;" [class.active]="i === activeIndex">
+            <div class="marker" *ngFor="let item of pictureItems; let i = index;" [class.active]="i === activeIndex" (click)="activateIndex(i)">
             </div>
         </div>
     </div>

@@ -8,15 +8,7 @@ import { DomSanitizer } from '@angular/platform-browser';
     encapsulation: ViewEncapsulation.None
 })
 export class PictureCarouselComponent implements OnInit, AfterViewInit {
-    @Input() items = [
-        { text: null, img: 'assets/veritas/IMG_1307_iphone8spacegrey_portrait.png' },
-        { text: null, img: 'assets/veritas/IMG_1308_iphone8spacegrey_portrait.png' },
-        { text: null, img: 'assets/veritas/IMG_1312_iphone8spacegrey_portrait.png' },
-        { text: null, img: 'assets/veritas/IMG_1313_iphone8spacegrey_portrait.png' },
-        { text: null, img: 'assets/veritas/IMG_1315_iphone8spacegrey_portrait.png' },
-        { text: null, img: 'assets/veritas/IMG_1316_iphone8spacegrey_portrait.png' },
-        { text: null, img: 'assets/veritas/IMG_1317_iphone8spacegrey_portrait.png' },
-    ];
+    @Input() items = [];
     pictureItems = [];
     marginRightAdjust = '-90px';
     previewHeight = '300px';
@@ -39,9 +31,9 @@ export class PictureCarouselComponent implements OnInit, AfterViewInit {
 
     ngOnInit() {
         this.pictureItems = [].concat(this.items).reverse()
-        .map(x => Object.assign({}, x, {
-            img: `url(${x.img})`
-        }));
+            .map(x => Object.assign({}, x, {
+                img: `url(${x.img})`
+            }));
         this.activeItem = this.items[this.activeIndex];
     }
     ngAfterViewInit() {
@@ -81,5 +73,20 @@ export class PictureCarouselComponent implements OnInit, AfterViewInit {
             }, 300);
         }, 300);
     }
-
+    activateIndex(i) {
+        if (this.activateIndex !== i) {
+            const direction = i < this.activeIndex ? 'left' : 'right';
+            this.currentClass = `hide-${direction}`;
+            this.activeIndex = i;
+            this.activeIndex = this.activeIndex < 0 ? this.items.length - 1 : this.activeIndex;
+            this.activeIndex = this.activeIndex > this.items.length - 1 ? 0 : this.activeIndex;
+            setTimeout(() => {
+                this.activeItem = this.items[this.activeIndex];
+                this.currentClass = `show-${direction}`;
+                setTimeout(() => {
+                    this.currentClass = '';
+                }, 300);
+            }, 300);
+        }
+    }
 }
