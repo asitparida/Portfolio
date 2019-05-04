@@ -38,12 +38,16 @@
         }
     }
     .titles {
+        position: relative;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 30px 0 30px 0;
         flex-direction: column;
+        @include respond-to-except-mobile {
+            min-height: calc(100vh - 300px);
+        }
         @include respond-to-mobile {
             padding: 15px 0;
         }
@@ -80,13 +84,13 @@
         }
     }
     h2 {
-        font-size: 2em;
+        font-size: 1.5em;
         font-weight: 100;
         margin: 5px 0;
         padding: 0;
         text-align: center;
         @include respond-to-mobile {
-            font-size: 1.5em;
+            font-size: 1.25em;
             padding: 0 15px;
         }
     }
@@ -360,8 +364,8 @@
                             @include respond-to-except-mobile {
                                 margin: 0 0 15px 0;
                                 padding: 0;
-                                font-size: x-large;
-                                font-weight: 300;
+                                font-size: 1.25em;
+                                font-weight: 700;
                                 text-align: left;
                                 // text-transform: capitalize;
                                 width: 100%;
@@ -373,7 +377,7 @@
                     label {
                         margin: 0;
                         padding: 0;
-                        font-size: 2em;
+                        font-size: 1.5em;
                         font-weight: 300;
                         text-align: left;
                         @include respond-to-mobile {
