@@ -36,11 +36,13 @@ import { ProjectPreviewerComponent } from './project-previewer/project-previewer
 import { GifLoaderDirective } from './gif-loader.directive';
 import { AnchorageHolderComponent } from './anchorage/anchorage-holder/anchorage-holder.component';
 import { PrismSnippetComponent } from './prism-snippet/prism-snippet.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    FooterComponent,
     ProjectsComponent,
     SkillsComponent,
     GitLinkComponent,

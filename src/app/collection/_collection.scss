@@ -368,14 +368,14 @@
         }
         &.projects-hyperlinks {
             justify-content: space-between;
-            padding: 45px 45px;
+            padding: 45px 45px 15px 45px;
             .projects-hyperlinks-content {
                 border-top: 1px dashed #e0e0e0;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
-                padding: 60px 0 30px 0;
+                padding: 90px 0 0px 0;
             }
             .project-nav-link {
                 display: flex;

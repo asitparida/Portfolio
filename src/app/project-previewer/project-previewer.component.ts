@@ -1,7 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, AfterViewInit } from '@angular/core';
 import { Project, BASE_COLORS, hexToRgb } from '../projects/projects.component';
 import { Projects } from '../projects/projects.definitions';
-import { AfterViewInit } from 'Portfolio.Me/Portfolio.Me/portfolio-v2-updated/node_modules/@angular/core/src/metadata/lifecycle_hooks';
 declare var MobileDetect: any;
 
 @Component({

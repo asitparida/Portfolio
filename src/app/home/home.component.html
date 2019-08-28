@@ -3,7 +3,7 @@
         <h1 style="margin-top: 30px">Hi</h1>
         <h2 style="margin-top: 0px;"> I am Asit</h2>
         <h2>I design beautiful and simple things through <span class="code">code</span> as my medium</h2>
-        <div class="live-proto-btn " (click)="showVideo = true;" *ngIf="!isMobile && false">
+        <div class="live-proto-btn " (click)="showVideo = true;" *ngIf="!isMobile">
             <a class="portfolio-btn main" style="margin-right: 15px;"><i>▶</i> Watch Intro</a>
         </div>
     </div>
@@ -76,7 +76,7 @@
             </a>
         </div>
         <div class="project-item-wrapper">
-            <a [routerLink]="['/featured/bun-bun']" data-bg-color="$PUMPKIN">
+            <a [routerLink]="['/featured/bun-bun']" data-bg-color="$POMEGRANATE">
                 <div class="project-item-content-wrapper">
                     <div class="content ">
                         <label class="title">Bun Bun Bakery</label>

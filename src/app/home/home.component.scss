@@ -557,6 +557,38 @@
                         }
                     }
                 }
+                &[data-bg-color="$POMEGRANATE"] {
+                    .project-item-content-wrapper {
+                        .colored-bg {
+                            background: lighten($ALIZARIN, 38);
+                        }
+                    }
+                    @include respond-to-mobile {
+                        background: lighten($ALIZARIN, 38);
+                    }
+                    @include respond-to-except-mobile {
+                        .project-item-content-wrapper {
+                            &:hover {
+                                .colored-bg {
+                                    background: rgba(darken($POMEGRANATE, 0), 1);
+                                }
+                                .tags {
+                                    .tag {
+                                        color: #f0f0f0;
+                                        border-right-color: #e0e0e0;
+                                    }
+                                }
+                                label {
+                                    color: #f0f0f0;
+                                }
+                                background: rgba(darken($POMEGRANATE, 0), 1);
+                                -webkit-box-shadow: 0px 13px 71px -2px rgba($POMEGRANATE, 1);
+                                -moz-box-shadow: 0px 13px 71px -2px rgba($POMEGRANATE, 1);
+                                box-shadow: 0px 13px 71px -2px rgba($POMEGRANATE, 1);
+                            }
+                        }
+                    }
+                }
                 &[data-bg-color="$WISTERIA"] {
                     .project-item-content-wrapper {
                         .colored-bg {

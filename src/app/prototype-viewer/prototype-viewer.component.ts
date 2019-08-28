@@ -1,6 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { DomSanitizer} from '@angular/platform-browser';
-import { AfterViewInit } from 'Portfolio.Me/Portfolio.Me/portfolio-v2-updated/node_modules/@angular/core/src/metadata/lifecycle_hooks';
 
 @Component({
     selector: 'app-prototype-viewer',
