@@ -157,6 +157,7 @@
                         .stop-title {
                             color: $NEPHRITIS;
                             font-weight: bold;
+                            font-size: large;
                             @include respond-to-mobile {
                                 border-left: none;
                                 padding-left: 36px;
@@ -256,7 +257,7 @@
                     }                
                 }
             }
-            &[data-color],
+            &[data-color]
             {
                 .grid-item-text-container-box {
                     color: $LIGHT_TONE;
@@ -557,7 +558,7 @@
         &.shown {
             @include respond-to-except-mobile {
                 .grid-item-content-container {
-                    animation: show-container 1s linear forwards;
+                    animation: show-container 0.5s linear forwards;
                     img {
                         display: block;
                     }
@@ -565,7 +566,7 @@
             }
             @include respond-to-mobile {
                 .grid-item-content-container {
-                    animation: show-container 0.1s linear forwards;
+                    animation: show-container 0.5s linear forwards;
                     img {
                         display: block;
                     }
@@ -581,10 +582,10 @@
         &.animate {
             @include respond-to-except-mobile {
                 .grid-item-content-container {
-                    animation: add-background 0.5s linear forwards;
+                    animation: add-background 0.25s linear forwards;
                 }
                 .grid-item-text-container {
-                    animation: show-container 0.5s step-end forwards;
+                    animation: show-container 0.25s step-end forwards;
                 }
             }
             @include respond-to-mobile {
@@ -750,7 +751,7 @@ body.dark {
 @keyframes show-container {
     from {
         opacity: 0;
-        transform: translateY(-25px)
+        transform: translateY(-15px)
     }
     60% {
         opacity: 1;
@@ -782,7 +783,7 @@ body.dark {
 
 @keyframes move-up-text {
     0% {
-        transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 15px, 0);
         opacity: 0;
     }
     100% {

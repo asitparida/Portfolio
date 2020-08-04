@@ -66,8 +66,11 @@ export class PitchVideoComponent implements OnInit, AfterViewInit {
         });
         this.videoPlayer.pip = false;
         this.videoPlayer.toggleControls(false);
+        this.videoPlayer.on('ready', event => {
+            this.videoPlayer.play();
+            this.videoPlayer.toggleControls(true);
+        });
         this.videoPlayer.on('canplay', event => {
-            // const instance = event.detail.plyr;
             this.videoPlayer.play();
             this.videoPlayer.toggleControls(true);
         });
