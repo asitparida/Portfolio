@@ -1,5 +1,0 @@
-<div class="anchorage-holder hidden-xs" [attr.id]="anchorageHolderId">
-  <div class="anchorage-vertical">
-    <div class="anchor" tabindex="0" *ngFor="let anchor of anchors" (keyup.enter)="activateAnchor(anchor)" (keyup.space)="activateAnchor(anchor)" (click)="activateAnchor(anchor)"><div class="anchor-circle" [attr.id]="anchor.circleId"></div><span>{{anchor.text}}</span></div>
-  </div>
-</div>

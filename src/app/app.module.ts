@@ -4,13 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from '../app/header/header.component';
-import { ProjectsComponent } from '../app/projects/projects.component';
-import { SkillsComponent } from '../app/skills/skills.component';
+import { HeaderComponent } from './about-me/header/header.component';
+import { ProjectsComponent } from './other-projects/projects/projects.component';
 import { GitLinkComponent } from './git-link.component';
-import { BioComponent } from './bio/bio.component';
-import { DeferLoadDirective } from './projects/defer-load.directive';
-import { TopScrollerComponent } from './top-scroller/top-scroller.component';
+import { BioComponent } from './about-me/bio/bio.component';
+import { DeferLoadDirective } from './other-projects/projects/defer-load.directive';
+import { TopScrollerComponent } from './structure/top-scroller/top-scroller.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app.routing';
 import { BunBunComponent } from './collection/bun-bun/bun-bun.component';
@@ -21,22 +20,21 @@ import { VeritasComponent } from './collection/veritas/veritas.component';
 import { TransitDisplayComponent } from './collection/transit-display/transit-display.component';
 import { IdiffComponent } from './collection/idiff/idiff.component';
 import { PrivacyGradeComponent } from './collection/privacy-grade/privacy-grade.component';
-import { PictureCarouselComponent } from './picture-carousel/picture-carousel.component';
-import { TeamBadgeComponent } from './team-badge/team-badge.component';
+import { PictureCarouselComponent } from './structure/picture-carousel/picture-carousel.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { OtherProjectsComponent } from './other-projects/other-projects.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { ContactComponent } from './contact/contact.component';
+import { NavigationComponent } from './structure/navigation/navigation.component';
+import { ContactComponent } from './about-me/contact/contact.component';
 import { ImgZoomerDirective } from './img-zoomer.directive';
 import { ClickOutsideDirective } from './click-outside.directive';
-import { PrototypeViewerComponent } from './prototype-viewer/prototype-viewer.component';
-import { PitchVideoComponent } from './pitch-video/pitch-video.component';
-import { ProjectPreviewerComponent } from './project-previewer/project-previewer.component';
+import { PrototypeViewerComponent } from './structure/prototype-viewer/prototype-viewer.component';
+import { PitchVideoComponent } from './structure/pitch-video/pitch-video.component';
+import { ProjectPreviewerComponent } from './structure/project-previewer/project-previewer.component';
 import { GifLoaderDirective } from './gif-loader.directive';
-import { AnchorageHolderComponent } from './anchorage/anchorage-holder/anchorage-holder.component';
-import { PrismSnippetComponent } from './prism-snippet/prism-snippet.component';
-import { FooterComponent } from './footer/footer.component';
+import { AnchorageHolderComponent } from './structure/anchorage-holder/anchorage-holder.component';
+import { PrismSnippetComponent } from './structure/prism-snippet/prism-snippet.component';
+import { FooterComponent } from './structure/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +42,6 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     FooterComponent,
     ProjectsComponent,
-    SkillsComponent,
     GitLinkComponent,
     DeferLoadDirective,
     BioComponent,
@@ -59,7 +56,6 @@ import { FooterComponent } from './footer/footer.component';
     IdiffComponent,
     PrivacyGradeComponent,
     PictureCarouselComponent,
-    TeamBadgeComponent,
     AboutMeComponent,
     OtherProjectsComponent,
     MySkillsComponent,

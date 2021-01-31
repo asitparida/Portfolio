@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Skill } from '../skills/skills.component';
 
 const SkillGroups = [
     {

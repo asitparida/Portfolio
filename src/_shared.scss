@@ -15,6 +15,57 @@
         }
     }
 
+    @mixin INSERT_HOVER_BGS($color, $lightenAmount, $foreground) {
+        .grid-item-content-container {
+            background-color: lighten($color, $lightenAmount);
+        }
+        .grid-item-text-container-box {
+            @include respond-to-mobile {
+                color: #303030;
+                .git-link {
+                    background-color: rgba($color, 0.10);
+                    svg g g {
+                        fill: $color;
+                    }
+                }
+            }
+            @include respond-to-except-mobile {
+                color: $foreground;
+                p {
+                    text-shadow: 3px 3px rgba($color, 0.50);
+                }
+                .git-link {
+                    background-color: rgba(255, 255, 255, 0.33);
+                    &:hover {
+                        background-color: $foreground;
+                        svg g g {
+                            fill: $color;
+                        }
+                    }
+                    svg g g {
+                        fill: $foreground;
+                    }
+                }
+            }
+        }
+        @include respond-to-except-mobile {
+            .grid-item-text-container:hover {
+                -webkit-box-shadow: 0px 13px 71px -2px rgba($color, 1);
+                -moz-box-shadow: 0px 13px 71px -2px rgba($color, 1);
+                box-shadow: 0px 13px 71px -2px rgba($color, 1);
+                background: $color;
+                background: rgba($color, 0.8) 20px 20px no-repeat;
+            }
+        }
+        label.featured {
+            span {
+                color: $foreground;
+                background: $color;
+            }
+        }
+    }
+    
+
     $wisteria: #8e44ad;
     $app-primary: darken(saturate($wisteria, 15), 20);
     $PETER_RIVER_DARK: #1d6ea4;

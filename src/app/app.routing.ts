@@ -12,7 +12,7 @@ import { MoosikComponent } from './collection/moosik/moosik.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { OtherProjectsComponent } from './other-projects/other-projects.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
-import { ContactComponent } from './contact/contact.component';
+import { ContactComponent } from './about-me/contact/contact.component';
 
 const appRoutes: Routes = [
     { path: '',   redirectTo: '/home', pathMatch: 'full' },
