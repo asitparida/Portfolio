@@ -1,0 +1,175 @@
+<div class="home-wrapper">
+    <div class="titles">
+        <h1 style="margin-top: 30px">Hi</h1>
+        <h2 style="margin-top: 0px;"> I am Asit</h2>
+        <h2>I design beautiful and simple things through <span class="code">code</span> as my medium</h2>
+        <div class="live-proto-btn " (click)="showVideo = true;" *ngIf="!isMobile">
+            <a class="portfolio-btn main" style="margin-right: 15px;"><i>▶</i> Watch Intro</a>
+        </div>
+    </div>
+    <div class="projects-title">
+        <label>Projects</label>
+    </div>
+    <div class="project-wrapper">
+        <div class="project-item-wrapper">
+            <a [routerLink]="['/featured/veritas']" data-bg-color="$TURQUOISE">
+                <div class="project-item-content-wrapper">
+                    <div class="content colored-bg" gifLoader>
+                        <img data-img="non-gif" class="" style="margin:0 45px;" data-lazy-load="true"
+                            src="assets/gifs/veritas-frame.gif" alt="GIF for Veritas App" />
+                        <img data-img="gif" class="hidden" style="margin:0 45px;" data-lazy-load="true"
+                            src="assets/gifs/veritas.gif" alt="GIF for Veritas App" />
+                    </div>
+                    <div class="content">
+                        <label class="title">Veritas</label>
+                        <label>An avatar based intervention game for combating misinformation</label>
+                        <div class="tags">
+                            <div class="tag">research</div>
+                            <div class="tag">prototyping</div>
+                            <div class="tag">development</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="project-item-wrapper">
+            <a [routerLink]="['/featured/idiff']" data-bg-color="$WISTERIA">
+                <div class="project-item-content-wrapper">
+                    <div class="content">
+                        <label class="title">iDiff</label>
+                        <label>A web-based visual tool to compare multiple fidelities for designs</label>
+                        <div class="tags">
+                            <div class="tag">design</div>
+                            <div class="tag">research</div>
+                            <div class="tag">development</div>
+                        </div>
+                    </div>
+                    <div class="content colored-bg" gifLoader>
+                        <img data-img="non-gif" class="" style="margin:0 45px;" data-lazy-load="true"
+                            src="assets/gifs/idiff-frame.gif" alt="GIF for I-DIFF App" />
+                        <img data-img="gif" class="hidden" style="margin:0 45px;" data-lazy-load="true"
+                            src="assets/gifs/idiff.gif" alt="GIF for I-DIFF App" />
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="project-item-wrapper">
+            <a [routerLink]="['/featured/transit-display']" data-bg-color="$BELIZE_HOLE">
+                <div class="project-item-content-wrapper">
+                    <div class="content colored-bg" gifLoader>
+                        <img data-img="non-gif" class="" data-lazy-load="true"
+                            src="assets/gifs/transit-display-frame.gif" alt="GIF for Transit Hub Display"
+                            style="max-height: 90%;" />
+                        <img data-img="gif" class="hidden" data-lazy-load="true" src="assets/gifs/transit-display.gif"
+                            alt="GIF for Transit Hub Display" style="max-height: 90%;" />
+                    </div>
+                    <div class="content ">
+                        <label class="title">Transit Hub Display</label>
+                        <label>Designing a data-driven display for a tourist hub</label>
+                        <div class="tags">
+                            <div class="tag">design</div>
+                            <div class="tag">research</div>
+                            <div class="tag">prototyping</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="project-item-wrapper">
+            <a [routerLink]="['/featured/bun-bun']" data-bg-color="$POMEGRANATE">
+                <div class="project-item-content-wrapper">
+                    <div class="content ">
+                        <label class="title">Bun Bun Bakery</label>
+                        <label>An online bakery shop for the best cinnamon buns in town</label>
+                        <div class="tags">
+                            <div class="tag">design</div>
+                            <div class="tag">prototyping</div>
+                            <div class="tag">development</div>
+                        </div>
+                    </div>
+                    <div class="content colored-bg" gifLoader>
+                        <img data-img="non-gif" class="" data-lazy-load="true" src="assets/gifs/bun-bun-frame.gif"
+                            alt="GIF for Bun Bun" style="max-height: 90%;" />
+                        <img data-img="gif" class="hidden" data-lazy-load="true" src="assets/gifs/bun-bun.gif"
+                            alt="GIF for Bun Bun" style="max-height: 90%;" />
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="project-wrapper">
+        <div class="project-item-wrapper">
+            <div class="project-items-list">
+                <div class="project-list-item">
+                    <a (click)="openDrawer('Lean-Case')" data-bg-color="$TURQUOISE">
+                        <div class="project-item-content-wrapper">
+                            <div class="content colored-bg">
+                                <img data-lazy-load="true" src="assets/project-logos/lean-case.png"
+                                    alt="GIF for lean case" style="max-height: 90%;" />
+                            </div>
+                            <div class="content ">
+                                <label class="title">Lean-Case</label>
+                                <label>A fintech app to plan and model day-to-day business operations</label>
+                                <div class="tags">
+                                    <div class="tag">design</div>
+                                    <div class="tag">development</div>
+                                    <div class="tag">angular</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project-list-item">
+                    <a (click)="openDrawer('uif-fabric')" data-bg-color="$BELIZE_HOLE">
+                        <div class="project-item-content-wrapper">
+                            <div class="content colored-bg">
+                                <img data-lazy-load="true" src="assets/project-logos/uif-fabric.png"
+                                    alt="GIF for Bun Bun" style="max-height: 70%;" />
+                            </div>
+                            <div class="content ">
+                                <label class="title">uif-fabric</label>
+                                <label>Angular UI components library for Office UI fabric</label>
+                                <div class="tags">
+                                    <div class="tag">components</div>
+                                    <div class="tag">UI Library</div>
+                                    <div class="tag">angular</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project-list-item">
+                    <a (click)="openDrawer('NotSoGrey')" data-bg-color="$TURQUOISE">
+                        <div class="project-item-content-wrapper">
+                            <div class="content colored-bg" style="padding: 0;">
+                                <img data-lazy-load="true" src="assets/project-logos/notsogrey_app.png" alt="GIF for Not So Grey"
+                                    style="max-width: 90%;" />
+                            </div>
+                            <div class="content ">
+                                <label class="title">Not So Grey</label>
+                                <label>A desktop app for folks who dream colors</label>
+                                <div class="tags">
+                                    <div class="tag">redesign</div>
+                                    <div class="tag">chrome app</div>
+                                    <div class="tag">angular</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="live-proto-btn ">
+            <a class="portfolio-btn main" [routerLink]="['/other-projects']"> See Other Projects</a>
+        </div>
+    </div>
+</div>
+
+<ng-container *ngIf="showVideo">
+    <app-pitch-video [(showVideo)]="showVideo"></app-pitch-video>
+</ng-container>
+<ng-container *ngIf="drawerOpened">
+    <app-project-previewer [(drawerOpened)]="drawerOpened" [projectId]="activeProjectId"></app-project-previewer>
+</ng-container>

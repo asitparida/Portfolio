@@ -1,0 +1,29 @@
+<div class="project-drawer-container visible anim in" data-tag="project-drawer">
+    <div class="project-drawer flex" data-tag="project-drawer-bg" *ngIf="project">
+        <div class="project-drawer-content" [class.justifyContentFlexStart]="project.video">
+            <div class="close" (click)="closeDrawer()">x</div><label
+                data-tag="project-drawer-title">{{project.name}}</label>
+            <p data-tag="project-drawer-subtitle">{{project.description}}</p>
+            <div class="project-drawer-links">
+                <a class="portfolio-btn" *ngIf="project.publishSrc" data-tag="app-link" [attr.href]="project.publishSrc"
+                    target="_blank">Visit Website</a>
+                <a class="portfolio-btn" *ngIf="project.githubSrc" data-tag="source-code"
+                    [attr.href]="project.githubSrc" target="_blank">GitHub</a></div>
+            <div class="project-video-container" *ngIf="project.video && !isMobile">
+                <div class="marvel-device macbook">
+                    <div class="top-bar"></div>
+                    <div class="camera"></div>
+                    <div class="screen">
+                        <div class="player-holder">
+                            <video controls crossorigin playsinline autoplay loop [src]="project.video"></video>
+                        </div>
+                    </div>
+                    <div class="bottom-bar"></div>
+                </div>
+            </div>
+            <div data-tag="project-drawer-description" [innerHTML]="project.content">
+            </div>
+        </div>
+    </div>
+    <div class="project-drawer-overlay" (click)="closeDrawer()" [style.backgroundColor]="backgroundColor"></div>
+</div>

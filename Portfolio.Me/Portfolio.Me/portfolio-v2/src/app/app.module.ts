@@ -10,6 +10,7 @@ import { SkillsComponent } from '../app/skills/skills.component';
 import { FooterComponent } from '../app/footer/footer.component';
 import { GitLinkComponent } from './git-link.component';
 import { GitHubDataComponent } from './github-data/github-data.component';
+import { BioComponent } from './bio/bio.component';
 import { GitHubDataService } from './github-data/github-data.service';
 import { DeferLoadDirective } from './projects/defer-load.directive';
 
@@ -22,7 +23,8 @@ import { DeferLoadDirective } from './projects/defer-load.directive';
     FooterComponent,
     GitLinkComponent,
     DeferLoadDirective,
-    GitHubDataComponent
+    GitHubDataComponent,
+    BioComponent
   ],
   imports: [
     BrowserModule,

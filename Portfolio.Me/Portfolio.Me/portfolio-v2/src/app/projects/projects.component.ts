@@ -4,9 +4,11 @@ import {
     ViewEncapsulation,
     HostListener
 } from '@angular/core';
-import { Projects as PROJECTS_ARRAY, LEANCASE } from './projects.definitions';
+import { Projects as PROJECTS_ARRAY } from './projects.definitions';
 import * as _ from 'underscore';
 import { Element } from '@angular/compiler';
+
+declare var gtag;
 
 function getStyle(el, styleProp) {
     if (el.currentStyle) {
@@ -55,6 +57,7 @@ class Project {
     bgColor: string;
     content: string;
     darker: boolean = false;
+    isNew: boolean = false;
     constructor() {
         this.size = 'single';
         this.width = '100%';
@@ -66,6 +69,13 @@ class Project {
 declare var GridScrollFx: any;
 let projectDrawerOpened = false;
 
+function RemoveVisibleInDrawer() {
+    const drawerContainer: any = document.querySelector('[data-tag="project-drawer"]');
+    if (drawerContainer) {
+        (drawerContainer as HTMLElement).classList.remove('visible');
+    }
+}
+
 @Component({
     selector: 'app-projects',
     templateUrl: './projects.component.html',
@@ -76,7 +86,6 @@ export class ProjectsComponent implements AfterViewInit {
     projects: any[] = [];
     currentWindowSize = null;
     drawerId = 'drawer' + Math.floor(Math.random() * 100);
-    LEANCASE = LEANCASE;
     constructor() {
         let self = this;
         _.each(PROJECTS_ARRAY, (_item: any, _iter: number) => {
@@ -89,6 +98,7 @@ export class ProjectsComponent implements AfterViewInit {
             _project.imgSrc = _item.img;
             _project.content = _item.content;
             _project.darker = _item.darker || false;
+            _project.isNew = _item.isNew || false;
             if (_item.size != null)
                 _project.landscapeSize = _item.size;
             if (_item.width != null)
@@ -116,6 +126,7 @@ export class ProjectsComponent implements AfterViewInit {
                     viewportFactor: 0.20
                 }, () => {
                     this.hightlightGridLayoutAdjuster();
+                    // this.showTimeline();
                 });
                 setTimeout(this.hightlightGridLayoutAdjuster);
                 this.currentWindowSize = 1;
@@ -143,6 +154,7 @@ export class ProjectsComponent implements AfterViewInit {
                     }
                 }
                 this.currentWindowSize = 0;
+                // this.showTimeline();
             } else {
                 this.reload();
             }
@@ -152,11 +164,16 @@ export class ProjectsComponent implements AfterViewInit {
     hightlightGridLayoutAdjuster() {
         setTimeout(() => {
             const gridElm: HTMLElement = document.getElementById('grid');
-            const highlightGridElm: HTMLElement = document.getElementById('highlight-grid');
-            if (gridElm && highlightGridElm) {
+            const highlightGridElms = document.querySelectorAll('.assign-grid-width');
+            if (gridElm && highlightGridElms.length > 0) {
                 const props: ClientRect = gridElm.getBoundingClientRect();
                 if (props) {
-                    highlightGridElm.style.width = props.width + 'px';
+                    for (var i = 0; i < highlightGridElms.length; i++) {
+                        (highlightGridElms[i] as HTMLElement).style.width = props.width + 'px';
+                        if ((highlightGridElms[i] as HTMLElement).classList.contains('assign-opacity')) {
+                            (highlightGridElms[i] as HTMLElement).style.opacity = '1';
+                        }
+                    }
                 }
             }
         });
@@ -183,6 +200,7 @@ export class ProjectsComponent implements AfterViewInit {
             }
         }
         projectDrawerOpened = false;
+        RemoveVisibleInDrawer();
     }
     drawerKeyUpListener(e: KeyboardEvent) {
         if (e.keyCode === 27) {
@@ -192,6 +210,7 @@ export class ProjectsComponent implements AfterViewInit {
                 elemTarget.classList.add('anim', 'out');
                 document.body.classList.remove('no-overflow');
                 projectDrawerOpened = false;
+                RemoveVisibleInDrawer();
             }
         }
     }
@@ -205,16 +224,25 @@ export class ProjectsComponent implements AfterViewInit {
         }
         document.removeEventListener('click', this.drawerClickListener);
         document.body.classList.remove('no-overflow');
+        RemoveVisibleInDrawer();
     }
 
     openProjectDrawer(item) {
+        if (gtag) {
+            gtag('event', 'open-project-detail', {
+                'event_category': 'Projects',
+                'event_label': item.name
+            });
+        }
         document.removeEventListener('click', this.drawerClickListener);
         document.removeEventListener('keyup', this.drawerKeyUpListener);
         const elem: HTMLElement = document.getElementById(this.drawerId);
         const drawerContainer: any = document.querySelector('[data-tag="project-drawer"]');
         if (elem) {
             projectDrawerOpened = !projectDrawerOpened;
+            (drawerContainer as HTMLElement).classList.remove('visible');
             if (projectDrawerOpened) {
+                (drawerContainer as HTMLElement).classList.add('visible');
                 let bgColor = COLORS[item.bgColor];
                 const rgb = hexToRgb(bgColor);
                 drawerContainer.style.backgroundColor = `rgba(${rgb.r},${rgb.g},${rgb.b},0.80)`;

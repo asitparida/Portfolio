@@ -1,0 +1,92 @@
+.anchorage-holder {
+    position: fixed;
+    right: 21px;
+    top: 50%;
+    z-index: 997;
+    transform: translateY(-50%);
+    &.show {
+        opacity: 1;
+        animation: pop-up 0.3s linear 0s forwards;
+    }
+    &.hide {
+        opacity: 0;
+        animation: pop-out 0.15s linear 0s forwards;
+    }
+    .anchorage-vertical {
+        display: flex;
+        flex-flow: column wrap;
+        .anchor {
+            height: 36px;
+            width: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            outline: none;
+            .anchor-circle {
+                &.active {
+                    background: rgba($color: #333, $alpha: 1);
+                }
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                border: 1px solid rgba($color: #333, $alpha: 1);
+            }
+            span {
+                white-space: nowrap;
+                opacity: 0;
+                position: absolute;
+                left: 5px;
+                transform: translateX(-100%);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-size: small;
+                background: #333;
+                color: #fff;
+                padding: 0 10px;
+                border-radius: 15px;
+                line-height: 24px;
+            }
+            &:hover {
+                .anchor-circle {
+                    &:not(:active) {
+                        background: rgba($color: #333, $alpha: 0.50);
+                    }
+                }
+                span {
+                    animation: fade-slide-in 0.2s ease-out 0s forwards;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+@keyframes  fade-slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-95%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-100%);
+    }
+}
+@keyframes pop-up {
+    0% {
+        opacity: 0;
+        display: block;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes pop-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}

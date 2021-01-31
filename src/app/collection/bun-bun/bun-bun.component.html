@@ -1,0 +1,185 @@
+<anchorage-holder></anchorage-holder>
+<div class="project-contents">
+    <section class="project-section h100Adjusted justifyAlignCenter">
+        <span data-type="anchor-elem">Introduction</span>
+        <div class="section-wrapper alignItemsBottom">
+            <div class="main-section alignItemsCenter header-section">
+                <h1 style="margin-top: 0;">Bun Bun Bakery</h1>
+                <p style="margin: 0 0 30px 0;">An online shop for the best cinnamon buns in town</p>
+                <div class="tags centered">
+                    <div class="tag">
+                        <img data-lazy-load="true" src="assets/layers.png">
+                        <label>design</label>
+                    </div>
+                    <div class="tag">
+                        <img data-lazy-load="true" src="assets/research.png">
+                        <label>evaluative research</label>
+                    </div>
+                    <div class="tag">
+                        <img data-lazy-load="true" src="assets/prototype.png">
+                        <label>prototyping</label>
+                    </div>
+                </div>
+                <div class="live-proto-btn">
+                    <a class="portfolio-btn" style="margin-right: 15px;" href="https://bun-bun.azurewebsites.net" target="_blank">Visit Website</a>
+                </div>
+            </div>
+            <div class="content-available-below-fold">
+                <img data-lazy-load="true" src="assets/arrow_upward.png" />
+            </div>
+        </div>
+    </section>
+    <section class="project-section alignItemsCenter h60">
+        <div class="section-wrapper w100 alignItemsFlexStart">
+            <div class="tri-section">
+                <h2>Why</h2>
+                <h3>did I pick this project ?</h3>
+                <p>
+                    This project was <strong>my first segway into paper-prototyping</strong> after I joined my master's program.
+                    The <strong>evolution</strong> of the design from lo-fi iterations to mid-fi and then building out the exact pixel
+                    perfect screens for a web-app was a fascinating experience.
+                    I could clearly sense the gradual improvement of the screens and understand why<strong> lo-fi prototyping</strong> and
+                    <strong>guerilla testing</strong> are essential during the ideation and discovery phases.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="project-section alignItemsCenter h60">
+        <span data-type="anchor-elem">Design Language</span>
+        <div class="section-wrapper alignItemsFlexStart w100">
+            <div class="tri-section w2">
+                <h2>Visual Language</h2>
+                <p>
+                    The first step was to create a visual language for the design.
+                    I looked at the existing phone and web apps, in the food-commerce space, for inspiration.
+                    The <a href="https://coolors.co/" target="_blank">Coolors</a> site was an excellent tool to browse
+                    through some cool color palettes related to cinnamon rolls and bakery in general.
+                </p>
+            </div>
+            <div class="tri-section w2 justifyAlignCenter">
+                <img imgZoomer data-lazy-load="true" class="boxed" src="assets/bun-bun/bun-bun.jpg" />
+            </div>
+        </div>
+    </section>
+    <section class="project-section h50 justifyAlignCenter">
+        <span data-type="anchor-elem">Paper Prototyping</span>
+        <div class="section-wrapper w100">
+            <div class="tri-section w1">
+                <h2>Paper Prototyping</h2>
+                <h3>Iteration #1</h3>
+                <p>
+                        I created low-fidelity paper prototypes to test out the screens quickly. The idea was to validate out the skeleton for the web-app. The online e-shopping experience was created using papers, post-its, and sharpies. I also created simple use-cases for baseline testing.
+                </p>
+                <div class="comments-wrapper">
+                    <div class="comment">
+                        <h4 class="highlight">Use-Case #1</h4>
+                        <p class="highlight-text">Alex is a Business Person who knows what exactly she wants. She wants quick ordering and custom order.</p>
+                    </div>
+                    <div class="comment">
+                        <h4 class="highlight">Use-Case #2</h4>
+                        <p class="highlight-text">Pam is a Business Event organizer. She is looking for reasonable offers on catering. She also prefers to bulk order for an event.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tri-section w1 justifyAlignCenter">
+                <app-picture-carousel staggerStep="10" listWrapperClass="bun-bun-hand-drawn-list-carousel"
+                    [bottomStagger]="true" carouselWrapperClass="bun-bun-hand-drawn-place-carousel" [items]="poaperPrototypesFirstCarouselItems"></app-picture-carousel>
+            </div>
+        </div>
+    </section>
+    <section class="project-section h50 justifyAlignCenter">
+        <span data-type="anchor-elem">Testing</span>
+        <div class="section-wrapper w100">
+            <div class="tri-section">
+                <h2></h2>
+                <h3>Guerilla Testing & Next Iterations</h3>
+            </div>
+        </div>
+        <div class="section-wrapper alignItemsFlexStart w100 p-t-b-0">
+            <div class="tri-section">
+                <h4 class="highlight">Feedback #1</h4>
+                <p class="highlight-text">In the homepage, images inside the carousel dont make sense and could be just
+                    changed to full bleed images.</p>
+            </div>
+            <div class="tri-section">
+                <h4 class="highlight">Feedback #2</h4>
+                <p class="highlight-text">In the final confirmation page – the details after order is processed did not
+                    reflect the context earlier i.e. if store pick or delivery was selected.</p>
+            </div>
+            <div class="tri-section">
+                <h4 class="highlight">Feedback #3</h4>
+                <p class="highlight-text">The call-to-action in the this iterations doesn't make sense as the ‘ORDER’
+                    button is not easily discoverable. </p>
+            </div>
+        </div>
+        <div class="section-wrapper w100 hidden-xs" style="padding-top: 0;">
+            <div class="tri-section">
+                <button class="portfolio-btn" (click)="showProtoTypeViewer = true;"> Compare fidelities</button>
+            </div>
+        </div>
+    </section>
+    <section class="project-section h75 justifyAlignCenter">
+        <span data-type="anchor-elem">Development</span>
+        <div class="section-wrapper w100 ">
+            <div class="tri-section">
+                <h2>Digital Prototyping</h2>
+                <p>
+                    Once the paper-prototypes were locked in, I moved to high-fi static designs created in Adobe XD and
+                    then to building the working prototype using Angular 5 & TypeScript.
+                    Below is a video preview of the working prototype.
+                </p>
+                <div class="macbook-wrapper hidden-xs">
+                    <div class="marvel-device macbook">
+                        <div class="top-bar"></div>
+                        <div class="camera"></div>
+                        <div class="screen">
+                            <div class="player-holder">
+                                <video controls crossorigin playsinline id="player" class="plyr-player">
+                                    <source src="https://s3.us-east-2.amazonaws.com/asitparida-portfolio/BunBun.mp4"
+                                        type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="bottom-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="project-section h20 justifyAlignCenter">
+        <div class="section-wrapper w100 footer-section">
+            <div class="tri-section w2">
+                <h4>Links</h4>
+                <div class="btn-containers">
+                    <a href="https://github.com/asitparida/bunbun" target="_blank" class="portfolio-btn">Visit GitHub</a>
+                    <a href="https://bun-bun.azurewebsites.net" target="_blank" class="portfolio-btn">Visit Website</a>
+                </div>
+            </div>
+            <div class="tri-section w1 justifyAlignFlexStart">
+                <h4>Credits</h4>
+                <p>
+                    <a href="https://www.flaticon.com/" target="_blank">Flat Icon</a>
+                </p>
+            </div>
+        </div>
+        <div class="section-wrapper w100 footer-section projects-hyperlinks hidden-xs">
+                <div class="projects-hyperlinks-content">
+                    <a class="project-nav-link" [routerLink]="['/featured/transit-display']"><img
+                            src="assets/keyboard_left.png" /><span class="text"><span class="text-uppercase">Previous Project:</span> Transit Hub Display</span></a>
+                    <a class="project-nav-link" [routerLink]="['/other-projects']"><span class="text"><span
+                                class="text-uppercase override">Other Projects</span></span><img class="right"
+                            src="assets/keyboard_left.png" /></a>
+                </div>
+            </div>
+    </section>
+</div>
+<div class="prototype-viewer" *ngIf="showProtoTypeViewer" (keyup.escape)=" showProtoTypeViewer = false;" tabindex="0">
+    <div class="close" (keyup.enter)=" showProtoTypeViewer = false;" (click)=" showProtoTypeViewer = false;">Close</div>
+    <div class="marvel-device ipad diff-ipad">
+        <div class="camera"></div>
+        <div class="screen">
+            <app-prototype-viewer src="https://idiff.azurewebsites.net/preview/5e91671d-21e1-f2ee-d00c-750421a30c01?forceResolution=full"></app-prototype-viewer>
+        </div>
+    </div>
+    <label>Use the drag handler to compare the low-fidelity and high-fidelity designs side-by-side</label>
+</div>

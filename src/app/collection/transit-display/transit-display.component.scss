@@ -1,0 +1,51 @@
+@import '../collection';
+@import '../../../_shared';
+/deep/ .transit-list {
+    width: 320px !important;
+    height: 220px !important;
+    .picture-wrapper {
+        margin-top: -60px;
+        margin-right: -45px !important;
+        overflow: visible !important;
+        .picture-card {
+            box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.33);
+            border-radius: 10px;
+        };
+    }
+}
+/deep/ .transit-carousel {
+    .picture-image-wrapper {
+        img {
+            height: 70vh;
+            border-radius: 5px;
+            box-shadow: 0px 0px 50px rgba($color: #000000, $alpha: 0.20);
+        }
+    }
+}
+/deep/ .picture-carousel-wrapper.transit-hand-drawn-place-carousel {
+    .picture-image-wrapper {
+        .img-container {
+            justify-content: center;
+        }
+        img {
+            height: 70vh;
+            border-radius: 5px;
+            // box-shadow: 0px 0px 50px rgba($color: #000000, $alpha: 0.20);
+        }
+    }
+}
+/deep/ .picture-carousel-wrapper.transit-hand-drawn-inplace-carousel {
+    .picture-image-wrapper {
+        .img-container {
+            justify-content: center;
+        }
+        img {
+            height: 50vh;
+            border-radius: 5px;
+            // box-shadow: 0px 0px 50px rgba($color: #000000, $alpha: 0.20);
+            @include respond-to-mobile {
+                height: auto;
+            }
+        }
+    }
+}
