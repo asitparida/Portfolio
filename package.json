@@ -34,7 +34,7 @@
     "typescript": "~2.7.2",
     "underscore": "1.9.1",
     "zone.js": "~0.8.26",
-    "prismjs": "1.15.0"
+    "prismjs": "1.27.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.7.0",
